@@ -93,7 +93,7 @@
       "name": "Scora",
       "startDate": "2022-12-31",
       "en_summary": "Tennis scoreboard app for WearOS watch\nIt helps you to count score during your tennis match.\n\nWebsite: http://scora.watch\n\nPublished on Google play Store : https://play.google.com/store/apps/details?id=fr.geoking.tennis.scoreboard.wear",
-      "fr_summary": "Application de tableau de score tennis pour montre WearOS\nElle vous aide à compter les points pendant votre match de tennis.\n\nSite web: http://scora.watch\n\nPublié sur Google Play Store : https://play.google.com/store/apps/details?id=fr.geoking.tennis.scoreboard.wear",
+      "fr_summary": "Application de comptage de points pour le tennis pour montre WearOS\nElle vous aide à compter les points pendant votre match de tennis.\n\nSite web: http://scora.watch\n\nPublié sur Google Play Store : https://play.google.com/store/apps/details?id=fr.geoking.tennis.scoreboard.wear",
       "url": "http://scora.watch",
       "en_highlights": [
         "Side project in production",

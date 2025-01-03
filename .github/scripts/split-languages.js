@@ -70,4 +70,4 @@ LANGUAGES.forEach(lang => {
 });
 
 // Commit and push only generated files
-commitAndPush(newVersion);
+//commitAndPush(newVersion);
