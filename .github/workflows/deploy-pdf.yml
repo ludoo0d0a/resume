@@ -16,6 +16,8 @@ on:
 jobs:
   convert:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
 #      - uses: actions/checkout@v4
 
@@ -51,11 +53,11 @@ jobs:
       # - https://ludoo0d0a.github.io/resume/resume-ludovic-valente-en.pdf
       # - https://ludoo0d0a.github.io/resume/cv-ludovic-valente-fr.pdf
       - name: Deploy PDFs to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .
           publish_branch: gh-pages
           keep_files: true
-          exclude_assets: '**/*.html,**/*.json,**/*.js,**/*.css'
+          exclude_assets: '**/*.html,**/*.json,**/*.js,**/*.css,node_modules/*'
           enable_jekyll: false
