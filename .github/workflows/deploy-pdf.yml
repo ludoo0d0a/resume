@@ -37,8 +37,8 @@ jobs:
       # Generate pdf versions
       - name: Generate PDF
         run: |
-          chromium --headless --disable-gpu --print-to-pdf=resume-ludovic-valente-en.pdf index.html
-          chromium --headless --disable-gpu --print-to-pdf=cv-ludovic-valente-fr.pdf index-fr.html
+          chromium --headless --disable-gpu --print-to-pdf=pdf/resume-ludovic-valente-en.pdf index.html
+          chromium --headless --disable-gpu --print-to-pdf=pdf/cv-ludovic-valente-fr.pdf index-fr.html
 
       - name: Commit PDFs
         env:
@@ -46,7 +46,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add resume-ludovic-valente-en.pdf cv-ludovic-valente-fr.pdf
+          git add pdf/resume-ludovic-valente-en.pdf pdf/cv-ludovic-valente-fr.pdf
           git commit -m "chore: update resume PDFs" || exit 0
           git push
 
@@ -60,6 +60,6 @@ jobs:
           #personal_token: ${{ secrets.GHP_TOKEN }}
           publish_dir: .
           publish_branch: gh-pages
-          keep_files: true
-          exclude_assets: '*.html,**/*.html,**/*.json,**/*.js,**/*.css,node_modules'
+          #keep_files: true
+          #exclude_assets: '*.html,**/*.html,**/*.json,**/*.js,**/*.css,node_modules'
           enable_jekyll: false
