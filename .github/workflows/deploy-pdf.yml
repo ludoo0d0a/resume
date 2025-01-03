@@ -1,0 +1,65 @@
+name: Generate Resume PDFs
+
+on:
+  workflow_run:
+    workflows: ["Translate resume files"]
+    types:
+      - completed
+
+  workflow_dispatch:
+    inputs:
+      artifact_name:
+        description: 'Name of the HTML artifact'
+        required: false
+        default: 'resume-html'
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download HTML artifacts
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          workflow: deploy-resume.yml
+          name: ${{ inputs.artifact_name || 'resume-html' }}
+          path: html
+
+      - name: Install Chrome
+        run: |
+          sudo apt-get install -y chromium-browser
+
+      # Generate pdf versions
+      - name: Generate PDF
+        run: |
+          chromium --headless --disable-gpu --print-to-pdf=resume-ludovic-valente-en.pdf index.html
+          chromium --headless --disable-gpu --print-to-pdf=cv-ludovic-valente-fr.pdf index-fr.html
+
+      - name: Upload PDF artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: resume-pdf
+          path: |
+            resume.pdf
+            resume-fr.pdf
+
+      - name: Commit PDFs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add resume.pdf resume-fr.pdf
+          git commit -m "chore: update resume PDFs" || exit 0
+          git push
+
+      # The PDFs will be accessible at:
+      # - https://ludoo0d0a.github.io/resume/resume-ludovic-valente-en.pdf
+      # - https://ludoo0d0a.github.io/resume/cv-ludovic-valente-fr.pdf
+      - name: Deploy PDFs to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          keep_files: true
+          exclude_assets: '**/*.html,**/*.json,**/*.js,**/*.css'
+          enable_jekyll: false

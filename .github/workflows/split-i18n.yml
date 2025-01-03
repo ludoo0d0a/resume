@@ -48,16 +48,19 @@ jobs:
         run: |
           npm install -g resume-cli
           npm install jsonresume-theme-kendall
-          sudo apt-get install -y chromium-browser
-
-      - name: Install Theme
-        run: |
-          npm install jsonresume-theme-kendall
 
       - name: Generate HTML
         run: |
           resume export index.html --theme kendall --resume resume.en.json
           resume export index-fr.html --theme kendall --resume resume.fr.json
+
+      - name: Upload HTML artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: resume-html
+          path: |
+            index.html
+            index-fr.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -71,8 +74,3 @@ jobs:
         run: |
           echo "::notice::Resume deployed to https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
 
-      # Generate pdf versions
-      - name: Generate PDF
-        run: |
-          chromium --headless --disable-gpu --print-to-pdf=resume-ludovic-valente-en.pdf index.html
-          chromium --headless --disable-gpu --print-to-pdf=cv-ludovic-valente-fr.pdf index-fr.html
