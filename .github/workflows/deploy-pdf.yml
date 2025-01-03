@@ -43,21 +43,13 @@ jobs:
           chromium --headless --disable-gpu --print-to-pdf=resume-ludovic-valente-en.pdf index.html
           chromium --headless --disable-gpu --print-to-pdf=cv-ludovic-valente-fr.pdf index-fr.html
 
-      - name: Upload PDF artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: resume-pdf
-          path: |
-            resume.pdf
-            resume-fr.pdf
-
       - name: Commit PDFs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add resume.pdf resume-fr.pdf
+          git add resume-ludovic-valente-en.pdf cv-ludovic-valente-fr.pdf
           git commit -m "chore: update resume PDFs" || exit 0
           git push
 
