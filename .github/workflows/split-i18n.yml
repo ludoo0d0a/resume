@@ -9,8 +9,6 @@ on:
 jobs:
   split-languages:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v4
 
@@ -38,7 +36,7 @@ jobs:
       # to see changes into jsonresume.org website : https://registry.jsonresume.org/ludoo0d0a
       - name: Update Gist
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GIST_TOKEN }}
           GIST_ID: ${{ secrets.GIST_ID }}
         run: |
           gh gist edit $GIST_ID -f resume.json resume.en.json
@@ -65,10 +63,12 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          #github_token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ secrets.GH_TOKEN }}
           publish_dir: .
           publish_branch: gh-pages
           keep_files: false
+          enable_jekyll: false
 
       - name: Log Deploy URL
         run: |
