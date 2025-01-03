@@ -34,7 +34,7 @@ jobs:
 
       - name: Update Gist
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GIST_ID: ${{ secrets.GIST_ID }}
         run: |
           gh gist edit $GIST_ID resume.json < resume.en.json
