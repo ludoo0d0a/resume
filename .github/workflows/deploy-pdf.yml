@@ -15,6 +15,7 @@ on:
 
 jobs:
   convert:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -55,8 +56,8 @@ jobs:
       - name: Deploy PDFs to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          #github_token: ${{ secrets.GITHUB_TOKEN }}
-          personal_token: ${{ secrets.GHP_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          #personal_token: ${{ secrets.GHP_TOKEN }}
           publish_dir: .
           publish_branch: gh-pages
           keep_files: true
