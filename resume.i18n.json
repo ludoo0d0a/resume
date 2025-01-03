@@ -7,7 +7,7 @@
     "image": "https://www.libravatar.org/avatar/0c1ddc83408f6f3966e7999083692f6d42832e1054640f4cc0a6e45aa2bc6779?d=retro&s=80",
     "email": "ludovic.valente@gmail.com",
     "phone": "",
-    "url": "https://github.com/ludoo0d0a",
+    "url": "https://scora.watch",
     "en_summary": "Senior Application Fullstack Developer, IT architect, VueJs Trainer, tech lead, Flutter/Android developer.\n\nFocused on modern architecture around mobility and web requirements.\nI create modern apps with emergent technologies relying on efficient architecture.\n\nMain/favorite skills : Java, SpringBoot, Android KMP, ElasticSearch, NodeJs, VueJs, Flutter",
     "fr_summary": "Développeur Senior Fullstack, architecte IT, formateur VueJs, tech lead, développeur Flutter/Android.\n\nFocalisé sur l'architecture moderne autour des besoins web et mobiles.\nJe crée des applications modernes avec des technologies émergentes s'appuyant sur une architecture efficace.\n\nCompétences principales/favorites : Java, SpringBoot, Android KMP, ElasticSearch, NodeJs, VueJs, Flutter",
     "location": {
@@ -31,9 +31,10 @@
         "url": "https://twitter.com/ludoo0d0a"
       },
       {
-        "en_network": "CV en français",
-        "fr_network": "Resume in English",
-        "username": "Ludovic.Valente",
+        "en_network": "CV en français \uD83C\uDDEB\uD83C\uDDF7 ",
+        "fr_network": "Resume in English \uD83C\uDDEC\uD83C\uDDE7 ",
+        "en_username": "CV de Ludovic Valente",
+        "fr_username": "Resume of Ludovic Valente",
         "en_url": "https://ludoo0d0a.github.io/resume/index-fr.html",
         "fr_url": "https://ludoo0d0a.github.io/resume/index.html"
       }

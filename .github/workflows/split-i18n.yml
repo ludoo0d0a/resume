@@ -34,7 +34,8 @@ jobs:
           git commit -m "chore: update language-specific resume files" || exit 0
           git push
 
-      # Update gist resume.json to see changes into jsonresume.org website : https://registry.jsonresume.org/ludoo0d0a
+      # Update gist resume.json : https://gist.github.com/ludoo0d0a/b7e4355cd0d2722f25002eca525ea262
+      # to see changes into jsonresume.org website : https://registry.jsonresume.org/ludoo0d0a
       - name: Update Gist
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -54,6 +55,7 @@ jobs:
       - name: Generate HTML
         run: |
           resume export index.html --theme kendall --resume resume.en.json
+          resume export index-fr.html --theme kendall --resume resume.fr.json
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
