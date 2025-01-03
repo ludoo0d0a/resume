@@ -32,4 +32,5 @@ Added a github action to deploy into github pages to display resume in different
 
 Added a github action to deploy to gist and sync with jsonresume
 
- - https://registry.jsonresume.org/ludoo0d0a
+ - jsonResume: https://registry.jsonresume.org/ludoo0d0a
+ - Gist : https://gist.github.com/ludoo0d0a/b7e4355cd0d2722f25002eca525ea262
