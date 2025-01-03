@@ -18,11 +18,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download HTML artifacts
-        uses: dawidd6/action-download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
-          workflow: deploy-resume.yml
           name: ${{ inputs.artifact_name || 'resume-html' }}
-          path: html
+          path: .
 
       - name: Install Chrome
         run: |
