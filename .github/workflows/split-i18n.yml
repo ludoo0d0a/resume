@@ -46,6 +46,8 @@ jobs:
         run: |
           npm install -g resume-cli
           npm install jsonresume-theme-kendall
+#          npm install jsonresume-theme-ludoo
+      # npm install jsonresume-theme-onepage-updated # compact for PDF
 
       - name: Generate HTML
         run: |

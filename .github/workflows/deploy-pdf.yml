@@ -37,8 +37,8 @@ jobs:
       # Generate pdf versions
       - name: Generate PDF
         run: |
-          chromium --headless --disable-gpu --print-to-pdf=pdf/resume-ludovic-valente-en.pdf index.html
-          chromium --headless --disable-gpu --print-to-pdf=pdf/cv-ludovic-valente-fr.pdf index-fr.html
+          chromium --headless --disable-gpu --no-pdf-header-footer --print-to-pdf=pdf/resume-ludovic-valente-en.pdf index.html
+          chromium --headless --disable-gpu --no-pdf-header-footer --print-to-pdf=pdf/cv-ludovic-valente-fr.pdf index-fr.html
 
       - name: Commit PDFs
         env:
