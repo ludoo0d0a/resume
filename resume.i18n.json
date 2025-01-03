@@ -1,8 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
-    "fr_name": null,
-    "en_name": "Ludovic Valente",
+    "name": "Ludovic Valente",
     "en_label": "Fullstack software engineer @SFΞIR Luxembourg",
     "fr_label": "Ingénieur logiciel fullstack @SFΞIR Luxembourg",
     "image": "https://www.libravatar.org/avatar/0c1ddc83408f6f3966e7999083692f6d42832e1054640f4cc0a6e45aa2bc6779?d=retro&s=80",
@@ -437,7 +436,7 @@
     },
     {
       "fr_name": "Sogeti",
-      "en_name": "Sogeti",
+      "name": "Sogeti",
       "position": "IT architect",
       "startDate": "2006-09-30",
       "endDate": "2007-08-31",
@@ -454,7 +453,7 @@
     },
     {
       "fr_name": "Sogeti",
-      "en_name": "Sogeti",
+      "name": "Sogeti",
       "position": "Software analyst developer",
       "startDate": "2006-01-31",
       "endDate": "2007-08-31",
@@ -471,8 +470,7 @@
       "url": "https://www.linkedin.com/company/sogeti/"
     },
     {
-      "fr_name": null,
-      "en_name": "Sogeti",
+      "name": "Sogeti",
       "position": "Software analyst developer",
       "startDate": "2006-01-31",
       "endDate": "2006-02-28",
@@ -486,13 +484,12 @@
         "OIDC",
         "ldap"
       ],
-      "fr_summary": null,
+      "fr_summary": "Client : Cour de Justice européenne.\\nDéveloppeur principal sur un moteur de recherche dédié aux Canevas permettant de rechercher et d'insérer des références dans les 20 langues différentes.\\nApplication Web J2EE utilisant Struts, JSP, authentification via LDAP AD/OID, base de données Oracle, utilisation d'ICU pour faciliter la traduction internationale et la manipulation de chaînes.",
       "en_summary": "Client : European Court of Justice.\nMain developer on a search engine dedicated to Canevas enabling to search and insert references in the different 20 languages.\nJ2EE Web application using Struts, JSP, authentication against LDAP AD/OID, Oracle database, use of ICU to help international translation and string manipulation",
       "url": "https://www.linkedin.com/company/sogeti/"
     },
     {
-      "fr_name": null,
-      "en_name": "Sogeti",
+      "name": "Sogeti",
       "position": "Software analyst developer",
       "startDate": "2005-08-31",
       "endDate": "2006-02-28",
@@ -506,7 +503,7 @@
         "OIDC",
         "ldap"
       ],
-      "fr_summary": null,
+      "fr_summary": "Client : Cour de Justice européenne.\nAnalyste et développeur pour un projet de gestion de toutes les décisions prises lors des audiences concernant les différentes affaires.\nApplication Web J2EE utilisant Struts, JSP et taglibs métier, authentification via LDAP AD/OID, base de données Oracle et sérialisation XML",
       "en_summary": "Client : European Court of Justice.\nAnalyst and developer for a project of management of all the decisions taken during hearings concerning the different cases.\nJ2EE Web application using Struts, JSP and business taglibs, authentication against LDAP AD/OID, Oracle database and XML serialization",
       "url": "https://www.linkedin.com/company/sogeti/"
     },
@@ -524,7 +521,7 @@
         "WordML",
         "Oracle10g database"
       ],
-      "fr_summary": null,
+      "fr_summary": "Client : Cour de Justice européenne.\nDéveloppeur principal / analyste sur un projet nommé Canevas.\nC'est une application bureautique multi-niveaux pour la création de documents judiciaires",
       "en_summary": "Client : European Court of Justice.\nMain developer / analyst on a project named Canevas.\nIt's a multi-tiers office application for judiciary documents creation.",
       "url": "https://www.linkedin.com/company/sogeti/"
     },
@@ -539,7 +536,7 @@
         "industrial prototyping",
         "Suppliers management"
       ],
-      "fr_summary": null,
+      "fr_summary": "THALES e-Transactions fournit des imprimantes dans des bornes pour la délivrance de billets dans les aéroports et les gares. Ce projet visait à fournir plusieurs prototypes de ces machines et à passer à la ligne de production avec tous les certificats nécessaires.\n•\tDéveloppement électronique et mécanique\n•\tGestion de la production\n•\tGestion des fournisseurs\n•\tSystème informatique (VB, communication série) pour contrôler différentes imprimantes lors des divers tests afin d'obtenir les certificats",
       "en_summary": "THALES e-Transactions delivers printers inside kiosks for ticket delivery in airport and train stations. This project was aimed at providing a few prototypes of these machines and go to the production line with all necessary certificates.\n•\tElectronic and mechanical development\n•\tProduction management\n•\tSuppliers management\n•\tComputer system (VB, serial communication) to control different printers for various tests in order to obtain certificates."
     }
   ],
@@ -655,8 +652,7 @@
         "Gradle"
       ],
       "level": "Senior",
-      "fr_name": null,
-      "en_name": "Mobile"
+      "name": "Mobile"
     }
   ],
   "languages": [
@@ -705,10 +701,9 @@
       "endDate": "2024-04-30"
     },
     {
-      "fr_name": null,
-      "en_name": "GCWizard",
+      "name": "GCWizard",
       "startDate": "2021-03-31",
-      "fr_summary": null,
+      "fr_summary": "Cette application mobile contient de nombreux outils hors ligne, tables et calculateurs pour soutenir le géocacheur en plein air ou à la maison dans la résolution de puzzles ou de calculs.\n\nDisponible pour iOs, Android et Web.",
       "en_summary": "This mobile app contains numerous offline tools, tables and calculators to support the active geocacher in the field or at home in solving puzzles or calculations.\n\nAvailable for iOs, Android and Web.",
       "url": "https://gcwizard.net/",
       "endDate": "2022-08-01",
@@ -739,7 +734,7 @@
       "fr_name": "Outils pour le géocaching",
       "en_name": "Geocaching Tools",
       "startDate": "2014-03-31",
-      "fr_summary": null,
+      "fr_summary": "Site Web contenant des outils online pour la communauté geocaching.\npitaso.com devenu maintenant geoking.fr",
       "en_summary": "Site Web contenant des outils online pour la communauté geocaching.\n\npitaso.com devenu maintenant geoking.fr",
       "url": "http://www.geoking.fr",
       "endDate": "2020-03-31",
@@ -748,18 +743,18 @@
       ]
     },
     {
-      "fr_name": null,
-      "en_name": "Plateforme de développement rapide pour application iPhone",
+      "fr_name": "Platforme de développement rapide pour application iPhone",
+      "en_name": "Rapid plateform for iPhone application",
       "startDate": "2012-07-31",
-      "fr_summary": null,
-      "en_summary": "Plateforme de développement rapide pour application iPhone."
+      "fr_summary": "Platforme de développement rapide pour application iPhone",
+      "en_summary": "Rapid plateform for iPhone application"
     },
     {
       "fr_name": "Eye Traffic - Info traffic Luxembourg",
       "en_name": "Eye Traffic - Lux traffic info",
       "startDate": "2010-08-31",
-      "fr_summary": null,
-      "en_summary": "Extension Chrome pour surveiller le traffic info au Luxembourg.",
+      "fr_summary": "Extension Chrome pour surveiller le traffic info au Luxembourg.",
+      "en_summary": "Chrome Extension to monitor traffic info in Luxembourg.",
       "url": "https://chrome.google.com/webstore/detail/kieaniodbboioemmcghcbkfgpmopffdc",
       "highlights": [
         "Agreement from Pont-Et-Chaussee to access their API"
@@ -769,8 +764,8 @@
       "fr_name": "Handball club Amnéville website",
       "en_name": "Site du club de Handball de Amnéville",
       "startDate": "2015-10-31",
-      "fr_summary": null,
-      "en_summary": "Réalisation du site Web du club de Amnéville sous Wordpress.\nValorisation du club, implication du comité dans ce nouvel outil de communication, promotion de nos équipes en N3 et prénationale, actualités, résultats et calendriers des différentes équipes",
+      "fr_summary": "Réalisation du site Web du club de Amnéville sous Wordpress.\nValorisation du club, implication du comité dans ce nouvel outil de communication, promotion de nos équipes en N3 et prénationale, actualités, résultats et calendriers des différentes équipes",
+      "en_summary": "Web site building for the Amnéville handball club.\nPromotion of the club, involvement of the committee in this new communication tool, promotion of our teams in N3 and national, news, results and calendars of the different teams",
       "url": "http://www.7amnevillois.fr",
       "endDate": "2022-08-31"
     },
@@ -820,7 +815,7 @@
       ]
     },
     {
-      "fr_name": null,
+      "fr_name": "Facelift for a real estate website",
       "en_name": "Facelift site d'annonces immobilières",
       "startDate": "2012-06-30",
       "fr_summary": "Facelift et ajout de plusieurs fonctionnalités du site Web Habiter.lu dédié aux annonces immobilières pour le compte d'Editus.",
@@ -835,7 +830,7 @@
     }
   ],
   "meta": {
-    "version": "v2.0.1",
+    "version": "v2.0.2",
     "theme": "kendall",
     "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
   }
