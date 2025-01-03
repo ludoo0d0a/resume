@@ -36,7 +36,7 @@ jobs:
       # Update gist resume.json to see changes into jsonresume.org website : https://registry.jsonresume.org/ludoo0d0a
       - name: Update Gist
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GIST_ID: ${{ secrets.GIST_ID }}
         run: |
           gh gist edit $GIST_ID resume.json < resume.en.json
