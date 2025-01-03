@@ -387,7 +387,6 @@
       "position": "Consultant",
       "startDate": "2010-05-31",
       "endDate": "2011-12-31",
-      "highlights": [],
       "fr_summary": "au Parlement européen - Développement d'applications Web\n\ne-dictionaries est un outil web pour distribuer et lancer des dictionnaires (web ou locaux) selon les licences relatives.\nLes utilisateurs peuvent facilement gérer leurs dictionnaires favoris sur leur portail.\nL'administration inclut la gestion des licences, les rapports statistiques, l'aperçu graphique des expirations et des quotas dépassés.\nUtilisé par tous les traducteurs pour leurs traductions quotidiennes.",
       "en_summary": "at European Parliament - WebApplication development \n\ne-dictionaries is web tool to distribute and launch dictionaries (web or local) according to the relative licenses.\nUsers could easily manage their favorite dictionaries on its portal.\nAdministration includes licenses management, statistics reports, graphical overview of expiration and quota exceeded.\nUsed by all translators for their day to day translations.",
       "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
@@ -836,7 +835,7 @@
     }
   ],
   "meta": {
-    "version": "v2.0.0",
+    "version": "v2.0.1",
     "theme": "kendall",
     "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
   }
