@@ -1,6 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
+    "name": "Ludovic Valente",
     "image": "https://www.libravatar.org/avatar/0c1ddc83408f6f3966e7999083692f6d42832e1054640f4cc0a6e45aa2bc6779?d=retro&s=80",
     "email": "ludovic.valente@gmail.com",
     "phone": "",
@@ -26,7 +27,6 @@
         "url": "https://twitter.com/ludoo0d0a"
       }
     ],
-    "name": "Ludovic Valente",
     "label": "Fullstack software engineer @SFΞIR Luxembourg",
     "summary": "Senior Application Fullstack Developer, IT architect, VueJs Trainer, tech lead, Flutter/Android developer.\n\nFocused on modern architecture around mobility and web requirements.\nI create modern apps with emergent technologies relying on efficient architecture.\n\nMain/favorite skills : Java, SpringBoot, Android KMP, ElasticSearch, NodeJs, VueJs, Flutter"
   },
@@ -404,6 +404,7 @@
       "summary": "at European Parliament :\n- Study and support for a worklow engine adoption : Bonita\n- workflow integration in a SOA approch\n- XML, XSL support to project teams\n- Jahia support (use, custom dev, bugfix, ...) to project teams\n- Studies on different Document Management system\n- J2EE projects development"
     },
     {
+      "name": "Sogeti",
       "position": "IT architect",
       "startDate": "2006-09-30",
       "endDate": "2007-08-31",
@@ -415,10 +416,10 @@
         "xml"
       ],
       "url": "https://www.linkedin.com/company/sogeti/",
-      "name": "Sogeti",
       "summary": "Client : European Court of Justice.\nCreation of an architecture team in charge of competitive intelligence and installation of a new homogeneous development environment (technologies, tools, testing, ergonomics)."
     },
     {
+      "name": "Sogeti",
       "position": "Software analyst developer",
       "startDate": "2006-01-31",
       "endDate": "2007-08-31",
@@ -431,10 +432,10 @@
         "OracleText contextual search"
       ],
       "url": "https://www.linkedin.com/company/sogeti/",
-      "name": "Sogeti",
       "summary": "Client : European Court of Justice.\nMain developer on an Intranet system : the first application hosted by this new system is a research tool enabling to merge and abstract all different sources of datas."
     },
     {
+      "name": "Sogeti",
       "position": "Software analyst developer",
       "startDate": "2006-01-31",
       "endDate": "2006-02-28",
@@ -449,10 +450,10 @@
         "ldap"
       ],
       "url": "https://www.linkedin.com/company/sogeti/",
-      "name": "Sogeti",
       "summary": "Client : European Court of Justice.\nMain developer on a search engine dedicated to Canevas enabling to search and insert references in the different 20 languages.\nJ2EE Web application using Struts, JSP, authentication against LDAP AD/OID, Oracle database, use of ICU to help international translation and string manipulation"
     },
     {
+      "name": "Sogeti",
       "position": "Software analyst developer",
       "startDate": "2005-08-31",
       "endDate": "2006-02-28",
@@ -467,7 +468,6 @@
         "ldap"
       ],
       "url": "https://www.linkedin.com/company/sogeti/",
-      "name": "Sogeti",
       "summary": "Client : European Court of Justice.\nAnalyst and developer for a project of management of all the decisions taken during hearings concerning the different cases.\nJ2EE Web application using Struts, JSP and business taglibs, authentication against LDAP AD/OID, Oracle database and XML serialization"
     },
     {
@@ -650,6 +650,7 @@
       "summary": "JS framework to automate task in Web"
     },
     {
+      "name": "GCWizard",
       "startDate": "2021-03-31",
       "url": "https://gcwizard.net/",
       "endDate": "2022-08-01",
@@ -659,7 +660,6 @@
         "Initiate translation engine and translators community and tools - Thanks crowdin",
         "Steganography module"
       ],
-      "name": "GCWizard",
       "summary": "This mobile app contains numerous offline tools, tables and calculators to support the active geocacher in the field or at home in solving puzzles or calculations.\n\nAvailable for iOs, Android and Web."
     },
     {
@@ -688,8 +688,8 @@
     },
     {
       "startDate": "2012-07-31",
-      "name": "Plateforme de développement rapide pour application iPhone",
-      "summary": "Plateforme de développement rapide pour application iPhone."
+      "name": "Rapid plateform for iPhone application",
+      "summary": "Rapid plateform for iPhone application"
     },
     {
       "startDate": "2010-08-31",
@@ -698,14 +698,14 @@
         "Agreement from Pont-Et-Chaussee to access their API"
       ],
       "name": "Eye Traffic - Lux traffic info",
-      "summary": "Extension Chrome pour surveiller le traffic info au Luxembourg."
+      "summary": "Chrome Extension to monitor traffic info in Luxembourg."
     },
     {
       "startDate": "2015-10-31",
       "url": "http://www.7amnevillois.fr",
       "endDate": "2022-08-31",
       "name": "Site du club de Handball de Amnéville",
-      "summary": "Réalisation du site Web du club de Amnéville sous Wordpress.\nValorisation du club, implication du comité dans ce nouvel outil de communication, promotion de nos équipes en N3 et prénationale, actualités, résultats et calendriers des différentes équipes"
+      "summary": "Web site building for the Amnéville handball club.\nPromotion of the club, involvement of the committee in this new communication tool, promotion of our teams in N3 and national, news, results and calendars of the different teams"
     },
     {
       "startDate": "2009-12-31",
@@ -752,7 +752,7 @@
     }
   ],
   "meta": {
-    "version": "v2.0.1",
+    "version": "v2.0.2",
     "theme": "kendall",
     "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
   }

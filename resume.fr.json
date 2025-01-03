@@ -1,6 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
+    "name": "Ludovic Valente",
     "image": "https://www.libravatar.org/avatar/0c1ddc83408f6f3966e7999083692f6d42832e1054640f4cc0a6e45aa2bc6779?d=retro&s=80",
     "email": "ludovic.valente@gmail.com",
     "phone": "",
@@ -26,7 +27,6 @@
         "url": "https://twitter.com/ludoo0d0a"
       }
     ],
-    "name": null,
     "label": "Ingénieur logiciel fullstack @SFΞIR Luxembourg",
     "summary": "Développeur Senior Fullstack, architecte IT, formateur VueJs, tech lead, développeur Flutter/Android.\n\nFocalisé sur l'architecture moderne autour des besoins web et mobiles.\nJe crée des applications modernes avec des technologies émergentes s'appuyant sur une architecture efficace.\n\nCompétences principales/favorites : Java, SpringBoot, Android KMP, ElasticSearch, NodeJs, VueJs, Flutter"
   },
@@ -404,6 +404,7 @@
       "summary": "au Parlement européen :\n- Étude et support pour l'adoption d'un moteur de workflow : Bonita\n- Intégration du workflow dans une approche SOA\n- Support XML, XSL aux équipes projet\n- Support Jahia (utilisation, dev personnalisé, correction de bugs, ...) aux équipes projet\n- Études sur différents systèmes de gestion documentaire\n- Développement de projets J2EE"
     },
     {
+      "name": "Sogeti",
       "position": "IT architect",
       "startDate": "2006-09-30",
       "endDate": "2007-08-31",
@@ -415,10 +416,10 @@
         "xml"
       ],
       "url": "https://www.linkedin.com/company/sogeti/",
-      "name": "Sogeti",
       "summary": "Client : Cour de Justice européenne.\nCréation d'une équipe d'architecture en charge de la veille concurrentielle et de l'installation d'un nouvel environnement de développement homogène (technologies, outils, tests, ergonomie)."
     },
     {
+      "name": "Sogeti",
       "position": "Software analyst developer",
       "startDate": "2006-01-31",
       "endDate": "2007-08-31",
@@ -431,10 +432,10 @@
         "OracleText contextual search"
       ],
       "url": "https://www.linkedin.com/company/sogeti/",
-      "name": "Sogeti",
       "summary": "Client : Cour de Justice européenne.\nDéveloppeur principal sur un système Intranet : la première application hébergée par ce nouveau système est un outil de recherche permettant de fusionner et d'abstraire toutes les différentes sources de données."
     },
     {
+      "name": "Sogeti",
       "position": "Software analyst developer",
       "startDate": "2006-01-31",
       "endDate": "2006-02-28",
@@ -449,10 +450,10 @@
         "ldap"
       ],
       "url": "https://www.linkedin.com/company/sogeti/",
-      "name": null,
-      "summary": null
+      "summary": "Client : Cour de Justice européenne.\\nDéveloppeur principal sur un moteur de recherche dédié aux Canevas permettant de rechercher et d'insérer des références dans les 20 langues différentes.\\nApplication Web J2EE utilisant Struts, JSP, authentification via LDAP AD/OID, base de données Oracle, utilisation d'ICU pour faciliter la traduction internationale et la manipulation de chaînes."
     },
     {
+      "name": "Sogeti",
       "position": "Software analyst developer",
       "startDate": "2005-08-31",
       "endDate": "2006-02-28",
@@ -467,8 +468,7 @@
         "ldap"
       ],
       "url": "https://www.linkedin.com/company/sogeti/",
-      "name": null,
-      "summary": null
+      "summary": "Client : Cour de Justice européenne.\nAnalyste et développeur pour un projet de gestion de toutes les décisions prises lors des audiences concernant les différentes affaires.\nApplication Web J2EE utilisant Struts, JSP et taglibs métier, authentification via LDAP AD/OID, base de données Oracle et sérialisation XML"
     },
     {
       "name": "Sogeti",
@@ -485,7 +485,7 @@
         "Oracle10g database"
       ],
       "url": "https://www.linkedin.com/company/sogeti/",
-      "summary": null
+      "summary": "Client : Cour de Justice européenne.\nDéveloppeur principal / analyste sur un projet nommé Canevas.\nC'est une application bureautique multi-niveaux pour la création de documents judiciaires"
     },
     {
       "name": "Quaternove",
@@ -497,7 +497,7 @@
         "Suppliers management"
       ],
       "position": "Chef de projet",
-      "summary": null
+      "summary": "THALES e-Transactions fournit des imprimantes dans des bornes pour la délivrance de billets dans les aéroports et les gares. Ce projet visait à fournir plusieurs prototypes de ces machines et à passer à la ligne de production avec tous les certificats nécessaires.\n•\tDéveloppement électronique et mécanique\n•\tGestion de la production\n•\tGestion des fournisseurs\n•\tSystème informatique (VB, communication série) pour contrôler différentes imprimantes lors des divers tests afin d'obtenir les certificats"
     }
   ],
   "volunteer": [],
@@ -607,7 +607,7 @@
         "Gradle"
       ],
       "level": "Senior",
-      "name": null
+      "name": "Mobile"
     }
   ],
   "languages": [
@@ -650,6 +650,7 @@
       "summary": "Framework JS pour automatiser les tâches sur le Web"
     },
     {
+      "name": "GCWizard",
       "startDate": "2021-03-31",
       "url": "https://gcwizard.net/",
       "endDate": "2022-08-01",
@@ -659,8 +660,7 @@
         "Initiate translation engine and translators community and tools - Thanks crowdin",
         "Steganography module"
       ],
-      "name": null,
-      "summary": null
+      "summary": "Cette application mobile contient de nombreux outils hors ligne, tables et calculateurs pour soutenir le géocacheur en plein air ou à la maison dans la résolution de puzzles ou de calculs.\n\nDisponible pour iOs, Android et Web."
     },
     {
       "startDate": "2015-09-30",
@@ -684,12 +684,12 @@
         "Logbook creator widely used by community"
       ],
       "name": "Outils pour le géocaching",
-      "summary": null
+      "summary": "Site Web contenant des outils online pour la communauté geocaching.\npitaso.com devenu maintenant geoking.fr"
     },
     {
       "startDate": "2012-07-31",
-      "name": null,
-      "summary": null
+      "name": "Platforme de développement rapide pour application iPhone",
+      "summary": "Platforme de développement rapide pour application iPhone"
     },
     {
       "startDate": "2010-08-31",
@@ -698,14 +698,14 @@
         "Agreement from Pont-Et-Chaussee to access their API"
       ],
       "name": "Eye Traffic - Info traffic Luxembourg",
-      "summary": null
+      "summary": "Extension Chrome pour surveiller le traffic info au Luxembourg."
     },
     {
       "startDate": "2015-10-31",
       "url": "http://www.7amnevillois.fr",
       "endDate": "2022-08-31",
       "name": "Handball club Amnéville website",
-      "summary": null
+      "summary": "Réalisation du site Web du club de Amnéville sous Wordpress.\nValorisation du club, implication du comité dans ce nouvel outil de communication, promotion de nos équipes en N3 et prénationale, actualités, résultats et calendriers des différentes équipes"
     },
     {
       "startDate": "2009-12-31",
@@ -747,12 +747,12 @@
         "HTML",
         "CSS"
       ],
-      "name": null,
+      "name": "Facelift for a real estate website",
       "summary": "Facelift et ajout de plusieurs fonctionnalités du site Web Habiter.lu dédié aux annonces immobilières pour le compte d'Editus."
     }
   ],
   "meta": {
-    "version": "v2.0.1",
+    "version": "v2.0.2",
     "theme": "kendall",
     "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
   }
