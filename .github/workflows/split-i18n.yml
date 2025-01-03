@@ -8,6 +8,8 @@ on:
 jobs:
   split-languages:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
 
@@ -21,6 +23,8 @@ jobs:
           node .github/scripts/split-languages.js
 
       - name: Commit Changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"

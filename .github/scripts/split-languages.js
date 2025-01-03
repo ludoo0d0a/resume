@@ -11,24 +11,6 @@ function incrementPatchVersion(version) {
     return `${version.startsWith('v') ? 'v' : ''}${major}.${minor}.${parseInt(patch) + 1}`;
 }
 
-// Function to commit and push changes
-function commitAndPush(version) {
-    try {
-        execSync('git config --local user.email "action@github.com"');
-        execSync('git config --local user.name "GitHub Action"');
-
-        // Add only generated language files
-        LANGUAGES.forEach(lang => {
-            execSync(`git add resume.${lang}.json`);
-        });
-
-        execSync(`git commit -m "chore: update generated resume files to version ${version}"`);
-        execSync('git push');
-    } catch (error) {
-        console.log('No changes to commit or push failed');
-    }
-}
-
 // Read input file
 const resumeData = JSON.parse(fs.readFileSync('resume.i18n.json', 'utf8'));
 
@@ -69,5 +51,3 @@ LANGUAGES.forEach(lang => {
     fs.writeFileSync(`resume.${lang}.json`, JSON.stringify(version, null, 2));
 });
 
-// Commit and push only generated files
-//commitAndPush(newVersion);
