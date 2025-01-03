@@ -29,6 +29,13 @@
         "network": "Twitter",
         "username": "ludoo0d0a",
         "url": "https://twitter.com/ludoo0d0a"
+      },
+      {
+        "en_network": "CV en français",
+        "fr_network": "Resume in English",
+        "username": "Ludovic.Valente",
+        "en_url": "https://ludoo0d0a.github.io/resume/index-fr.html",
+        "fr_url": "https://ludoo0d0a.github.io/resume/index.html"
       }
     ]
   },
@@ -830,7 +837,7 @@
     }
   ],
   "meta": {
-    "version": "v2.0.2",
+    "version": "v2.0.3",
     "theme": "kendall",
     "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
   }
