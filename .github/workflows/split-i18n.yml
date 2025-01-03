@@ -1,0 +1,29 @@
+name: Translate resume files
+
+on:
+  push:
+    paths:
+      - 'resume.i18n.json'
+
+jobs:
+  split-languages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Create Language-Specific Files
+        run: |
+          node .github/scripts/split-languages.js
+
+      - name: Commit Changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add resume.en.json resume.fr.json
+          git commit -m "chore: update language-specific resume files" || exit 0
+          git push
