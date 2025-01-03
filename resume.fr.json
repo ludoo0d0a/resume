@@ -1,0 +1,769 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Ludovic Valente",
+    "image": "https://www.libravatar.org/avatar/0c1ddc83408f6f3966e7999083692f6d42832e1054640f4cc0a6e45aa2bc6779?d=retro&s=80",
+    "email": "ludovic.valente@gmail.com",
+    "phone": "",
+    "url": "https://scora.watch",
+    "location": {
+      "countryCode": "LU",
+      "address": "Luxembourg"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "ludovicvalente",
+        "url": "https://www.linkedin.com/in/ludovicvalente/"
+      },
+      {
+        "network": "Github",
+        "username": "ludoo0d0a",
+        "url": "https://github.com/ludoo0d0a"
+      },
+      {
+        "network": "Twitter",
+        "username": "ludoo0d0a",
+        "url": "https://twitter.com/ludoo0d0a"
+      },
+      {
+        "network": "Resume in English 🇬🇧 ",
+        "username": "Resume of Ludovic Valente",
+        "url": "https://ludoo0d0a.github.io/resume/index.html"
+      },
+      {
+        "network": "PDF",
+        "username": "cv.pdf 📄 ",
+        "url": "https://ludoo0d0a.github.io/resume/pdf/cv-ludovic-valente-fr.pdf"
+      }
+    ],
+    "label": "Ingénieur logiciel fullstack @SFΞIR Luxembourg",
+    "summary": "Développeur Senior Fullstack, architecte IT, formateur VueJs, tech lead, développeur Flutter/Android.\n\nFocalisé sur l'architecture moderne autour des besoins web et mobiles.\nJe crée des applications modernes avec des technologies émergentes s'appuyant sur une architecture efficace.\n\nCompétences principales/favorites : Java, SpringBoot, Android KMP, ElasticSearch, NodeJs, VueJs, Flutter"
+  },
+  "work": [
+    {
+      "name": "SFEIR",
+      "position": "Fullstack software engineer",
+      "startDate": "2017-08-31",
+      "highlights": [
+        "java",
+        "SpringBoot",
+        "Kafka",
+        "Cloud",
+        "Android Mobile"
+      ],
+      "url": "https://www.linkedin.com/company/sfeir/",
+      "location": "Luxembourg",
+      "summary": "Consultant dans le développement et l'architecture de logiciels"
+    },
+    {
+      "name": "SFEIR",
+      "position": "Engineer manager",
+      "startDate": "2018-01-31",
+      "endDate": "2024-12-31",
+      "url": "https://www.linkedin.com/company/sfeir/",
+      "location": "Luxembourg",
+      "highlights": [
+        "suivi",
+        "carrière",
+        "RH",
+        "formation"
+      ],
+      "summary": "Responsable d'une équipe de 10 collaborateurs, en charge du suivi de carrière, formation, mission et clients, participation aux décisions de l'agence Luxembourg."
+    },
+    {
+      "name": "Temenos",
+      "position": "Senior Software Developer",
+      "startDate": "2024-07-31",
+      "endDate": "2024-12-31",
+      "highlights": [
+        "java",
+        "SpringBoot",
+        "keycloak",
+        "jwt",
+        "jsonApi",
+        "jsonSchema",
+        "unit testing",
+        "integration testing"
+      ],
+      "url": "https://www.linkedin.com/company/temenos/",
+      "location": "Bertrange, Luxembourg, Luxembourg",
+      "summary": "En tant que développeur senior, ma mission pour Sfeir est d'aider à créer une plateforme de données sur le système existant Multifonds Temenos, pour fournir des portails personnalisés."
+    },
+    {
+      "name": "Foyer Group",
+      "position": "Architect, Expert leader",
+      "startDate": "2023-02-28",
+      "endDate": "2024-06-01",
+      "highlights": [
+        "AWS",
+        "SpringBoot",
+        "scala",
+        "CI/CD",
+        "Kubernetes",
+        "argoCD",
+        "JWT"
+      ],
+      "url": "https://www.linkedin.com/company/foyer-assurances/",
+      "location": "Leudelange, Luxembourg, Luxembourg",
+      "summary": "J'ai rejoint l'équipe architecture MEO pour améliorer la qualité, l'architecture et les processus autour de la production logicielle au sein du Groupe Foyer.\nBeaucoup de défis intéressants ici !"
+    },
+    {
+      "name": "Fundsquare",
+      "position": "Ingenieur développement fullstack",
+      "startDate": "2017-08-31",
+      "endDate": "2023-02-28",
+      "highlights": [
+        "SpringBoot",
+        "Camunda BPM",
+        "Kafka",
+        "Trifacta",
+        "Camel",
+        "MsSql",
+        "Mongo",
+        "Elasticsearch",
+        "Kubernetes",
+        "AKS",
+        "Azure",
+        "ESB",
+        "Openshift",
+        "React",
+        "GraphQL",
+        "NodeJs"
+      ],
+      "url": "https://www.linkedin.com/company/fundsquare/",
+      "location": "Luxembourg",
+      "summary": "En tant que développeur senior, je gère principalement la plateforme de collecte pour obtenir des données, le traitement, le nettoyage.\nLes principales données collectées sont Priips EPT, Mifid EMT, EET, ...\n\nEn tant que tech lead, je coordonne les équipes, rédige l'architecture et organise les choses avec tous les acteurs pour atteindre une solution stable et techniquement viable, correspondant à la vision cible.\n\nJe conçois et développe la plupart des modèles comme les couches de données, l'orchestration, la chorégraphie, les transactions distribuées, la communication événementielle, la surveillance métier, les spécifications de contrat avec json schema, les générateurs de code pour les microservices prêts à déployer et pour les clients API, les scripts d'outillage devops pour le développement local, la livraison et le dépannage.\n\nLa stack est composée de plusieurs couches autour de ces technologies principales :\n- SpringBoot, Camunda BPM, Kafka, Trifacta, Camel, MsSql, Mongo, Elasticsearch, Kubernetes, AKS, ESB, Openshift, React, GraphQL, NodeJs\n\nNous travaillons en collaboration avec l'équipe d'architecture de la Bourse du Luxembourg pour évoluer vers une solution moderne, native cloud dans Azure.\n\nEn 5 ans, nous sommes passés complètement de legacy tomcat+mssql+esb à des micro-services distribués event driven+mongo+kafka cloud native.\n\nDepuis l'acquisition de Fundsquare par Fe Fundinfo, l'objectif à court terme est de passer complètement en cloud native et d'intégrer leur plateforme."
+    },
+    {
+      "position": "Senior Software Developer",
+      "startDate": "2021-01-31",
+      "endDate": "2021-10-31",
+      "highlights": [
+        "Spring",
+        "Kafka",
+        "Mongo",
+        "Azure",
+        "Openshift"
+      ],
+      "url": "https://www.linkedin.com/company/luxembourg-stock-exchange/",
+      "location": "Luxembourg",
+      "name": "Bourse de Luxembourg",
+      "summary": "Temps partiel entre LuxSE et Fundsquare (pour Sfeir)\n\nL'objectif est de développer un nouvel ensemble d'outils communs.\nCes services sont partagés par LuxSE et Fundsquare.\nHébergé dans Azure, s'appuyant sur Spring - Kafka - Mongo, je suis en charge du développement de plusieurs services.\nLe connecteur FTP, le catalogue API sont les premiers services de cette plateforme."
+    },
+    {
+      "name": "SOGETI Luxembourg",
+      "position": "Fullstack software engineer",
+      "startDate": "2017-06-30",
+      "endDate": "2017-08-31",
+      "highlights": [
+        "Java",
+        "Spring",
+        "Eclipse",
+        "Xml",
+        "AkomaNtoso",
+        "Xsd",
+        "Dtd",
+        "Jira"
+      ],
+      "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
+      "location": "Bertrange",
+      "summary": "Outil de conversion pour le Parlement européen.\n\nCe moteur MsWord vers Xml est utilisé en production pour produire des documents xml conformes aux règles fournies par le PE.\nJ'ai construit le cœur du moteur au démarrage du projet.\nPendant ces 3 mois, j'ai fait monter le projet d'un niveau en termes de lisibilité, de tests, de maintenance, de support de nouveaux formats.\n\nAmélioration de la qualité, support des tests, amélioration du moteur de règles, réécriture des règles et des transformateurs pour les 2 formats principaux.\n\nJava, Spring, Eclipse, Xml, AkomaNtoso, Xsd, Dtd, Jira"
+    },
+    {
+      "name": "Sogeti luxembourg",
+      "position": "Fullstack software engineer",
+      "startDate": "2001-06-30",
+      "endDate": "2017-08-31",
+      "highlights": [
+        "Java",
+        "Spring",
+        "nodejs",
+        "Backbone",
+        "Android"
+      ],
+      "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
+      "location": "Bertrange, Luxembourg",
+      "summary": "J'ai travaillé pour des institutions européennes et nationales en tant qu'ingénieur logiciel Fullstack.\nLes projets sont principalement axés sur les technologies web et mobiles.\nJava+Spring, nodejs, Backbone, Android..., je suis les standards modernes et les nouvelles bibliothèques et frameworks performants.\nIntégré dans plusieurs équipes de différents clients, j'aime travailler avec des personnes de différents horizons multiculturels.\n\nVoir les détails ci-dessus :"
+    },
+    {
+      "name": "SOGETI Luxembourg",
+      "position": "Fullstack software engineer",
+      "startDate": "2017-01-31",
+      "endDate": "2017-06-30",
+      "highlights": [
+        "JHipster",
+        "Spring Boot",
+        "ElasticSeach",
+        "Angular",
+        "Bootstrap",
+        "webpack",
+        "grunt",
+        "nodejs",
+        "jdk7",
+        "tomcat7"
+      ],
+      "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
+      "location": "Luxembourg",
+      "summary": "au Parlement européen, unité DAS (Traduction)\n\nRedémarrer une plateforme collaborative à partir de zéro.\nMigration technologique complète de Sharepoint vers Java/Angular.\nLes premières étapes doivent poser les bases d'un système collaboratif entièrement extensible, s'appuyant fortement sur les données métier.\n\nJHipster / Spring Boot / ElasticSeach / Angular / Bootstrap / webpack / grunt / nodejs / jdk7 / tomcat7"
+    },
+    {
+      "name": "SOGETI Luxembourg",
+      "position": "Fullstack software engineer",
+      "startDate": "2016-06-30",
+      "endDate": "2016-12-31",
+      "highlights": [
+        "Spring Boot",
+        "Spring Cloud",
+        "microservices architecture",
+        "angular",
+        "bootstrap",
+        "bower",
+        "grunt",
+        "jpa",
+        "Oracle",
+        "tomcat",
+        "java8"
+      ],
+      "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
+      "location": "Luxembourg",
+      "summary": "au Parlement européen, unité DAS (Traduction)\n\nSPA+ : Participer à l'architecture orientée services ; Construire et configurer un routeur/proxy.\nSocrates : Construction d'un gestionnaire d'événements basé sur REST pour compléter la suite d'outils\n\n-> Spring Boot, Spring Cloud, architecture microservices, angular, bootstrap, bower, grunt, jpa, Oracle, tomcat, java8"
+    },
+    {
+      "name": "SOGETI Luxembourg",
+      "position": "Fullstack software engineer",
+      "startDate": "2016-01-31",
+      "endDate": "2016-06-30",
+      "highlights": [
+        "ElasticSearch",
+        "Spring Data",
+        "Java",
+        "Backbone",
+        "Marionette",
+        "Bootstrap",
+        "Grunt",
+        "Maven",
+        "REST",
+        "json"
+      ],
+      "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
+      "summary": "au Parlement européen, unité DAS (Traduction)\n\nSirius : Moteur de recherche - Architecte, analyste technique, développement, intégration web, tests, déploiements.\nMettre en œuvre une solution basée sur ElasticSearch pour des millions de documents dans un contexte multilingue et de traduction. Application web en architecture SPA, responsive et orientée REST.\n\n-> ElasticSearch, Spring Data, Java, Backbone, Marionette, Bootstrap, Grunt, Maven, REST, json"
+    },
+    {
+      "name": "SOGETI Luxembourg",
+      "position": "Web/Java developer",
+      "startDate": "2014-10-31",
+      "endDate": "2015-12-31",
+      "highlights": [
+        "Scrum",
+        "Spring",
+        "Java",
+        "ExtJs",
+        "Maven"
+      ],
+      "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
+      "location": "Luxembourg",
+      "summary": "au Parlement européen, unité DAS (Traduction)\n\nFluid+ : Rejoindre une équipe pour compléter une application web dédiée à la gestion des contrats pour les unités de traduction.\nSupport pour les équipes sur Sencha ExtJs.\nConseiller UX pour l'unité.\n-> Scrum, Spring, Java, ExtJs, Maven"
+    },
+    {
+      "name": "SOGETI Luxembourg",
+      "position": "IT Consultant",
+      "startDate": "2014-03-31",
+      "endDate": "2014-09-30",
+      "highlights": [
+        "SolrCloud",
+        "ZooKeeper",
+        "Vagrant",
+        "Python"
+      ],
+      "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
+      "location": "Luxembourg",
+      "summary": "à BNL - Bibliothèque Nationale du Luxembourg\n\nEtude Solr pour un moteur de recherche performant pour eluxemburgensia.lu.\nRechercher, investiguer, tester et réaliser des prototypes avec Solr.\nIntégration forte à l'outil existant A-Z.lu et au viewer eluxemburgensia.lu.\nProblématique de scalabilité et performance.\nRéalisation de prototype avec SolrCloud.\n\nSolr 4.8 - SolrCloud - ZooKeeper - Vagrant - Python -"
+    },
+    {
+      "name": "SOGETI Luxembourg",
+      "position": "Android Mobile Developer",
+      "startDate": "2013-10-31",
+      "endDate": "2014-03-31",
+      "highlights": [
+        "ADT",
+        "AndroidStudio",
+        "Gradle",
+        "Volley",
+        "AndroidPlot",
+        "GreenDAO",
+        "Eclipse",
+        "Spring MVC",
+        "Apache Commons",
+        "Rest",
+        "XML"
+      ],
+      "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
+      "location": "Luxembourg",
+      "summary": "Développement d'une app Android pour effectuer le relevé des prix pour le STATEC (statec.lu).\nRéalisation des services backend (Java, Spring MVC)\n\nAndroid SDK 4.ADT, AndroidStudio, Gradle, Volley, AndroidPlot, GreenDAO\nEclipse, Spring MVC, Apache Commons, Rest, XML"
+    },
+    {
+      "name": "SOGETI Luxembourg",
+      "position": "Mobile developer - iOS",
+      "startDate": "2013-06-30",
+      "endDate": "2013-07-31",
+      "highlights": [
+        "iOs",
+        "RestKit",
+        "NodeJs",
+        "Express"
+      ],
+      "summary": "pour Editus Luxembourg,\n\nPour l'app iPhone/iPad habiter.lu, développement de l'API avec RestKit.\nMockup avec NodeJs et Express."
+    },
+    {
+      "name": "SOGETI Luxembourg",
+      "position": "Développeur - architecte Web/Java",
+      "startDate": "2013-03-31",
+      "endDate": "2013-06-30",
+      "highlights": [
+        "ExtJs",
+        "java"
+      ],
+      "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
+      "location": "Luxembourg",
+      "summary": "à BNL - Bibliothèque nationale du Luxembourg\n\nMise à jour du projet eLuxemburgensia.\nSupport de ExtJs 4.2\nProcess de build avec Sencha Cmd.\nRefonte des thèmes en SASS.\nDécouplage du repository pour amélioration des performances.\nSupport des livres.\nArchitecture des caches revue."
+    },
+    {
+      "name": "SOGETI Luxembourg",
+      "position": "Web/Java developer",
+      "startDate": "2012-11-30",
+      "endDate": "2013-02-28",
+      "highlights": [
+        "java",
+        "jQuery",
+        "jQueryUI",
+        "pdfBox",
+        "Documentum"
+      ],
+      "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
+      "location": "Luxembourg / Monaco",
+      "summary": "à Société Générale Bank & Trust\n\nBasé sur Documentum, nous développons une webapp pour gérer les PDF en utilisant des workflows métier.\nGrâce à pdfBox, j'ai géré l'édition PDF.\nJ'ai réalisé l'interface web complexe avec jQueryUI et d'autres plugins jQuery.\n---\nDéveloppement d'un outil de gestion documentaire.\nBasé sur Documentum, l'application Web permet de gérer les workflows des documents PDF.\nConception de l'interface avec jQueryUI.\nEdition/manipulation des PDF avec pdfBox."
+    },
+    {
+      "name": "SOGETI Luxembourg",
+      "position": "Web/Java developer",
+      "startDate": "2012-01-31",
+      "endDate": "2012-05-31",
+      "highlights": [],
+      "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
+      "summary": "à BNL - Bibliothèque nationale du Luxembourg\n\nAjout de nouvelles fonctionnalités sur le visualiseur Web Media utilisé dans eluxemburgensia.lu"
+    },
+    {
+      "name": "SOGETI Luxembourg",
+      "position": "Software engineer",
+      "startDate": "2011-11-30",
+      "endDate": "2011-12-31",
+      "highlights": [],
+      "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
+      "location": "luxembourg",
+      "summary": "à BNL - Bibliothèque nationale du Luxembourg\npour LNB - Bibliothèque de Lettonie\n\nPublier un visualiseur de médias, développé précédemment, en tant que projet opensource.\nSupprimer les dépendances propriétaires et créer un mode libre à la place.\nDonner à l'application un haut niveau de couplage lâche et la capacité d'être bien intégrée dans d'autres systèmes.\n\nhttp://sourceforge.net/projects/bnlviewer/\n\nMaintenant le projet est utilisé dans http://www.periodika.lv"
+    },
+    {
+      "name": "SOGETI Luxembourg",
+      "position": "Consultant",
+      "startDate": "2010-05-31",
+      "endDate": "2011-12-31",
+      "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
+      "location": "Luxembourg",
+      "highlights": [
+        "Java",
+        "Spring",
+        "Hibernate",
+        "jQueryUI",
+        "Virtualization system (AppV,SCCM,...)",
+        "Oracle",
+        "AD/LDAP",
+        "JavaWebStart"
+      ],
+      "summary": "au Parlement européen - Développement d'applications Web\n\ne-dictionaries est un outil web pour distribuer et lancer des dictionnaires (web ou locaux) selon les licences relatives.\nLes utilisateurs peuvent facilement gérer leurs dictionnaires favoris sur leur portail.\nL'administration inclut la gestion des licences, les rapports statistiques, l'aperçu graphique des expirations et des quotas dépassés.\nUtilisé par tous les traducteurs pour leurs traductions quotidiennes."
+    },
+    {
+      "position": "Software engineer",
+      "startDate": "2009-08-31",
+      "endDate": "2010-05-31",
+      "highlights": [
+        "ExtJs",
+        "Java",
+        "xml",
+        "ALTO",
+        "Mets"
+      ],
+      "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
+      "summary": "à BNL - Bibliothèque nationale du Luxembourg\nCréation et intégration d'un nouveau client Web (ExtJs/Java) pour consulter les journaux et livres en ligne.\nStandards Mets/alto. Application Web2.0 complète."
+    },
+    {
+      "name": "SOGETI Luxembourg",
+      "position": "Senior Software Engineer - J2EE, XML, DMS/CMS, ExtJs specialist",
+      "startDate": "2007-09-30",
+      "endDate": "2009-07-31",
+      "highlights": [
+        "SOA",
+        "java",
+        "J2EE",
+        "XSL",
+        "xml",
+        "Bonita workflow",
+        "Jahia"
+      ],
+      "url": "https://www.linkedin.com/company/sogeti/",
+      "summary": "au Parlement européen :\n- Étude et support pour l'adoption d'un moteur de workflow : Bonita\n- Intégration du workflow dans une approche SOA\n- Support XML, XSL aux équipes projet\n- Support Jahia (utilisation, dev personnalisé, correction de bugs, ...) aux équipes projet\n- Études sur différents systèmes de gestion documentaire\n- Développement de projets J2EE"
+    },
+    {
+      "name": "Sogeti",
+      "position": "IT architect",
+      "startDate": "2006-09-30",
+      "endDate": "2007-08-31",
+      "highlights": [
+        "jsf",
+        "ejb",
+        "toplink orm",
+        "Jdeveloper",
+        "xml"
+      ],
+      "url": "https://www.linkedin.com/company/sogeti/",
+      "summary": "Client : Cour de Justice européenne.\nCréation d'une équipe d'architecture en charge de la veille concurrentielle et de l'installation d'un nouvel environnement de développement homogène (technologies, outils, tests, ergonomie)."
+    },
+    {
+      "name": "Sogeti",
+      "position": "Software analyst developer",
+      "startDate": "2006-01-31",
+      "endDate": "2007-08-31",
+      "highlights": [
+        "Java",
+        "XSL",
+        "Ajax",
+        "XML",
+        "Oracle10g xmlDB",
+        "OracleText contextual search"
+      ],
+      "url": "https://www.linkedin.com/company/sogeti/",
+      "summary": "Client : Cour de Justice européenne.\nDéveloppeur principal sur un système Intranet : la première application hébergée par ce nouveau système est un outil de recherche permettant de fusionner et d'abstraire toutes les différentes sources de données."
+    },
+    {
+      "name": "Sogeti",
+      "position": "Software analyst developer",
+      "startDate": "2006-01-31",
+      "endDate": "2006-02-28",
+      "highlights": [
+        "Word",
+        "VB",
+        "VBA",
+        "icu",
+        "java",
+        "jsp",
+        "OIDC",
+        "ldap"
+      ],
+      "url": "https://www.linkedin.com/company/sogeti/",
+      "summary": "Client : Cour de Justice européenne.\\nDéveloppeur principal sur un moteur de recherche dédié aux Canevas permettant de rechercher et d'insérer des références dans les 20 langues différentes.\\nApplication Web J2EE utilisant Struts, JSP, authentification via LDAP AD/OID, base de données Oracle, utilisation d'ICU pour faciliter la traduction internationale et la manipulation de chaînes."
+    },
+    {
+      "name": "Sogeti",
+      "position": "Software analyst developer",
+      "startDate": "2005-08-31",
+      "endDate": "2006-02-28",
+      "highlights": [
+        "Word",
+        "VB",
+        "VBA",
+        "icu",
+        "java",
+        "jsp",
+        "OIDC",
+        "ldap"
+      ],
+      "url": "https://www.linkedin.com/company/sogeti/",
+      "summary": "Client : Cour de Justice européenne.\nAnalyste et développeur pour un projet de gestion de toutes les décisions prises lors des audiences concernant les différentes affaires.\nApplication Web J2EE utilisant Struts, JSP et taglibs métier, authentification via LDAP AD/OID, base de données Oracle et sérialisation XML"
+    },
+    {
+      "name": "Sogeti",
+      "position": "Software analyst developer",
+      "startDate": "2001-09-30",
+      "endDate": "2004-09-30",
+      "highlights": [
+        "VB",
+        "Word VBA",
+        "Servlets Java",
+        "XML",
+        "XSL",
+        "WordML",
+        "Oracle10g database"
+      ],
+      "url": "https://www.linkedin.com/company/sogeti/",
+      "summary": "Client : Cour de Justice européenne.\nDéveloppeur principal / analyste sur un projet nommé Canevas.\nC'est une application bureautique multi-niveaux pour la création de documents judiciaires"
+    },
+    {
+      "name": "Quaternove",
+      "startDate": "2000-09-30",
+      "endDate": "2001-09-30",
+      "highlights": [
+        "VB",
+        "industrial prototyping",
+        "Suppliers management"
+      ],
+      "position": "Chef de projet",
+      "summary": "THALES e-Transactions fournit des imprimantes dans des bornes pour la délivrance de billets dans les aéroports et les gares. Ce projet visait à fournir plusieurs prototypes de ces machines et à passer à la ligne de production avec tous les certificats nécessaires.\n•\tDéveloppement électronique et mécanique\n•\tGestion de la production\n•\tGestion des fournisseurs\n•\tSystème informatique (VB, communication série) pour contrôler différentes imprimantes lors des divers tests afin d'obtenir les certificats"
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "Ecole nationale d'Ingénieurs de Metz",
+      "startDate": "1995-12-31",
+      "endDate": "2000-12-31",
+      "score": "",
+      "courses": [],
+      "area": "Ingénieur généraliste, spécialisé mécanique",
+      "studyType": "Diplôme d'ingénieur"
+    }
+  ],
+  "awards": [],
+  "certificates": [],
+  "publications": [
+    {
+      "name": "Scora",
+      "releaseDate": "2024-09-03",
+      "url": "https://play.google.com/store/apps/details?id=fr.geoking.tennis.scoreboard.wear",
+      "summary": "Tableau de score tennis pour montre Google Android WearOS"
+    },
+    {
+      "releaseDate": "2019-10-09",
+      "url": "https://www.npmjs.com/package/passport-geocaching",
+      "name": "Passport pour Geocaching",
+      "summary": "Stratégie d'authentification Geocaching pour Passport et Node.js"
+    }
+  ],
+  "skills": [
+    {
+      "keywords": [
+        "HTML / JSX",
+        "SCSS / CSS / Styled Components / Material",
+        "Javascript / Typescript",
+        "React",
+        "Angular",
+        "VueJs",
+        "Sencha ExtJs",
+        "Backbone.js",
+        "Webpack",
+        "Redux",
+        "Chrome Extensions",
+        "GruntJS",
+        "GreaseMonkey",
+        "Figma"
+      ],
+      "level": "Senior",
+      "name": "Frontend"
+    },
+    {
+      "keywords": [
+        "Node",
+        "Java",
+        "Spring",
+        "SpringBoot",
+        "Solr",
+        "ElasticSearch",
+        "Python",
+        "Kotlin",
+        "scala",
+        "Postgres",
+        "Redis",
+        "Serverless",
+        "Keycloak",
+        "Kafka",
+        "Microservices",
+        "REST",
+        "SOA",
+        "JHipster",
+        "Hibernate",
+        "XSL/XSLT",
+        "MongoDb",
+        "Oracle",
+        "PostgreSQL"
+      ],
+      "level": "Senior",
+      "name": "Backend"
+    },
+    {
+      "keywords": [
+        "AWS",
+        "Azure / AKS",
+        "Google Cloud / GCP",
+        "Netlify",
+        "kubernetes"
+      ],
+      "level": "Senior",
+      "name": "Cloud"
+    },
+    {
+      "keywords": [
+        "Github actions",
+        "argoCD",
+        "Jenkins"
+      ],
+      "level": "Senior",
+      "name": "CI/CD"
+    },
+    {
+      "keywords": [
+        "Flutter",
+        "iOs / Swift / ObjectiveC",
+        "Android / Kotlin / Jetpack compose / KMP",
+        "Ionic Framework",
+        "Gradle"
+      ],
+      "level": "Senior",
+      "name": "Mobile"
+    }
+  ],
+  "languages": [
+    {
+      "language": "French",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Fluent"
+    }
+  ],
+  "interests": [],
+  "references": [
+    {
+      "name": "Vincent Mellano",
+      "reference": "I had the chance to work with Ludovic at the European Parliament for about 2 years.\r\nThe way he can deliver quality software on a very short time using cutting-edge technologies is very impressive.\r\nHis experience and ability to foresee problems at the very first phases of the project helped us a lot while taking decisions.\r\nI would recommend Ludovic to anyone looking for a highly skilled, effective and professional software engineer."
+    },
+    {
+      "name": "Pierre-antoine Gregoire",
+      "reference": "Ludovic is a very talented person. He can tackle hard tasks in a short schedule while maintaining the quality of the result. He was an invaluable partner during the time we spent working in the same service of the European parliament, and I can't wait to work with him again in the future years if it is made possible. \r\nIn the meantime, I can only recommend him to anybody looking for a capable professional, who doesn't lack neither the ability to learn nor an advanced existing technical knowledge."
+    }
+  ],
+  "projects": [
+    {
+      "name": "Scora",
+      "startDate": "2022-12-31",
+      "url": "http://scora.watch",
+      "summary": "Application de comptage de points pour le tennis pour montre WearOS\nElle vous aide à compter les points pendant votre match de tennis.\n\nSite web: http://scora.watch\n\nPublié sur Google Play Store : https://play.google.com/store/apps/details?id=fr.geoking.tennis.scoreboard.wear",
+      "highlights": [
+        "Projet personnel en production",
+        "Technologie émergente KMP"
+      ]
+    },
+    {
+      "name": "Gorilla",
+      "startDate": "2023-10-31",
+      "url": "https://github.com/ludoo0d0a/gorilla",
+      "endDate": "2024-04-30",
+      "summary": "Framework JS pour automatiser les tâches sur le Web"
+    },
+    {
+      "name": "GCWizard",
+      "startDate": "2021-03-31",
+      "url": "https://gcwizard.net/",
+      "endDate": "2022-08-01",
+      "highlights": [
+        "Joined the team composed of great german guys",
+        "Improved search engine",
+        "Initiate translation engine and translators community and tools - Thanks crowdin",
+        "Steganography module"
+      ],
+      "summary": "Cette application mobile contient de nombreux outils hors ligne, tables et calculateurs pour soutenir le géocacheur en plein air ou à la maison dans la résolution de puzzles ou de calculs.\n\nDisponible pour iOs, Android et Web."
+    },
+    {
+      "startDate": "2015-09-30",
+      "url": "https://www.npmjs.com/~ludoo",
+      "endDate": "2015-09-30",
+      "highlights": [
+        "javascript",
+        "oauth2",
+        "npm",
+        "nodejs",
+        "backbone"
+      ],
+      "name": "Bibliothèques npm/nodejs pour backbone et passport",
+      "summary": "Dévéloppement et mise à disposition sous npmjs et github de composants NodeJs.\n- backgrid (grid / backbone) : fork compatible CommonJs.\n- Strategy passport.js pour geocaching\n- Api geocaching NodeJs"
+    },
+    {
+      "startDate": "2014-03-31",
+      "url": "http://www.geoking.fr",
+      "endDate": "2020-03-31",
+      "highlights": [
+        "Logbook creator widely used by community"
+      ],
+      "name": "Outils pour le géocaching",
+      "summary": "Site Web contenant des outils online pour la communauté geocaching.\npitaso.com devenu maintenant geoking.fr"
+    },
+    {
+      "startDate": "2012-07-31",
+      "name": "Platforme de développement rapide pour application iPhone",
+      "summary": "Platforme de développement rapide pour application iPhone"
+    },
+    {
+      "startDate": "2010-08-31",
+      "url": "https://chrome.google.com/webstore/detail/kieaniodbboioemmcghcbkfgpmopffdc",
+      "highlights": [
+        "Agreement from Pont-Et-Chaussee to access their API"
+      ],
+      "name": "Eye Traffic - Info traffic Luxembourg",
+      "summary": "Extension Chrome pour surveiller le traffic info au Luxembourg."
+    },
+    {
+      "startDate": "2015-10-31",
+      "url": "http://www.7amnevillois.fr",
+      "endDate": "2022-08-31",
+      "name": "Handball club Amnéville website",
+      "summary": "Réalisation du site Web du club de Amnéville sous Wordpress.\nValorisation du club, implication du comité dans ce nouvel outil de communication, promotion de nos équipes en N3 et prénationale, actualités, résultats et calendriers des différentes équipes"
+    },
+    {
+      "startDate": "2009-12-31",
+      "url": "https://chrome.google.com/webstore/detail/hhcknjkmaaeinhdjgimjnophgpbdgfmg",
+      "endDate": "2013-05-31",
+      "name": "Extension Chrome ReaderPlus",
+      "summary": "Chrome extension for Google Reader.\nEnhances navigation and presentation by adding a theme, social sharing features, quick article preview, icons, filtering, and more...\nReached 80,000 users before GoogleReader shutdown.\nProject transferred to a Chinese team.",
+      "highlights": [
+        "HTML5",
+        "CSS3",
+        "Javascript",
+        "Disponible sur le Chrome Store",
+        "Plus de 80000 utilisateurs",
+        "Article dans Lifehacker : https://lifehacker.com/reader-plus-is-a-chrome-extension-that-adds-missing-fea-5798022",
+        "Projet vendu",
+        "Plus de 600 issues/requêtes"
+      ]
+    },
+    {
+      "startDate": "2012-09-30",
+      "url": "http://apps.microsoft.com/windows/fr-be/app/cityreal/8c70e367-e1bd-4890-8519-857389282fe1",
+      "endDate": "2012-10-31",
+      "highlights": [
+        "HTML5",
+        "CSS3",
+        "Javascript",
+        "WebJs",
+        "Visual Studio"
+      ],
+      "name": "Application Windows8",
+      "summary": "Création et publication d'une application mobile Windows8.\nGestion immobilière pour une agence immobilière parisienne."
+    },
+    {
+      "startDate": "2012-06-30",
+      "url": "http://habiter.lu",
+      "endDate": "2012-06-30",
+      "highlights": [
+        "PHP",
+        "HTML",
+        "CSS"
+      ],
+      "name": "Facelift for a real estate website",
+      "summary": "Facelift et ajout de plusieurs fonctionnalités du site Web Habiter.lu dédié aux annonces immobilières pour le compte d'Editus."
+    }
+  ],
+  "meta": {
+    "version": "v2.0.3",
+    "theme": "kendall",
+    "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
+  }
+}
