@@ -17,13 +17,7 @@ jobs:
   convert:
     runs-on: ubuntu-latest
     steps:
-#      - name: Download HTML artifacts
-#        uses: dawidd6/action-download-artifact@v2
-#        with:
-#          workflow: ${{ github.event.workflow_run.workflow_id }}
-#          workflow_conclusion: success
-#          name: ${{ inputs.artifact_name || 'resume-html' }}
-#          path: .
+#      - uses: actions/checkout@v4
 
       - name: Download HTML artifacts
         uses: actions/download-artifact@v4
@@ -43,15 +37,15 @@ jobs:
           chromium --headless --disable-gpu --print-to-pdf=resume-ludovic-valente-en.pdf index.html
           chromium --headless --disable-gpu --print-to-pdf=cv-ludovic-valente-fr.pdf index-fr.html
 
-      - name: Commit PDFs
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add resume-ludovic-valente-en.pdf cv-ludovic-valente-fr.pdf
-          git commit -m "chore: update resume PDFs" || exit 0
-          git push
+#      - name: Commit PDFs
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#        run: |
+#          git config --local user.email "action@github.com"
+#          git config --local user.name "GitHub Action"
+#          git add resume-ludovic-valente-en.pdf cv-ludovic-valente-fr.pdf
+#          git commit -m "chore: update resume PDFs" || exit 0
+#          git push
 
       # The PDFs will be accessible at:
       # - https://ludoo0d0a.github.io/resume/resume-ludovic-valente-en.pdf
