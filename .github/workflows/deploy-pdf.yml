@@ -20,9 +20,9 @@ jobs:
       - name: Download HTML artifacts
         uses: dawidd6/action-download-artifact@v2
         with:
-          workflow: deploy-resume.yml
+          workflow: split-i18n.yml
           name: ${{ inputs.artifact_name || 'resume-html' }}
-          path: html
+          path: .
 
       - name: Install Chrome
         run: |
