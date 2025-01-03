@@ -1,0 +1,121 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Ludovic Valente",
+    "en_label": "Fullstack software engineer @SFΞIR Luxembourg",
+    "fr_label": "Ingénieur logiciel fullstack @SFΞIR Luxembourg",
+    "image": "https://www.libravatar.org/avatar/0c1ddc83408f6f3966e7999083692f6d42832e1054640f4cc0a6e45aa2bc6779?d=retro&s=80",
+    "email": "ludovic.valente@gmail.com",
+    "phone": "",
+    "url": "https://github.com/ludoo0d0a",
+    "en_summary": "Senior Application Fullstack Developer, IT architect, VueJs Trainer, tech lead, Flutter/Android developer.\n\nFocused on modern architecture around mobility and web requirements.\nI create modern apps with emergent technologies relying on efficient architecture.\n\nMain/favorite skills : Java, SpringBoot, Android KMP, ElasticSearch, NodeJs, VueJs, Flutter",
+    "fr_summary": "Développeur Senior Fullstack, architecte IT, formateur VueJs, tech lead, développeur Flutter/Android.\n\nFocalisé sur l'architecture moderne autour des besoins web et mobiles.\nJe crée des applications modernes avec des technologies émergentes s'appuyant sur une architecture efficace.\n\nCompétences principales/favorites : Java, SpringBoot, Android KMP, ElasticSearch, NodeJs, VueJs, Flutter",
+    "location": {
+      "countryCode": "LU",
+      "address": "Luxembourg"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "ludovicvalente",
+        "url": "https://www.linkedin.com/in/ludovicvalente/"
+      },
+      {
+        "network": "Github",
+        "username": "ludoo0d0a",
+        "url": "https://github.com/ludoo0d0a"
+      },
+      {
+        "network": "Twitter",
+        "username": "ludoo0d0a",
+        "url": "https://twitter.com/ludoo0d0a"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "SFEIR",
+      "position": "Fullstack software engineer",
+      "startDate": "2017-08-31",
+      "highlights": [
+        "java",
+        "SpringBoot",
+        "Kafka",
+        "Cloud",
+        "Android Mobile"
+      ],
+      "en_summary": "Consultant in software development and architecture",
+      "fr_summary": "Consultant dans le développement et l'architecture de logiciels",
+      "url": "https://www.linkedin.com/company/sfeir/",
+      "location": "Luxembourg"
+    },
+    {
+      "name": "SFEIR",
+      "position": "Engineer manager",
+      "startDate": "2018-01-31",
+      "endDate": "2024-12-31",
+      "en_highlights": [
+        "follow up",
+        "carreer",
+        "HR",
+        "formation"
+      ],
+      "fr_highlights": [
+        "suivi",
+        "carrière",
+        "RH",
+        "formation"
+      ],
+      "en_summary": "Managing a team of 10 collaborators, in charge of career follow-up, training, mission and clients, participation in Luxembourg agency decisions.",
+      "fr_summary": "Responsable d'une équipe de 10 collaborateurs, en charge du suivi de carrière, formation, mission et clients, participation aux décisions de l'agence Luxembourg.",
+      "url": "https://www.linkedin.com/company/sfeir/",
+      "location": "Luxembourg"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Scora",
+      "releaseDate": "2024-09-03",
+      "en_summary": "Tennis scoreboard for watch on Google Android WearOS",
+      "fr_summary": "Tableau de score tennis pour montre Google Android WearOS",
+      "url": "https://play.google.com/store/apps/details?id=fr.geoking.tennis.scoreboard.wear"
+    },
+    {
+      "name": "Passport for Geocaching",
+      "releaseDate": "2019-10-09",
+      "en_summary": "Geocaching authentication strategy for Passport and Node.js",
+      "fr_summary": "Stratégie d'authentification Geocaching pour Passport et Node.js",
+      "url": "https://www.npmjs.com/package/passport-geocaching"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Scora",
+      "startDate": "2022-12-31",
+      "en_summary": "Tennis scoreboard app for WearOS watch\nIt helps you to count score during your tennis match.\n\nWebsite: http://scora.watch\n\nPublished on Google play Store : https://play.google.com/store/apps/details?id=fr.geoking.tennis.scoreboard.wear",
+      "fr_summary": "Application de tableau de score tennis pour montre WearOS\nElle vous aide à compter les points pendant votre match de tennis.\n\nSite web: http://scora.watch\n\nPublié sur Google Play Store : https://play.google.com/store/apps/details?id=fr.geoking.tennis.scoreboard.wear",
+      "url": "http://scora.watch",
+      "en_highlights": [
+        "Side project in production",
+        "KMP emergent technology"
+      ],
+      "fr_highlights": [
+        "Projet personnel en production",
+        "Technologie émergente KMP"
+      ]
+    },
+    {
+      "name": "Gorilla",
+      "startDate": "2023-10-31",
+      "en_summary": "JS framework to automate task in Web",
+      "fr_summary": "Framework JS pour automatiser les tâches sur le Web",
+      "url": "https://github.com/ludoo0d0a/gorilla",
+      "endDate": "2024-04-30"
+    }
+  ],
+  "meta": {
+    "version": "v2.0.0",
+    "theme": "kendall",
+    "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
+  }
+}
