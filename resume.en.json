@@ -358,6 +358,8 @@
       "position": "Consultant",
       "startDate": "2010-05-31",
       "endDate": "2011-12-31",
+      "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
+      "location": "Luxembourg",
       "highlights": [
         "Java",
         "Spring",
@@ -368,8 +370,6 @@
         "AD/LDAP",
         "JavaWebStart"
       ],
-      "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
-      "location": "Luxembourg",
       "summary": "at European Parliament - WebApplication development \n\ne-dictionaries is web tool to distribute and launch dictionaries (web or local) according to the relative licenses.\nUsers could easily manage their favorite dictionaries on its portal.\nAdministration includes licenses management, statistics reports, graphical overview of expiration and quota exceeded.\nUsed by all translators for their day to day translations."
     },
     {
@@ -752,7 +752,7 @@
     }
   ],
   "meta": {
-    "version": "v2.0.0",
+    "version": "v2.0.1",
     "theme": "kendall",
     "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
   }
