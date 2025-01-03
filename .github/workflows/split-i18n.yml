@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'resume.i18n.json'
+  workflow_dispatch:
 
 jobs:
   split-languages:
