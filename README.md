@@ -17,3 +17,6 @@ Idea is to have a single file `resume.i18n.json` having all translations node us
 }
 ```
 
+# TODO
+
+- A github.io page to display resume in different languages
