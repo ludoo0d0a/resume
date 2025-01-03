@@ -31,3 +31,10 @@ jobs:
           git add resume.en.json resume.fr.json
           git commit -m "chore: update language-specific resume files" || exit 0
           git push
+
+      - name: Update Gist
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GIST_ID: ${{ secrets.GIST_ID }}
+        run: |
+          gh gist edit $GIST_ID resume.json < resume.en.json
