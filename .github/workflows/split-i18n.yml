@@ -3,7 +3,12 @@ name: Translate resume files
 env:
   #THEME_NAME: 'kendall'
   THEME_NAME: 'ludoo'
-  LANGUAGES: '["en", "fr"]'  # JSON array format for parsing
+  LANGUAGES: |
+    [
+      "en",
+      "fr"
+    ]
+    
 
 on:
   push:
@@ -25,7 +30,7 @@ jobs:
       # Translate resume files
       - name: Create Language-Specific Files
         run: |
-          node .github/scripts/split-languages.js --langs=$${{env.LANGUAGES}}
+          node .github/scripts/split-languages.js --langs=${{env.LANGUAGES}}
 
       - name: Commit Changes
         env:
@@ -60,12 +65,27 @@ jobs:
             resume.*.json
             node_modules/
 
+  # Required because you cannot access the env context in matrix
+  gen-matrix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate Matrix
+        id: gen-matrix
+        run: |
+          # use heredoc with random delimiter for multiline JSON
+          delimiter="$(tr -dc A-Za-z0-9 </dev/urandom | head -c 20)"
+          echo "services<<$delimiter
+          $LANGUAGES
+          $delimiter" >> "$GITHUB_OUTPUT"
+    outputs:
+      services: ${{ steps.gen-matrix.outputs.languages }}
+
   build:
     needs: prepare
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        language: ${{ fromJson(env.LANGUAGES) }}
+        language: ${{ fromJson(needs.gen-matrix.outputs.languages) }}
     steps:
       - uses: actions/download-artifact@v4
         with:

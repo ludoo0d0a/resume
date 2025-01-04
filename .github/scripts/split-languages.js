@@ -7,6 +7,7 @@ const langsArg = args.find(arg => arg.startsWith('--langs='));
 let LANGUAGES = ['en', 'fr']; // default fallback
 
 if (langsArg) {
+    console.log('parameters :', langsArg);
     try {
         // Extract the array string after --langs= and parse it
         const langsStr = langsArg.split('--langs=')[1];
