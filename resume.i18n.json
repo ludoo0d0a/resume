@@ -693,8 +693,8 @@
     {
       "name": "Scora",
       "startDate": "2022-12-31",
-      "en_summary": "Tennis scoreboard app for WearOS watch\nIt helps you to count score during your tennis match.\n\nWebsite: http://scora.watch\n\nPublished on Google play Store : https://play.google.com/store/apps/details?id=fr.geoking.tennis.scoreboard.wear",
-      "fr_summary": "Application de comptage de points pour le tennis pour montre WearOS\nElle vous aide à compter les points pendant votre match de tennis.\n\nSite web: http://scora.watch\n\nPublié sur Google Play Store : https://play.google.com/store/apps/details?id=fr.geoking.tennis.scoreboard.wear",
+      "en_description": "Tennis scoreboard app for WearOS watch\nIt helps you to count score during your tennis match.\n\nWebsite: http://scora.watch\n\nPublished on Google play Store : https://play.google.com/store/apps/details?id=fr.geoking.tennis.scoreboard.wear",
+      "fr_description": "Application de comptage de points pour le tennis pour montre WearOS\nElle vous aide à compter les points pendant votre match de tennis.\n\nSite web: http://scora.watch\n\nPublié sur Google Play Store : https://play.google.com/store/apps/details?id=fr.geoking.tennis.scoreboard.wear",
       "url": "http://scora.watch",
       "en_highlights": [
         "Side project in production",
@@ -708,16 +708,16 @@
     {
       "name": "Gorilla",
       "startDate": "2023-10-31",
-      "en_summary": "JS framework to automate task in Web",
-      "fr_summary": "Framework JS pour automatiser les tâches sur le Web",
+      "en_description": "JS framework to automate task in Web",
+      "fr_description": "Framework JS pour automatiser les tâches sur le Web",
       "url": "https://github.com/ludoo0d0a/gorilla",
       "endDate": "2024-04-30"
     },
     {
       "name": "GCWizard",
       "startDate": "2021-03-31",
-      "fr_summary": "Cette application mobile contient de nombreux outils hors ligne, tables et calculateurs pour soutenir le géocacheur en plein air ou à la maison dans la résolution de puzzles ou de calculs.\n\nDisponible pour iOs, Android et Web.",
-      "en_summary": "This mobile app contains numerous offline tools, tables and calculators to support the active geocacher in the field or at home in solving puzzles or calculations.\n\nAvailable for iOs, Android and Web.",
+      "fr_description": "Cette application mobile contient de nombreux outils hors ligne, tables et calculateurs pour soutenir le géocacheur en plein air ou à la maison dans la résolution de puzzles ou de calculs.\n\nDisponible pour iOs, Android et Web.",
+      "en_description": "This mobile app contains numerous offline tools, tables and calculators to support the active geocacher in the field or at home in solving puzzles or calculations.\n\nAvailable for iOs, Android and Web.",
       "url": "https://gcwizard.net/",
       "endDate": "2022-08-01",
       "highlights": [
@@ -731,8 +731,8 @@
       "en_name": "Npm/nodejs library for Backbone et Passport authentication",
       "fr_name": "Bibliothèques npm/nodejs pour backbone et passport",
       "startDate": "2015-09-30",
-      "fr_summary": "Dévéloppement et mise à disposition sous npmjs et github de composants NodeJs.\n- backgrid (grid / backbone) : fork compatible CommonJs.\n- Strategy passport.js pour geocaching\n- Api geocaching NodeJs",
-      "en_summary": "Development and distribution on npmjs and github of NodeJs components.\\n- backgrid (grid / backbone): CommonJs compatible fork.\\n- Passport.js strategy for geocaching\\n- Geocaching NodeJs API",
+      "fr_description": "Dévéloppement et mise à disposition sous npmjs et github de composants NodeJs.\n- backgrid (grid / backbone) : fork compatible CommonJs.\n- Strategy passport.js pour geocaching\n- Api geocaching NodeJs",
+      "en_description": "Development and distribution on npmjs and github of NodeJs components.\\n- backgrid (grid / backbone): CommonJs compatible fork.\\n- Passport.js strategy for geocaching\\n- Geocaching NodeJs API",
       "url": "https://www.npmjs.com/~ludoo",
       "endDate": "2015-09-30",
       "highlights": [
@@ -747,8 +747,8 @@
       "fr_name": "Outils pour le géocaching",
       "en_name": "Geocaching Tools",
       "startDate": "2014-03-31",
-      "fr_summary": "Site Web contenant des outils online pour la communauté geocaching.\npitaso.com devenu maintenant geoking.fr",
-      "en_summary": "Site Web contenant des outils online pour la communauté geocaching.\n\npitaso.com devenu maintenant geoking.fr",
+      "fr_description": "Site Web contenant des outils online pour la communauté geocaching.\npitaso.com devenu maintenant geoking.fr",
+      "en_description": "Site Web contenant des outils online pour la communauté geocaching.\n\npitaso.com devenu maintenant geoking.fr",
       "url": "http://www.geoking.fr",
       "endDate": "2020-03-31",
       "highlights": [
@@ -759,15 +759,15 @@
       "fr_name": "Platforme de développement rapide pour application iPhone",
       "en_name": "Rapid plateform for iPhone application",
       "startDate": "2012-07-31",
-      "fr_summary": "Platforme de développement rapide pour application iPhone",
-      "en_summary": "Rapid plateform for iPhone application"
+      "fr_description": "Platforme de développement rapide pour application iPhone",
+      "en_description": "Rapid plateform for iPhone application"
     },
     {
       "fr_name": "Eye Traffic - Info traffic Luxembourg",
       "en_name": "Eye Traffic - Lux traffic info",
       "startDate": "2010-08-31",
-      "fr_summary": "Extension Chrome pour surveiller le traffic info au Luxembourg.",
-      "en_summary": "Chrome Extension to monitor traffic info in Luxembourg.",
+      "fr_description": "Extension Chrome pour surveiller le traffic info au Luxembourg.",
+      "en_description": "Chrome Extension to monitor traffic info in Luxembourg.",
       "url": "https://chrome.google.com/webstore/detail/kieaniodbboioemmcghcbkfgpmopffdc",
       "highlights": [
         "Agreement from Pont-Et-Chaussee to access their API"
@@ -777,8 +777,8 @@
       "fr_name": "Handball club Amnéville website",
       "en_name": "Site du club de Handball de Amnéville",
       "startDate": "2015-10-31",
-      "fr_summary": "Réalisation du site Web du club de Amnéville sous Wordpress.\nValorisation du club, implication du comité dans ce nouvel outil de communication, promotion de nos équipes en N3 et prénationale, actualités, résultats et calendriers des différentes équipes",
-      "en_summary": "Web site building for the Amnéville handball club.\nPromotion of the club, involvement of the committee in this new communication tool, promotion of our teams in N3 and national, news, results and calendars of the different teams",
+      "fr_description": "Réalisation du site Web du club de Amnéville sous Wordpress.\nValorisation du club, implication du comité dans ce nouvel outil de communication, promotion de nos équipes en N3 et prénationale, actualités, résultats et calendriers des différentes équipes",
+      "en_description": "Web site building for the Amnéville handball club.\nPromotion of the club, involvement of the committee in this new communication tool, promotion of our teams in N3 and national, news, results and calendars of the different teams",
       "url": "http://www.7amnevillois.fr",
       "endDate": "2022-08-31"
     },
@@ -786,8 +786,8 @@
       "fr_name": "Extension Chrome ReaderPlus",
       "en_name": "ReaderPlus Chrome extension",
       "startDate": "2009-12-31",
-      "fr_summary": "Chrome extension for Google Reader.\nEnhances navigation and presentation by adding a theme, social sharing features, quick article preview, icons, filtering, and more...\nReached 80,000 users before GoogleReader shutdown.\nProject transferred to a Chinese team.",
-      "en_summary": "Extension Chrome pour Google Reader.\nAméliore la navigation et la présentation en ajoutant un thème, des fonctions de partage vers les sites sociaux, un aperçu rapide des articles, des icônes, un filtre, et plus encore....\nJusqu'à 80 000 utilisateurs avant la fermeture de GoogleReader.\nProjet transféré à une équipe chinoise.",
+      "fr_description": "Chrome extension for Google Reader.\nEnhances navigation and presentation by adding a theme, social sharing features, quick article preview, icons, filtering, and more...\nReached 80,000 users before GoogleReader shutdown.\nProject transferred to a Chinese team.",
+      "en_description": "Extension Chrome pour Google Reader.\nAméliore la navigation et la présentation en ajoutant un thème, des fonctions de partage vers les sites sociaux, un aperçu rapide des articles, des icônes, un filtre, et plus encore....\nJusqu'à 80 000 utilisateurs avant la fermeture de GoogleReader.\nProjet transféré à une équipe chinoise.",
       "url": "https://chrome.google.com/webstore/detail/hhcknjkmaaeinhdjgimjnophgpbdgfmg",
       "endDate": "2013-05-31",
       "en_highlights": [
@@ -815,8 +815,8 @@
       "fr_name": "Application Windows8",
       "en_name": "Windows8 Application",
       "startDate": "2012-09-30",
-      "en_summary": "Creation and publication of a Windows 8 mobile application.\nReal estate management for a Parisian agency",
-      "fr_summary": "Création et publication d'une application mobile Windows8.\nGestion immobilière pour une agence immobilière parisienne.",
+      "en_description": "Creation and publication of a Windows 8 mobile application.\nReal estate management for a Parisian agency",
+      "fr_description": "Création et publication d'une application mobile Windows8.\nGestion immobilière pour une agence immobilière parisienne.",
       "url": "http://apps.microsoft.com/windows/fr-be/app/cityreal/8c70e367-e1bd-4890-8519-857389282fe1",
       "endDate": "2012-10-31",
       "highlights": [
@@ -831,8 +831,8 @@
       "fr_name": "Facelift for a real estate website",
       "en_name": "Facelift site d'annonces immobilières",
       "startDate": "2012-06-30",
-      "fr_summary": "Facelift et ajout de plusieurs fonctionnalités du site Web Habiter.lu dédié aux annonces immobilières pour le compte d'Editus.",
-      "en_summary": "Facelift and addition of multiple features to Habiter.lu website dedicated to real estate listings for Editus.",
+      "fr_description": "Facelift et ajout de plusieurs fonctionnalités du site Web Habiter.lu dédié aux annonces immobilières pour le compte d'Editus.",
+      "en_description": "Facelift and addition of multiple features to Habiter.lu website dedicated to real estate listings for Editus.",
       "url": "http://habiter.lu",
       "endDate": "2012-06-30",
       "highlights": [
@@ -844,7 +844,7 @@
   ],
   "meta": {
     "version": "v2.0.3",
-    "theme": "kendall",
+    "theme": "ludoo",
     "en_locale": "en-US",
     "fr_locale": "fr-FR",
     "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
