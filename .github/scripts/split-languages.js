@@ -1,8 +1,22 @@
 const fs = require('fs');
 const { execSync } = require('child_process');
 
-// Define supported languages
-const LANGUAGES = ['en', 'fr'];
+// Parse command line arguments for --langs parameter
+const args = process.argv.slice(2);
+const langsArg = args.find(arg => arg.startsWith('--langs='));
+let LANGUAGES = ['en', 'fr']; // default fallback
+
+if (langsArg) {
+    try {
+        // Extract the array string after --langs= and parse it
+        const langsStr = langsArg.split('--langs=')[1];
+        // Parse the array string, replacing single quotes with double quotes for valid JSON
+        LANGUAGES = JSON.parse(langsStr.replace(/'/g, '"'));
+    } catch (error) {
+        console.log('Invalid langs parameter format. Using default languages:', LANGUAGES);
+        throw new Error('Invalid langs parameter format.');
+    }
+}
 
 // Read input file
 const resumeData = JSON.parse(fs.readFileSync('resume.i18n.json', 'utf8'));

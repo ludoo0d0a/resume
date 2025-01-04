@@ -3,8 +3,7 @@ name: Translate resume files
 env:
   #THEME_NAME: 'kendall'
   THEME_NAME: 'ludoo'
-  OUTPUT_DIR: 'dist'
-  LANGUAGES: 'en,fr'
+  LANGUAGES: '["en", "fr"]'  # JSON array format for parsing
 
 on:
   push:
@@ -13,7 +12,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  split-languages:
+  prepare:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -53,23 +52,47 @@ jobs:
           npm install -g resume-cli
           npm install jsonresume-theme-${{ env.THEME_NAME }}
 
-      - name: Generate HTML
-        run: |
-          resume export index.html --theme ${{ env.THEME_NAME }} --resume resume.en.json
-          resume export index-fr.html --theme ${{ env.THEME_NAME }} --resume resume.fr.json
-
-      - name: Generate PDF
-        run: |
-          resume export pdf/resume.pdf --format pdf --theme ${{ env.THEME_NAME }} --resume resume.en.json
-          resume export pdf/resume-fr.pdf --format pdf --theme ${{ env.THEME_NAME }} --resume resume.fr.json
-
-      - name: Upload HTML artifacts
+      - name: Upload workspace
         uses: actions/upload-artifact@v4
         with:
-          name: resume-html
+          name: workspace
           path: |
-            index.html
-            index-fr.html
+            resume.*.json
+            node_modules/
+
+  build:
+    needs: prepare
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        language: ${{ fromJson(env.LANGUAGES) }}
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: workspace
+
+      - name: Generate HTML for ${{ matrix.language }}
+        run: |
+          resume export index-${{ matrix.language }}.html --theme ${{ env.THEME_NAME }} --resume resume.${{ matrix.language }}.json
+
+      - name: Generate PDF for ${{ matrix.language }}
+        run: |
+          resume export pdf/resume-${{ matrix.language }}.pdf --format pdf --theme ${{ env.THEME_NAME }} --resume resume.${{ matrix.language }}.json
+
+      - name: Upload builds
+        uses: actions/upload-artifact@v4
+        with:
+          name: builds-${{ matrix.language }}
+          path: |
+            *.html
+            pdf/*.pdf
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
@@ -77,8 +100,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .
           publish_branch: gh-pages
-          keep_files: false
-          enable_jekyll: false
 
       - name: Log Deploy URL
         run: |
