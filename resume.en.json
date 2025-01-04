@@ -765,6 +765,6 @@
     "version": "v2.0.3",
     "theme": "kendall",
     "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json",
-    "lang": "en"
+    "locale": "en-US"
   }
 }

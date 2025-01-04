@@ -845,8 +845,8 @@
   "meta": {
     "version": "v2.0.3",
     "theme": "kendall",
-    "en_lang": "en",
-    "fr_lang": "fr",
+    "en_locale": "en-US",
+    "fr_locale": "fr-FR",
     "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
   }
 }
