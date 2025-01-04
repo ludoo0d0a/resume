@@ -205,7 +205,7 @@
       ],
       "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
       "location": "Luxembourg",
-      "summary": "au Parlement européen, unité DAS (Traduction)\n\nRedémarrer une plateforme collaborative à partir de zéro.\nMigration technologique complète de Sharepoint vers Java/Angular.\nLes premières étapes doivent poser les bases d'un système collaboratif entièrement extensible, s'appuyant fortement sur les données métier.\n\nJHipster / Spring Boot / ElasticSeach / Angular / Bootstrap / webpack / grunt / nodejs / jdk7 / tomcat7"
+      "summary": "au Parlement européen, unité DAS (Traduction)\n\nRedémarrer une plateforme collaborative à partir de zéro.\nMigration technologique complète de Sharepoint vers Java/Angular.\nLes premières étapes doivent poser les bases d'un système collaboratif entièrement extensible, s'appuyant fortement sur les données métier."
     },
     {
       "name": "SOGETI Luxembourg",
@@ -227,7 +227,7 @@
       ],
       "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
       "location": "Luxembourg",
-      "summary": "au Parlement européen, unité DAS (Traduction)\n\nSPA+ : Participer à l'architecture orientée services ; Construire et configurer un routeur/proxy.\nSocrates : Construction d'un gestionnaire d'événements basé sur REST pour compléter la suite d'outils\n\n-> Spring Boot, Spring Cloud, architecture microservices, angular, bootstrap, bower, grunt, jpa, Oracle, tomcat, java8"
+      "summary": "au Parlement européen, unité DAS (Traduction)\n\nSPA+ : Participer à l'architecture orientée services ; Construire et configurer un routeur/proxy.\nSocrates : Construction d'un gestionnaire d'événements basé sur REST pour compléter la suite d'outils"
     },
     {
       "name": "SOGETI Luxembourg",
@@ -247,7 +247,7 @@
         "json"
       ],
       "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
-      "summary": "au Parlement européen, unité DAS (Traduction)\n\nSirius : Moteur de recherche - Architecte, analyste technique, développement, intégration web, tests, déploiements.\nMettre en œuvre une solution basée sur ElasticSearch pour des millions de documents dans un contexte multilingue et de traduction. Application web en architecture SPA, responsive et orientée REST.\n\n-> ElasticSearch, Spring Data, Java, Backbone, Marionette, Bootstrap, Grunt, Maven, REST, json"
+      "summary": "au Parlement européen, unité DAS (Traduction)\n\nSirius : Moteur de recherche - Architecte, analyste technique, développement, intégration web, tests, déploiements.\nMettre en œuvre une solution basée sur ElasticSearch pour des millions de documents dans un contexte multilingue et de traduction. Application web en architecture SPA, responsive et orientée REST."
     },
     {
       "name": "SOGETI Luxembourg",
@@ -263,7 +263,7 @@
       ],
       "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
       "location": "Luxembourg",
-      "summary": "au Parlement européen, unité DAS (Traduction)\n\nFluid+ : Rejoindre une équipe pour compléter une application web dédiée à la gestion des contrats pour les unités de traduction.\nSupport pour les équipes sur Sencha ExtJs.\nConseiller UX pour l'unité.\n-> Scrum, Spring, Java, ExtJs, Maven"
+      "summary": "au Parlement européen, unité DAS (Traduction)\n\nFluid+ : Rejoindre une équipe pour compléter une application web dédiée à la gestion des contrats pour les unités de traduction.\nSupport pour les équipes sur Sencha ExtJs.\nConseiller UX pour l'unité."
     },
     {
       "name": "SOGETI Luxembourg",
@@ -278,7 +278,7 @@
       ],
       "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
       "location": "Luxembourg",
-      "summary": "à BNL - Bibliothèque Nationale du Luxembourg\n\nEtude Solr pour un moteur de recherche performant pour eluxemburgensia.lu.\nRechercher, investiguer, tester et réaliser des prototypes avec Solr.\nIntégration forte à l'outil existant A-Z.lu et au viewer eluxemburgensia.lu.\nProblématique de scalabilité et performance.\nRéalisation de prototype avec SolrCloud.\n\nSolr 4.8 - SolrCloud - ZooKeeper - Vagrant - Python -"
+      "summary": "à BNL - Bibliothèque Nationale du Luxembourg\n\nEtude Solr pour un moteur de recherche performant pour eluxemburgensia.lu.\nRechercher, investiguer, tester et réaliser des prototypes avec Solr.\nIntégration forte à l'outil existant A-Z.lu et au viewer eluxemburgensia.lu.\nProblématique de scalabilité et performance.\nRéalisation de prototype avec SolrCloud."
     },
     {
       "name": "SOGETI Luxembourg",
@@ -358,7 +358,9 @@
       "position": "Software engineer",
       "startDate": "2011-11-30",
       "endDate": "2011-12-31",
-      "highlights": [],
+      "highlights": [
+        "opensource forks"
+      ],
       "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
       "location": "luxembourg",
       "summary": "à BNL - Bibliothèque nationale du Luxembourg\npour LNB - Bibliothèque de Lettonie\n\nPublier un visualiseur de médias, développé précédemment, en tant que projet opensource.\nSupprimer les dépendances propriétaires et créer un mode libre à la place.\nDonner à l'application un haut niveau de couplage lâche et la capacité d'être bien intégrée dans d'autres systèmes.\n\nhttp://sourceforge.net/projects/bnlviewer/\n\nMaintenant le projet est utilisé dans http://www.periodika.lv"
