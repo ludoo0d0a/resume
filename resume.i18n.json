@@ -32,7 +32,7 @@
       },
       {
         "en_network": "flag::fr::CV en français",
-        "fr_network": "flag::en::Resume in English",
+        "fr_network": "flag::us::Resume in English",
         "en_username": "CV de Ludovic Valente",
         "fr_username": "Resume of Ludovic Valente",
         "en_url": "https://ludoo0d0a.github.io/resume/index-fr.html",

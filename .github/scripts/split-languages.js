@@ -4,18 +4,8 @@ const { execSync } = require('child_process');
 // Define supported languages
 const LANGUAGES = ['en', 'fr'];
 
-// Function to increment patch version
-function incrementPatchVersion(version) {
-    const cleanVersion = version.replace(/^v/, '');
-    const [major, minor, patch] = cleanVersion.split('.');
-    return `${version.startsWith('v') ? 'v' : ''}${major}.${minor}.${parseInt(patch) + 1}`;
-}
-
 // Read input file
 const resumeData = JSON.parse(fs.readFileSync('resume.i18n.json', 'utf8'));
-
-// Get incremented version for commit message only
-const newVersion = incrementPatchVersion(resumeData.meta.version);
 
 // Function to remove language-specific fields
 function createLanguageVersion(data, language) {

@@ -1,5 +1,11 @@
 name: Translate resume files
 
+env:
+  #THEME_NAME: 'kendall'
+  THEME_NAME: 'ludoo'
+  OUTPUT_DIR: 'dist'
+  LANGUAGES: 'en,fr'
+
 on:
   push:
     paths:
@@ -20,7 +26,7 @@ jobs:
       # Translate resume files
       - name: Create Language-Specific Files
         run: |
-          node .github/scripts/split-languages.js
+          node .github/scripts/split-languages.js --langs=$${{env.LANGUAGES}}
 
       - name: Commit Changes
         env:
@@ -45,14 +51,17 @@ jobs:
       - name: Install Resume CLI
         run: |
           npm install -g resume-cli
-          npm install jsonresume-theme-kendall
-#          npm install jsonresume-theme-ludoo
-      # npm install jsonresume-theme-onepage-updated # compact for PDF
+          npm install jsonresume-theme-${{ env.THEME_NAME }}
 
       - name: Generate HTML
         run: |
-          resume export index.html --theme kendall --resume resume.en.json
-          resume export index-fr.html --theme kendall --resume resume.fr.json
+          resume export index.html --theme ${{ env.THEME_NAME }} --resume resume.en.json
+          resume export index-fr.html --theme ${{ env.THEME_NAME }} --resume resume.fr.json
+
+      - name: Generate PDF
+        run: |
+          resume export pdf/resume.pdf --format pdf --theme ${{ env.THEME_NAME }} --resume resume.en.json
+          resume export pdf/resume-fr.pdf --format pdf --theme ${{ env.THEME_NAME }} --resume resume.fr.json
 
       - name: Upload HTML artifacts
         uses: actions/upload-artifact@v4
@@ -66,7 +75,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          #personal_token: ${{ secrets.GHP_TOKEN }}
           publish_dir: .
           publish_branch: gh-pages
           keep_files: false
