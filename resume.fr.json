@@ -646,7 +646,7 @@
       "name": "Scora",
       "startDate": "2022-12-31",
       "url": "http://scora.watch",
-      "summary": "Application de comptage de points pour le tennis pour montre WearOS\nElle vous aide à compter les points pendant votre match de tennis.\n\nSite web: http://scora.watch\n\nPublié sur Google Play Store : https://play.google.com/store/apps/details?id=fr.geoking.tennis.scoreboard.wear",
+      "description": "Application de comptage de points pour le tennis pour montre WearOS\nElle vous aide à compter les points pendant votre match de tennis.\n\nSite web: http://scora.watch\n\nPublié sur Google Play Store : https://play.google.com/store/apps/details?id=fr.geoking.tennis.scoreboard.wear",
       "highlights": [
         "Projet personnel en production",
         "Technologie émergente KMP"
@@ -657,7 +657,7 @@
       "startDate": "2023-10-31",
       "url": "https://github.com/ludoo0d0a/gorilla",
       "endDate": "2024-04-30",
-      "summary": "Framework JS pour automatiser les tâches sur le Web"
+      "description": "Framework JS pour automatiser les tâches sur le Web"
     },
     {
       "name": "GCWizard",
@@ -670,7 +670,7 @@
         "Initiate translation engine and translators community and tools - Thanks crowdin",
         "Steganography module"
       ],
-      "summary": "Cette application mobile contient de nombreux outils hors ligne, tables et calculateurs pour soutenir le géocacheur en plein air ou à la maison dans la résolution de puzzles ou de calculs.\n\nDisponible pour iOs, Android et Web."
+      "description": "Cette application mobile contient de nombreux outils hors ligne, tables et calculateurs pour soutenir le géocacheur en plein air ou à la maison dans la résolution de puzzles ou de calculs.\n\nDisponible pour iOs, Android et Web."
     },
     {
       "startDate": "2015-09-30",
@@ -684,7 +684,7 @@
         "backbone"
       ],
       "name": "Bibliothèques npm/nodejs pour backbone et passport",
-      "summary": "Dévéloppement et mise à disposition sous npmjs et github de composants NodeJs.\n- backgrid (grid / backbone) : fork compatible CommonJs.\n- Strategy passport.js pour geocaching\n- Api geocaching NodeJs"
+      "description": "Dévéloppement et mise à disposition sous npmjs et github de composants NodeJs.\n- backgrid (grid / backbone) : fork compatible CommonJs.\n- Strategy passport.js pour geocaching\n- Api geocaching NodeJs"
     },
     {
       "startDate": "2014-03-31",
@@ -694,12 +694,12 @@
         "Logbook creator widely used by community"
       ],
       "name": "Outils pour le géocaching",
-      "summary": "Site Web contenant des outils online pour la communauté geocaching.\npitaso.com devenu maintenant geoking.fr"
+      "description": "Site Web contenant des outils online pour la communauté geocaching.\npitaso.com devenu maintenant geoking.fr"
     },
     {
       "startDate": "2012-07-31",
       "name": "Platforme de développement rapide pour application iPhone",
-      "summary": "Platforme de développement rapide pour application iPhone"
+      "description": "Platforme de développement rapide pour application iPhone"
     },
     {
       "startDate": "2010-08-31",
@@ -708,21 +708,21 @@
         "Agreement from Pont-Et-Chaussee to access their API"
       ],
       "name": "Eye Traffic - Info traffic Luxembourg",
-      "summary": "Extension Chrome pour surveiller le traffic info au Luxembourg."
+      "description": "Extension Chrome pour surveiller le traffic info au Luxembourg."
     },
     {
       "startDate": "2015-10-31",
       "url": "http://www.7amnevillois.fr",
       "endDate": "2022-08-31",
       "name": "Handball club Amnéville website",
-      "summary": "Réalisation du site Web du club de Amnéville sous Wordpress.\nValorisation du club, implication du comité dans ce nouvel outil de communication, promotion de nos équipes en N3 et prénationale, actualités, résultats et calendriers des différentes équipes"
+      "description": "Réalisation du site Web du club de Amnéville sous Wordpress.\nValorisation du club, implication du comité dans ce nouvel outil de communication, promotion de nos équipes en N3 et prénationale, actualités, résultats et calendriers des différentes équipes"
     },
     {
       "startDate": "2009-12-31",
       "url": "https://chrome.google.com/webstore/detail/hhcknjkmaaeinhdjgimjnophgpbdgfmg",
       "endDate": "2013-05-31",
       "name": "Extension Chrome ReaderPlus",
-      "summary": "Chrome extension for Google Reader.\nEnhances navigation and presentation by adding a theme, social sharing features, quick article preview, icons, filtering, and more...\nReached 80,000 users before GoogleReader shutdown.\nProject transferred to a Chinese team.",
+      "description": "Chrome extension for Google Reader.\nEnhances navigation and presentation by adding a theme, social sharing features, quick article preview, icons, filtering, and more...\nReached 80,000 users before GoogleReader shutdown.\nProject transferred to a Chinese team.",
       "highlights": [
         "HTML5",
         "CSS3",
@@ -746,7 +746,7 @@
         "Visual Studio"
       ],
       "name": "Application Windows8",
-      "summary": "Création et publication d'une application mobile Windows8.\nGestion immobilière pour une agence immobilière parisienne."
+      "description": "Création et publication d'une application mobile Windows8.\nGestion immobilière pour une agence immobilière parisienne."
     },
     {
       "startDate": "2012-06-30",
@@ -758,12 +758,12 @@
         "CSS"
       ],
       "name": "Facelift for a real estate website",
-      "summary": "Facelift et ajout de plusieurs fonctionnalités du site Web Habiter.lu dédié aux annonces immobilières pour le compte d'Editus."
+      "description": "Facelift et ajout de plusieurs fonctionnalités du site Web Habiter.lu dédié aux annonces immobilières pour le compte d'Editus."
     }
   ],
   "meta": {
     "version": "v2.0.3",
-    "theme": "kendall",
+    "theme": "ludoo",
     "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json",
     "locale": "fr-FR"
   }
