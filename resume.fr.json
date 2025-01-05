@@ -29,17 +29,17 @@
       {
         "network": "PDF",
         "username": "CV au format PDF",
-        "url": "https://ludoo0d0a.github.io/resume/pdf/resume-fr.pdf"
+        "url": "pdf/resume-fr.pdf"
       },
       {
-        "network": "lang::fr",
+        "network": "translation::fr",
         "username": "CV en français",
-        "url": "https://ludoo0d0a.github.io/resume/index-fr.html"
+        "url": "index-fr.html"
       },
       {
-        "network": "lang::en",
+        "network": "translation::us",
         "username": "English version",
-        "url": "https://ludoo0d0a.github.io/resume/index-en.html"
+        "url": "index-en.html"
       }
     ],
     "label": "Ingénieur logiciel fullstack @SFΞIR Luxembourg",
@@ -768,7 +768,7 @@
     }
   ],
   "meta": {
-    "version": "v2.0.3",
+    "version": "v2.0.6",
     "theme": "ludoo",
     "languages": "en,fr",
     "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json",
