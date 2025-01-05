@@ -28,7 +28,7 @@ jobs:
       # Translate resume files
       - name: Create Language-Specific Files
         run: |
-          node .github/scripts/split-languages.js --action=split --langs=${{LANGUAGES}}
+          node .github/scripts/split-languages.js --action=split --langs=${{env.LANGUAGES}}
 
       - name: Commit Changes
         env:
