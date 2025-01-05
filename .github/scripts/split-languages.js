@@ -16,6 +16,7 @@ function getArgument(name, defaultValue) {
     const prefix = `--${name}=`;
     const foundArg = args.find(arg => arg.startsWith(prefix));
     if (!foundArg) {
+        console.log("defaultValue for "+name+'='+defaultValue)
         return defaultValue;
     }
     return foundArg.split(prefix)[1];
