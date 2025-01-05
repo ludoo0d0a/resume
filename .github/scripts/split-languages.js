@@ -4,15 +4,11 @@ const { execSync } = require('child_process');
 // Parse command line arguments for --langs parameter
 const args = process.argv.slice(2);
 const DEFAULT_LANGUAGES = JSON.stringify(["en", "fr"]);
-// const langsStr = getArgument('langs', DEFAULT_LANGUAGES)
 const action = getArgument('action', 'split')
 const theme = getArgument('theme', 'ludoo')
 
 console.log("action="+action)
-// console.log("langsStr="+langsStr)
 console.log("theme="+theme)
-
-//const LANGUAGES = getLanguages()
 
 const resumeData = JSON.parse(fs.readFileSync('resume.i18n.json', 'utf8'));
 const LANGUAGES = resumeData.meta.languages.split(',');
@@ -58,21 +54,7 @@ function createLanguageVersion(data, language) {
     return result;
 }
 
-// function getLanguages(){
-//     // Parse the array string, replacing single quotes with double quotes for valid JSON
-//     console.log("langsStr="+langsStr)
-//     const json = langsStr.replace(/'/g, '"')
-//     if (json.includes('"')){
-//         return JSON.parse(json);
-//     }else{
-//         //bypass the json parsing when use arg (quotes disappeared)
-//         // expected format is [en,fr]
-//         return langsStr.replace('[', '').replace(']', '').split(',')
-//     }
-// }
-
 function splitLanguages() {
-
     LANGUAGES.forEach(lang => {
         const version = createLanguageVersion(resumeData, lang);
         fs.writeFileSync(`resume.${lang}.json`, JSON.stringify(version, null, 2));
