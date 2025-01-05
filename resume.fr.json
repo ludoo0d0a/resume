@@ -32,9 +32,14 @@
         "url": "https://ludoo0d0a.github.io/resume/pdf/resume-fr.pdf"
       },
       {
-        "network": "flag::us::Resume in English",
+        "network": "lang::fr",
+        "username": "CV en français",
+        "url": "https://ludoo0d0a.github.io/resume/index-fr.html"
+      },
+      {
+        "network": "lang::en",
         "username": "English version",
-        "url": "https://ludoo0d0a.github.io/resume/index.html"
+        "url": "https://ludoo0d0a.github.io/resume/index-en.html"
       }
     ],
     "label": "Ingénieur logiciel fullstack @SFΞIR Luxembourg",
@@ -783,6 +788,13 @@
         "Randonnée",
         "Tennis",
         "Handball"
+      ]
+    },
+    {
+      "name": "Musique",
+      "keywords": [
+        "Guitare",
+        "Piano"
       ]
     }
   ]
