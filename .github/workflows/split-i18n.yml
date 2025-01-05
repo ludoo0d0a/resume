@@ -20,8 +20,7 @@ jobs:
         with:
           node-version: '20'
 
-      # Translate resume files
-      - name: Create Language-Specific Files
+      - name: Translate resume files
         run: |
           node .github/scripts/split-languages.js --action=split
 
@@ -44,21 +43,28 @@ jobs:
         run: |
           gh gist edit $GIST_ID -f resume.json resume.en.json
 
-      # Deploy to GitHub Pages
-      - name: Install Resume CLI
+      - name: Install
         run: |
           npm install -g resume-cli
           npm install jsonresume-theme-${{ env.THEME_NAME }}
 
-      # Translate resume files
-      - name: Create Language-Specific Files
+      - name: Generate output files
         run: |
           node .github/scripts/split-languages.js --action=generate --theme=${{ env.THEME_NAME }} --langs=${{ env.LANGUAGES }}
 
-      # Homepage
-      - name: Create index.html
+      - name: Homepage index.html
         run: |
           cp index-en.html index.html
+
+      - name: Commit generated files
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add pdf/* index.html index-*.html
+          git commit -m "chore: generated files" || exit 0
+          git push
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

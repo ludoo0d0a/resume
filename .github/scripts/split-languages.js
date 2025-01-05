@@ -25,7 +25,6 @@ function getArgument(name, defaultValue) {
     return foundArg.split(prefix)[1];
 }
 
-
 // Function to remove language-specific fields
 function createLanguageVersion(data, language) {
     const result = JSON.parse(JSON.stringify(data));
