@@ -3,7 +3,8 @@ name: Translate resume files
 env:
   #THEME_NAME: 'kendall'
   THEME_NAME: 'ludoo'
-  LANGUAGES: |
+  LANGUAGES: ["en","fr"]
+  LANGUAGES2: |
     [
       "en",
       "fr"
