@@ -56,7 +56,10 @@ jobs:
       - name: ls
         run: |
           ls
-          ls pdf/*
+
+      - name: ls pdf
+        run: |
+          ls pdf
 
       - name: Homepage index.html
         run: |
