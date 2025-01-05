@@ -3,7 +3,7 @@ const { execSync } = require('child_process');
 
 // Parse command line arguments for --langs parameter
 const args = process.argv.slice(2);
-const DEFAULT_LANGUAGES = JSON.stringify(['en', 'fr']);
+const DEFAULT_LANGUAGES = JSON.stringify(["en", "fr"]);
 const langsStr = getArgument('langs', DEFAULT_LANGUAGES)
 const action = getArgument('action', 'split')
 const theme = getArgument('theme', 'ludoo')
@@ -48,6 +48,7 @@ function createLanguageVersion(data, language) {
 
 function getLanguages(){
     // Parse the array string, replacing single quotes with double quotes for valid JSON
+    console.log("langsStr="+langsStr)
     return JSON.parse(langsStr.replace(/'/g, '"'));
 }
 
