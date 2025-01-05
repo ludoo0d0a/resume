@@ -1,13 +1,25 @@
 # Resume of Ludovic Valente
 
 Using JsonResume standard, I host my own version in 2 languages
-It produces a HTML themed-version in 2 languages: EN,FR
+It produces a HTML and PDF themed-version in 2 languages: EN,FR
 
 https://ludoo0d0a.github.io/resume/
 
-# i18n support 
+## Features
+- Internationalization
+- HTML and PDF generation
+- Github action to translate resume in 2 languages
+- Hosted on github pages
+- Synchronized with jsonresume.org
 
-Thanks to IA code generation (Sourcegraph Cody), I created in a few hours a github action to translate my resume in 2 languages.
+## Prerequisites
+
+TODO
+
+
+## i18n support 
+
+Thanks to IA code generation (Sourcegraph Cody), I created in a few hours a stable first version of github action to translate my resume in 2 languages.
 
 Idea is to have a single file `resume.i18n.json` having all translations node using the following format:
 
@@ -21,14 +33,14 @@ Idea is to have a single file `resume.i18n.json` having all translations node us
 }
 ```
 
-# Deployment / Hosting github.io
+## Deployment / Hosting github.io
 
 Added a github action to deploy into github pages to display resume in different languages
 
  - EN: https://ludoo0d0a.github.io/resume/
  - FR: https://ludoo0d0a.github.io/resume/index-fr.html
 
-# Sync with jsonresume through gist
+## Sync with jsonresume through gist
 
 Added a github action to deploy to gist and sync with jsonresume
 
