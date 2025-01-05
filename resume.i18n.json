@@ -847,6 +847,7 @@
     "theme": "ludoo",
     "en_locale": "en-US",
     "fr_locale": "fr-FR",
+    "languages": "en,fr",
     "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
   }
 }
