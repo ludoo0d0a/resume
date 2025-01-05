@@ -61,7 +61,7 @@ jobs:
       # Homepage
       - name: Create index.html
         run: |
-          cp index.en.html index.html
+          cp index-en.html index.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
