@@ -27,14 +27,14 @@
         "url": "https://twitter.com/ludoo0d0a"
       },
       {
-        "network": "flag::fr::CV en français",
-        "username": "CV de Ludovic Valente",
-        "url": "https://ludoo0d0a.github.io/resume/index-fr.html"
-      },
-      {
         "network": "PDF",
         "username": "PDF Download",
-        "url": "https://ludoo0d0a.github.io/resume/pdf/resume-ludovic-valente-en.pdf"
+        "url": "https://ludoo0d0a.github.io/resume/pdf/resume-en.pdf"
+      },
+      {
+        "network": "flag::fr::CV en français",
+        "username": "Version en Francais",
+        "url": "https://ludoo0d0a.github.io/resume/index-fr.html"
       }
     ],
     "label": "Fullstack software engineer @SFΞIR Luxembourg",
@@ -520,7 +520,7 @@
       "endDate": "2000-12-31",
       "score": "",
       "courses": [],
-      "area": "Generalist engineeer, speciality mechanic",
+      "area": "Generalist engineeer, mechanical specialty",
       "studyType": "Engineer degree"
     }
   ],

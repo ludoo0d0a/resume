@@ -19,30 +19,27 @@
         "network": "LinkedIn",
         "username": "ludovicvalente",
         "url": "https://www.linkedin.com/in/ludovicvalente/"
-      },
-      {
+      },{
         "network": "Github",
         "username": "ludoo0d0a",
         "url": "https://github.com/ludoo0d0a"
-      },
-      {
+      },{
         "network": "Twitter",
         "username": "ludoo0d0a",
         "url": "https://twitter.com/ludoo0d0a"
-      },
-      {
-        "en_network": "flag::fr::CV en français",
-        "fr_network": "flag::us::Resume in English",
-        "en_username": "CV de Ludovic Valente",
-        "fr_username": "Resume of Ludovic Valente",
-        "en_url": "https://ludoo0d0a.github.io/resume/index-fr.html",
-        "fr_url": "https://ludoo0d0a.github.io/resume/index.html"
       }, {
         "network": "PDF",
         "en_username": "PDF Download",
         "fr_username": "CV au format PDF",
-        "en_url": "https://ludoo0d0a.github.io/resume/pdf/resume-ludovic-valente-en.pdf",
-        "fr_url": "https://ludoo0d0a.github.io/resume/pdf/cv-ludovic-valente-fr.pdf"
+        "en_url": "https://ludoo0d0a.github.io/resume/pdf/resume-en.pdf",
+        "fr_url": "https://ludoo0d0a.github.io/resume/pdf/resume-fr.pdf"
+      },{
+        "en_network": "flag::fr::CV en français",
+        "fr_network": "flag::us::Resume in English",
+        "en_username": "Version en Francais",
+        "fr_username": "English version",
+        "en_url": "https://ludoo0d0a.github.io/resume/index-fr.html",
+        "fr_url": "https://ludoo0d0a.github.io/resume/index.html"
       }
     ]
   },
@@ -561,7 +558,7 @@
     {
       "institution": "Ecole nationale d'Ingénieurs de Metz",
       "fr_area": "Ingénieur généraliste, spécialisé mécanique",
-      "en_area": "Generalist engineeer, speciality mechanic",
+      "en_area": "Generalist engineeer, mechanical specialty",
       "fr_studyType": "Diplôme d'ingénieur",
       "en_studyType": "Engineer degree",
       "startDate": "1995-12-31",
