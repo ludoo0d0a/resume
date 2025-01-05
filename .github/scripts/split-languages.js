@@ -12,6 +12,7 @@ console.log("action="+action)
 console.log("langsStr="+langsStr)
 console.log("theme="+theme)
 
+
 function getArgument(name, defaultValue) {
     const prefix = `--${name}=`;
     const foundArg = args.find(arg => arg.startsWith(prefix));
@@ -54,7 +55,13 @@ function createLanguageVersion(data, language) {
 function getLanguages(){
     // Parse the array string, replacing single quotes with double quotes for valid JSON
     console.log("langsStr="+langsStr)
-    return JSON.parse(langsStr.replace(/'/g, '"'));
+    const json = langsStr.replace(/'/g, '"')
+    if (json.includes('"')){
+        return JSON.parse(json);
+    }else{
+        //bypass the json parsing when use arg (quotes disappeared)
+        return langsStr.replace('[', '').replace(']', '').split(',')
+    }
 }
 
 function splitLanguages() {
