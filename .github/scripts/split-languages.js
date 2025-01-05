@@ -12,7 +12,6 @@ console.log("action="+action)
 console.log("langsStr="+langsStr)
 console.log("theme="+theme)
 
-
 function getArgument(name, defaultValue) {
     const prefix = `--${name}=`;
     const foundArg = args.find(arg => arg.startsWith(prefix));
@@ -60,6 +59,7 @@ function getLanguages(){
         return JSON.parse(json);
     }else{
         //bypass the json parsing when use arg (quotes disappeared)
+        // expected format is [en,fr]
         return langsStr.replace('[', '').replace(']', '').split(',')
     }
 }
