@@ -58,6 +58,11 @@ jobs:
         run: |
           node .github/scripts/split-languages.js --action=generate --theme=${{ env.THEME_NAME }} --langs=${{ env.LANGUAGES }}
 
+      # Homepage
+      - name: Create index.html
+        run: |
+          cp index.en.html index.html
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
