@@ -1,10 +1,5 @@
 name: Translate resume files
 
-env:
-  #THEME_NAME: 'kendall'
-  THEME_NAME: 'ludoo'
-  LANGUAGES: "[\"en\",\"fr\"]"
-
 on:
   push:
     paths:
@@ -15,6 +10,9 @@ on:
 jobs:
   prepare:
     runs-on: ubuntu-latest
+    env:
+      THEME_NAME: 'ludoo'
+      LANGUAGES: "[\"en\",\"fr\"]"
     steps:
       - uses: actions/checkout@v4
 
