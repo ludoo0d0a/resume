@@ -70,6 +70,10 @@ jobs:
   set-matrix:
     runs-on: ubuntu-latest
     steps:
+      - run: echo "$LANGUAGES"
+      - run: echo "$(toJson(LANGUAGES))"
+      - run: echo "$LANGUAGES"
+
       - name: Generate Matrix
         id: gen-matrix
         run: echo "::set-output name=languages::{\"include\":[\"en\",\"fr\"]}"
@@ -83,8 +87,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        #language: ['en','fr']
-        language: ${{ fromJson(needs.gen-matrix.outputs.languages) }}
+        language: ['en','fr']
+#        language: ${{ fromJson(needs.gen-matrix.outputs.languages) }}
     steps:
       - uses: actions/download-artifact@v4
         with:
