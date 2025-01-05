@@ -766,6 +766,7 @@
   "meta": {
     "version": "v2.0.3",
     "theme": "ludoo",
+    "languages": "en,fr",
     "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json",
     "locale": "fr-FR"
   }
