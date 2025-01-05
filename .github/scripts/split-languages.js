@@ -12,6 +12,9 @@ console.log("action="+action)
 console.log("langsStr="+langsStr)
 console.log("theme="+theme)
 
+const LANGUAGES = getLanguages()
+console.log("parsed LANGUAGES="+LANGUAGES)
+
 function getArgument(name, defaultValue) {
     const prefix = `--${name}=`;
     const foundArg = args.find(arg => arg.startsWith(prefix));
@@ -66,14 +69,14 @@ function getLanguages(){
 
 function splitLanguages() {
     const resumeData = JSON.parse(fs.readFileSync('resume.i18n.json', 'utf8'));
-    getLanguages().forEach(lang => {
+    LANGUAGES.forEach(lang => {
         const version = createLanguageVersion(resumeData, lang);
         fs.writeFileSync(`resume.${lang}.json`, JSON.stringify(version, null, 2));
     });
 }
 
 function generateResumes(){
-    getLanguages().forEach(lang => {
+    LANGUAGES.forEach(lang => {
         const shellHtml = execSync(`resume export index-${lang}.html --theme ${theme} --resume resume.${lang}.json`);
         const shellPdf = execSync(`resume export pdf/resume-${lang}.pdf --format pdf --theme ${theme} --resume resume.${lang}.json`);
     });
