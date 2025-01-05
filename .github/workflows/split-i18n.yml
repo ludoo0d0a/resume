@@ -53,6 +53,11 @@ jobs:
         run: |
           node .github/scripts/split-languages.js --action=generate --theme=${{ env.THEME_NAME }} --langs=${{ env.LANGUAGES }}
 
+      - name: ls
+        run: |
+          ls
+          ls pdf/*
+
       - name: Homepage index.html
         run: |
           cp index-en.html index.html
