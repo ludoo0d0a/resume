@@ -63,7 +63,7 @@ function splitLanguages() {
 function generateResumes(){
     LANGUAGES.forEach(lang => {
         const shellHtml = execSync(`resume export index-${lang}.html --theme ${theme} --resume resume.${lang}.json`);
-        const shellPdf = execSync(`resume export pdf/resume-${lang}.pdf --format pdf --theme ${theme} --resume resume.${lang}.json`);
+        const shellPdf = execSync(`export RESUME_PUPPETEER_NO_SANDBOX=1; resume export pdf/resume-${lang}.pdf --format pdf --theme ${theme} --resume resume.${lang}.json`);
     });
 }
 
