@@ -72,7 +72,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "$LANGUAGES"
-      - run: echo "$(toJson(${{LANGUAGES}}))"
+      - run: echo "$(toJson(${{env.LANGUAGES}}))"
 
       - name: Generate Matrix
         id: gen-matrix
