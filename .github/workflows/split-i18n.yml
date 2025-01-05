@@ -15,7 +15,7 @@ on:
   push:
     paths:
       - 'resume.i18n.json'
-      - '.github/scripts/**'
+      - '.github/worflows/**'
   workflow_dispatch:
 
 jobs:
@@ -28,6 +28,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
 
       # Translate resume files
       - name: Create Language-Specific Files
@@ -90,6 +92,10 @@ jobs:
         language: ['en','fr']
 #        language: ${{ fromJson(needs.set-matrix.outputs.languages) }}
     steps:
+      - name: Install Resume CLI (repeated)
+        run: |
+          npm install -g resume-cli
+          
       - uses: actions/download-artifact@v4
         with:
           name: workspace
