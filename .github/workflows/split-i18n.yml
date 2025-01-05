@@ -71,7 +71,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add pdf/* index.html index-*.html
+          git add pdf/*.pdf index.html index-*.html
           git commit -m "chore: generated files" || exit 0
           git push
 
