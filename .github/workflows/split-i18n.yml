@@ -70,11 +70,11 @@ jobs:
   set-matrix:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "::set-output name=jsonlangs::{\"include\":$(toJson(LANGUAGES))}"
       - name: Generate Matrix
         id: gen-matrix
         run: echo "::set-output name=languages::{\"include\":[\"en\",\"fr\"]}"
-#          run: echo "::set-output languages={\"include\":[$LANGUAGES]}" //+toJson
+#       run: echo "::set-output name=languages::{\"include\":$LANGUAGES}" //+toJson
+#       run: echo "::set-output name=languages::{\"include\":$(toJson(LANGUAGES))}"
     outputs:
       languages: ${{ steps.set-matrix.outputs.languages }}
 
