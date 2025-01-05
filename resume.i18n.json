@@ -678,7 +678,34 @@
       "fluency": "Fluent"
     }
   ],
-  "interests": [],
+  "en_interests": [{
+    "name": "Geocaching",
+    "keywords": [
+      "gps",
+      "treasure hunt"
+    ]
+  },{
+    "name": "Sports",
+    "keywords": [
+      "Hiking",
+      "Tennis",
+      "Handball"
+    ]
+  }],
+  "fr_interests": [{
+    "name": "Geocaching",
+    "keywords": [
+      "gps",
+      "Chasse au trésor"
+    ]
+  },{
+    "name": "Sports",
+    "keywords": [
+      "Randonnée",
+      "Tennis",
+      "Handball"
+    ]
+  }],
   "references": [
     {
       "name": "Vincent Mellano",
