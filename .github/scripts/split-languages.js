@@ -51,7 +51,7 @@ function getLanguages(){
     return JSON.parse(langsStr.replace(/'/g, '"'));
 }
 
-function splitLanguages(resumeData) {
+function splitLanguages() {
     const resumeData = JSON.parse(fs.readFileSync('resume.i18n.json', 'utf8'));
     getLanguages().forEach(lang => {
         const version = createLanguageVersion(resumeData, lang);
