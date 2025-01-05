@@ -75,11 +75,11 @@ jobs:
         run: |
           # use heredoc with random delimiter for multiline JSON
           delimiter="$(tr -dc A-Za-z0-9 </dev/urandom | head -c 20)"
-          echo "services<<$delimiter
+          echo "languages<<$delimiter
           $LANGUAGES
           $delimiter" >> "$GITHUB_OUTPUT"
     outputs:
-      services: ${{ steps.gen-matrix.outputs.languages }}
+      languages: ${{ steps.gen-matrix.outputs.languages }}
 
   build:
     needs: prepare
