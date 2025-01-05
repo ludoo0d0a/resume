@@ -8,6 +8,10 @@ const langsStr = getArgument('langs', DEFAULT_LANGUAGES)
 const action = getArgument('action', 'split')
 const theme = getArgument('theme', 'ludoo')
 
+console.log("action="+action)
+console.log("langsStr="+langsStr)
+console.log("theme="+theme)
+
 function getArgument(name, defaultValue) {
     const prefix = `--${name}=`;
     const foundArg = args.find(arg => arg.startsWith(prefix));
