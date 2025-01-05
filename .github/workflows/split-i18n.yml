@@ -26,7 +26,7 @@ jobs:
       # Translate resume files
       - name: Create Language-Specific Files
         run: |
-          node .github/scripts/split-languages.js --action=split --langs=${{env.LANGUAGES}}
+          node .github/scripts/split-languages.js --action=split --langs=${{ env.LANGUAGES }}
 
       - name: Commit Changes
         env:
@@ -56,7 +56,7 @@ jobs:
       # Translate resume files
       - name: Create Language-Specific Files
         run: |
-          node .github/scripts/split-languages.js --action=generate --theme=${{ env.THEME_NAME }} --langs=${{LANGUAGES}}
+          node .github/scripts/split-languages.js --action=generate --theme=${{ env.THEME_NAME }} --langs=${{ env.LANGUAGES }}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
