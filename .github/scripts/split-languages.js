@@ -3,24 +3,20 @@ const { execSync } = require('child_process');
 
 // Parse command line arguments for --langs parameter
 const args = process.argv.slice(2);
-const langsArg = args.find(arg => arg.startsWith('--langs='));
-let LANGUAGES = ['en', 'fr']; // default fallback
+const DEFAULT_LANGUAGES = JSON.stringify(['en', 'fr']);
+const langsStr = getArgument('langs', DEFAULT_LANGUAGES)
+const action = getArgument('action', 'split')
+const theme = getArgument('theme', 'ludoo')
 
-if (langsArg) {
-    console.log('parameters :', langsArg);
-    try {
-        // Extract the array string after --langs= and parse it
-        const langsStr = langsArg.split('--langs=')[1];
-        // Parse the array string, replacing single quotes with double quotes for valid JSON
-        LANGUAGES = JSON.parse(langsStr.replace(/'/g, '"'));
-    } catch (error) {
-        console.log('Invalid langs parameter format. Using default languages:', LANGUAGES);
-        throw new Error('Invalid langs parameter format.');
+function getArgument(name, defaultValue) {
+    const prefix = `--${name}=`;
+    const foundArg = args.find(arg => arg.startsWith(prefix));
+    if (!foundArg) {
+        return defaultValue;
     }
+    return foundArg.split(prefix)[1];
 }
 
-// Read input file
-const resumeData = JSON.parse(fs.readFileSync('resume.i18n.json', 'utf8'));
 
 // Function to remove language-specific fields
 function createLanguageVersion(data, language) {
@@ -50,9 +46,28 @@ function createLanguageVersion(data, language) {
     return result;
 }
 
-// Generate files for each language
-LANGUAGES.forEach(lang => {
-    const version = createLanguageVersion(resumeData, lang);
-    fs.writeFileSync(`resume.${lang}.json`, JSON.stringify(version, null, 2));
-});
+function getLanguages(){
+    // Parse the array string, replacing single quotes with double quotes for valid JSON
+    return JSON.parse(langsStr.replace(/'/g, '"'));
+}
 
+function splitLanguages(resumeData) {
+    const resumeData = JSON.parse(fs.readFileSync('resume.i18n.json', 'utf8'));
+    getLanguages().forEach(lang => {
+        const version = createLanguageVersion(resumeData, lang);
+        fs.writeFileSync(`resume.${lang}.json`, JSON.stringify(version, null, 2));
+    });
+}
+
+function generateResumes(){
+    getLanguages().forEach(lang => {
+        const shellHtml = execSync(`resume export index-${lang}.html --theme ${theme} --resume resume.${lang}.json`);
+        const shellPdf = execSync(`resume export pdf/resume-${lang}.pdf --format pdf --theme ${theme} --resume resume.${lang}.json`);
+    });
+}
+
+if (action === 'split') {
+    splitLanguages();
+}else if (action === 'generate') {
+   generateResumes();
+}

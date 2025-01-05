@@ -4,12 +4,6 @@ env:
   #THEME_NAME: 'kendall'
   THEME_NAME: 'ludoo'
   LANGUAGES: "[\"en\",\"fr\"]"
-  LANGUAGES2: |
-    [
-      "en",
-      "fr"
-    ]
-    
 
 on:
   push:
@@ -34,8 +28,7 @@ jobs:
       # Translate resume files
       - name: Create Language-Specific Files
         run: |
-          node .github/scripts/split-languages.js
-        #  node .github/scripts/split-languages.js --langs=$(jq ${{env.LANGUAGES}} | join(","))
+          node .github/scripts/split-languages.js --action=split --langs=${{LANGUAGES}}
 
       - name: Commit Changes
         env:
@@ -62,66 +55,10 @@ jobs:
           npm install -g resume-cli
           npm install jsonresume-theme-${{ env.THEME_NAME }}
 
-      - name: Upload workspace
-        uses: actions/upload-artifact@v4
-        with:
-          name: workspace
-          path: |
-            resume.*.json
-            node_modules/
-
-  # Required because you cannot access the env context in matrix
-  set-matrix:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "$LANGUAGES"
-
-      - name: Set Matrix languages
-        id: set-matrix
-        run: echo "::set-output name=languages::{\"include\":$LANGUAGES}"
-#        run: echo "::set-output name=languages::{\"include\":[\"en\",\"fr\"]}"
-#       run: echo "::set-output name=languages::{\"include\":$(toJson(LANGUAGES))}"
-    outputs:
-      languages: ${{ steps.set-matrix.outputs.languages }}
-
-  build:
-    needs: prepare
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        language: ['en','fr']
-#        language: ${{ fromJson(needs.set-matrix.outputs.languages) }}
-    steps:
-      - name: Install Resume CLI (repeated)
+      # Translate resume files
+      - name: Create Language-Specific Files
         run: |
-          npm install -g resume-cli
-          
-      - uses: actions/download-artifact@v4
-        with:
-          name: workspace
-
-      - name: Generate HTML for ${{ matrix.language }}
-        run: |
-          resume export index-${{ matrix.language }}.html --theme ${{ env.THEME_NAME }} --resume resume.${{ matrix.language }}.json
-
-      - name: Generate PDF for ${{ matrix.language }}
-        run: |
-          resume export pdf/resume-${{ matrix.language }}.pdf --format pdf --theme ${{ env.THEME_NAME }} --resume resume.${{ matrix.language }}.json
-
-      - name: Upload builds
-        uses: actions/upload-artifact@v4
-        with:
-          name: builds-${{ matrix.language }}
-          path: |
-            *.html
-            pdf/*.pdf
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download all artifacts
-        uses: actions/download-artifact@v4
+          node .github/scripts/split-languages.js --action=generate --theme=${{ env.THEME_NAME }} --langs=${{LANGUAGES}}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
