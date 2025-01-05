@@ -88,7 +88,7 @@ jobs:
     strategy:
       matrix:
         language: ['en','fr']
-#        language: ${{ fromJson(needs.gen-matrix.outputs.languages) }}
+#        language: ${{ fromJson(needs.set-matrix.outputs.languages) }}
     steps:
       - uses: actions/download-artifact@v4
         with:
