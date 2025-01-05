@@ -632,7 +632,6 @@
       "fluency": "Fluent"
     }
   ],
-  "interests": [],
   "references": [
     {
       "name": "Vincent Mellano",
@@ -769,5 +768,22 @@
     "languages": "en,fr",
     "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json",
     "locale": "en-US"
-  }
+  },
+  "interests": [
+    {
+      "name": "Geocaching",
+      "keywords": [
+        "gps",
+        "treasure hunt"
+      ]
+    },
+    {
+      "name": "Sports",
+      "keywords": [
+        "Hiking",
+        "Tennis",
+        "Handball"
+      ]
+    }
+  ]
 }
