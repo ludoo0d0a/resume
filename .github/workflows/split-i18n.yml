@@ -31,7 +31,7 @@ jobs:
       - name: Create Language-Specific Files
         run: |
           node .github/scripts/split-languages.js
-        #  node .github/scripts/split-languages.js --langs=$(jq env.LANGUAGES | join(","))
+        #  node .github/scripts/split-languages.js --langs=$(jq ${{env.LANGUAGES}} | join(","))
 
       - name: Commit Changes
         env:
