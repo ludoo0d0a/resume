@@ -11,11 +11,20 @@ https://ludoo0d0a.github.io/resume/
 - Github action to translate resume in 2 languages
 - Hosted on github pages
 - Synchronized with jsonresume.org
+- Content versioning
 
 ## Prerequisites
 
-TODO
-
+In Settings / Secrets / Actions / Add a new secret
+ - GIST_ID : Id of the gist resume.json
+ - GIST_TOKEN: Personal Access Token to access the gist ; 
+   - to create it, 
+     - go to https://github.com/settings/personal-access-tokens
+     - and select User permissions:
+       - Read and Write access to gists
+     Repository permissions
+       - Read access to metadata
+       - Read and Write access to workflows   
 
 ## i18n support 
 
@@ -32,6 +41,11 @@ Idea is to have a single file `resume.i18n.json` having all translations node us
   "url": "https://play.google.com/store/apps/details?id=fr.geoking.tennis.scoreboard.wear"
 }
 ```
+
+## Theming
+
+Theming is done using [jsonresume-theme-ludoo](https://github.com/jsonresume/jsonresume-theme-ludoo) allowing to use 
+a single jsonresume file to generate the resume in HTML and PD in all languages.
 
 ## Deployment / Hosting github.io
 
