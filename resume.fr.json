@@ -539,10 +539,22 @@
       "summary": "Tableau de score tennis pour montre Google Android WearOS"
     },
     {
+      "releaseDate": "2025-01-02",
+      "url": "https://www.npmjs.com/package/jsonresume-theme-ludoo",
+      "name": "Theme pour CV au format json-resume",
+      "summary": "Theme pour CV au format json-resume suportant i18n"
+    },
+    {
       "releaseDate": "2019-10-09",
       "url": "https://www.npmjs.com/package/passport-geocaching",
       "name": "Passport pour Geocaching",
       "summary": "Stratégie d'authentification Geocaching pour Passport et Node.js"
+    },
+    {
+      "releaseDate": "2011-10-01",
+      "url": "https://chrome.google.com/webstore/detail/hhcknjkmaaeinhdjgimjnophgpbdgfmg",
+      "name": "Extension Chrome ReaderPlus",
+      "summary": "Chrome extension for Google Reader.\nEnhances navigation and presentation by adding a theme, social sharing features, quick article preview, icons, filtering, and more...\nReached 80,000 users before GoogleReader shutdown.\nProject transferred to a Chinese team."
     }
   ],
   "skills": [
