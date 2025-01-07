@@ -579,12 +579,28 @@
       "url": "https://play.google.com/store/apps/details?id=fr.geoking.tennis.scoreboard.wear"
     },
     {
+      "fr_name": "Theme pour CV au format json-resume",
+      "en_name": "Theme for resume theme using json-resume format",
+      "releaseDate": "2025-01-02",
+      "en_summary": "Theme for resume theme using json-resume format, including i18n",
+      "fr_summary": "Theme pour CV au format json-resume suportant i18n",
+      "url": "https://www.npmjs.com/package/jsonresume-theme-ludoo"
+    },
+    {
       "fr_name": "Passport pour Geocaching",
       "en_name": "Passport for Geocaching",
       "releaseDate": "2019-10-09",
       "en_summary": "Geocaching authentication strategy for Passport and Node.js",
       "fr_summary": "Stratégie d'authentification Geocaching pour Passport et Node.js",
       "url": "https://www.npmjs.com/package/passport-geocaching"
+    },
+    {
+      "fr_name": "Extension Chrome ReaderPlus",
+      "en_name": "ReaderPlus Chrome Extension",
+      "releaseDate": "2011-10-01",
+      "fr_summary": "Chrome extension for Google Reader.\nEnhances navigation and presentation by adding a theme, social sharing features, quick article preview, icons, filtering, and more...\nReached 80,000 users before GoogleReader shutdown.\nProject transferred to a Chinese team.",
+      "en_summary": "Extension Chrome pour Google Reader.\nAméliore la navigation et la présentation en ajoutant un thème, des fonctions de partage vers les sites sociaux, un aperçu rapide des articles, des icônes, un filtre, et plus encore....\nJusqu'à 80 000 utilisateurs avant la fermeture de GoogleReader.\nProjet transféré à une équipe chinoise.",
+      "url": "https://chrome.google.com/webstore/detail/hhcknjkmaaeinhdjgimjnophgpbdgfmg"
     }
   ],
   "skills": [
