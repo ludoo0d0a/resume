@@ -41,6 +41,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GIST_TOKEN }}
           GIST_ID: ${{ secrets.GIST_ID }}
+        if: ${{ env.GIST_ID != '' }}
         run: |
           gh gist edit $GIST_ID -f resume.json resume.en.json
 
