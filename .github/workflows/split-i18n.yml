@@ -52,7 +52,7 @@ jobs:
 
       - name: Generate output files
         run: |
-          node .github/scripts/split-languages.js --action=generate --theme=${{ env.THEME_NAME }} --langs=${{ env.LANGUAGES }}
+          node .github/scripts/split-languages.js --action=generate --theme=${{ env.THEME_NAME }} 
 
       - name: ls
         run: |

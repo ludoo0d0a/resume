@@ -1,7 +1,7 @@
 const fs = require('fs');
 const { execSync } = require('child_process');
 
-// Parse command line arguments for --langs parameter
+// Parse command line arguments for --langs parameter //unused now get langs from i18n file
 const args = process.argv.slice(2);
 const DEFAULT_LANGUAGES = JSON.stringify(["en", "fr"]);
 const action = getArgument('action', 'split')
@@ -57,13 +57,16 @@ function splitLanguages() {
     LANGUAGES.forEach(lang => {
         const version = createLanguageVersion(resumeData, lang);
         fs.writeFileSync(`resume.${lang}.json`, JSON.stringify(version, null, 2));
+        console.log(`Created file: resume.${lang}.json`)
     });
 }
 
 function generateResumes(){
     LANGUAGES.forEach(lang => {
         const shellHtml = execSync(`resume export index-${lang}.html --theme ${theme} --resume resume.${lang}.json`);
+        console.log(`Created HTML file: index-${lang}.html`)
         const shellPdf = execSync(`export RESUME_PUPPETEER_NO_SANDBOX=1; resume export pdf/resume-${lang}.pdf --format pdf --theme ${theme} --resume resume.${lang}.json`);
+        console.log(`Created PDF file: pdf/resume-${lang}.pdf`)
     });
 }
 
