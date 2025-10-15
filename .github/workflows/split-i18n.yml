@@ -50,17 +50,13 @@ jobs:
           npm install -g resume-cli
           npm install jsonresume-theme-${{ env.THEME_NAME }}
 
+      - name: Split into all languages
+        run: |
+          node .github/scripts/split-languages.js --action=split
+
       - name: Generate output files
         run: |
           node .github/scripts/split-languages.js --action=generate --theme=${{ env.THEME_NAME }} 
-
-      - name: ls
-        run: |
-          ls
-
-      - name: ls pdf
-        run: |
-          ls pdf
 
       - name: Homepage index.html
         run: |
