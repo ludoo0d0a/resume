@@ -26,6 +26,35 @@ In Settings / Secrets / Actions / Add a new secret
        - Read access to metadata
        - Read and Write access to workflows   
 
+## Getting started
+
+Just edit `resume.i18n.json`. 
+Github actions will be triggered on commit/push.
+Split will prodcce all separate resume in each languages.
+Generate will produce all PDF and HTML outputs
+All these assets will be deployed in your github.io.
+
+## Getting started locally
+
+Install dependencies:
+
+```bash
+npm install -g resume-cli
+npm install
+```
+
+Run the following commands to generate the resume in all languages:
+
+```bash
+sh split.sh
+sh generate.sh
+```
+
+Outputs are :
+- index.html
+- index-*.html
+- pdf/resume-*.pdf
+
 ## i18n support 
 
 Thanks to IA code generation (Sourcegraph Cody), I created in a few hours a stable first version of github action to translate my resume in 2 languages.
