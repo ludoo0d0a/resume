@@ -123,7 +123,7 @@
       "location": "Bertrange, Luxembourg"
     },
     {
-      "name": "Foyer Group",
+      "name": "Foyer",
       "position": "Architect, Expert leader",
       "startDate": "2023-02-28",
       "endDate": "2024-06-01",
@@ -841,10 +841,10 @@
     },
     {
       "fr_name": "Platforme de développement rapide pour application iPhone",
-      "en_name": "Rapid plateform for iPhone application",
+      "en_name": "Rapid platform for iPhone application",
       "startDate": "2012-07-31",
       "fr_description": "Platforme de développement rapide pour application iPhone",
-      "en_description": "Rapid plateform for iPhone application"
+      "en_description": "Rapid platform for iPhone application"
     },
     {
       "fr_name": "Eye Traffic - Info traffic Luxembourg",
