@@ -1,0 +1,1 @@
+node .github/scripts/split-languages.js --action=split --theme=ludoo

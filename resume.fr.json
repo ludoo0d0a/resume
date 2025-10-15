@@ -5,7 +5,7 @@
     "image": "https://www.libravatar.org/avatar/0c1ddc83408f6f3966e7999083692f6d42832e1054640f4cc0a6e45aa2bc6779?d=retro&s=80",
     "email": "ludovic.valente@gmail.com",
     "phone": "",
-    "url": "https://scora.watch",
+    "url": "https://scorawatch.com",
     "location": {
       "countryCode": "LU",
       "address": "Luxembourg"
@@ -43,7 +43,7 @@
       }
     ],
     "label": "Ingénieur logiciel fullstack @SFΞIR Luxembourg",
-    "summary": "Développeur Senior Fullstack, architecte IT, formateur VueJs, tech lead, développeur Flutter/Android.\n\nFocalisé sur l'architecture moderne autour des besoins web et mobiles.\nJe crée des applications modernes avec des technologies émergentes s'appuyant sur une architecture efficace.\n\nCompétences principales/favorites : Java, SpringBoot, Android KMP, ElasticSearch, NodeJs, VueJs, Flutter"
+    "summary": "Développeur Senior Fullstack, architecte IT, formateur VueJs, tech lead, développeur Flutter/Android.\n\nFocalisé sur l'architecture moderne autour des besoins web et mobiles.\nJe crée des applications modernes avec des technologies émergentes s'appuyant sur une architecture efficace.\n\nCompétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, NodeJs, VueJs, Flutter"
   },
   "work": [
     {
@@ -75,6 +75,24 @@
         "formation"
       ],
       "summary": "Responsable d'une équipe de 10 collaborateurs, en charge du suivi de carrière, formation, mission et clients, participation aux décisions de l'agence Luxembourg."
+    },
+    {
+      "name": "Société Générale",
+      "position": "Tech lead",
+      "startDate": "2024-02-15",
+      "endDate": "2024-09-30",
+      "highlights": [
+        "java",
+        "SpringBoot",
+        "jwt",
+        "reactive programming",
+        "openapi",
+        "unit testing",
+        "integration testing"
+      ],
+      "url": "https://www.linkedin.com/company/societe-generale/",
+      "location": "Belval, Luxembourg",
+      "summary": "En tant que consultant Sfeir, ma mission pour SG est d'assurer le suivi technique, l'architecture et le développement des projets règlementaires comme EMIR, MIFID, Loi du 25 mars. Mon rôle est d'améliorer l'efficacité et la qualité du code au sein de l'équipe de 4 développeurs. En parallèle, l'objectif est la modernisation de plusieurs applications vers Kubernetes/Cloud/API."
     },
     {
       "name": "Temenos",
@@ -663,8 +681,8 @@
     {
       "name": "Scora",
       "startDate": "2022-12-31",
-      "url": "http://scora.watch",
-      "description": "Application de comptage de points pour le tennis pour montre WearOS\nElle vous aide à compter les points pendant votre match de tennis.\n\nSite web: http://scora.watch\n\nPublié sur Google Play Store : https://play.google.com/store/apps/details?id=fr.geoking.tennis.scoreboard.wear",
+      "url": "http://scorawatch.com",
+      "description": "Application de comptage de points pour le tennis pour montre WearOS\nElle vous aide à compter les points pendant votre match de tennis.\n\nSite web: http://scorawatch.com\n\nPublié sur Google Play Store : https://play.google.com/store/apps/details?id=fr.geoking.tennis.scoreboard.wear",
       "highlights": [
         "Projet personnel en production",
         "Technologie émergente KMP"
@@ -780,7 +798,7 @@
     }
   ],
   "meta": {
-    "version": "v2.0.6",
+    "version": "v2.1.0",
     "theme": "ludoo",
     "languages": "en,fr",
     "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json",
