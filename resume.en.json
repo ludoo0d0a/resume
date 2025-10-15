@@ -557,6 +557,12 @@
       "summary": "Tennis scoreboard for watch on Google Android WearOS"
     },
     {
+      "releaseDate": "2025-01-03",
+      "url": "https://github.com/ludoo0d0a/resume",
+      "name": "This resume was generated in PDF and HTML in several languages, based on a single JSON file, then auto published on web site.",
+      "summary": "Resume theme using json-resume format. Translations, PDF, HTML, auto web published"
+    },
+    {
       "releaseDate": "2025-01-02",
       "url": "https://www.npmjs.com/package/jsonresume-theme-ludoo",
       "name": "Theme for resume theme using json-resume format",
