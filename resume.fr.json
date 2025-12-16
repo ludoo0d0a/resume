@@ -77,6 +77,43 @@
       "summary": "Responsable d'une équipe de 10 collaborateurs, en charge du suivi de carrière, formation, mission et clients, participation aux décisions de l'agence Luxembourg."
     },
     {
+      "name": "Banque Internationale à Luxembourg",
+      "position": "Software Architect",
+      "startDate": "2025-11-15",
+      "highlights": [
+        "java",
+        "SpringBoot",
+        "microservices",
+        "openshift",
+        "architecture",
+        "solution design",
+        "openapi",
+        "flowable",
+        "jwt",
+        "unit testing",
+        "integration testing"
+      ],
+      "url": "https://www.linkedin.com/company/bil-luxembourg/",
+      "location": "Luxembourg, Luxembourg",
+      "summary": "En tant que consultant Sfeir, je suis architecte logiciel à la BIL (Banque Internationale à Luxembourg) au sein de l'équipe COE, en charge de plusieurs microservices.\nMon rôle consiste à analyser et proposer des solutions techniques fiables.\nLors de la conception, je pilote les développements et offre mon expertise technique aux développeurs et je révise les fonctionnalités.\nJe suis également responsable de l'amélioration de la qualité, des outils et des bonnes pratiques, pendant les processus de développement, de déploiement et de release."
+    },
+    {
+      "name": "STATEC",
+      "position": "Android Mobile Developer",
+      "startDate": "2025-11-01",
+      "endDate": "2025-12-15",
+      "highlights": [
+        "Android",
+        "capacity",
+        "SQLite",
+        "Typescript",
+        "hybride mobile"
+      ],
+      "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
+      "location": "Luxembourg",
+      "summary": "Consultant Sfeir pour STATEC - Développement d'un moteur offline basé sur SQLite pour une application Android réalisé avec Capacity"
+    },
+    {
       "name": "Société Générale",
       "position": "Tech lead",
       "startDate": "2025-02-15",

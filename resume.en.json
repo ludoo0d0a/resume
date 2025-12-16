@@ -43,7 +43,7 @@
       }
     ],
     "label": "Fullstack software engineer @SFΞIR Luxembourg",
-    "summary": "Senior Application Fullstack Developer, IT architect, VueJs Trainer, tech lead, Flutter/Android developer.\n\nFocused on modern architecture around mobility and web requirements.\nI create modern apps with emergent technologies relying on efficient architecture.\n\nMain/favorite skills : Java, SpringBoot, Android, ElasticSearch, NodeJs, VueJs, Flutter"
+    "summary": "Senior Full-Stack Application Developer, IT architect, Vue.js Trainer, tech lead, Flutter/Android developer.\n\nFocused on modern architecture around mobility and web requirements.\nI create modern apps with emerging technologies relying on efficient architecture.\n\nMain/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js, Flutter"
   },
   "work": [
     {
@@ -74,7 +74,44 @@
         "HR",
         "formation"
       ],
-      "summary": "Managing a team of 10 collaborators, in charge of career follow-up, training, mission and clients, participation in Luxembourg agency decisions."
+      "summary": "Managing a team of 10 collaborators, in charge of career follow-up, training, missions and clients, participating in Luxembourg agency decisions."
+    },
+    {
+      "name": "Banque Internationale à Luxembourg",
+      "position": "Software Architect",
+      "startDate": "2025-11-15",
+      "highlights": [
+        "java",
+        "SpringBoot",
+        "microservices",
+        "openshift",
+        "architecture",
+        "solution design",
+        "openapi",
+        "flowable",
+        "jwt",
+        "unit testing",
+        "integration testing"
+      ],
+      "url": "https://www.linkedin.com/company/bil-luxembourg/",
+      "location": "Luxembourg, Luxembourg",
+      "summary": "As a Sfeir consultant, I am a Software Architect at BIL (Banque Internationale à Luxembourg) in the COE team, responsible for multiple microservices.\nMy role is to analyze and suggest reliable technical solutions.\nDuring the design phase, I lead developers, provide technical expertise, and review features.\nI am also responsible for improving quality, tooling, and best practices during the development, deployment, and release processes."
+    },
+    {
+      "name": "STATEC",
+      "position": "Android Mobile Developer",
+      "startDate": "2025-11-01",
+      "endDate": "2025-12-15",
+      "highlights": [
+        "Android",
+        "capacity",
+        "SQLite",
+        "Typescript",
+        "hybride mobile"
+      ],
+      "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
+      "location": "Luxembourg",
+      "summary": "Sfeir consultant for STATEC - Development of an offline engine based on SQLite for an Android application built with Capacity"
     },
     {
       "name": "Société Générale",
@@ -92,7 +129,7 @@
       ],
       "url": "https://www.linkedin.com/company/societe-generale/",
       "location": "Belval, Luxembourg",
-      "summary": "As Sfeir consultant, I am Tech lead / dev / architecture in the Regulatory team for Luxembourg.\nRegulatory topics are mainly reporting on EMIR, MIFID, Loi du 25 mars\nMy role is to improve efficiency and code quality in the team of 4 developers.\nIn the meantime, target is the modernization of several apps to Kubernetes/Cloud/API."
+      "summary": "As a Sfeir consultant, I am Tech Lead / Developer / Architect in the Regulatory team for Luxembourg.\nRegulatory topics are mainly reporting on EMIR, MIFID, Loi du 25 mars.\nMy role is to improve efficiency and code quality in the team of 4 developers.\nMeanwhile, the target is the modernization of several apps to Kubernetes/Cloud/API."
     },
     {
       "name": "Temenos",
@@ -111,7 +148,7 @@
       ],
       "url": "https://www.linkedin.com/company/temenos/",
       "location": "Bertrange, Luxembourg",
-      "summary": "As a senior dev, my mission for Sfeir is to help and create a data platform upon existing Multifonds Temenos data system, to provide custom portals."
+      "summary": "As a senior developer, my mission for Sfeir is to help create a data platform on top of the existing Multifonds Temenos data system, to provide custom portals."
     },
     {
       "name": "Foyer",
@@ -129,7 +166,7 @@
       ],
       "url": "https://www.linkedin.com/company/foyer-assurances/",
       "location": "Leudelange, Luxembourg",
-      "summary": "I joined architecture team MEO to improve quality, architecture and processus around software production inside Foyer Group.\nA lot of interesting challenges here !"
+      "summary": "I joined the MEO architecture team to improve quality, architecture and processes around software production inside Foyer Group.\nA lot of interesting challenges here!"
     },
     {
       "name": "Fundsquare",
@@ -156,7 +193,7 @@
       ],
       "url": "https://www.linkedin.com/company/fundsquare/",
       "location": "Luxembourg",
-      "summary": "As a senior dev, I mostly manage the collection platform to get data, processing, wrangling, cleansing.\nMain collected data are Priips EPT, Mifid EMT, EET, ...\n\nAs a tech lead, I coordinate teams, draft architecture, and organize stuff with all actors to reach a stable and technically viable solution, matching the target vision.\n\nI design and dev most of the patterns like data layers, orchestation, choreography, distributed transactions, communication event driven, business monitoring, contract spec with json schema, code generators for microservices ready to deploy and for API clients, tooling devops scripts for local dev, delivery and troubleshooting.\n\nThe stack is composed of several layers around these main technologies : \n- SpringBoot, Camunda BPM, Kafka, Trifacta, Camel, MsSql, Mongo, Elasticsearch, Kubernetes, AKS, ESB, Openshift, React, GraphQL , NodeJs\n\nWe are working in collaboration with Bourse du Luxembourg architecture team to evolve to a modern solution, cloud-native in Azure.\n\nIn 5 years, we fully moved from legacy tomcat+mssql+esb to distributed event driven micro services+mongo+kafka cloud native.\n\nSince Fundsquare's acquisition by Fe Fundinfo, short target is to move completely cloud native, and integrate their platform."
+      "summary": "As a senior developer, I mostly manage the collection platform to get data, processing, wrangling, cleansing.\nMain collected data are Priips EPT, Mifid EMT, EET, ...\n\nAs a tech lead, I coordinate teams, draft architecture, and organize activities with all stakeholders to reach a stable and technically viable solution, matching the target vision.\n\nI design and develop most of the patterns like data layers, orchestration, choreography, distributed transactions, event-driven communication, business monitoring, contract specifications with JSON schema, code generators for deployable microservices and for API clients, DevOps tooling scripts for local development, delivery and troubleshooting.\n\nThe stack is composed of several layers around these main technologies:\n- SpringBoot, Camunda BPM, Kafka, Trifacta, Camel, MsSql, Mongo, Elasticsearch, Kubernetes, AKS, ESB, Openshift, React, GraphQL, Node.js\n\nWe are working in collaboration with Bourse du Luxembourg architecture team to evolve to a modern solution, cloud-native in Azure.\n\nOver 5 years, we completely moved from legacy tomcat+mssql+esb to distributed event-driven microservices+mongo+kafka cloud native.\n\nSince Fundsquare's acquisition by Fe Fundinfo, the short-term target is to move completely cloud native, and integrate their platform."
     },
     {
       "position": "Senior Software Developer",
@@ -172,7 +209,7 @@
       "url": "https://www.linkedin.com/company/luxembourg-stock-exchange/",
       "location": "Luxembourg",
       "name": "Luxembourg Stock Exchange",
-      "summary": "Part time between LuxSE and Fundsquare (for Sfeir)\n\nThe goal is to develop a new common set of tools.\nThese services are shared by LuxSE and Fundsquare.\nHosted in Azure, relying on Spring - Kafka - Mongo, I'm in charge of the development of several services.\nFTP connector, API Catalog are the first services of this platform."
+      "summary": "Part-time between LuxSE and Fundsquare (for Sfeir)\n\nThe goal is to develop a new common set of tools.\nThese services are shared by LuxSE and Fundsquare.\nHosted in Azure, relying on Spring - Kafka - Mongo, I'm in charge of the development of several services.\nFTP connector, API Catalog are the first services of this platform."
     },
     {
       "name": "SOGETI Luxembourg",
@@ -191,7 +228,7 @@
       ],
       "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
       "location": "Bertrange, Luxembourg",
-      "summary": "Conversion tool for European Parliament.\n\nThis MsWord to Xml engine is used in production to produce xml document compliant with rules provided by EP.\nI built the engine core on the project startup. \nDuring these 3 months, I put the project a level higher in terms of readability, testing, maintenance, new format support.\n\nQuality improvement, testing support, improve rules engine, rewrite rules and transformers for the 2 main formats.\n\nJava, Spring, Eclipse, Xml, AkomaNtoso, Xsd, Dtd, Jira"
+      "summary": "Conversion tool for European Parliament.\n\nThis MS Word to XML engine is used in production to produce XML documents compliant with rules provided by EP.\nI built the engine core at the project startup.\nDuring these 3 months, I elevated the project to a higher level in terms of readability, testing, maintenance, new format support.\n\nQuality improvement, testing support, improved rules engine, rewrite rules and transformers for the 2 main formats.\n\nJava, Spring, Eclipse, XML, AkomaNtoso, XSD, DTD, Jira"
     },
     {
       "name": "Sogeti luxembourg",
@@ -207,7 +244,7 @@
       ],
       "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
       "location": "Bertrange, Luxembourg",
-      "summary": "I worked for european and national institutions as Fullstack software engineer.\nProjects are mainly focused on web and mobile technologies.\nJava+Spring, nodejs, Backbone, Android..., I follow modern standards and new performant libraires and frameworks.\nIntegrated into several teams from multiple clients,I like to work with people of different multi cultural backgrounds.\n\nSee details above :"
+      "summary": "I worked for European and national institutions as Full-Stack software engineer.\nProjects are mainly focused on web and mobile technologies.\nJava+Spring, Node.js, Backbone, Android..., I follow modern standards and new performant libraries and frameworks.\nIntegrated into several teams from multiple clients, I like to work with people of different multicultural backgrounds.\n\nSee details above:"
     },
     {
       "name": "SOGETI Luxembourg",
@@ -228,7 +265,7 @@
       ],
       "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
       "location": "Luxembourg",
-      "summary": "at European Parliament, DAS Unit (Translation)\n\nRestart  a collaborative platform from scratch.\nComplete technology migration from Sharepoint to Java/Angular.\nThe first steps should put basis of full extensible collaborative system, strongly relying on business data."
+      "summary": "at European Parliament, DAS Unit (Translation)\n\nRestart a collaborative platform from scratch.\nComplete technology migration from SharePoint to Java/Angular.\nThe first steps should lay the foundation for a fully extensible collaborative system, strongly relying on business data."
     },
     {
       "name": "SOGETI Luxembourg",
@@ -250,7 +287,7 @@
       ],
       "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
       "location": "Luxembourg",
-      "summary": "at European Parliament, DAS Unit (Translation)\n\nSPA+ : Participate in architecture services oriented ; Build and configure a router/proxy.\nSocrates : Building a REST-based event manager to complete the suite of tools"
+      "summary": "at European Parliament, DAS Unit (Translation)\n\nSPA+ : Participate in service-oriented architecture; Build and configure a router/proxy.\nSocrates : Building a REST-based event manager to complete the suite of tools"
     },
     {
       "name": "SOGETI Luxembourg",
@@ -270,7 +307,7 @@
         "json"
       ],
       "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
-      "summary": "at European Parliament, DAS Unit (Translation)\n\nSirius : Search engine - Architect, technical analyst, developement, web integration, testing, deployments.\nImplement a solution based on ElasticSearch for millions of documents in multilingual and translation context. Web application in SPA architecture, repsonsive and REST oriented."
+      "summary": "at European Parliament, DAS Unit (Translation)\n\nSirius : Search engine - Architect, technical analyst, development, web integration, testing, deployments.\nImplement a solution based on ElasticSearch for millions of documents in multilingual and translation context. Web application in SPA architecture, responsive and REST oriented."
     },
     {
       "name": "SOGETI Luxembourg",
@@ -286,7 +323,7 @@
       ],
       "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
       "location": "Luxembourg",
-      "summary": "at European Parliament, DAS Unit (Translation)\n\nFluid+ : Join a team to complete a web application dedicated to contracts managements for Translation Units.\nSupport for teams on Sencha ExtJs. \nUX advisor for the unit."
+      "summary": "at European Parliament, DAS Unit (Translation)\n\nFluid+ : Join a team to complete a web application dedicated to contract management for Translation Units.\nSupport for teams on Sencha ExtJs.\nUX advisor for the unit."
     },
     {
       "name": "SOGETI Luxembourg",
@@ -301,7 +338,7 @@
       ],
       "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
       "location": "Luxembourg",
-      "summary": "at BNL - Bibliothèque Nationale du Luxembourg\n\nEtude Solr pour un moteur de recherche performant pour eluxemburgensia.lu.\nRechercher, investiguer, tester et réaliser des prototypes avec Solr.\nIntégration forte à l'outil existant A-Z.lu et au viewer eluxemburgensia.lu.\nProblématique de scalabilité et performance.\nRéalisation de prototype avec SolrCloud."
+      "summary": "at BNL - Bibliothèque Nationale du Luxembourg\n\nSolr study for a high-performance search engine for eluxemburgensia.lu.\nResearch, investigate, test and develop prototypes with Solr.\nStrong integration with existing tool A-Z.lu and viewer eluxemburgensia.lu.\nScalability and performance issues.\nPrototype development with SolrCloud."
     },
     {
       "name": "SOGETI Luxembourg",
@@ -323,7 +360,7 @@
       ],
       "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
       "location": "Luxembourg",
-      "summary": "Développement d'une app Android pour effectuer le relevé des prix pour le STATEC (statec.lu). \nRéalisation des services backend (Java, Spring MVC)\n\nAndroid SDK 4.ADT, AndroidStudio, Gradle, Volley, AndroidPlot, GreenDAO\nEclipse, Spring MVC, Apache Commons, Rest, XML"
+      "summary": "Development of an Android app to perform price collection for STATEC (statec.lu).\nBackend services development (Java, Spring MVC)\n\nAndroid SDK 4.ADT, AndroidStudio, Gradle, Volley, AndroidPlot, GreenDAO\nEclipse, Spring MVC, Apache Commons, REST, XML"
     },
     {
       "name": "SOGETI Luxembourg",
@@ -336,7 +373,7 @@
         "NodeJs",
         "Express"
       ],
-      "summary": "pour Editus Luxembourg, \n\nPour l'app iPhone/iPad habiter.lu, développement de l'API avec RestKit.\nMockup avec NodeJs et Express."
+      "summary": "for Editus Luxembourg,\n\nFor the iPhone/iPad app habiter.lu, API development with RestKit.\nMockup with Node.js and Express."
     },
     {
       "name": "SOGETI Luxembourg",
@@ -349,7 +386,7 @@
       ],
       "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
       "location": "Luxembourg",
-      "summary": "at BNL - Bibliotheque nationale du Luxembourg\n\nMise à jour du projet eLuxemburgensia.\nSupport de ExtJs 4.2\nProcess de build avec Sencha Cmd.\nRefonte des thèmes en SASS.\nDécouplage du repository pour amélioration des performances.\nSupport des livres.\nArchitecture des caches revue."
+      "summary": "at BNL - Bibliothèque nationale du Luxembourg\n\nUpdate of the eLuxemburgensia project.\nExtJs 4.2 support\nBuild process with Sencha Cmd.\nTheme redesign in SASS.\nRepository decoupling for performance improvement.\nBook support.\nCache architecture review."
     },
     {
       "name": "SOGETI Luxembourg",
@@ -365,7 +402,7 @@
       ],
       "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
       "location": "Luxembourg / Monaco",
-      "summary": "at Société Générale Bank & Trust\n\nBased on Documentum, we develop a webapp to manage PDF using business workflows.\nThanks to pdfBox, I managed PDF edition.\nI made the complex web interface with jQueryUI and others jQuery plugins.\n---\nDéveloppement d'un outil de gestion documentaire .\nBasé sur Documentum, l'application Web permet de gérer les workflows des documents PDF.\nConception de l'interface avec jQueryUI.\nEdition/manipulation des PDF avec pdfBox."
+      "summary": "at Société Générale Bank & Trust\n\nBased on Documentum, we develop a web application to manage PDFs using business workflows.\nThanks to PDFBox, I managed PDF editing.\nI made the complex web interface with jQueryUI and other jQuery plugins.\n---\nDevelopment of a document management tool.\nBased on Documentum, the Web application allows managing PDF document workflows.\nInterface design with jQueryUI.\nPDF editing/manipulation with PDFBox."
     },
     {
       "name": "SOGETI Luxembourg",
@@ -374,7 +411,7 @@
       "endDate": "2012-05-31",
       "highlights": [],
       "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
-      "summary": "at BNL - Bibliotheque nationale du Luxembourg\n\nAdd some new features on the Web Media Viewer used in eluxemburgensia.lu"
+      "summary": "at BNL - Bibliothèque nationale du Luxembourg\n\nAdd some new features on the Web Media Viewer used in eluxemburgensia.lu"
     },
     {
       "name": "SOGETI Luxembourg",
@@ -386,7 +423,7 @@
       ],
       "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
       "location": "luxembourg",
-      "summary": "at BNL - Bibliotheque nationale du Luxembourg\nfor LNB - Latvia library\n\nPublish a media viewer, developed previously, as an opensource project. \nRemoves proprietary dependencies and create a free mode instead.\nGives the application a high level of loose coupling and the capability to be well integrated in other systems.\n\nhttp://sourceforge.net/projects/bnlviewer/\n\nNow project is used in http://www.periodika.lv"
+      "summary": "at BNL - Bibliothèque nationale du Luxembourg\nfor LNB - Latvia library\n\nPublish a media viewer, developed previously, as an open-source project.\nRemoved proprietary dependencies and created a free mode instead.\nGave the application a high level of loose coupling and the capability to be well integrated in other systems.\n\nhttp://sourceforge.net/projects/bnlviewer/\n\nThe project is now used in http://www.periodika.lv"
     },
     {
       "name": "SOGETI Luxembourg",
@@ -405,7 +442,7 @@
         "AD/LDAP",
         "JavaWebStart"
       ],
-      "summary": "at European Parliament - WebApplication development \n\ne-dictionaries is web tool to distribute and launch dictionaries (web or local) according to the relative licenses.\nUsers could easily manage their favorite dictionaries on its portal.\nAdministration includes licenses management, statistics reports, graphical overview of expiration and quota exceeded.\nUsed by all translators for their day to day translations."
+      "summary": "at European Parliament - Web Application development\n\ne-dictionaries is a web tool to distribute and launch dictionaries (web or local) according to the applicable licenses.\nUsers could easily manage their favorite dictionaries on their portal.\nAdministration includes license management, statistics reports, graphical overview of expiration and quota exceeded.\nUsed by all translators for their day-to-day translations."
     },
     {
       "position": "Software engineer",
@@ -419,7 +456,7 @@
         "Mets"
       ],
       "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
-      "summary": "at BNL - Bibliotheque nationale du Luxembourg\nCreation and integration of a new Web client (ExtJs/Java) to consult newspapers and books online.\nMets/alto standards. Full Web2.0 application."
+      "summary": "at BNL - Bibliothèque nationale du Luxembourg\nCreation and integration of a new Web client (ExtJs/Java) to consult newspapers and books online.\nMets/alto standards. Full Web2.0 application."
     },
     {
       "name": "SOGETI Luxembourg",
@@ -436,7 +473,7 @@
         "Jahia"
       ],
       "url": "https://www.linkedin.com/company/sogeti/",
-      "summary": "at European Parliament :\n- Study and support for a worklow engine adoption : Bonita\n- workflow integration in a SOA approch\n- XML, XSL support to project teams\n- Jahia support (use, custom dev, bugfix, ...) to project teams\n- Studies on different Document Management system\n- J2EE projects development"
+      "summary": "at European Parliament:\n- Study and support for a workflow engine adoption: Bonita\n- Workflow integration in a SOA approach\n- XML, XSL support to project teams\n- Jahia support (use, custom development, bugfix, ...) to project teams\n- Studies on different Document Management systems\n- J2EE projects development"
     },
     {
       "name": "Sogeti",
@@ -467,7 +504,7 @@
         "OracleText contextual search"
       ],
       "url": "https://www.linkedin.com/company/sogeti/",
-      "summary": "Client : European Court of Justice.\nMain developer on an Intranet system : the first application hosted by this new system is a research tool enabling to merge and abstract all different sources of datas."
+      "summary": "Client : European Court of Justice.\nMain developer on an Intranet system: the first application hosted by this new system is a research tool that enables merging and abstracting all different sources of data."
     },
     {
       "name": "Sogeti",
@@ -485,7 +522,7 @@
         "ldap"
       ],
       "url": "https://www.linkedin.com/company/sogeti/",
-      "summary": "Client : European Court of Justice.\nMain developer on a search engine dedicated to Canevas enabling to search and insert references in the different 20 languages.\nJ2EE Web application using Struts, JSP, authentication against LDAP AD/OID, Oracle database, use of ICU to help international translation and string manipulation"
+      "summary": "Client : European Court of Justice.\nMain developer on a search engine dedicated to Canevas enabling searching and inserting references in 20 different languages.\nJ2EE Web application using Struts, JSP, authentication against LDAP AD/OID, Oracle database, use of ICU to help international translation and string manipulation"
     },
     {
       "name": "Sogeti",
@@ -503,7 +540,7 @@
         "ldap"
       ],
       "url": "https://www.linkedin.com/company/sogeti/",
-      "summary": "Client : European Court of Justice.\nAnalyst and developer for a project of management of all the decisions taken during hearings concerning the different cases.\nJ2EE Web application using Struts, JSP and business taglibs, authentication against LDAP AD/OID, Oracle database and XML serialization"
+      "summary": "Client : European Court of Justice.\nAnalyst and developer for a project managing all the decisions taken during hearings concerning the different cases.\nJ2EE Web application using Struts, JSP and business taglibs, authentication against LDAP AD/OID, Oracle database and XML serialization"
     },
     {
       "name": "Sogeti",
@@ -520,7 +557,7 @@
         "Oracle10g database"
       ],
       "url": "https://www.linkedin.com/company/sogeti/",
-      "summary": "Client : European Court of Justice.\nMain developer / analyst on a project named Canevas.\nIt's a multi-tiers office application for judiciary documents creation."
+      "summary": "Client : European Court of Justice.\nMain developer / analyst on a project named Canevas.\nIt's a multi-tier office application for judicial document creation."
     },
     {
       "name": "Quaternove",
@@ -532,7 +569,7 @@
         "Suppliers management"
       ],
       "position": "Project manager",
-      "summary": "THALES e-Transactions delivers printers inside kiosks for ticket delivery in airport and train stations. This project was aimed at providing a few prototypes of these machines and go to the production line with all necessary certificates.\n•\tElectronic and mechanical development\n•\tProduction management\n•\tSuppliers management\n•\tComputer system (VB, serial communication) to control different printers for various tests in order to obtain certificates."
+      "summary": "THALES e-Transactions delivers printers inside kiosks for ticket delivery in airports and train stations. This project was aimed at providing a few prototypes of these machines and moving to the production line with all necessary certificates.\n•\tElectronic and mechanical development\n•\tProduction management\n•\tSuppliers management\n•\tComputer system (VB, serial communication) to control different printers for various tests in order to obtain certificates."
     }
   ],
   "volunteer": [],
@@ -566,7 +603,7 @@
       "releaseDate": "2025-01-02",
       "url": "https://www.npmjs.com/package/jsonresume-theme-ludoo",
       "name": "Theme for resume theme using json-resume format",
-      "summary": "Theme for resume theme using json-resume format, including i18n"
+      "summary": "Resume theme using json-resume format, including i18n"
     },
     {
       "releaseDate": "2019-10-09",
@@ -578,7 +615,7 @@
       "releaseDate": "2011-10-01",
       "url": "https://chrome.google.com/webstore/detail/hhcknjkmaaeinhdjgimjnophgpbdgfmg",
       "name": "ReaderPlus Chrome Extension",
-      "summary": "Extension Chrome pour Google Reader.\nAméliore la navigation et la présentation en ajoutant un thème, des fonctions de partage vers les sites sociaux, un aperçu rapide des articles, des icônes, un filtre, et plus encore....\nJusqu'à 80 000 utilisateurs avant la fermeture de GoogleReader.\nProjet transféré à une équipe chinoise."
+      "summary": "Chrome extension for Google Reader.\nEnhances navigation and presentation by adding a theme, social sharing features, quick article preview, icons, filtering, and more...\nReached 80,000 users before Google Reader shutdown.\nProject transferred to a Chinese team."
     }
   ],
   "skills": [
