@@ -47,6 +47,7 @@ body {
 
 .ep-section {
   margin-top: 1rem;
+  page-break-inside: avoid;
 }
 
 .ep-section-title {
@@ -56,24 +57,10 @@ body {
   font-weight: bold;
   padding: 0.25rem 0.5rem;
   margin: 0 0 0.5rem;
-  page-break-after: avoid;
 }
 
 .ep-entry {
   margin-bottom: 0.75rem;
-  page-break-inside: avoid;
-}
-
-.ep-entry-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 0.75rem;
-}
-
-.ep-entry-main {
-  flex: 1;
-  min-width: 0;
 }
 
 .ep-entry-title {
@@ -86,17 +73,9 @@ body {
 }
 
 .ep-entry-dates {
-  flex-shrink: 0;
+  float: right;
   font-style: italic;
   color: #333;
-  text-align: right;
-  white-space: nowrap;
-}
-
-.ep-entry-body,
-.ep-summary {
-  margin: 0.35rem 0 0;
-  white-space: pre-wrap;
 }
 
 .ep-summary {
@@ -115,19 +94,16 @@ body {
 
 .ep-skills-list li,
 .ep-languages-list li {
-  margin-bottom: 0.35rem;
-}
-
-.ep-skill-keywords {
-  display: block;
-  margin-top: 0.15rem;
-  font-weight: normal;
-  color: #333;
+  margin-bottom: 0.2rem;
 }
 
 .ep-highlights {
   margin: 0.3rem 0 0;
   padding-left: 1.2rem;
+}
+
+.ep-clear {
+  clear: both;
 }
 </style>
   <style media="print">@page {
@@ -174,6 +150,7 @@ body {
 
 .ep-section {
   margin-top: 1rem;
+  page-break-inside: avoid;
 }
 
 .ep-section-title {
@@ -183,24 +160,10 @@ body {
   font-weight: bold;
   padding: 0.25rem 0.5rem;
   margin: 0 0 0.5rem;
-  page-break-after: avoid;
 }
 
 .ep-entry {
   margin-bottom: 0.75rem;
-  page-break-inside: avoid;
-}
-
-.ep-entry-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 0.75rem;
-}
-
-.ep-entry-main {
-  flex: 1;
-  min-width: 0;
 }
 
 .ep-entry-title {
@@ -213,17 +176,9 @@ body {
 }
 
 .ep-entry-dates {
-  flex-shrink: 0;
+  float: right;
   font-style: italic;
   color: #333;
-  text-align: right;
-  white-space: nowrap;
-}
-
-.ep-entry-body,
-.ep-summary {
-  margin: 0.35rem 0 0;
-  white-space: pre-wrap;
 }
 
 .ep-summary {
@@ -242,19 +197,16 @@ body {
 
 .ep-skills-list li,
 .ep-languages-list li {
-  margin-bottom: 0.35rem;
-}
-
-.ep-skill-keywords {
-  display: block;
-  margin-top: 0.15rem;
-  font-weight: normal;
-  color: #333;
+  margin-bottom: 0.2rem;
 }
 
 .ep-highlights {
   margin: 0.3rem 0 0;
   padding-left: 1.2rem;
+}
+
+.ep-clear {
+  clear: both;
 }
 </style>
 </head>
@@ -263,594 +215,269 @@ body {
     <div class="ep-brand">EUROPASS</div>
     <div class="ep-subtitle">Curriculum Vitae</div>
     <div class="ep-name">Ludovic Valente</div>
-    <div class="ep-label">Fullstack software engineer @SFΞIR Luxembourg</div>
+    <div class="ep-label"></div>
   </header>
 
   <section class="ep-section ep-contact">
     <h2 class="ep-section-title">Personal information</h2>
-    <p>ludovic.valente@gmail.com</p>
-    
-    <p>https://scorawatch.com</p>
-    <p>Luxembourg, LU</p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
   </section>
 
   <section class="ep-section">
-    <h2 class="ep-section-title">About me</h2>
-    <p class="ep-summary">Senior Full-Stack Application Developer, IT architect, Vue.js Trainer, tech lead, Flutter/Android developer.
-
-Focused on modern architecture around mobility and web requirements.
-I create modern apps with emerging technologies relying on efficient architecture.
-
-Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js, Flutter</p>
+    <h2 class="ep-section-title"></h2>
+    <p class="ep-summary"></p>
   </section>
 
   <section class="ep-section">
     <h2 class="ep-section-title">Work experience</h2>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Fullstack software engineer</div>
-          <div class="ep-entry-meta">SFEIR · Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">Aug 2017 — Present</div>
-      </div>
-      <p class="ep-entry-body">Consultant in software development and architecture</p>
-      <ul class="ep-highlights">
-        <li>java</li><li>SpringBoot</li><li>Kafka</li><li>Cloud</li><li>Android Mobile</li>
-      </ul>
+      <div class="ep-entry-dates">Aug 2017 — Present</div>
+      <div class="ep-entry-title">Fullstack software engineer</div>
+      <div class="ep-entry-meta">SFEIR · </div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Engineer manager</div>
-          <div class="ep-entry-meta">SFEIR · Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">Jan 2018 — Dec 2024</div>
-      </div>
-      <p class="ep-entry-body">Managing a team of 10 collaborators, in charge of career follow-up, training, missions and clients, participating in Luxembourg agency decisions.</p>
-      <ul class="ep-highlights">
-        <li>follow up</li><li>carreer</li><li>HR</li><li>formation</li>
-      </ul>
+      <div class="ep-entry-dates">Jan 2018 — Dec 2024</div>
+      <div class="ep-entry-title">Engineer manager</div>
+      <div class="ep-entry-meta">SFEIR · </div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Software Architect</div>
-          <div class="ep-entry-meta">Banque Internationale à Luxembourg · Luxembourg, Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">Nov 2025 — Present</div>
-      </div>
-      <p class="ep-entry-body">As a Sfeir consultant, I am a Software Architect at BIL (Banque Internationale à Luxembourg) in the COE team, responsible for multiple microservices.
-My role is to analyze and suggest reliable technical solutions.
-During the design phase, I lead developers, provide technical expertise, and review features.
-I am also responsible for improving quality, tooling, and best practices during the development, deployment, and release processes.</p>
-      <ul class="ep-highlights">
-        <li>java</li><li>SpringBoot</li><li>microservices</li><li>openshift</li><li>architecture</li><li>solution design</li><li>openapi</li><li>flowable</li><li>jwt</li><li>unit testing</li><li>integration testing</li>
-      </ul>
+      <div class="ep-entry-dates">Nov 2025 — Present</div>
+      <div class="ep-entry-title">Software Architect</div>
+      <div class="ep-entry-meta">Banque Internationale à Luxembourg · </div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Android Mobile Developer</div>
-          <div class="ep-entry-meta">STATEC · Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">Nov 2025 — Dec 2025</div>
-      </div>
-      <p class="ep-entry-body">Sfeir consultant for STATEC - Development of an offline engine based on SQLite for an Android application built with Capacity</p>
-      <ul class="ep-highlights">
-        <li>Android</li><li>capacity</li><li>SQLite</li><li>Typescript</li><li>hybride mobile</li>
-      </ul>
+      <div class="ep-entry-dates">Nov 2025 — Dec 2025</div>
+      <div class="ep-entry-title">Android Mobile Developer</div>
+      <div class="ep-entry-meta">STATEC · </div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Tech lead</div>
-          <div class="ep-entry-meta">Société Générale · Belval, Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">Feb 2025 — Sep 2025</div>
-      </div>
-      <p class="ep-entry-body">As a Sfeir consultant, I am Tech Lead / Developer / Architect in the Regulatory team for Luxembourg.
-Regulatory topics are mainly reporting on EMIR, MIFID, Loi du 25 mars.
-My role is to improve efficiency and code quality in the team of 4 developers.
-Meanwhile, the target is the modernization of several apps to Kubernetes/Cloud/API.</p>
-      <ul class="ep-highlights">
-        <li>java</li><li>SpringBoot</li><li>jwt</li><li>reactive programming</li><li>openapi</li><li>unit testing</li><li>integration testing</li>
-      </ul>
+      <div class="ep-entry-dates">Feb 2025 — Sep 2025</div>
+      <div class="ep-entry-title">Tech lead</div>
+      <div class="ep-entry-meta">Société Générale · </div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Senior Software Developer</div>
-          <div class="ep-entry-meta">Temenos · Bertrange, Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">Jul 2024 — Dec 2024</div>
-      </div>
-      <p class="ep-entry-body">As a senior developer, my mission for Sfeir is to help create a data platform on top of the existing Multifonds Temenos data system, to provide custom portals.</p>
-      <ul class="ep-highlights">
-        <li>java</li><li>SpringBoot</li><li>keycloak</li><li>jwt</li><li>jsonApi</li><li>jsonSchema</li><li>unit testing</li><li>integration testing</li>
-      </ul>
+      <div class="ep-entry-dates">Jul 2024 — Dec 2024</div>
+      <div class="ep-entry-title">Senior Software Developer</div>
+      <div class="ep-entry-meta">Temenos · </div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Architect, Expert leader</div>
-          <div class="ep-entry-meta">Foyer · Leudelange, Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">Feb 2023 — Jun 2024</div>
-      </div>
-      <p class="ep-entry-body">I joined the MEO architecture team to improve quality, architecture and processes around software production inside Foyer Group.
-A lot of interesting challenges here!</p>
-      <ul class="ep-highlights">
-        <li>AWS</li><li>SpringBoot</li><li>scala</li><li>CI/CD</li><li>Kubernetes</li><li>argoCD</li><li>JWT</li>
-      </ul>
+      <div class="ep-entry-dates">Feb 2023 — Jun 2024</div>
+      <div class="ep-entry-title">Architect, Expert leader</div>
+      <div class="ep-entry-meta">Foyer · </div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Ingenieur développement fullstack</div>
-          <div class="ep-entry-meta">Fundsquare · Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">Aug 2017 — Feb 2023</div>
-      </div>
-      <p class="ep-entry-body">As a senior developer, I mostly manage the collection platform to get data, processing, wrangling, cleansing.
-Main collected data are Priips EPT, Mifid EMT, EET, ...
-
-As a tech lead, I coordinate teams, draft architecture, and organize activities with all stakeholders to reach a stable and technically viable solution, matching the target vision.
-
-I design and develop most of the patterns like data layers, orchestration, choreography, distributed transactions, event-driven communication, business monitoring, contract specifications with JSON schema, code generators for deployable microservices and for API clients, DevOps tooling scripts for local development, delivery and troubleshooting.
-
-The stack is composed of several layers around these main technologies:
-- SpringBoot, Camunda BPM, Kafka, Trifacta, Camel, MsSql, Mongo, Elasticsearch, Kubernetes, AKS, ESB, Openshift, React, GraphQL, Node.js
-
-We are working in collaboration with Bourse du Luxembourg architecture team to evolve to a modern solution, cloud-native in Azure.
-
-Over 5 years, we completely moved from legacy tomcat+mssql+esb to distributed event-driven microservices+mongo+kafka cloud native.
-
-Since Fundsquare's acquisition by Fe Fundinfo, the short-term target is to move completely cloud native, and integrate their platform.</p>
-      <ul class="ep-highlights">
-        <li>SpringBoot</li><li>Camunda BPM</li><li>Kafka</li><li>Trifacta</li><li>Camel</li><li>MsSql</li><li>Mongo</li><li>Elasticsearch</li><li>Kubernetes</li><li>AKS</li><li>Azure</li><li>ESB</li><li>Openshift</li><li>React</li><li>GraphQL</li><li>NodeJs</li>
-      </ul>
+      <div class="ep-entry-dates">Aug 2017 — Feb 2023</div>
+      <div class="ep-entry-title">Ingenieur développement fullstack</div>
+      <div class="ep-entry-meta">Fundsquare · </div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Senior Software Developer</div>
-          <div class="ep-entry-meta">Luxembourg Stock Exchange · Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">Jan 2021 — Oct 2021</div>
-      </div>
-      <p class="ep-entry-body">Part-time between LuxSE and Fundsquare (for Sfeir)
-
-The goal is to develop a new common set of tools.
-These services are shared by LuxSE and Fundsquare.
-Hosted in Azure, relying on Spring - Kafka - Mongo, I'm in charge of the development of several services.
-FTP connector, API Catalog are the first services of this platform.</p>
-      <ul class="ep-highlights">
-        <li>Spring</li><li>Kafka</li><li>Mongo</li><li>Azure</li><li>Openshift</li>
-      </ul>
+      <div class="ep-entry-dates">Jan 2021 — Oct 2021</div>
+      <div class="ep-entry-title">Senior Software Developer</div>
+      <div class="ep-entry-meta">Luxembourg Stock Exchange · </div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Fullstack software engineer</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg · Bertrange, Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">Jun 2017 — Aug 2017</div>
-      </div>
-      <p class="ep-entry-body">Conversion tool for European Parliament.
-
-This MS Word to XML engine is used in production to produce XML documents compliant with rules provided by EP.
-I built the engine core at the project startup.
-During these 3 months, I elevated the project to a higher level in terms of readability, testing, maintenance, new format support.
-
-Quality improvement, testing support, improved rules engine, rewrite rules and transformers for the 2 main formats.
-
-Java, Spring, Eclipse, XML, AkomaNtoso, XSD, DTD, Jira</p>
-      <ul class="ep-highlights">
-        <li>Java</li><li>Spring</li><li>Eclipse</li><li>Xml</li><li>AkomaNtoso</li><li>Xsd</li><li>Dtd</li><li>Jira</li>
-      </ul>
+      <div class="ep-entry-dates">Jun 2017 — Aug 2017</div>
+      <div class="ep-entry-title">Fullstack software engineer</div>
+      <div class="ep-entry-meta">SOGETI Luxembourg · </div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Fullstack software engineer</div>
-          <div class="ep-entry-meta">Sogeti luxembourg · Bertrange, Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">Jun 2001 — Aug 2017</div>
-      </div>
-      <p class="ep-entry-body">I worked for European and national institutions as Full-Stack software engineer.
-Projects are mainly focused on web and mobile technologies.
-Java+Spring, Node.js, Backbone, Android..., I follow modern standards and new performant libraries and frameworks.
-Integrated into several teams from multiple clients, I like to work with people of different multicultural backgrounds.
-
-See details above:</p>
-      <ul class="ep-highlights">
-        <li>Java</li><li>Spring</li><li>nodejs</li><li>Backbone</li><li>Android</li>
-      </ul>
+      <div class="ep-entry-dates">Jun 2001 — Aug 2017</div>
+      <div class="ep-entry-title">Fullstack software engineer</div>
+      <div class="ep-entry-meta">Sogeti luxembourg · </div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Fullstack software engineer</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg · Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">Jan 2017 — Jun 2017</div>
-      </div>
-      <p class="ep-entry-body">at European Parliament, DAS Unit (Translation)
-
-Restart a collaborative platform from scratch.
-Complete technology migration from SharePoint to Java/Angular.
-The first steps should lay the foundation for a fully extensible collaborative system, strongly relying on business data.</p>
-      <ul class="ep-highlights">
-        <li>JHipster</li><li>Spring Boot</li><li>ElasticSeach</li><li>Angular</li><li>Bootstrap</li><li>webpack</li><li>grunt</li><li>nodejs</li><li>jdk7</li><li>tomcat7</li>
-      </ul>
+      <div class="ep-entry-dates">Jan 2017 — Jun 2017</div>
+      <div class="ep-entry-title">Fullstack software engineer</div>
+      <div class="ep-entry-meta">SOGETI Luxembourg · </div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Fullstack software engineer</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg · Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">Jun 2016 — Dec 2016</div>
-      </div>
-      <p class="ep-entry-body">at European Parliament, DAS Unit (Translation)
-
-SPA+ : Participate in service-oriented architecture; Build and configure a router/proxy.
-Socrates : Building a REST-based event manager to complete the suite of tools</p>
-      <ul class="ep-highlights">
-        <li>Spring Boot</li><li>Spring Cloud</li><li>microservices architecture</li><li>angular</li><li>bootstrap</li><li>bower</li><li>grunt</li><li>jpa</li><li>Oracle</li><li>tomcat</li><li>java8</li>
-      </ul>
+      <div class="ep-entry-dates">Jun 2016 — Dec 2016</div>
+      <div class="ep-entry-title">Fullstack software engineer</div>
+      <div class="ep-entry-meta">SOGETI Luxembourg · </div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Fullstack software engineer</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">Jan 2016 — Jun 2016</div>
-      </div>
-      <p class="ep-entry-body">at European Parliament, DAS Unit (Translation)
-
-Sirius : Search engine - Architect, technical analyst, development, web integration, testing, deployments.
-Implement a solution based on ElasticSearch for millions of documents in multilingual and translation context. Web application in SPA architecture, responsive and REST oriented.</p>
-      <ul class="ep-highlights">
-        <li>ElasticSearch</li><li>Spring Data</li><li>Java</li><li>Backbone</li><li>Marionette</li><li>Bootstrap</li><li>Grunt</li><li>Maven</li><li>REST</li><li>json</li>
-      </ul>
+      <div class="ep-entry-dates">Jan 2016 — Jun 2016</div>
+      <div class="ep-entry-title">Fullstack software engineer</div>
+      <div class="ep-entry-meta">SOGETI Luxembourg</div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Web/Java developer</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg · Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">Oct 2014 — Dec 2015</div>
-      </div>
-      <p class="ep-entry-body">at European Parliament, DAS Unit (Translation)
-
-Fluid+ : Join a team to complete a web application dedicated to contract management for Translation Units.
-Support for teams on Sencha ExtJs.
-UX advisor for the unit.</p>
-      <ul class="ep-highlights">
-        <li>Scrum</li><li>Spring</li><li>Java</li><li>ExtJs</li><li>Maven</li>
-      </ul>
+      <div class="ep-entry-dates">Oct 2014 — Dec 2015</div>
+      <div class="ep-entry-title">Web/Java developer</div>
+      <div class="ep-entry-meta">SOGETI Luxembourg · </div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">IT Consultant</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg · Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">Mar 2014 — Sep 2014</div>
-      </div>
-      <p class="ep-entry-body">at BNL - Bibliothèque Nationale du Luxembourg
-
-Solr study for a high-performance search engine for eluxemburgensia.lu.
-Research, investigate, test and develop prototypes with Solr.
-Strong integration with existing tool A-Z.lu and viewer eluxemburgensia.lu.
-Scalability and performance issues.
-Prototype development with SolrCloud.</p>
-      <ul class="ep-highlights">
-        <li>SolrCloud</li><li>ZooKeeper</li><li>Vagrant</li><li>Python</li>
-      </ul>
+      <div class="ep-entry-dates">Mar 2014 — Sep 2014</div>
+      <div class="ep-entry-title">IT Consultant</div>
+      <div class="ep-entry-meta">SOGETI Luxembourg · </div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Android Mobile Developer</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg · Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">Oct 2013 — Mar 2014</div>
-      </div>
-      <p class="ep-entry-body">Development of an Android app to perform price collection for STATEC (statec.lu).
-Backend services development (Java, Spring MVC)
-
-Android SDK 4.ADT, AndroidStudio, Gradle, Volley, AndroidPlot, GreenDAO
-Eclipse, Spring MVC, Apache Commons, REST, XML</p>
-      <ul class="ep-highlights">
-        <li>ADT</li><li>AndroidStudio</li><li>Gradle</li><li>Volley</li><li>AndroidPlot</li><li>GreenDAO</li><li>Eclipse</li><li>Spring MVC</li><li>Apache Commons</li><li>Rest</li><li>XML</li>
-      </ul>
+      <div class="ep-entry-dates">Oct 2013 — Mar 2014</div>
+      <div class="ep-entry-title">Android Mobile Developer</div>
+      <div class="ep-entry-meta">SOGETI Luxembourg · </div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Mobile developer - iOS</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">Jun 2013 — Jul 2013</div>
-      </div>
-      <p class="ep-entry-body">for Editus Luxembourg,
-
-For the iPhone/iPad app habiter.lu, API development with RestKit.
-Mockup with Node.js and Express.</p>
-      <ul class="ep-highlights">
-        <li>iOs</li><li>RestKit</li><li>NodeJs</li><li>Express</li>
-      </ul>
+      <div class="ep-entry-dates">Jun 2013 — Jul 2013</div>
+      <div class="ep-entry-title">Mobile developer - iOS</div>
+      <div class="ep-entry-meta">SOGETI Luxembourg</div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Développeur - architecte Web/Java</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg · Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">Mar 2013 — Jun 2013</div>
-      </div>
-      <p class="ep-entry-body">at BNL - Bibliothèque nationale du Luxembourg
-
-Update of the eLuxemburgensia project.
-ExtJs 4.2 support
-Build process with Sencha Cmd.
-Theme redesign in SASS.
-Repository decoupling for performance improvement.
-Book support.
-Cache architecture review.</p>
-      <ul class="ep-highlights">
-        <li>ExtJs</li><li>java</li>
-      </ul>
+      <div class="ep-entry-dates">Mar 2013 — Jun 2013</div>
+      <div class="ep-entry-title">Développeur - architecte Web/Java</div>
+      <div class="ep-entry-meta">SOGETI Luxembourg · </div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Web/Java developer</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg · Luxembourg / Monaco</div>
-        </div>
-        <div class="ep-entry-dates">Nov 2012 — Feb 2013</div>
-      </div>
-      <p class="ep-entry-body">at Société Générale Bank & Trust
-
-Based on Documentum, we develop a web application to manage PDFs using business workflows.
-Thanks to PDFBox, I managed PDF editing.
-I made the complex web interface with jQueryUI and other jQuery plugins.
----
-Development of a document management tool.
-Based on Documentum, the Web application allows managing PDF document workflows.
-Interface design with jQueryUI.
-PDF editing/manipulation with PDFBox.</p>
-      <ul class="ep-highlights">
-        <li>java</li><li>jQuery</li><li>jQueryUI</li><li>pdfBox</li><li>Documentum</li>
-      </ul>
+      <div class="ep-entry-dates">Nov 2012 — Feb 2013</div>
+      <div class="ep-entry-title">Web/Java developer</div>
+      <div class="ep-entry-meta">SOGETI Luxembourg · </div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Web/Java developer</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">Jan 2012 — May 2012</div>
-      </div>
-      <p class="ep-entry-body">at BNL - Bibliothèque nationale du Luxembourg
-
-Add some new features on the Web Media Viewer used in eluxemburgensia.lu</p>
+      <div class="ep-entry-dates">Jan 2012 — May 2012</div>
+      <div class="ep-entry-title">Web/Java developer</div>
+      <div class="ep-entry-meta">SOGETI Luxembourg</div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Software engineer</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg · luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">Nov 2011 — Dec 2011</div>
-      </div>
-      <p class="ep-entry-body">at BNL - Bibliothèque nationale du Luxembourg
-for LNB - Latvia library
-
-Publish a media viewer, developed previously, as an open-source project.
-Removed proprietary dependencies and created a free mode instead.
-Gave the application a high level of loose coupling and the capability to be well integrated in other systems.
-
-http://sourceforge.net/projects/bnlviewer/
-
-The project is now used in http://www.periodika.lv</p>
-      <ul class="ep-highlights">
-        <li>opensource forks</li>
-      </ul>
+      <div class="ep-entry-dates">Nov 2011 — Dec 2011</div>
+      <div class="ep-entry-title">Software engineer</div>
+      <div class="ep-entry-meta">SOGETI Luxembourg · </div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Consultant</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg · Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">May 2010 — Dec 2011</div>
-      </div>
-      <p class="ep-entry-body">at European Parliament - Web Application development
-
-e-dictionaries is a web tool to distribute and launch dictionaries (web or local) according to the applicable licenses.
-Users could easily manage their favorite dictionaries on their portal.
-Administration includes license management, statistics reports, graphical overview of expiration and quota exceeded.
-Used by all translators for their day-to-day translations.</p>
-      <ul class="ep-highlights">
-        <li>Java</li><li>Spring</li><li>Hibernate</li><li>jQueryUI</li><li>Virtualization system (AppV,SCCM,...)</li><li>Oracle</li><li>AD/LDAP</li><li>JavaWebStart</li>
-      </ul>
+      <div class="ep-entry-dates">May 2010 — Dec 2011</div>
+      <div class="ep-entry-title">Consultant</div>
+      <div class="ep-entry-meta">SOGETI Luxembourg · </div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Software engineer</div>
-          <div class="ep-entry-meta"></div>
-        </div>
-        <div class="ep-entry-dates">Aug 2009 — May 2010</div>
-      </div>
-      <p class="ep-entry-body">at BNL - Bibliothèque nationale du Luxembourg
-Creation and integration of a new Web client (ExtJs/Java) to consult newspapers and books online.
-Mets/alto standards. Full Web2.0 application.</p>
-      <ul class="ep-highlights">
-        <li>ExtJs</li><li>Java</li><li>xml</li><li>ALTO</li><li>Mets</li>
-      </ul>
+      <div class="ep-entry-dates">Aug 2009 — May 2010</div>
+      <div class="ep-entry-title">Software engineer</div>
+      <div class="ep-entry-meta"></div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Senior Software Engineer - J2EE, XML, DMS/CMS, ExtJs specialist</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">Sep 2007 — Jul 2009</div>
-      </div>
-      <p class="ep-entry-body">at European Parliament:
-- Study and support for a workflow engine adoption: Bonita
-- Workflow integration in a SOA approach
-- XML, XSL support to project teams
-- Jahia support (use, custom development, bugfix, ...) to project teams
-- Studies on different Document Management systems
-- J2EE projects development</p>
-      <ul class="ep-highlights">
-        <li>SOA</li><li>java</li><li>J2EE</li><li>XSL</li><li>xml</li><li>Bonita workflow</li><li>Jahia</li>
-      </ul>
+      <div class="ep-entry-dates">Sep 2007 — Jul 2009</div>
+      <div class="ep-entry-title">Senior Software Engineer - J2EE, XML, DMS/CMS, ExtJs specialist</div>
+      <div class="ep-entry-meta">SOGETI Luxembourg</div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">IT architect</div>
-          <div class="ep-entry-meta">Sogeti</div>
-        </div>
-        <div class="ep-entry-dates">Sep 2006 — Aug 2007</div>
-      </div>
-      <p class="ep-entry-body">Client : European Court of Justice.
-Creation of an architecture team in charge of competitive intelligence and installation of a new homogeneous development environment (technologies, tools, testing, ergonomics).</p>
-      <ul class="ep-highlights">
-        <li>jsf</li><li>ejb</li><li>toplink orm</li><li>Jdeveloper</li><li>xml</li>
-      </ul>
+      <div class="ep-entry-dates">Sep 2006 — Aug 2007</div>
+      <div class="ep-entry-title">IT architect</div>
+      <div class="ep-entry-meta">Sogeti</div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Software analyst developer</div>
-          <div class="ep-entry-meta">Sogeti</div>
-        </div>
-        <div class="ep-entry-dates">Jan 2006 — Aug 2007</div>
-      </div>
-      <p class="ep-entry-body">Client : European Court of Justice.
-Main developer on an Intranet system: the first application hosted by this new system is a research tool that enables merging and abstracting all different sources of data.</p>
-      <ul class="ep-highlights">
-        <li>Java</li><li>XSL</li><li>Ajax</li><li>XML</li><li>Oracle10g xmlDB</li><li>OracleText contextual search</li>
-      </ul>
+      <div class="ep-entry-dates">Jan 2006 — Aug 2007</div>
+      <div class="ep-entry-title">Software analyst developer</div>
+      <div class="ep-entry-meta">Sogeti</div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Software analyst developer</div>
-          <div class="ep-entry-meta">Sogeti</div>
-        </div>
-        <div class="ep-entry-dates">Jan 2006 — Feb 2006</div>
-      </div>
-      <p class="ep-entry-body">Client : European Court of Justice.
-Main developer on a search engine dedicated to Canevas enabling searching and inserting references in 20 different languages.
-J2EE Web application using Struts, JSP, authentication against LDAP AD/OID, Oracle database, use of ICU to help international translation and string manipulation</p>
-      <ul class="ep-highlights">
-        <li>Word</li><li>VB</li><li>VBA</li><li>icu</li><li>java</li><li>jsp</li><li>OIDC</li><li>ldap</li>
-      </ul>
+      <div class="ep-entry-dates">Jan 2006 — Feb 2006</div>
+      <div class="ep-entry-title">Software analyst developer</div>
+      <div class="ep-entry-meta">Sogeti</div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Software analyst developer</div>
-          <div class="ep-entry-meta">Sogeti</div>
-        </div>
-        <div class="ep-entry-dates">Aug 2005 — Feb 2006</div>
-      </div>
-      <p class="ep-entry-body">Client : European Court of Justice.
-Analyst and developer for a project managing all the decisions taken during hearings concerning the different cases.
-J2EE Web application using Struts, JSP and business taglibs, authentication against LDAP AD/OID, Oracle database and XML serialization</p>
-      <ul class="ep-highlights">
-        <li>Word</li><li>VB</li><li>VBA</li><li>icu</li><li>java</li><li>jsp</li><li>OIDC</li><li>ldap</li>
-      </ul>
+      <div class="ep-entry-dates">Aug 2005 — Feb 2006</div>
+      <div class="ep-entry-title">Software analyst developer</div>
+      <div class="ep-entry-meta">Sogeti</div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Software analyst developer</div>
-          <div class="ep-entry-meta">Sogeti</div>
-        </div>
-        <div class="ep-entry-dates">Sep 2001 — Sep 2004</div>
-      </div>
-      <p class="ep-entry-body">Client : European Court of Justice.
-Main developer / analyst on a project named Canevas.
-It's a multi-tier office application for judicial document creation.</p>
-      <ul class="ep-highlights">
-        <li>VB</li><li>Word VBA</li><li>Servlets Java</li><li>XML</li><li>XSL</li><li>WordML</li><li>Oracle10g database</li>
-      </ul>
+      <div class="ep-entry-dates">Sep 2001 — Sep 2004</div>
+      <div class="ep-entry-title">Software analyst developer</div>
+      <div class="ep-entry-meta">Sogeti</div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Project manager</div>
-          <div class="ep-entry-meta">Quaternove</div>
-        </div>
-        <div class="ep-entry-dates">Sep 2000 — Sep 2001</div>
-      </div>
-      <p class="ep-entry-body">THALES e-Transactions delivers printers inside kiosks for ticket delivery in airports and train stations. This project was aimed at providing a few prototypes of these machines and moving to the production line with all necessary certificates.
-•	Electronic and mechanical development
-•	Production management
-•	Suppliers management
-•	Computer system (VB, serial communication) to control different printers for various tests in order to obtain certificates.</p>
-      <ul class="ep-highlights">
-        <li>VB</li><li>industrial prototyping</li><li>Suppliers management</li>
-      </ul>
+      <div class="ep-entry-dates">Sep 2000 — Sep 2001</div>
+      <div class="ep-entry-title">Project manager</div>
+      <div class="ep-entry-meta">Quaternove</div>
+      <p></p>
+      <div class="ep-clear"></div>
     </div>
   </section>
 
   <section class="ep-section">
     <h2 class="ep-section-title">Education and training</h2>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Ecole nationale d&#x27;Ingénieurs de Metz</div>
-          <div class="ep-entry-meta">Engineer degree — Generalist engineer, mechanics specialty</div>
-        </div>
-        <div class="ep-entry-dates">Dec 1995 — Dec 2000</div>
-      </div>
+      <div class="ep-entry-dates">Dec 1995 — Dec 2000</div>
+      <div class="ep-entry-title">Ecole nationale d&#x27;Ingénieurs de Metz</div>
+      <div class="ep-entry-meta"></div>
+      <div class="ep-clear"></div>
     </div>
   </section>
 
   <section class="ep-section">
     <h2 class="ep-section-title">Language skills</h2>
     <ul class="ep-languages-list">
-      <li><strong>French</strong> — Native speaker</li>
-      <li><strong>English</strong> — Fluent</li>
+      <li><strong>French</strong> — </li>
+      <li><strong>English</strong> — </li>
     </ul>
   </section>
 
   <section class="ep-section">
     <h2 class="ep-section-title">Digital skills</h2>
     <ul class="ep-skills-list">
-      <li>
-        <strong>Frontend</strong> — Senior
-        <span class="ep-skill-keywords">HTML / JSX, SCSS / CSS / Styled Components / Material, Javascript / Typescript, React, Angular, VueJs, Sencha ExtJs, Backbone.js, Webpack, Redux, Chrome Extensions, GruntJS, GreaseMonkey, Figma</span>
-      </li>
-      <li>
-        <strong>Backend</strong> — Senior
-        <span class="ep-skill-keywords">Node, Java, Spring, SpringBoot, Solr, ElasticSearch, Python, Kotlin, scala, Postgres, Redis, Serverless, Keycloak, Kafka, Microservices, REST, SOA, JHipster, Hibernate, XSL/XSLT, MongoDb, Oracle, PostgreSQL</span>
-      </li>
-      <li>
-        <strong>Cloud</strong> — Senior
-        <span class="ep-skill-keywords">AWS, Azure / AKS, Google Cloud / GCP, Netlify, kubernetes</span>
-      </li>
-      <li>
-        <strong>CI/CD</strong> — Senior
-        <span class="ep-skill-keywords">Github actions, argoCD, Jenkins</span>
-      </li>
-      <li>
-        <strong>Mobile</strong> — Senior
-        <span class="ep-skill-keywords">Flutter, iOs / Swift / ObjectiveC, Android / Kotlin / Jetpack compose / KMP, Ionic Framework, Gradle</span>
-      </li>
+      <li>Frontend ()</li>
+      <li>Backend ()</li>
+      <li>Cloud ()</li>
+      <li>CI/CD ()</li>
+      <li>Mobile ()</li>
     </ul>
   </section>
 
