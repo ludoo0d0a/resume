@@ -24,19 +24,20 @@ Edit **`resume.i18n.json`**, then run `npm run build:all` again.
 | Command | What it does |
 |---------|----------------|
 | `npm run split` | `resume.i18n.json` → `resume.en.json`, `resume.fr.json` |
-| `npm run build:site` | `public/` HTML + `pdf/` (+ mirror PDFs to `public/pdf/`) |
-| `npm run build:europass` | `public/resume-*-europass.{xml,html}` + `public/pdf/resume-*-europass.pdf` |
-| `npm run build:public` | site + Europass + XSD validate |
-| `npm run build:all` | split + build:public |
+| `npm run build -- --preset public` | Full site: HTML, PDFs, Europass XML/HTML/PDF, XSD validate |
+| `npm run build:all` | `split` + `--preset public` |
+| `npm run validate` | Validate existing Europass XML only |
 
-Needs **`xmllint`** for `npm run validate`. See [schemas/europass/README.md](schemas/europass/README.md) for `npm run xsd`.
+Other presets: `site`, `europass`, `europass-xml` (XML + validate). See `npm run build -- --help`.
+
+Needs **`xmllint`** for validate. See [schemas/europass/README.md](schemas/europass/README.md) for `npm run xsd`.
 
 ## GitHub Actions
 
 On push to `resume.i18n.json` (or build-related paths), CI runs the same pipeline:
 
 1. `npm run split` → commit `resume.en.json` / `resume.fr.json`
-2. `npm run build:public` → commit `public/` and `pdf/`
+2. `npm run build -- --preset public` → commit `public/` and `pdf/`
 3. Deploy **`public/`** to GitHub Pages (`gh-pages`)
 
 Optional gist sync: set `GIST_ID` and `GIST_TOKEN` in repository secrets.

@@ -61,7 +61,7 @@ jobs:
         run: gh gist edit $GIST_ID -f resume.json resume.en.json
 
       - name: Build public site
-        run: npm run build:public
+        run: npm run build -- --preset public
 
       - name: Commit generated site
         env:

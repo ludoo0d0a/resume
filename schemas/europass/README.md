@@ -21,8 +21,8 @@ After download, `included/` and `imported/` paths are wired for offline use (off
 ## Validate generated XML
 
 ```bash
-npm run build:europass-xml   # build + validate
-npm run validate             # validate existing files only
+npm run build -- --preset europass-xml   # build + validate
+npm run validate                         # validate existing files only
 ```
 
 ## License

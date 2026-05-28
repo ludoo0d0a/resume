@@ -7,15 +7,15 @@ resume.i18n.json
        │  npm run split  (scripts/split-i18n.js)
        ▼
 resume.en.json  resume.fr.json
-       │  npm run build:public
-       ├─ build:site   → public/index-*.html, pdf/*.pdf, public/pdf/*
-       ├─ build:europass → public/resume-*-europass.{xml,html} + public/pdf/resume-*-europass.pdf
-       └─ validate     → XSD (xmllint)
+       │  npm run build -- --preset public
+       ├─ site      → public/index-*.html, pdf/*.pdf, public/pdf/*
+       ├─ europass  → public/resume-*-europass.{xml,html} + public/pdf/resume-*-europass.pdf
+       └─ validate  → XSD (xmllint)
        ▼
 public/  (+ pdf/ in repo)  →  GitHub Pages (publish_dir: public)
 ```
 
-**Local:** `npm ci` then `npm run build:all` (split + build + validate).
+**Local:** `npm ci` then `npm run build:all` (split + `build -- --preset public`).
 
 **CI:** [.github/workflows/build.yml](.github/workflows/build.yml) runs the same npm scripts, commits `resume.*.json`, `public/`, `pdf/`, deploys `public/` to `gh-pages`.
 
@@ -24,11 +24,10 @@ public/  (+ pdf/ in repo)  →  GitHub Pages (publish_dir: public)
 | Script | Action |
 |--------|--------|
 | `npm run split` | `resume.i18n.json` → `resume.en.json`, `resume.fr.json` |
-| `npm run build:site` | HTML in `public/`, PDF in `pdf/` + copy to `public/pdf/` |
-| `npm run build:europass` | Europass XML/HTML/PDF in `public/` |
-| `npm run build:public` | `build:site` + `build:europass` + `validate` |
-| `npm run build:all` | `split` + `build:public` |
-| `npm run validate` | Europass XML vs vendored XSD |
+| `npm run build -- --preset public` | Full publish output + XSD validate |
+| `npm run build:all` | `split` + `--preset public` |
+| `npm run build -- --help` | Presets: `site`, `europass`, `europass-xml`, `public` |
+| `npm run validate` | Europass XML vs vendored XSD (no rebuild) |
 | `npm run xsd` | Refresh `schemas/europass/v3.4.0/` |
 
 Requires global or npx **`resume-cli`** for PDF export. Requires **`xmllint`** for validate.
@@ -57,8 +56,9 @@ Profile URLs in JSON are relative to the **site root** (`pdf/resume-en.pdf`, `in
 | Path | Role |
 |------|------|
 | `scripts/split-i18n.js` | i18n split |
-| `scripts/build.js` | Build CLI |
+| `scripts/build.js` | Build CLI (`--preset`, `--target`, `--validate`) |
 | `scripts/lib/build-resume.js` | Render/export orchestration |
+| `scripts/lib/europass-validate.js` | XSD validation (xmllint) |
 | `scripts/lib/europass-xml.js` | JSON Resume → Europass XML |
 | `index.js` | Re-exports `jsonresume-theme-ludoo` |
 | `europass/` | Europass HTML/PDF theme for resume-cli |

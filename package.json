@@ -7,12 +7,7 @@
   "scripts": {
     "split": "node scripts/split-i18n.js",
     "build": "node scripts/build.js",
-    "build:site": "node scripts/build.js --target html --target pdf",
-    "build:europass": "node scripts/build.js --target europass-xml --target europass-html --target europass-pdf",
-    "build:public": "npm run build:site && npm run build:europass && npm run validate",
-    "build:all": "npm run split && npm run build:public",
-    "build:pdf": "node scripts/build.js --with-pdf",
-    "build:europass-xml": "node scripts/build.js --target europass-xml && node scripts/validate-europass-xml.js",
+    "build:all": "npm run split && npm run build -- --preset public",
     "validate": "node scripts/validate-europass-xml.js",
     "xsd": "node scripts/download-europass-xsd.js"
   },

@@ -17,6 +17,24 @@ const TARGET_ALIASES = {
   europasshtml: 'europass-html',
 };
 
+/** Named output bundles (expand to --target values). */
+const BUILD_PRESETS = {
+  site: {
+    targets: ['html', 'pdf'],
+  },
+  europass: {
+    targets: ['europass-xml', 'europass-html', 'europass-pdf'],
+  },
+  'europass-xml': {
+    targets: ['europass-xml'],
+    validate: true,
+  },
+  public: {
+    targets: ['html', 'pdf', 'europass-xml', 'europass-html', 'europass-pdf'],
+    validate: true,
+  },
+};
+
 function ensureParentDir(filePath) {
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
 }
@@ -216,10 +234,31 @@ function normalizeTarget(value) {
   return target;
 }
 
+function normalizePreset(value) {
+  const key = String(value).trim().toLowerCase();
+  if (key === 'europassxml') return 'europass-xml';
+  if (!BUILD_PRESETS[key]) {
+    throw new Error(`Unknown preset "${value}". Use: ${Object.keys(BUILD_PRESETS).join(', ')}`);
+  }
+  return key;
+}
+
+function applyPreset(options) {
+  const preset = BUILD_PRESETS[options.preset];
+  for (const target of preset.targets) {
+    options.targets.add(target);
+  }
+  if (preset.validate) {
+    options.validate = true;
+  }
+}
+
 function parseBuildArgs(argv) {
   const options = {
     langs: [],
     targets: new Set(),
+    preset: null,
+    validate: false,
     withPdf: false,
     useApi: process.env.EUROPASS_USE_API === '1',
     restUrl: process.env.EUROPASS_REST_URL || DEFAULT_REST_URL,
@@ -230,8 +269,12 @@ function parseBuildArgs(argv) {
     const arg = argv[i];
     if ((arg === '--lang' || arg === '--locale') && argv[i + 1]) {
       options.langs.push(argv[++i]);
+    } else if ((arg === '--preset' || arg === '--mode') && argv[i + 1]) {
+      options.preset = normalizePreset(argv[++i]);
     } else if (arg === '--target' && argv[i + 1]) {
       options.targets.add(normalizeTarget(argv[++i]));
+    } else if (arg === '--validate') {
+      options.validate = true;
     } else if (arg === '--with-pdf') {
       options.withPdf = true;
     } else if (arg === '--use-api') {
@@ -241,6 +284,10 @@ function parseBuildArgs(argv) {
     } else if (arg === '--help' || arg === '-h') {
       options.help = true;
     }
+  }
+
+  if (options.preset) {
+    applyPreset(options);
   }
 
   if (!options.langs.length) {
@@ -254,6 +301,7 @@ function parseBuildArgs(argv) {
 export {
   DEFAULT_REST_URL,
   TARGET_ALIASES,
+  BUILD_PRESETS,
   loadResume,
   loadThemeRender,
   buildEuropassXml,
