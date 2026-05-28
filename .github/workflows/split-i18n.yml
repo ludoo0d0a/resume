@@ -4,6 +4,12 @@ on:
   push:
     paths:
       - 'resume.i18n.json'
+      - 'scripts/**'
+      - 'europass/**'
+      - 'index.js'
+      - 'package.json'
+      - 'schemas/europass/**'
+      - '.github/workflows/split-i18n.yml'
 
   workflow_dispatch:
 
@@ -11,7 +17,7 @@ jobs:
   generate-resume:
     runs-on: ubuntu-latest
     env:
-      THEME_NAME: 'ludoo'
+      RESUME_PUPPETEER_NO_SANDBOX: '1'
 
     steps:
       - uses: actions/checkout@v4
@@ -20,10 +26,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: npm
 
       - name: Translate resume files
-        run: |
-          node .github/scripts/split-languages.js --action=split
+        run: node .github/scripts/split-languages.cjs --action=split
 
       - name: Commit Changes
         env:
@@ -42,25 +48,22 @@ jobs:
           GH_TOKEN: ${{ secrets.GIST_TOKEN }}
           GIST_ID: ${{ secrets.GIST_ID }}
         if: ${{ env.GIST_ID != '' }}
-        run: |
-          gh gist edit $GIST_ID -f resume.json resume.en.json
+        run: gh gist edit $GIST_ID -f resume.json resume.en.json
 
-      - name: Install
-        run: |
-          npm install -g resume-cli
-          npm install jsonresume-theme-${{ env.THEME_NAME }}
+      - name: Install resume-cli
+        run: npm install -g resume-cli
 
-      - name: Split into all languages
-        run: |
-          node .github/scripts/split-languages.js --action=split
+      - name: Install project dependencies
+        run: npm ci
 
-      - name: Generate output files
-        run: |
-          node .github/scripts/split-languages.js --action=generate --theme=${{ env.THEME_NAME }} 
+      - name: Install xmllint
+        run: sudo apt-get update && sudo apt-get install -y libxml2-utils
 
-      - name: Homepage index.html
+      - name: Build site and Europass outputs
         run: |
-          cp index-en.html index.html
+          npm run build:site
+          npm run build:europass
+          npm run validate
 
       - name: Commit generated files
         env:
@@ -68,18 +71,21 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add pdf/*.pdf index.html index-*.html
-          git commit -m "chore: generated files" || exit 0
+          git add public/ pdf/
+          git commit -m "chore: generated site files in public/ and pdf/" || exit 0
           git push
+
+      - name: Remove node_modules before Pages deploy
+        run: rm -rf node_modules
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          publish_dir: public
           publish_branch: gh-pages
 
       - name: Log Deploy URL
         run: |
           echo "::notice::Resume deployed to https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
-
+          echo "::notice::Europass EN https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/resume.en.europass.html"
