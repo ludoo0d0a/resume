@@ -10,6 +10,8 @@ const root = path.resolve(fileURLToPath(new URL('..', import.meta.url)));
 function printHelp() {
   console.log(`Usage: npm run build -- [options]
 
+Pipeline: npm run split  →  resume.en.json / resume.fr.json  →  npm run build:public
+
 Languages (default: ${SUPPORTED_LANGS.join(', ')}):
   --lang <en|fr>        Repeat for one language
 

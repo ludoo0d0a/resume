@@ -1,0 +1,1172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SkillsPassport xmlns="http://europass.cedefop.europa.eu/Europass" locale="en" xsi:schemaLocation="http://europass.cedefop.europa.eu/Europass http://europass.cedefop.europa.eu/xml/v3.4.0/EuropassSchema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DocumentInfo>
+    <DocumentType>ECV</DocumentType>
+    <CreationDate>2026-05-28T19:50:45.744Z</CreationDate>
+    <LastUpdateDate>2026-05-28T19:50:45.744Z</LastUpdateDate>
+    <XSDVersion>V3.4</XSDVersion>
+    <Generator>jsonresume-theme-ludoo</Generator>
+    <EuropassLogo>true</EuropassLogo>
+  </DocumentInfo>
+  <PrintingPreferences>
+    <Document type="ECV">
+      <Field name="LearnerInfo" show="true" order="Identification Headline WorkExperience Education Skills Achievement ReferenceTo"/>
+      <Field name="LearnerInfo.Identification.PersonName" show="true" order="FirstName Surname"/>
+      <Field name="LearnerInfo.Identification.Demographics.Birthdate" show="false" format="text/short"/>
+      <Field name="LearnerInfo.WorkExperience[0].Period" show="true" format="text/short"/>
+      <Field name="LearnerInfo.Education[0].Period" show="true" format="text/short"/>
+    </Document>
+  </PrintingPreferences>
+  <LearnerInfo>
+    <Identification>
+      <PersonName>
+        <FirstName>Ludovic</FirstName>
+        <Surname>Valente</Surname>
+      </PersonName>
+      <ContactInfo>
+        <Address>
+          <Contact>
+            <Country>
+              <Code>LU</Code>
+              <Label>Luxembourg</Label>
+            </Country>
+          </Contact>
+        </Address>
+        <Email>
+          <Contact>ludovic.valente@gmail.com</Contact>
+        </Email>
+        <WebsiteList>
+          <Website>
+            <Contact>https://scorawatch.com</Contact>
+            <Use>
+              <Code>personal</Code>
+              <Label>personal</Label>
+            </Use>
+          </Website>
+        </WebsiteList>
+      </ContactInfo>
+    </Identification>
+    <Headline>
+      <Type>
+        <Code>personal_statement</Code>
+        <Label>Personal statement</Label>
+      </Type>
+      <Description>
+        <Label>Senior Full-Stack Application Developer, IT architect, Vue.js Trainer, tech lead, Flutter/Android developer.
+        Focused on modern architecture around mobility and web requirements.
+        I create modern apps with emerging technologies relying on efficient architecture.
+        Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js, Flutter</Label>
+      </Description>
+    </Headline>
+    <WorkExperienceList>
+      <WorkExperience>
+        <Period>
+          <From year="2017" month="--08" day="---31"/>
+          <Current>true</Current>
+        </Period>
+        <Position>
+          <Label>Fullstack software engineer</Label>
+        </Position>
+        <Activities>Consultant in software development and architecture
+        • java
+        • SpringBoot
+        • Kafka
+        • Cloud
+        • Android Mobile</Activities>
+        <Employer>
+          <Name>SFEIR</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Municipality>Luxembourg</Municipality>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2018" month="--01" day="---31"/>
+          <To year="2024" month="--12" day="---31"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Engineer manager</Label>
+        </Position>
+        <Activities>Managing a team of 10 collaborators, in charge of career follow-up, training, missions and clients, participating in Luxembourg agency decisions.
+        • follow up
+        • carreer
+        • HR
+        • formation</Activities>
+        <Employer>
+          <Name>SFEIR</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Municipality>Luxembourg</Municipality>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2025" month="--11" day="---15"/>
+          <Current>true</Current>
+        </Period>
+        <Position>
+          <Label>Software Architect</Label>
+        </Position>
+        <Activities>As a Sfeir consultant, I am a Software Architect at BIL (Banque Internationale à Luxembourg) in the COE team, responsible for multiple microservices.
+        My role is to analyze and suggest reliable technical solutions.
+        During the design phase, I lead developers, provide technical expertise, and review features.
+        I am also responsible for improving quality, tooling, and best practices during the development, deployment, and release processes.
+        • java
+        • SpringBoot
+        • microservices
+        • openshift
+        • architecture
+        • solution design
+        • openapi
+        • flowable
+        • jwt
+        • unit testing
+        • integration testing</Activities>
+        <Employer>
+          <Name>Banque Internationale à Luxembourg</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Municipality>Luxembourg</Municipality>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2025" month="--11" day="---01"/>
+          <To year="2025" month="--12" day="---15"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Android Mobile Developer</Label>
+        </Position>
+        <Activities>Sfeir consultant for STATEC - Development of an offline engine based on SQLite for an Android application built with Capacity
+        • Android
+        • capacity
+        • SQLite
+        • Typescript
+        • hybride mobile</Activities>
+        <Employer>
+          <Name>STATEC</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Municipality>Luxembourg</Municipality>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2025" month="--02" day="---15"/>
+          <To year="2025" month="--09" day="---30"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Tech lead</Label>
+        </Position>
+        <Activities>As a Sfeir consultant, I am Tech Lead / Developer / Architect in the Regulatory team for Luxembourg.
+        Regulatory topics are mainly reporting on EMIR, MIFID, Loi du 25 mars.
+        My role is to improve efficiency and code quality in the team of 4 developers.
+        Meanwhile, the target is the modernization of several apps to Kubernetes/Cloud/API.
+        • java
+        • SpringBoot
+        • jwt
+        • reactive programming
+        • openapi
+        • unit testing
+        • integration testing</Activities>
+        <Employer>
+          <Name>Société Générale</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Municipality>Belval</Municipality>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2024" month="--07" day="---31"/>
+          <To year="2024" month="--12" day="---31"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Senior Software Developer</Label>
+        </Position>
+        <Activities>As a senior developer, my mission for Sfeir is to help create a data platform on top of the existing Multifonds Temenos data system, to provide custom portals.
+        • java
+        • SpringBoot
+        • keycloak
+        • jwt
+        • jsonApi
+        • jsonSchema
+        • unit testing
+        • integration testing</Activities>
+        <Employer>
+          <Name>Temenos</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Municipality>Bertrange</Municipality>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2023" month="--02" day="---28"/>
+          <To year="2024" month="--06" day="---01"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Architect, Expert leader</Label>
+        </Position>
+        <Activities>I joined the MEO architecture team to improve quality, architecture and processes around software production inside Foyer Group.
+        A lot of interesting challenges here!
+        • AWS
+        • SpringBoot
+        • scala
+        • CI/CD
+        • Kubernetes
+        • argoCD
+        • JWT</Activities>
+        <Employer>
+          <Name>Foyer</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Municipality>Leudelange</Municipality>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2017" month="--08" day="---31"/>
+          <To year="2023" month="--02" day="---28"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Ingenieur développement fullstack</Label>
+        </Position>
+        <Activities>As a senior developer, I mostly manage the collection platform to get data, processing, wrangling, cleansing.
+        Main collected data are Priips EPT, Mifid EMT, EET, ...
+        As a tech lead, I coordinate teams, draft architecture, and organize activities with all stakeholders to reach a stable and technically viable solution, matching the target vision.
+        I design and develop most of the patterns like data layers, orchestration, choreography, distributed transactions, event-driven communication, business monitoring, contract specifications with JSON schema, code generators for deployable microservices and for API clients, DevOps tooling scripts for local development, delivery and troubleshooting.
+        The stack is composed of several layers around these main technologies:
+        - SpringBoot, Camunda BPM, Kafka, Trifacta, Camel, MsSql, Mongo, Elasticsearch, Kubernetes, AKS, ESB, Openshift, React, GraphQL, Node.js
+        We are working in collaboration with Bourse du Luxembourg architecture team to evolve to a modern solution, cloud-native in Azure.
+        Over 5 years, we completely moved from legacy tomcat+mssql+esb to distributed event-driven microservices+mongo+kafka cloud native.
+        Since Fundsquare's acquisition by Fe Fundinfo, the short-term target is to move completely cloud native, and integrate their platform.
+        • SpringBoot
+        • Camunda BPM
+        • Kafka
+        • Trifacta
+        • Camel
+        • MsSql
+        • Mongo
+        • Elasticsearch
+        • Kubernetes
+        • AKS
+        • Azure
+        • ESB
+        • Openshift
+        • React
+        • GraphQL
+        • NodeJs</Activities>
+        <Employer>
+          <Name>Fundsquare</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Municipality>Luxembourg</Municipality>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2021" month="--01" day="---31"/>
+          <To year="2021" month="--10" day="---31"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Senior Software Developer</Label>
+        </Position>
+        <Activities>Part-time between LuxSE and Fundsquare (for Sfeir)
+        The goal is to develop a new common set of tools.
+        These services are shared by LuxSE and Fundsquare.
+        Hosted in Azure, relying on Spring - Kafka - Mongo, I'm in charge of the development of several services.
+        FTP connector, API Catalog are the first services of this platform.
+        • Spring
+        • Kafka
+        • Mongo
+        • Azure
+        • Openshift</Activities>
+        <Employer>
+          <Name>Luxembourg Stock Exchange</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Municipality>Luxembourg</Municipality>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2017" month="--06" day="---30"/>
+          <To year="2017" month="--08" day="---31"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Fullstack software engineer</Label>
+        </Position>
+        <Activities>Conversion tool for European Parliament.
+        This MS Word to XML engine is used in production to produce XML documents compliant with rules provided by EP.
+        I built the engine core at the project startup.
+        During these 3 months, I elevated the project to a higher level in terms of readability, testing, maintenance, new format support.
+        Quality improvement, testing support, improved rules engine, rewrite rules and transformers for the 2 main formats.
+        Java, Spring, Eclipse, XML, AkomaNtoso, XSD, DTD, Jira
+        • Java
+        • Spring
+        • Eclipse
+        • Xml
+        • AkomaNtoso
+        • Xsd
+        • Dtd
+        • Jira</Activities>
+        <Employer>
+          <Name>SOGETI Luxembourg</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Municipality>Bertrange</Municipality>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2001" month="--06" day="---30"/>
+          <To year="2017" month="--08" day="---31"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Fullstack software engineer</Label>
+        </Position>
+        <Activities>I worked for European and national institutions as Full-Stack software engineer.
+        Projects are mainly focused on web and mobile technologies.
+        Java+Spring, Node.js, Backbone, Android..., I follow modern standards and new performant libraries and frameworks.
+        Integrated into several teams from multiple clients, I like to work with people of different multicultural backgrounds.
+        See details above:
+        • Java
+        • Spring
+        • nodejs
+        • Backbone
+        • Android</Activities>
+        <Employer>
+          <Name>Sogeti luxembourg</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Municipality>Bertrange</Municipality>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2017" month="--01" day="---31"/>
+          <To year="2017" month="--06" day="---30"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Fullstack software engineer</Label>
+        </Position>
+        <Activities>at European Parliament, DAS Unit (Translation)
+        Restart a collaborative platform from scratch.
+        Complete technology migration from SharePoint to Java/Angular.
+        The first steps should lay the foundation for a fully extensible collaborative system, strongly relying on business data.
+        • JHipster
+        • Spring Boot
+        • ElasticSeach
+        • Angular
+        • Bootstrap
+        • webpack
+        • grunt
+        • nodejs
+        • jdk7
+        • tomcat7</Activities>
+        <Employer>
+          <Name>SOGETI Luxembourg</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Municipality>Luxembourg</Municipality>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2016" month="--06" day="---30"/>
+          <To year="2016" month="--12" day="---31"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Fullstack software engineer</Label>
+        </Position>
+        <Activities>at European Parliament, DAS Unit (Translation)
+        SPA+ : Participate in service-oriented architecture; Build and configure a router/proxy.
+        Socrates : Building a REST-based event manager to complete the suite of tools
+        • Spring Boot
+        • Spring Cloud
+        • microservices architecture
+        • angular
+        • bootstrap
+        • bower
+        • grunt
+        • jpa
+        • Oracle
+        • tomcat
+        • java8</Activities>
+        <Employer>
+          <Name>SOGETI Luxembourg</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Municipality>Luxembourg</Municipality>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2016" month="--01" day="---31"/>
+          <To year="2016" month="--06" day="---30"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Fullstack software engineer</Label>
+        </Position>
+        <Activities>at European Parliament, DAS Unit (Translation)
+        Sirius : Search engine - Architect, technical analyst, development, web integration, testing, deployments.
+        Implement a solution based on ElasticSearch for millions of documents in multilingual and translation context. Web application in SPA architecture, responsive and REST oriented.
+        • ElasticSearch
+        • Spring Data
+        • Java
+        • Backbone
+        • Marionette
+        • Bootstrap
+        • Grunt
+        • Maven
+        • REST
+        • json</Activities>
+        <Employer>
+          <Name>SOGETI Luxembourg</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2014" month="--10" day="---31"/>
+          <To year="2015" month="--12" day="---31"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Web/Java developer</Label>
+        </Position>
+        <Activities>at European Parliament, DAS Unit (Translation)
+        Fluid+ : Join a team to complete a web application dedicated to contract management for Translation Units.
+        Support for teams on Sencha ExtJs.
+        UX advisor for the unit.
+        • Scrum
+        • Spring
+        • Java
+        • ExtJs
+        • Maven</Activities>
+        <Employer>
+          <Name>SOGETI Luxembourg</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Municipality>Luxembourg</Municipality>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2014" month="--03" day="---31"/>
+          <To year="2014" month="--09" day="---30"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>IT Consultant</Label>
+        </Position>
+        <Activities>at BNL - Bibliothèque Nationale du Luxembourg
+        Solr study for a high-performance search engine for eluxemburgensia.lu.
+        Research, investigate, test and develop prototypes with Solr.
+        Strong integration with existing tool A-Z.lu and viewer eluxemburgensia.lu.
+        Scalability and performance issues.
+        Prototype development with SolrCloud.
+        • SolrCloud
+        • ZooKeeper
+        • Vagrant
+        • Python</Activities>
+        <Employer>
+          <Name>SOGETI Luxembourg</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Municipality>Luxembourg</Municipality>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2013" month="--10" day="---31"/>
+          <To year="2014" month="--03" day="---31"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Android Mobile Developer</Label>
+        </Position>
+        <Activities>Development of an Android app to perform price collection for STATEC (statec.lu).
+        Backend services development (Java, Spring MVC)
+        Android SDK 4.ADT, AndroidStudio, Gradle, Volley, AndroidPlot, GreenDAO
+        Eclipse, Spring MVC, Apache Commons, REST, XML
+        • ADT
+        • AndroidStudio
+        • Gradle
+        • Volley
+        • AndroidPlot
+        • GreenDAO
+        • Eclipse
+        • Spring MVC
+        • Apache Commons
+        • Rest
+        • XML</Activities>
+        <Employer>
+          <Name>SOGETI Luxembourg</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Municipality>Luxembourg</Municipality>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2013" month="--06" day="---30"/>
+          <To year="2013" month="--07" day="---31"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Mobile developer - iOS</Label>
+        </Position>
+        <Activities>for Editus Luxembourg,
+        For the iPhone/iPad app habiter.lu, API development with RestKit.
+        Mockup with Node.js and Express.
+        • iOs
+        • RestKit
+        • NodeJs
+        • Express</Activities>
+        <Employer>
+          <Name>SOGETI Luxembourg</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2013" month="--03" day="---31"/>
+          <To year="2013" month="--06" day="---30"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Développeur - architecte Web/Java</Label>
+        </Position>
+        <Activities>at BNL - Bibliothèque nationale du Luxembourg
+        Update of the eLuxemburgensia project.
+        ExtJs 4.2 support
+        Build process with Sencha Cmd.
+        Theme redesign in SASS.
+        Repository decoupling for performance improvement.
+        Book support.
+        Cache architecture review.
+        • ExtJs
+        • java</Activities>
+        <Employer>
+          <Name>SOGETI Luxembourg</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Municipality>Luxembourg</Municipality>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2012" month="--11" day="---30"/>
+          <To year="2013" month="--02" day="---28"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Web/Java developer</Label>
+        </Position>
+        <Activities>at Société Générale Bank &amp; Trust
+        Based on Documentum, we develop a web application to manage PDFs using business workflows.
+        Thanks to PDFBox, I managed PDF editing.
+        I made the complex web interface with jQueryUI and other jQuery plugins.
+        ---
+        Development of a document management tool.
+        Based on Documentum, the Web application allows managing PDF document workflows.
+        Interface design with jQueryUI.
+        PDF editing/manipulation with PDFBox.
+        • java
+        • jQuery
+        • jQueryUI
+        • pdfBox
+        • Documentum</Activities>
+        <Employer>
+          <Name>SOGETI Luxembourg</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Municipality>Luxembourg / Monaco</Municipality>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2012" month="--01" day="---31"/>
+          <To year="2012" month="--05" day="---31"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Web/Java developer</Label>
+        </Position>
+        <Activities>at BNL - Bibliothèque nationale du Luxembourg
+        Add some new features on the Web Media Viewer used in eluxemburgensia.lu</Activities>
+        <Employer>
+          <Name>SOGETI Luxembourg</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2011" month="--11" day="---30"/>
+          <To year="2011" month="--12" day="---31"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Software engineer</Label>
+        </Position>
+        <Activities>at BNL - Bibliothèque nationale du Luxembourg
+        for LNB - Latvia library
+        Publish a media viewer, developed previously, as an open-source project.
+        Removed proprietary dependencies and created a free mode instead.
+        Gave the application a high level of loose coupling and the capability to be well integrated in other systems.
+        http://sourceforge.net/projects/bnlviewer/
+        The project is now used in http://www.periodika.lv
+        • opensource forks</Activities>
+        <Employer>
+          <Name>SOGETI Luxembourg</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Municipality>luxembourg</Municipality>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2010" month="--05" day="---31"/>
+          <To year="2011" month="--12" day="---31"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Consultant</Label>
+        </Position>
+        <Activities>at European Parliament - Web Application development
+        e-dictionaries is a web tool to distribute and launch dictionaries (web or local) according to the applicable licenses.
+        Users could easily manage their favorite dictionaries on their portal.
+        Administration includes license management, statistics reports, graphical overview of expiration and quota exceeded.
+        Used by all translators for their day-to-day translations.
+        • Java
+        • Spring
+        • Hibernate
+        • jQueryUI
+        • Virtualization system (AppV,SCCM,...)
+        • Oracle
+        • AD/LDAP
+        • JavaWebStart</Activities>
+        <Employer>
+          <Name>SOGETI Luxembourg</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Municipality>Luxembourg</Municipality>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2009" month="--08" day="---31"/>
+          <To year="2010" month="--05" day="---31"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Software engineer</Label>
+        </Position>
+        <Activities>at BNL - Bibliothèque nationale du Luxembourg
+        Creation and integration of a new Web client (ExtJs/Java) to consult newspapers and books online.
+        Mets/alto standards. Full Web2.0 application.
+        • ExtJs
+        • Java
+        • xml
+        • ALTO
+        • Mets</Activities>
+        <Employer>
+          <Name/>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2007" month="--09" day="---30"/>
+          <To year="2009" month="--07" day="---31"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Senior Software Engineer - J2EE, XML, DMS/CMS, ExtJs specialist</Label>
+        </Position>
+        <Activities>at European Parliament:
+        - Study and support for a workflow engine adoption: Bonita
+        - Workflow integration in a SOA approach
+        - XML, XSL support to project teams
+        - Jahia support (use, custom development, bugfix, ...) to project teams
+        - Studies on different Document Management systems
+        - J2EE projects development
+        • SOA
+        • java
+        • J2EE
+        • XSL
+        • xml
+        • Bonita workflow
+        • Jahia</Activities>
+        <Employer>
+          <Name>SOGETI Luxembourg</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2006" month="--09" day="---30"/>
+          <To year="2007" month="--08" day="---31"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>IT architect</Label>
+        </Position>
+        <Activities>Client : European Court of Justice.
+        Creation of an architecture team in charge of competitive intelligence and installation of a new homogeneous development environment (technologies, tools, testing, ergonomics).
+        • jsf
+        • ejb
+        • toplink orm
+        • Jdeveloper
+        • xml</Activities>
+        <Employer>
+          <Name>Sogeti</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2006" month="--01" day="---31"/>
+          <To year="2007" month="--08" day="---31"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Software analyst developer</Label>
+        </Position>
+        <Activities>Client : European Court of Justice.
+        Main developer on an Intranet system: the first application hosted by this new system is a research tool that enables merging and abstracting all different sources of data.
+        • Java
+        • XSL
+        • Ajax
+        • XML
+        • Oracle10g xmlDB
+        • OracleText contextual search</Activities>
+        <Employer>
+          <Name>Sogeti</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2006" month="--01" day="---31"/>
+          <To year="2006" month="--02" day="---28"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Software analyst developer</Label>
+        </Position>
+        <Activities>Client : European Court of Justice.
+        Main developer on a search engine dedicated to Canevas enabling searching and inserting references in 20 different languages.
+        J2EE Web application using Struts, JSP, authentication against LDAP AD/OID, Oracle database, use of ICU to help international translation and string manipulation
+        • Word
+        • VB
+        • VBA
+        • icu
+        • java
+        • jsp
+        • OIDC
+        • ldap</Activities>
+        <Employer>
+          <Name>Sogeti</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2005" month="--08" day="---31"/>
+          <To year="2006" month="--02" day="---28"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Software analyst developer</Label>
+        </Position>
+        <Activities>Client : European Court of Justice.
+        Analyst and developer for a project managing all the decisions taken during hearings concerning the different cases.
+        J2EE Web application using Struts, JSP and business taglibs, authentication against LDAP AD/OID, Oracle database and XML serialization
+        • Word
+        • VB
+        • VBA
+        • icu
+        • java
+        • jsp
+        • OIDC
+        • ldap</Activities>
+        <Employer>
+          <Name>Sogeti</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2001" month="--09" day="---30"/>
+          <To year="2004" month="--09" day="---30"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Software analyst developer</Label>
+        </Position>
+        <Activities>Client : European Court of Justice.
+        Main developer / analyst on a project named Canevas.
+        It's a multi-tier office application for judicial document creation.
+        • VB
+        • Word VBA
+        • Servlets Java
+        • XML
+        • XSL
+        • WordML
+        • Oracle10g database</Activities>
+        <Employer>
+          <Name>Sogeti</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2000" month="--09" day="---30"/>
+          <To year="2001" month="--09" day="---30"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Project manager</Label>
+        </Position>
+        <Activities>THALES e-Transactions delivers printers inside kiosks for ticket delivery in airports and train stations. This project was aimed at providing a few prototypes of these machines and moving to the production line with all necessary certificates.
+        •	Electronic and mechanical development
+        •	Production management
+        •	Suppliers management
+        •	Computer system (VB, serial communication) to control different printers for various tests in order to obtain certificates.
+        • VB
+        • industrial prototyping
+        • Suppliers management</Activities>
+        <Employer>
+          <Name>Quaternove</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+    </WorkExperienceList>
+    <EducationList>
+      <Education>
+        <Period>
+          <From year="1995" month="--12" day="---31"/>
+          <To year="2000" month="--12" day="---31"/>
+          <Current>false</Current>
+        </Period>
+        <Title>Engineer degree — Generalist engineer, mechanics specialty</Title>
+        <Organisation>
+          <Name>Ecole nationale d'Ingénieurs de Metz</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+          </ContactInfo>
+        </Organisation>
+        <Level>
+          <Code>3</Code>
+          <Label>EQF 3</Label>
+        </Level>
+        <Field>
+          <Label>Generalist engineer, mechanics specialty</Label>
+        </Field>
+      </Education>
+    </EducationList>
+    <Skills>
+      <Linguistic>
+        <MotherTongueList>
+          <MotherTongue>
+            <Description>
+              <Code>fr</Code>
+              <Label>French</Label>
+            </Description>
+          </MotherTongue>
+          <MotherTongue>
+            <Description>
+              <Code>en</Code>
+              <Label>English</Label>
+            </Description>
+          </MotherTongue>
+        </MotherTongueList>
+      </Linguistic>
+      <Computer>
+        <Description>Frontend; Backend; Cloud; CI/CD; Mobile</Description>
+      </Computer>
+    </Skills>
+  </LearnerInfo>
+</SkillsPassport>

@@ -1,103 +1,62 @@
 # Resume of Ludovic Valente
 
-Using JsonResume standard, I host my own version in 2 languages
-It produces a HTML and PDF themed-version in 2 languages: EN,FR
+JSON Resume CV in **EN** and **FR**, built from a single i18n source.
 
-https://ludoo0d0a.github.io/resume/
+Live site: https://ludoo0d0a.github.io/resume/
 
-## Features
-- Internationalization
-- HTML and PDF generation
-- Github action to translate resume in 2 languages
-- Hosted on github pages
-- Synchronized with jsonresume.org
-- Content versioning
-
-## Prerequisites
-
-In Settings / Secrets / Actions / Add a new secret
- - GIST_ID : Id of the gist resume.json
- - GIST_TOKEN: Personal Access Token to access the gist ; 
-   - to create it, 
-     - go to https://github.com/settings/personal-access-tokens
-     - and select User permissions:
-       - Read and Write access to gists
-     Repository permissions
-       - Read access to metadata
-       - Read and Write access to workflows   
-
-## Getting started
-
-Just edit `resume.i18n.json`. 
-Github actions will be triggered on commit/push.
-Split will prodcce all separate resume in each languages.
-Generate will produce all PDF and HTML outputs
-All these assets will be deployed in your github.io.
-
-## Getting started locally
-
-Install dependencies:
+## Quick start (local)
 
 ```bash
-npm install -g resume-cli
-npm install
-```
-
-### Build site (`public/`)
-
-All published assets go under `public/`. GitHub Actions deploys that folder to Pages (`publish_dir: public`).
-
-```bash
+npm install -g resume-cli   # PDF export
 npm ci
-sh scripts/split.sh            # resume.en.json, resume.fr.json
-npm run build:site             # HTML + PDF → public/
-npm run build:europass         # Europass XML + HTML + PDF
-npm run validate               # XSD check (needs xmllint)
+npm run build:all           # split → public/ + pdf/ + Europass + validate
 ```
 
-Or `sh scripts/generate.sh` after split (runs `build:site`).
+Edit **`resume.i18n.json`**, then run `npm run build:all` again.
 
-Outputs in `public/`:
+### npm scripts
 
-- `index.html`, `index-en.html`, `index-fr.html`
-- `pdf/resume-en.pdf`, `pdf/resume-fr.pdf` (also mirrored to `public/pdf/` for GitHub Pages)
-- `resume.{lang}.europass.xml`, `.html`, `.pdf`
+| Command | What it does |
+|---------|----------------|
+| `npm run split` | `resume.i18n.json` → `resume.en.json`, `resume.fr.json` |
+| `npm run build:site` | `public/` HTML + `pdf/` (+ mirror PDFs to `public/pdf/`) |
+| `npm run build:europass` | Europass files in `public/` |
+| `npm run build:public` | site + Europass + XSD validate |
+| `npm run build:all` | split + build:public |
 
-See [schemas/europass/README.md](schemas/europass/README.md) for schema refresh (`npm run xsd`).
+Needs **`xmllint`** for `npm run validate`. See [schemas/europass/README.md](schemas/europass/README.md) for `npm run xsd`.
 
-## i18n support 
+## GitHub Actions
 
-Thanks to IA code generation (Sourcegraph Cody), I created in a few hours a stable first version of github action to translate my resume in 2 languages.
+On push to `resume.i18n.json` (or build-related paths), CI runs the same pipeline:
 
-Idea is to have a single file `resume.i18n.json` having all translations node using the following format:
+1. `npm run split` → commit `resume.en.json` / `resume.fr.json`
+2. `npm run build:public` → commit `public/` and `pdf/`
+3. Deploy **`public/`** to GitHub Pages (`gh-pages`)
+
+Optional gist sync: set `GIST_ID` and `GIST_TOKEN` in repository secrets.
+
+## Published URLs
+
+| Page | URL |
+|------|-----|
+| EN | https://ludoo0d0a.github.io/resume/ |
+| FR | https://ludoo0d0a.github.io/resume/index-fr.html |
+| Europass EN | https://ludoo0d0a.github.io/resume/resume.en.europass.html |
+
+## i18n format
 
 ```json
 {
-  "name": "Scora",
-  "releaseDate": "2024-09-03",
-  "en_summary": "Tennis scoreboard for watch on Google Android WearOS",
-  "fr_summary": "Tableau de score tennis pour montre Google Android WearOS",
-  "url": "https://play.google.com/store/apps/details?id=fr.geoking.tennis.scoreboard.wear"
+  "en_summary": "English text",
+  "fr_summary": "Texte français"
 }
 ```
 
+Languages come from `meta.languages` in `resume.i18n.json` (e.g. `"en,fr"`).
+
 ## Theming
 
-Theming is done using [jsonresume-theme-ludoo](https://github.com/jsonresume/jsonresume-theme-ludoo) allowing to use 
-a single jsonresume file to generate the resume in HTML and PD in all languages.
+[jsonresume-theme-ludoo](https://github.com/jsonresume/jsonresume-theme-ludoo) via root `index.js`; Europass layout in `europass/`.
 
-## Deployment / Hosting github.io
-
-CI builds into `public/` and deploys that directory to the `gh-pages` branch. Site URLs are relative to `public/` (no `/public/` prefix in the browser).
-
- - EN: https://ludoo0d0a.github.io/resume/
- - FR: https://ludoo0d0a.github.io/resume/index-fr.html
- - Europass (EN): https://ludoo0d0a.github.io/resume/resume.en.europass.html
- - Europass (FR): https://ludoo0d0a.github.io/resume/resume.fr.europass.html
-
-## Sync with jsonresume through gist
-
-Added a github action to deploy to gist and sync with jsonresume
-
- - jsonResume: https://registry.jsonresume.org/ludoo0d0a
- - Gist : https://gist.github.com/ludoo0d0a/b7e4355cd0d2722f25002eca525ea262
+Agent-oriented details: [AGENTS.md](AGENTS.md).
