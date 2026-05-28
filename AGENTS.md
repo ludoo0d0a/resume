@@ -9,7 +9,7 @@ resume.i18n.json
 resume.en.json  resume.fr.json
        │  npm run build:public
        ├─ build:site   → public/index-*.html, pdf/*.pdf, public/pdf/*
-       ├─ build:europass → public/*.europass.{xml,html} + public/pdf/resume-*-europass.pdf
+       ├─ build:europass → public/resume-*-europass.{xml,html} + public/pdf/resume-*-europass.pdf
        └─ validate     → XSD (xmllint)
        ▼
 public/  (+ pdf/ in repo)  →  GitHub Pages (publish_dir: public)
@@ -47,7 +47,7 @@ Requires global or npx **`resume-cli`** for PDF export. Requires **`xmllint`** f
 | HTML | `public/index-en.html`, `public/index-fr.html` |
 | PDF (repo) | `pdf/resume-en.pdf`, `pdf/resume-fr.pdf` |
 | PDF (Pages) | `public/pdf/resume-*.pdf` |
-| Europass XML/HTML | `public/resume.{lang}.europass.{xml,html}` |
+| Europass XML/HTML | `public/resume-{lang}-europass.{xml,html}` |
 | Europass PDF | `public/pdf/resume-{lang}-europass.pdf` |
 
 Profile URLs in JSON are relative to the **site root** (`pdf/resume-en.pdf`, `index-fr.html`).

@@ -25,7 +25,7 @@ Edit **`resume.i18n.json`**, then run `npm run build:all` again.
 |---------|----------------|
 | `npm run split` | `resume.i18n.json` → `resume.en.json`, `resume.fr.json` |
 | `npm run build:site` | `public/` HTML + `pdf/` (+ mirror PDFs to `public/pdf/`) |
-| `npm run build:europass` | Europass files in `public/` |
+| `npm run build:europass` | `public/resume-*-europass.{xml,html}` + `public/pdf/resume-*-europass.pdf` |
 | `npm run build:public` | site + Europass + XSD validate |
 | `npm run build:all` | split + build:public |
 
@@ -47,7 +47,7 @@ Optional gist sync: set `GIST_ID` and `GIST_TOKEN` in repository secrets.
 |------|-----|
 | EN | https://ludoo0d0a.github.io/resume/ |
 | FR | https://ludoo0d0a.github.io/resume/index-fr.html |
-| Europass EN | https://ludoo0d0a.github.io/resume/resume.en.europass.html |
+| Europass EN | https://ludoo0d0a.github.io/resume/resume-en-europass.html |
 
 ## i18n format
 

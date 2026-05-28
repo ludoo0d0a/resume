@@ -44,8 +44,8 @@ function pathsForLang(lang) {
     /** JSON Resume PDF (repo); copied to public/pdf/ for GitHub Pages. */
     pdf: `pdf/resume-${code}.pdf`,
     sitePdf: `public/pdf/resume-${code}.pdf`,
-    europassXml: `public/resume.${code}.europass.xml`,
-    europassHtml: `public/resume.${code}.europass.html`,
+    europassXml: `public/resume-${code}-europass.xml`,
+    europassHtml: `public/resume-${code}-europass.html`,
     /** Europass PDF (GitHub Pages: public/pdf/). */
     europassPdf: `public/pdf/resume-${code}-europass.pdf`,
   };

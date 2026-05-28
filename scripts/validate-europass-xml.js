@@ -32,7 +32,7 @@ function main() {
   if (help) {
     console.log(`Usage: npm run validate -- [--lang en|fr]
 
-Validates public/resume.<lang>.europass.xml against schemas/europass/v3.4.0/EuropassSchema.xsd
+Validates public/resume-<lang>-europass.xml against schemas/europass/v3.4.0/EuropassSchema.xsd
 (requires xmllint).
 `);
     return;
