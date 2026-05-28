@@ -180,6 +180,11 @@ async function buildForLang(root, lang, options = {}, render) {
       ...options,
       writeXml: !xml && !europassXml,
     });
+    const europassPdfPath = path.join(root, paths.europassPdf);
+    const siteEuropassPdf = path.join(root, paths.siteEuropassPdf);
+    ensureParentDir(siteEuropassPdf);
+    fs.copyFileSync(europassPdfPath, siteEuropassPdf);
+    console.log(`Copied Europass PDF (${lang}): ${paths.siteEuropassPdf}`);
   }
 
   return { lang, paths, resume, resumePath, europassXml };

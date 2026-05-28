@@ -9,7 +9,7 @@ resume.i18n.json
 resume.en.json  resume.fr.json
        │  npm run build:public
        ├─ build:site   → public/index-*.html, pdf/*.pdf, public/pdf/*
-       ├─ build:europass → public/*.europass.*
+       ├─ build:europass → public/*.europass.{xml,html} + pdf/resume-*-europass.pdf
        └─ validate     → XSD (xmllint)
        ▼
 public/  (+ pdf/ in repo)  →  GitHub Pages (publish_dir: public)
@@ -17,7 +17,7 @@ public/  (+ pdf/ in repo)  →  GitHub Pages (publish_dir: public)
 
 **Local:** `npm ci` then `npm run build:all` (split + build + validate).
 
-**CI:** [.github/workflows/build.yml](.github/workflows/build.yml) runs the same npm scripts, commits `resume.*.json`, `public/`, `pdf/`, deploys `public/` to `gh-pages`.
+**CI:** [.github/workflows/split-i18n.yml](.github/workflows/split-i18n.yml) runs the same npm scripts, commits `resume.*.json`, `public/`, `pdf/`, deploys `public/` to `gh-pages`.
 
 ## npm scripts
 
@@ -47,7 +47,9 @@ Requires global or npx **`resume-cli`** for PDF export. Requires **`xmllint`** f
 | HTML | `public/index-en.html`, `public/index-fr.html` |
 | PDF (repo) | `pdf/resume-en.pdf`, `pdf/resume-fr.pdf` |
 | PDF (Pages) | `public/pdf/resume-*.pdf` |
-| Europass | `public/resume.{lang}.europass.{xml,html,pdf}` |
+| Europass XML/HTML | `public/resume.{lang}.europass.{xml,html}` |
+| Europass PDF (repo) | `pdf/resume-{lang}-europass.pdf` |
+| Europass PDF (Pages) | `public/pdf/resume-{lang}-europass.pdf` |
 
 Profile URLs in JSON are relative to the **site root** (`pdf/resume-en.pdf`, `index-fr.html`).
 

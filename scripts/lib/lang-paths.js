@@ -46,7 +46,9 @@ function pathsForLang(lang) {
     sitePdf: `public/pdf/resume-${code}.pdf`,
     europassXml: `public/resume.${code}.europass.xml`,
     europassHtml: `public/resume.${code}.europass.html`,
-    europassPdf: `public/resume.${code}.europass.pdf`,
+    /** Europass PDF (repo); copied to public/pdf/ for GitHub Pages. */
+    europassPdf: `pdf/resume-${code}-europass.pdf`,
+    siteEuropassPdf: `public/pdf/resume-${code}-europass.pdf`,
   };
 }
 

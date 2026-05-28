@@ -34,6 +34,12 @@
         "en_url": "pdf/resume-en.pdf",
         "fr_url": "pdf/resume-fr.pdf"
       },{
+        "network": "europass",
+        "en_username": "Europass PDF",
+        "fr_username": "CV au format Europass",
+        "en_url": "pdf/resume-en-europass.pdf",
+        "fr_url": "pdf/resume-fr-europass.pdf"
+      },{
         "network": "translation::fr",
         "username": "CV en français",
         "url": "index-fr.html"

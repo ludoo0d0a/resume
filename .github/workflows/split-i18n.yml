@@ -10,13 +10,15 @@ on:
       - 'package.json'
       - 'package-lock.json'
       - 'schemas/europass/**'
-      - '.github/workflows/build.yml'
+      - '.github/workflows/split-i18n.yml'
 
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     env:
       RESUME_PUPPETEER_NO_SANDBOX: '1'
 
