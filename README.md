@@ -1,6 +1,6 @@
 # Resume of Ludovic Valente
 
-[![Build and deploy](https://github.com/ludoo0d0a/resume/actions/workflows/split-i18n.yml/badge.svg?branch=main)](https://github.com/ludoo0d0a/resume/actions/workflows/split-i18n.yml)
+[![Build and deploy](https://github.com/ludoo0d0a/resume/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/ludoo0d0a/resume/actions/workflows/build.yml)
 [![Live site](https://img.shields.io/website?down_color=red&down_message=offline&up_color=brightgreen&up_message=online&url=https%3A%2F%2Fludoo0d0a.github.io%2Fresume%2F)](https://ludoo0d0a.github.io/resume/)
 [![JSON Resume](https://img.shields.io/badge/format-JSON%20Resume-1a2226)](https://jsonresume.org/)
 [![Languages](https://img.shields.io/badge/languages-EN%20%7C%20FR-blue)](#i18n-format)

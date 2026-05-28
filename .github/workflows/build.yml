@@ -10,7 +10,7 @@ on:
       - 'package.json'
       - 'package-lock.json'
       - 'schemas/europass/**'
-      - '.github/workflows/split-i18n.yml'
+      - '.github/workflows/build.yml'
 
   workflow_dispatch:
 
