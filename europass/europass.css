@@ -58,6 +58,18 @@ body {
   margin-bottom: 0.75rem;
 }
 
+.ep-entry-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.ep-entry-main {
+  flex: 1;
+  min-width: 0;
+}
+
 .ep-entry-title {
   font-weight: bold;
 }
@@ -68,9 +80,15 @@ body {
 }
 
 .ep-entry-dates {
-  float: right;
+  flex-shrink: 0;
   font-style: italic;
   color: #333;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.ep-entry-body {
+  margin: 0.35rem 0 0;
 }
 
 .ep-summary {
@@ -95,8 +113,4 @@ body {
 .ep-highlights {
   margin: 0.3rem 0 0;
   padding-left: 1.2rem;
-}
-
-.ep-clear {
-  clear: both;
 }

@@ -36,6 +36,28 @@ function isFirst(items, field) {
   return items && items.length > 0 && items.some((item) => item[field]);
 }
 
+function locationLine(location) {
+  if (!location) return '';
+  const parts = [];
+  if (location.address) parts.push(location.address);
+  if (location.city) parts.push(location.city);
+  if (location.region) parts.push(location.region);
+  if (location.countryCode) parts.push(location.countryCode);
+  return parts.join(', ');
+}
+
+function educationDetail(entry) {
+  const parts = [];
+  if (entry.studyType) parts.push(entry.studyType);
+  if (entry.area) parts.push(entry.area);
+  return parts.join(' — ');
+}
+
+function keywordsText(keywords) {
+  if (!keywords || !keywords.length) return '';
+  return keywords.join(', ');
+}
+
 function parseDate(value) {
   if (!value) return null;
   const parts = String(value).split('-');
@@ -76,14 +98,42 @@ function render(resume) {
     entry.duration = formatDuration(entry.startDate, entry.endDate, locale, i18n.present);
   }
 
-  if (resume.work) resume.work.forEach(formatSection);
-  if (resume.education) resume.education.forEach(formatSection);
+  if (resume.basics) {
+    resume.basics.locationLine = locationLine(resume.basics.location);
+  }
+
+  if (resume.work) {
+    resume.work.forEach((entry) => {
+      formatSection(entry);
+      entry.boolHighlights = !!(entry.highlights && entry.highlights.length);
+    });
+  }
+
+  if (resume.education) {
+    resume.education.forEach((entry) => {
+      formatSection(entry);
+      entry.educationDetail = educationDetail(entry);
+    });
+  }
+
+  if (resume.skills) {
+    resume.skills.forEach((skill) => {
+      skill.keywordsText = keywordsText(skill.keywords);
+    });
+  }
 
   resume.workBool = isFirst(resume.work, 'name');
   resume.educationBool = isFirst(resume.education, 'institution');
   resume.skillsBool = isFirst(resume.skills, 'name');
   resume.languagesBool = isFirst(resume.languages, 'language');
   resume.certificatesBool = isFirst(resume.certificates, 'name');
+  resume.contactBool = !!(
+    resume.basics &&
+    (resume.basics.email ||
+      resume.basics.phone ||
+      resume.basics.url ||
+      resume.basics.locationLine)
+  );
 
   return Handlebars.compile(theme)({
     css: styleCSS,

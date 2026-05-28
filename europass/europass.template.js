@@ -11,93 +11,99 @@ export default `<!DOCTYPE html>
     <div class="ep-brand">EUROPASS</div>
     <div class="ep-subtitle">{{resume.titles.cv}}</div>
     <div class="ep-name">{{resume.basics.name}}</div>
-    {{#resume.basics.label}}<div class="ep-label">{{resume.basics.label}}</div>{{/resume.basics.label}}
+    {{#if resume.basics.label}}<div class="ep-label">{{resume.basics.label}}</div>{{/if}}
   </header>
 
+  {{#if resume.contactBool}}
   <section class="ep-section ep-contact">
     <h2 class="ep-section-title">{{resume.titles.personal}}</h2>
-    {{#resume.basics.email}}<p>{{resume.basics.email}}</p>{{/resume.basics.email}}
-    {{#resume.basics.phone}}<p>{{resume.basics.phone}}</p>{{/resume.basics.phone}}
-    {{#resume.basics.url}}<p>{{resume.basics.url}}</p>{{/resume.basics.url}}
-    {{#resume.basics.location}}
-    <p>{{#city}}{{city}}{{#countryCode}}, {{/countryCode}}{{/city}}{{#countryCode}}{{countryCode}}{{/countryCode}}</p>
-    {{/resume.basics.location}}
+    {{#if resume.basics.email}}<p>{{resume.basics.email}}</p>{{/if}}
+    {{#if resume.basics.phone}}<p>{{resume.basics.phone}}</p>{{/if}}
+    {{#if resume.basics.url}}<p>{{resume.basics.url}}</p>{{/if}}
+    {{#if resume.basics.locationLine}}<p>{{resume.basics.locationLine}}</p>{{/if}}
   </section>
+  {{/if}}
 
-  {{#resume.basics.summary}}
+  {{#if resume.basics.summary}}
   <section class="ep-section">
     <h2 class="ep-section-title">{{resume.titles.about}}</h2>
     <p class="ep-summary">{{{resume.basics.summary}}}</p>
   </section>
-  {{/resume.basics.summary}}
+  {{/if}}
 
-  {{#resume.workBool}}
+  {{#if resume.workBool}}
   <section class="ep-section">
     <h2 class="ep-section-title">{{resume.titles.work}}</h2>
-    {{#resume.work}}
+    {{#each resume.work}}
     <div class="ep-entry">
-      <div class="ep-entry-dates">{{startDateText}} — {{endDateText}}</div>
-      <div class="ep-entry-title">{{position}}</div>
-      <div class="ep-entry-meta">{{name}}{{#location}} · {{location}}{{/location}}</div>
-      {{#summary}}<p>{{{summary}}}</p>{{/summary}}
-      {{#boolHighlights}}
+      <div class="ep-entry-head">
+        <div class="ep-entry-main">
+          <div class="ep-entry-title">{{position}}</div>
+          <div class="ep-entry-meta">{{name}}{{#if location}} · {{location}}{{/if}}</div>
+        </div>
+        <div class="ep-entry-dates">{{startDateText}} — {{endDateText}}</div>
+      </div>
+      {{#if summary}}<p class="ep-entry-body">{{{summary}}}</p>{{/if}}
+      {{#if boolHighlights}}
       <ul class="ep-highlights">
-        {{#highlights}}<li>{{.}}</li>{{/highlights}}
+        {{#each highlights}}<li>{{this}}</li>{{/each}}
       </ul>
-      {{/boolHighlights}}
-      <div class="ep-clear"></div>
+      {{/if}}
     </div>
-    {{/resume.work}}
+    {{/each}}
   </section>
-  {{/resume.workBool}}
+  {{/if}}
 
-  {{#resume.educationBool}}
+  {{#if resume.educationBool}}
   <section class="ep-section">
     <h2 class="ep-section-title">{{resume.titles.education}}</h2>
-    {{#resume.education}}
+    {{#each resume.education}}
     <div class="ep-entry">
-      <div class="ep-entry-dates">{{startDateText}} — {{endDateText}}</div>
-      <div class="ep-entry-title">{{institution}}</div>
-      <div class="ep-entry-meta">{{educationDetail}}</div>
-      <div class="ep-clear"></div>
+      <div class="ep-entry-head">
+        <div class="ep-entry-main">
+          <div class="ep-entry-title">{{institution}}</div>
+          {{#if educationDetail}}<div class="ep-entry-meta">{{educationDetail}}</div>{{/if}}
+        </div>
+        <div class="ep-entry-dates">{{startDateText}} — {{endDateText}}</div>
+      </div>
     </div>
-    {{/resume.education}}
+    {{/each}}
   </section>
-  {{/resume.educationBool}}
+  {{/if}}
 
-  {{#resume.languagesBool}}
+  {{#if resume.languagesBool}}
   <section class="ep-section">
     <h2 class="ep-section-title">{{resume.titles.languages}}</h2>
     <ul class="ep-languages-list">
-      {{#resume.languages}}
-      <li><strong>{{language}}</strong>{{#fluency}} — {{fluency}}{{/fluency}}</li>
-      {{/resume.languages}}
+      {{#each resume.languages}}
+      <li><strong>{{language}}</strong>{{#if fluency}} — {{fluency}}{{/if}}</li>
+      {{/each}}
     </ul>
   </section>
-  {{/resume.languagesBool}}
+  {{/if}}
 
-  {{#resume.skillsBool}}
+  {{#if resume.skillsBool}}
   <section class="ep-section">
     <h2 class="ep-section-title">{{resume.titles.skills}}</h2>
     <ul class="ep-skills-list">
-      {{#resume.skills}}
-      <li>{{name}}{{#level}} ({{level}}){{/level}}</li>
-      {{/resume.skills}}
+      {{#each resume.skills}}
+      <li>{{name}}{{#if keywordsText}} ({{keywordsText}}){{else}}{{#if level}} ({{level}}){{/if}}{{/if}}</li>
+      {{/each}}
     </ul>
   </section>
-  {{/resume.skillsBool}}
+  {{/if}}
 
-  {{#resume.certificatesBool}}
+  {{#if resume.certificatesBool}}
   <section class="ep-section">
     <h2 class="ep-section-title">{{resume.titles.certificates}}</h2>
-    {{#resume.certificates}}
+    {{#each resume.certificates}}
     <div class="ep-entry">
       <div class="ep-entry-title">{{name}}</div>
-      {{#issuer}}<div class="ep-entry-meta">{{issuer}}</div>{{/issuer}}
-      {{#date}}<div class="ep-entry-meta">{{date}}</div>{{/date}}
+      {{#if issuer}}<div class="ep-entry-meta">{{issuer}}</div>{{/if}}
+      {{#if date}}<div class="ep-entry-meta">{{date}}</div>{{/if}}
     </div>
-    {{/resume.certificates}}
+    {{/each}}
   </section>
-  {{/resume.certificatesBool}}
+  {{/if}}
 </body>
 </html>`;
