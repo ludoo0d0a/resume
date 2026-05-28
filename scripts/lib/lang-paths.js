@@ -38,8 +38,12 @@ function pathsForLang(lang) {
     /** SkillsPassport @locale — XSD pattern is 2 letters or 2+3 (e.g. en, sr-lat). */
     xmlLocale: code,
     resume: `resume.${code}.json`,
-    html: `public/resume.${code}.html`,
-    pdf: `public/resume.${code}.pdf`,
+    /** Published site root is /public (GitHub Pages). */
+    indexHtml: `public/index-${code}.html`,
+    homepage: 'public/index.html',
+    /** JSON Resume PDF (repo); copied to public/pdf/ for GitHub Pages. */
+    pdf: `pdf/resume-${code}.pdf`,
+    sitePdf: `public/pdf/resume-${code}.pdf`,
     europassXml: `public/resume.${code}.europass.xml`,
     europassHtml: `public/resume.${code}.europass.html`,
     europassPdf: `public/resume.${code}.europass.pdf`,

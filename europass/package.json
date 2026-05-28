@@ -1,0 +1,11 @@
+{
+  "name": "jsonresume-theme-ludoo-europass",
+  "version": "0.1.0",
+  "description": "Europass-styled JSON Resume theme",
+  "type": "module",
+  "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "handlebars": "4.7.9"
+  }
+}

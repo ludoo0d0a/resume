@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import { render as themeRender } from '../../index.js';
 import { jsonResumeToEuropassXml } from './europass-xml.js';
 import { SUPPORTED_LANGS, pathsForLang, normalizeLang } from './lang-paths.js';
 import { exportWithResumeCli } from './resume-cli.js';
@@ -39,7 +38,8 @@ function loadResume(root, lang) {
 }
 
 async function loadThemeRender() {
-  return themeRender;
+  const { render } = await import('../../index.js');
+  return render;
 }
 
 function buildEuropassXml(resume, paths) {
@@ -144,11 +144,8 @@ async function buildForLang(root, lang, options = {}, render) {
   if (targets.has('html')) {
     const themeRender = render || (await loadThemeRender());
     const html = themeRender(resume);
-    const indexHtml = path.join(root, `public/index-${lang}.html`);
-    writeFile(indexHtml, html);
-    console.log(`Wrote theme HTML (${lang}): ${path.relative(root, indexHtml)}`);
-    writeFile(path.join(root, paths.html), html);
-    console.log(`Wrote theme HTML (${lang}): ${paths.html}`);
+    writeFile(path.join(root, paths.indexHtml), html);
+    console.log(`Wrote theme HTML (${lang}): ${paths.indexHtml}`);
   }
 
   if (targets.has('europass-xml')) {
@@ -158,8 +155,13 @@ async function buildForLang(root, lang, options = {}, render) {
   }
 
   if (targets.has('pdf')) {
-    exportPdf(root, resumePath, path.join(root, paths.pdf), '.');
+    const pdfPath = path.join(root, paths.pdf);
+    exportPdf(root, resumePath, pdfPath, '.');
     console.log(`Wrote PDF (${lang}): ${paths.pdf}`);
+    const sitePdf = path.join(root, paths.sitePdf);
+    ensureParentDir(sitePdf);
+    fs.copyFileSync(pdfPath, sitePdf);
+    console.log(`Copied PDF (${lang}): ${paths.sitePdf}`);
   }
 
   if (targets.has('europass-html')) {
@@ -191,6 +193,15 @@ async function buildAll(root, options = {}) {
 
   for (const lang of langs) {
     await buildForLang(root, lang, options, render);
+  }
+
+  if (targets.has('html') && langs.includes('en')) {
+    const paths = pathsForLang('en');
+    fs.copyFileSync(
+      path.join(root, paths.indexHtml),
+      path.join(root, paths.homepage),
+    );
+    console.log(`Wrote ${paths.homepage} from ${paths.indexHtml}`);
   }
 }
 

@@ -63,9 +63,9 @@ function formatDuration(startDate, endDate, locale, presentLabel) {
 }
 
 function render(resume) {
-  const locale = (resume.meta && resume.meta.locale) || 'fr-FR';
-  const lang = locale.split('-')[0] || 'fr';
-  const i18n = I18N[locale] || I18N['fr-FR'];
+  const locale = (resume.meta && resume.meta.locale) || 'en-US';
+  const lang = locale.split('-')[0] || 'en';
+  const i18n = I18N[locale] || I18N['en-US'];
 
   resume.lang = lang;
   resume.titles = i18n;

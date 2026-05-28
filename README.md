@@ -43,17 +43,27 @@ npm install -g resume-cli
 npm install
 ```
 
-Run the following commands to generate the resume in all languages:
+### Build site (`public/`)
+
+All published assets go under `public/`. GitHub Actions deploys that folder to Pages (`publish_dir: public`).
 
 ```bash
-sh split.sh
-sh generate.sh
+npm ci
+sh scripts/split.sh            # resume.en.json, resume.fr.json
+npm run build:site             # HTML + PDF → public/
+npm run build:europass         # Europass XML + HTML + PDF
+npm run validate               # XSD check (needs xmllint)
 ```
 
-Outputs are :
-- index.html
-- index-*.html
-- pdf/resume-*.pdf
+Or `sh scripts/generate.sh` after split (runs `build:site`).
+
+Outputs in `public/`:
+
+- `index.html`, `index-en.html`, `index-fr.html`
+- `pdf/resume-en.pdf`, `pdf/resume-fr.pdf` (also mirrored to `public/pdf/` for GitHub Pages)
+- `resume.{lang}.europass.xml`, `.html`, `.pdf`
+
+See [schemas/europass/README.md](schemas/europass/README.md) for schema refresh (`npm run xsd`).
 
 ## i18n support 
 
@@ -78,10 +88,12 @@ a single jsonresume file to generate the resume in HTML and PD in all languages.
 
 ## Deployment / Hosting github.io
 
-Added a github action to deploy into github pages to display resume in different languages
+CI builds into `public/` and deploys that directory to the `gh-pages` branch. Site URLs are relative to `public/` (no `/public/` prefix in the browser).
 
  - EN: https://ludoo0d0a.github.io/resume/
  - FR: https://ludoo0d0a.github.io/resume/index-fr.html
+ - Europass (EN): https://ludoo0d0a.github.io/resume/resume.en.europass.html
+ - Europass (FR): https://ludoo0d0a.github.io/resume/resume.fr.europass.html
 
 ## Sync with jsonresume through gist
 
