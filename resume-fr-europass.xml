@@ -2,8 +2,8 @@
 <SkillsPassport xmlns="http://europass.cedefop.europa.eu/Europass" locale="fr" xsi:schemaLocation="http://europass.cedefop.europa.eu/Europass http://europass.cedefop.europa.eu/xml/v3.4.0/EuropassSchema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <DocumentInfo>
     <DocumentType>ECV</DocumentType>
-    <CreationDate>2026-05-28T20:53:25.739Z</CreationDate>
-    <LastUpdateDate>2026-05-28T20:53:25.739Z</LastUpdateDate>
+    <CreationDate>2026-05-29T11:05:26.832Z</CreationDate>
+    <LastUpdateDate>2026-05-29T11:05:26.832Z</LastUpdateDate>
     <XSDVersion>V3.4</XSDVersion>
     <Generator>jsonresume-theme-ludoo</Generator>
     <EuropassLogo>true</EuropassLogo>
@@ -164,9 +164,9 @@
         <Position>
           <Label>Android Mobile Developer</Label>
         </Position>
-        <Activities>Consultant Sfeir pour STATEC - Développement d'un moteur offline basé sur SQLite pour une application Android réalisé avec Capacity
+        <Activities>Consultant Sfeir pour STATEC - Développement d'un moteur offline basé sur SQLite pour une application Android réalisé avec Capacitor
         • Android
-        • capacity
+        • capacitor
         • SQLite
         • Typescript
         • hybride mobile</Activities>
