@@ -118,13 +118,13 @@
       "endDate": "2025-12-15",
       "highlights": [
         "Android",
-        "capacity",
+        "capacitor",
         "SQLite",
         "Typescript",
         "hybride mobile"
       ],
-      "fr_summary": "Consultant Sfeir pour STATEC - Développement d'un moteur offline basé sur SQLite pour une application Android réalisé avec Capacity",
-      "en_summary": "Sfeir consultant for STATEC - Development of an offline engine based on SQLite for an Android application built with Capacity",
+      "fr_summary": "Consultant Sfeir pour STATEC - Développement d'un moteur offline basé sur SQLite pour une application Android réalisé avec Capacitor",
+      "en_summary": "Sfeir consultant for STATEC - Development of an offline engine based on SQLite for an Android application built with Capacitor",
       "url": "https://www.linkedin.com/company/sogeti-luxembourg/",
       "location": "Luxembourg"
     },
