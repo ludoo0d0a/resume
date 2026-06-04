@@ -63,6 +63,6 @@ Languages come from `meta.languages` in `resume.i18n.json` (e.g. `"en,fr"`).
 
 ## Theming
 
-[jsonresume-theme-ludoo](https://github.com/jsonresume/jsonresume-theme-ludoo) via root `index.js`; Europass layout in `europass/`.
+Modern responsive theme in `templates/moderncv/` via root `index.js`; Europass layout in `templates/europass/`.
 
 Agent-oriented details: [AGENTS.md](AGENTS.md).

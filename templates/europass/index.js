@@ -3,7 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import Handlebars from 'handlebars';
 import theme from './europass.template.js';
-import { buildCefProfile, resolveIsoLanguage, isMotherTongue } from '../scripts/lib/europass-codes.js';
+import { buildCefProfile, resolveIsoLanguage, isMotherTongue } from '../../scripts/lib/europass-codes.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const styleCSS = fs.readFileSync(path.join(__dirname, 'europass.css'), 'utf8');

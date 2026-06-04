@@ -60,8 +60,9 @@ Profile URLs in JSON are relative to the **site root** (`pdf/resume-en.pdf`, `in
 | `scripts/lib/build-resume.js` | Render/export orchestration |
 | `scripts/lib/europass-validate.js` | XSD validation (xmllint) |
 | `scripts/lib/europass-xml.js` | JSON Resume → Europass XML |
-| `index.js` | Re-exports `jsonresume-theme-ludoo` |
-| `europass/` | Europass HTML/PDF theme for resume-cli |
+| `templates/moderncv/` | Modern responsive HTML theme (timeline, lang toggle, PDF) |
+| `index.js` | Re-exports `templates/moderncv/` for resume-cli |
+| `templates/europass/` | Europass HTML/PDF theme for resume-cli |
 
 ## Boundaries
 

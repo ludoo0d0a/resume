@@ -150,7 +150,7 @@ async function writeEuropassPdf(root, lang, resume, resumePath, xml, options = {
     }
   }
 
-  exportPdf(root, resumePath, outputPath, './europass');
+  exportPdf(root, resumePath, outputPath, './templates/europass');
   console.log(`Wrote Europass-styled PDF (${lang}): ${outputPath}`);
 }
 
@@ -205,7 +205,7 @@ async function buildForLang(root, lang, options = {}, render) {
       resumePath,
       outputPath: path.join(root, paths.europassHtml),
       format: 'html',
-      theme: './europass',
+      theme: './templates/europass',
     });
     console.log(`Wrote Europass HTML (${lang}): ${paths.europassHtml}`);
   }

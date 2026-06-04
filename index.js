@@ -1,7 +1,2 @@
-import { createRequire } from 'node:module';
-
-const require = createRequire(import.meta.url);
-const { render } = require('jsonresume-theme-ludoo');
-
-export { render };
-export default { render };
+export { render } from './templates/moderncv/index.js';
+export { default } from './templates/moderncv/index.js';

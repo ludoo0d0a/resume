@@ -847,7 +847,7 @@
   ],
   "meta": {
     "version": "v2.1.0",
-    "theme": "ludoo",
+    "theme": "moderncv",
     "languages": "en,fr",
     "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json",
     "europass": {

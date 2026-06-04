@@ -5,7 +5,7 @@ on:
     paths:
       - 'resume.i18n.json'
       - 'scripts/**'
-      - 'europass/**'
+      - 'templates/**'
       - 'index.js'
       - 'package.json'
       - 'package-lock.json'
