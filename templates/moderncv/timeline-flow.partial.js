@@ -27,7 +27,9 @@ export default `
         <span class="timeline-flow__connector" aria-hidden="true"></span>
         <article class="timeline-flow__card">
           <header class="timeline-flow__head">
-            <div>
+            <div class="timeline-flow__identity">
+              {{#if position}}{{> companyLogo logoUrl=logoUrl size=36 className="company-logo--work"}}{{/if}}
+              <div>
               {{#if position}}
               <h3 class="timeline-flow__title">{{position}}</h3>
               <p class="timeline-flow__meta">
@@ -43,6 +45,7 @@ export default `
                 {{#if url}}<p class="timeline-flow__meta"><a href="{{url}}" rel="noopener noreferrer">{{url}}</a></p>{{/if}}
                 {{/if}}
               {{/if}}
+              </div>
             </div>
             {{#if dateRange}}
             <div class="timeline-flow__dates">

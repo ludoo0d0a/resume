@@ -12,12 +12,15 @@ export default `
     <span class="timeline-flow__connector" aria-hidden="true"></span>
     <article class="timeline-flow__card work-era">
       <header class="timeline-flow__head work-era__head">
-        <div>
+        <div class="timeline-flow__identity">
+          {{> companyLogo logoUrl=era.employerLogo size=40 className="company-logo--era"}}
+          <div>
           <h3 class="timeline-flow__title">
             {{#if era.employerUrl}}<a href="{{era.employerUrl}}" rel="noopener noreferrer">{{era.employer}}</a>{{else}}{{era.employer}}{{/if}}
           </h3>
           {{#if era.tagline}}<p class="work-era__tagline">{{era.tagline}}</p>{{/if}}
           {{#if era.location}}<p class="timeline-flow__meta">{{era.location}}</p>{{/if}}
+          </div>
         </div>
         <div class="timeline-flow__dates">
           <time>{{era.dateRange}}</time>
@@ -56,6 +59,7 @@ export default `
           <li class="work-era__mission">
             <details class="work-era__mission-details"{{#if isCurrent}} open{{/if}}>
               <summary class="work-era__mission-summary">
+                {{> companyLogo logoUrl=clientLogo size=24 className="company-logo--mission"}}
                 <span class="work-era__mission-client">
                   {{#if clientUrl}}<a href="{{clientUrl}}" rel="noopener noreferrer">{{clientName}}</a>{{else}}{{clientName}}{{/if}}
                 </span>
@@ -83,6 +87,7 @@ export default `
             <li class="work-era__mission">
               <details class="work-era__mission-details">
                 <summary class="work-era__mission-summary">
+                  {{> companyLogo logoUrl=clientLogo size=24 className="company-logo--mission"}}
                   <span class="work-era__mission-client">
                     {{#if clientUrl}}<a href="{{clientUrl}}" rel="noopener noreferrer">{{clientName}}</a>{{else}}{{clientName}}{{/if}}
                   </span>
@@ -113,7 +118,9 @@ export default `
     <span class="timeline-flow__connector" aria-hidden="true"></span>
     <article class="timeline-flow__card">
       <header class="timeline-flow__head">
-        <div>
+        <div class="timeline-flow__identity">
+          {{> companyLogo logoUrl=entry.logoUrl size=36 className="company-logo--work"}}
+          <div>
           {{#if entry.position}}
           <h3 class="timeline-flow__title">{{entry.position}}</h3>
           <p class="timeline-flow__meta">
@@ -123,6 +130,7 @@ export default `
           {{else}}
           <h3 class="timeline-flow__title">{{entry.name}}</h3>
           {{/if}}
+          </div>
         </div>
         {{#if entry.dateRange}}
         <div class="timeline-flow__dates">

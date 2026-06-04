@@ -70,6 +70,11 @@
           "type": "string",
           "format": "uri",
           "description": "Link to client organization (LinkedIn, site, …)"
+        },
+        "clientLogo": {
+          "type": "string",
+          "format": "uri",
+          "description": "Small logo image URL for the client (optional; favicon inferred from clientUrl when host is not LinkedIn/social)"
         }
       },
       "examples": [
@@ -88,6 +93,7 @@
         "endDate": { "type": "string", "format": "date" },
         "location": { "type": "string" },
         "clientUrl": { "type": "string", "format": "uri" },
+        "clientLogo": { "type": "string", "format": "uri" },
         "en_client": { "type": "string" },
         "fr_client": { "type": "string" },
         "en_summary": { "type": "string" },
@@ -119,6 +125,16 @@
       "properties": {
         "employer": { "type": "string" },
         "employerUrl": { "type": "string", "format": "uri" },
+        "employerLogo": {
+          "type": "string",
+          "format": "uri",
+          "description": "Small logo image URL for the employer (ESN)"
+        },
+        "employerWebsite": {
+          "type": "string",
+          "format": "uri",
+          "description": "Employer corporate site (used to infer favicon when employerLogo is omitted)"
+        },
         "location": { "type": "string" },
         "startDate": { "type": "string", "format": "date" },
         "endDate": { "type": "string", "format": "date" },
@@ -148,7 +164,12 @@
         "summary": { "type": "string" },
         "highlights": { "type": "array", "items": { "type": "string" } },
         "url": { "type": "string" },
-        "location": { "type": "string" }
+        "location": { "type": "string" },
+        "logoUrl": {
+          "type": "string",
+          "format": "uri",
+          "description": "Small logo image URL for the company (standalone work entries)"
+        }
       },
       "additionalProperties": true
     }

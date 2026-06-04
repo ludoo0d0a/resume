@@ -16,8 +16,14 @@ export default `<!DOCTYPE html>
           <a class="toolbar__lang-btn{{#if resume.ui.isFr}} is-active{{/if}}" href="index-fr.html" hreflang="fr" lang="fr">FR</a>
         </div>
         <div class="toolbar__actions">
-          <a class="toolbar__btn toolbar__btn--ghost" href="{{resume.ui.europassPdf}}">{{resume.ui.europassLabel}}</a>
-          <a class="toolbar__btn toolbar__btn--primary" href="{{resume.ui.pdf}}" download>{{resume.ui.downloadLabel}}</a>
+          <a class="toolbar__btn toolbar__btn--icon toolbar__btn--ghost" href="{{resume.ui.europassPdf}}" aria-label="{{resume.ui.europassLabel}}" title="{{resume.ui.europassLabel}}">
+            <svg class="toolbar__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg>
+            <span class="toolbar__btn-text">{{resume.ui.europassLabel}}</span>
+          </a>
+          <a class="toolbar__btn toolbar__btn--icon toolbar__btn--primary" href="{{resume.ui.pdf}}" download aria-label="{{resume.ui.downloadLabel}}" title="{{resume.ui.downloadLabel}}">
+            <svg class="toolbar__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 19h14"/></svg>
+            <span class="toolbar__btn-text">{{resume.ui.downloadLabel}}</span>
+          </a>
         </div>
       </div>
     </nav>
@@ -28,7 +34,10 @@ export default `<!DOCTYPE html>
         <ul class="section-nav__list">
           {{#each resume.nav}}
           <li class="section-nav__item">
-            <a class="section-nav__link" href="#{{id}}">{{label}}</a>
+            <a class="section-nav__link" href="#{{id}}" aria-label="{{label}}">
+              <span class="section-nav__mobile">{{{icon}}}<span class="section-nav__link-caption">{{label}}</span></span>
+              <span class="section-nav__link-full">{{label}}</span>
+            </a>
           </li>
           {{/each}}
         </ul>
@@ -44,7 +53,10 @@ export default `<!DOCTYPE html>
     <ul class="section-nav__list section-nav__list--vertical">
       {{#each resume.nav}}
       <li class="section-nav__item">
-        <a class="section-nav__link" href="#{{id}}">{{label}}</a>
+        <a class="section-nav__link" href="#{{id}}" aria-label="{{label}}">
+          <span class="section-nav__mobile">{{{icon}}}<span class="section-nav__link-caption">{{label}}</span></span>
+          <span class="section-nav__link-full">{{label}}</span>
+        </a>
       </li>
       {{/each}}
     </ul>
@@ -70,7 +82,12 @@ export default `<!DOCTYPE html>
           {{#if resume.basics.profileLinks}}
           <ul class="hero__profiles">
             {{#each resume.basics.profileLinks}}
-            <li><a href="{{url}}" rel="noopener noreferrer" data-network="{{icon}}">{{network}}{{#if username}} · {{username}}{{/if}}</a></li>
+            <li>
+              <a class="hero__profile-link hero__profile-link--{{iconKey}}" href="{{url}}" rel="noopener noreferrer" data-network="{{iconKey}}" aria-label="{{ariaLabel}}" title="{{ariaLabel}}">
+                {{{iconSvg}}}
+                <span class="hero__profile-text">{{#if username}}{{username}}{{else}}{{network}}{{/if}}</span>
+              </a>
+            </li>
             {{/each}}
           </ul>
           {{/if}}

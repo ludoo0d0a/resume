@@ -3,6 +3,8 @@
  * workEras remains on the resume object for moderncv grouping; Europass / resume-cli use work only.
  */
 
+import { resolveCompanyLogo } from './company-logo.js';
+
 const EMPLOYER_CLIENT_SEP = ' - ';
 
 function parseDate(value) {
@@ -141,6 +143,11 @@ export function prepareWorkErasForDisplay(workEras, formatSection, options = {})
       const entry = {
         ...mission,
         clientName: mission.client || '',
+        clientLogo: resolveCompanyLogo(
+          mission.clientLogo,
+          mission.clientUrl,
+          mission.client || mission.en_client || mission.fr_client,
+        ),
       };
       formatSection(entry);
       entry.boolHighlights = !!(entry.highlights && entry.highlights.length);
@@ -158,6 +165,7 @@ export function prepareWorkErasForDisplay(workEras, formatSection, options = {})
       anchorId: `era-${eraIndex}`,
       employer: era.employer,
       employerUrl: era.employerUrl,
+      employerLogo: resolveCompanyLogo(era.employerLogo, era.employerWebsite, era.employer),
       location: era.location,
       startDate: era.startDate,
       endDate: era.endDate,
@@ -211,6 +219,7 @@ export function buildExperienceTimeline(resume, formatSection, i18n) {
     entry.boolHighlights = !!(entry.highlights && entry.highlights.length);
     entry.isCurrent = !entry.endDate;
     entry.isStandalone = true;
+    entry.logoUrl = resolveCompanyLogo(entry.logoUrl, entry.url, entry.name);
   });
 
   const blocks = [

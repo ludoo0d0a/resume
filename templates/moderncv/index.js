@@ -6,14 +6,27 @@ import theme from './template.js';
 import timelineFlowPartial from './timeline-flow.partial.js';
 import experienceFlowPartial from './experience-flow.partial.js';
 import workEraFlowPartial from './work-era-flow.partial.js';
+import companyLogoPartial from './company-logo.partial.js';
 import { buildExperienceTimeline } from '../../scripts/lib/work-eras.js';
+import { resolveCompanyLogo } from '../../scripts/lib/company-logo.js';
+import { navIcon } from './nav-icons.js';
+import { profileLinkIcon } from './profile-icons.js';
 
 Handlebars.registerPartial('timelineFlow', timelineFlowPartial);
 Handlebars.registerPartial('experienceFlow', experienceFlowPartial);
 Handlebars.registerPartial('workEraFlow', workEraFlowPartial);
+Handlebars.registerPartial('companyLogo', companyLogoPartial);
 
 const MAJOR_YEAR_GAP = 2;
 const MAJOR_YEAR_MAX = 12;
+
+function navItem(id, i18n, labelKey) {
+  return {
+    id,
+    label: i18n[labelKey],
+    icon: navIcon(id),
+  };
+}
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const styleCSS = fs.readFileSync(path.join(__dirname, 'moderncv.css'), 'utf8');
@@ -84,13 +97,6 @@ const UI_BY_LANG = {
   },
 };
 
-const PROFILE_ICONS = {
-  linkedin: 'linkedin',
-  github: 'github',
-  twitter: 'twitter',
-  x: 'twitter',
-};
-
 function isFirst(items, field) {
   return items && items.length > 0 && items.some((item) => item[field]);
 }
@@ -146,11 +152,6 @@ function formatDuration(startDate, endDate, locale, presentLabel) {
   if (years) parts.push(`${years} ${years > 1 ? yearsWord : yearWord}`);
   if (rem) parts.push(`${rem} ${rem > 1 ? monthsWord : monthWord}`);
   return parts.join(' ') || presentLabel;
-}
-
-function profileIcon(network) {
-  const key = String(network || '').toLowerCase();
-  return PROFILE_ICONS[key] || 'link';
 }
 
 function startYearFromEntry(entry) {
@@ -260,10 +261,10 @@ function render(resume) {
       const n = String(p.network || '').toLowerCase();
       return p.url && !n.includes('translation') && n !== 'pdf' && n !== 'europass';
     });
-    resume.basics.profileLinks = profiles.map((p) => ({
-      ...p,
-      icon: profileIcon(p.network),
-    }));
+    resume.basics.profileLinks = profiles.map((p) => {
+      const iconMeta = profileLinkIcon(p.network, p.username);
+      return { ...p, ...iconMeta, icon: iconMeta.iconKey };
+    });
   }
 
   if (resume.work) {
@@ -271,6 +272,7 @@ function render(resume) {
       formatSection(entry);
       entry.boolHighlights = !!(entry.highlights && entry.highlights.length);
       entry.isCurrent = !entry.endDate;
+      entry.logoUrl = resolveCompanyLogo(entry.logoUrl, entry.url, entry.name);
     });
   }
 
@@ -344,16 +346,16 @@ function render(resume) {
 
   const nav = [];
   if (resume.basics && resume.basics.summary) {
-    nav.push({ id: 'about', label: i18n.about });
+    nav.push(navItem('about', i18n, 'about'));
   }
-  if (resume.workBool) nav.push({ id: 'experience', label: i18n.experience });
-  if (resume.educationBool) nav.push({ id: 'education', label: i18n.education });
-  if (resume.skillsBool) nav.push({ id: 'skills', label: i18n.skills });
-  if (resume.projectsBool) nav.push({ id: 'projects', label: i18n.projects });
-  if (resume.languagesBool) nav.push({ id: 'languages', label: i18n.languages });
-  if (resume.interestsBool) nav.push({ id: 'interests', label: i18n.interests });
-  if (resume.publicationsBool) nav.push({ id: 'publications', label: i18n.publications });
-  if (resume.referencesBool) nav.push({ id: 'references', label: i18n.references });
+  if (resume.workBool) nav.push(navItem('experience', i18n, 'experience'));
+  if (resume.educationBool) nav.push(navItem('education', i18n, 'education'));
+  if (resume.skillsBool) nav.push(navItem('skills', i18n, 'skills'));
+  if (resume.projectsBool) nav.push(navItem('projects', i18n, 'projects'));
+  if (resume.languagesBool) nav.push(navItem('languages', i18n, 'languages'));
+  if (resume.interestsBool) nav.push(navItem('interests', i18n, 'interests'));
+  if (resume.publicationsBool) nav.push(navItem('publications', i18n, 'publications'));
+  if (resume.referencesBool) nav.push(navItem('references', i18n, 'references'));
   resume.nav = nav;
   resume.navBool = nav.length > 1;
 

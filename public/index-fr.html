@@ -18,8 +18,9 @@
   --radius: 12px;
   --shadow: 0 4px 24px rgba(15, 20, 25, 0.08);
   --toolbar-h: 3.25rem;
-  --header-offset: 7rem;
+  --header-offset: 6.5rem;
   --nav-side-w: 11rem;
+  --timeline-gutter: 1.5rem;
   --font: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
@@ -42,6 +43,14 @@ body {
   color: var(--text);
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -151,6 +160,23 @@ a:hover {
   text-decoration: none;
 }
 
+.toolbar__icon {
+  flex-shrink: 0;
+}
+
+.section-nav__mobile {
+  display: none;
+}
+
+.section-nav__link-full {
+  display: inline;
+}
+
+.section-nav__icon {
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
 /* —— Section navigation —— */
 .section-nav--side {
   display: none;
@@ -239,6 +265,131 @@ a:hover {
   min-width: 0;
 }
 
+@media (max-width: 899px) {
+  :root {
+    --toolbar-h: 2.5rem;
+    --nav-mobile-h: 5.25rem;
+    --header-offset: calc(var(--toolbar-h) + var(--nav-mobile-h) + 0.35rem);
+  }
+
+  .toolbar__inner {
+    padding: 0.35rem 0.75rem;
+    gap: 0.5rem;
+    min-height: var(--toolbar-h);
+  }
+
+  .toolbar__lang-btn {
+    padding: 0.3rem 0.65rem;
+    font-size: 0.75rem;
+  }
+
+  .toolbar__actions {
+    margin-left: auto;
+    flex-wrap: nowrap;
+    gap: 0.35rem;
+  }
+
+  .toolbar__btn--icon {
+    width: 2.35rem;
+    height: 2.35rem;
+    padding: 0;
+    justify-content: center;
+    border-radius: 10px;
+  }
+
+  .toolbar__btn--icon .toolbar__btn-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .site-header .section-nav:not(.section-nav--side) .section-nav__label {
+    display: none;
+  }
+
+  .site-header .section-nav:not(.section-nav--side) .section-nav__inner {
+    flex-direction: row;
+    align-items: stretch;
+    padding: 0 0.5rem 0.5rem;
+    gap: 0;
+  }
+
+  .site-header .section-nav:not(.section-nav--side) .section-nav__list {
+    gap: 0.2rem;
+    padding: 0.15rem 0.15rem 0.25rem;
+    align-items: stretch;
+  }
+
+  .site-header .section-nav:not(.section-nav--side) .section-nav__item {
+    scroll-snap-align: center;
+  }
+
+  .site-header .section-nav:not(.section-nav--side) .section-nav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 4.25rem;
+    max-width: 5.75rem;
+    min-height: var(--nav-mobile-h);
+    padding: 0.4rem 0.3rem 0.35rem;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.15;
+    border-radius: 10px;
+    white-space: normal;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.82);
+  }
+
+  .site-header .section-nav:not(.section-nav--side) .section-nav__link:hover,
+  .site-header .section-nav:not(.section-nav--side) .section-nav__link:focus-visible {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .site-header .section-nav:not(.section-nav--side) .section-nav__link-full {
+    display: none;
+  }
+
+  .site-header .section-nav:not(.section-nav--side) .section-nav__mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.3rem;
+    width: 100%;
+    min-height: 0;
+  }
+
+  .site-header .section-nav:not(.section-nav--side) .section-nav__icon {
+    width: 1.375rem;
+    height: 1.375rem;
+  }
+
+  .site-header .section-nav:not(.section-nav--side) .section-nav__link-caption {
+    display: -webkit-box;
+    width: 100%;
+    font-size: 0.6rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+}
+
 @media (min-width: 900px) {
   :root {
     --header-offset: 3.75rem;
@@ -269,6 +420,14 @@ a:hover {
     overflow: visible;
     padding: 0;
     gap: 0.15rem;
+  }
+
+  .section-nav--side .section-nav__mobile {
+    display: none;
+  }
+
+  .section-nav--side .section-nav__link-full {
+    display: inline;
   }
 
   .section-nav--side .section-nav__link {
@@ -312,6 +471,8 @@ a:hover {
   box-shadow: var(--shadow);
   padding: 1.75rem 1.5rem;
   margin-bottom: 1.5rem;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .hero__main {
@@ -355,13 +516,59 @@ a:hover {
   font-size: 0.9rem;
 }
 
-.hero__contact a,
-.hero__profiles a {
+.hero__contact a {
   color: var(--text-muted);
 }
 
-.hero__contact a:hover,
-.hero__profiles a:hover {
+.hero__contact a:hover {
+  color: var(--accent);
+}
+
+.hero__profiles {
+  gap: 0.45rem;
+}
+
+.hero__profile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  background: var(--surface-muted);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.hero__profile-link:hover {
+  color: var(--accent);
+  border-color: var(--accent-soft);
+  background: var(--accent-soft);
+  text-decoration: none;
+}
+
+.hero__profile-icon {
+  flex-shrink: 0;
+}
+
+.hero__profile-link--linkedin {
+  color: #0a66c2;
+}
+
+.hero__profile-link--github {
+  color: #24292f;
+}
+
+.hero__profile-link--twitter {
+  color: #0f1419;
+}
+
+.hero__profile-link--linkedin:hover,
+.hero__profile-link--github:hover,
+.hero__profile-link--twitter:hover {
   color: var(--accent);
 }
 
@@ -383,6 +590,8 @@ a:hover {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 1.5rem 1.25rem;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .section--compact {
@@ -416,6 +625,8 @@ a:hover {
   grid-template-columns: minmax(3.5rem, auto) 1fr;
   gap: 0.75rem 1.25rem;
   align-items: start;
+  width: 100%;
+  min-width: 0;
 }
 
 .timeline-rail {
@@ -498,7 +709,7 @@ a:hover {
 .timeline-flow__list {
   list-style: none;
   margin: 0;
-  padding: 0 0 0 1.5rem;
+  padding: 0 0 0 var(--timeline-gutter);
 }
 
 .timeline-flow__year {
@@ -516,7 +727,7 @@ a:hover {
 
 .timeline-flow__year-node {
   position: absolute;
-  left: -1.5rem;
+  left: calc(-1 * var(--timeline-gutter));
   width: 13px;
   height: 13px;
   margin-left: -5px;
@@ -542,6 +753,7 @@ a:hover {
 .timeline-flow__item {
   position: relative;
   padding-bottom: 1.1rem;
+  min-width: 0;
 }
 
 .timeline-flow__item:last-child {
@@ -550,7 +762,7 @@ a:hover {
 
 .timeline-flow__connector {
   position: absolute;
-  left: -1.5rem;
+  left: calc(-1 * var(--timeline-gutter));
   top: 1.1rem;
   width: 1rem;
   height: 2px;
@@ -572,14 +784,60 @@ a:hover {
   padding: 1rem 1.15rem;
   border: 1px solid var(--line);
   transition: border-color 0.2s, box-shadow 0.2s;
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 
 .timeline-flow__head {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 0.5rem 1rem;
   margin-bottom: 0.35rem;
+}
+
+.timeline-flow__identity {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-width: 0;
+  flex: 0 1 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.timeline-flow__identity > div {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+@media (min-width: 641px) {
+  .timeline-flow__head {
+    flex-wrap: nowrap;
+  }
+
+  .timeline-flow__identity {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}
+
+.company-logo {
+  flex-shrink: 0;
+  border-radius: 6px;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.company-logo--era {
+  margin-top: 0;
+}
+
+.company-logo--mission {
+  align-self: center;
 }
 
 .timeline-flow__title {
@@ -602,7 +860,8 @@ a:hover {
 
 .timeline-flow__dates {
   text-align: right;
-  flex-shrink: 0;
+  flex: 0 0 auto;
+  align-self: flex-start;
   font-size: 0.8125rem;
   color: var(--text-muted);
 }
@@ -627,14 +886,34 @@ a:hover {
 }
 
 @media (max-width: 640px) {
+  :root {
+    --timeline-gutter: 1.1rem;
+  }
+
+  .page-layout {
+    padding: 1rem 0.75rem 2.5rem;
+  }
+
+  .hero {
+    padding: 1.35rem 1rem;
+  }
+
+  .section {
+    padding: 1.25rem 1rem;
+  }
+
   .timeline-flow {
     grid-template-columns: 1fr;
+    gap: 0.65rem;
   }
 
   .timeline-rail {
     order: -1;
     align-self: auto;
     min-height: 0;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0 -0.15rem;
   }
 
   .timeline-rail__track {
@@ -646,9 +925,10 @@ a:hover {
     flex-wrap: nowrap;
     overflow-x: auto;
     gap: 0.4rem;
-    padding: 0 0 0.5rem;
+    padding: 0 0.15rem 0.5rem;
     scroll-snap-type: x proximity;
     -webkit-overflow-scrolling: touch;
+    max-width: 100%;
   }
 
   .timeline-rail__item {
@@ -657,11 +937,106 @@ a:hover {
   }
 
   .timeline-rail__chip {
-    min-width: 3.25rem;
+    min-width: 3rem;
   }
 
   .timeline-rail__chip:hover {
     transform: none;
+  }
+
+  .timeline-flow__body {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .timeline-flow__spine {
+    width: 2px;
+  }
+
+  .timeline-flow__year-node,
+  .timeline-flow__connector {
+    left: calc(-1 * var(--timeline-gutter));
+  }
+
+  .timeline-flow__year-node {
+    width: 11px;
+    height: 11px;
+    margin-left: -4px;
+  }
+
+  .timeline-flow__connector {
+    width: 0.65rem;
+  }
+
+  .timeline-flow__card {
+    padding: 0.85rem 0.9rem;
+    border-radius: 12px;
+  }
+
+  .timeline-flow__head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .timeline-flow__identity {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .timeline-flow__dates {
+    text-align: left;
+    width: 100%;
+    flex-shrink: 1;
+  }
+
+  .timeline-flow__dates time {
+    white-space: normal;
+  }
+
+  .timeline-flow__meta a {
+    word-break: break-word;
+  }
+
+  .work-era__role-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .work-era__role-dates,
+  .work-era__mission-dates {
+    white-space: normal;
+    text-align: left;
+  }
+
+  .work-era__mission-summary {
+    grid-template-columns: auto 1fr;
+    gap: 0.2rem 0.5rem;
+  }
+
+  .work-era__mission-summary .company-logo--mission {
+    grid-row: 1 / span 2;
+  }
+
+  .work-era__mission-dates {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .work-era__mission-body {
+    margin-left: 0;
+    padding-left: 0.65rem;
+  }
+
+  .skill-card,
+  .ref-card {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .skill-card__head {
+    flex-wrap: wrap;
   }
 }
 
@@ -875,33 +1250,31 @@ a:hover {
 
 @media (max-width: 480px) {
   :root {
-    --header-offset: 9.5rem;
-  }
-
-  .section-nav__inner {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.35rem;
-    padding-bottom: 0.65rem;
-  }
-
-  .section-nav__list {
-    padding-bottom: 0.25rem;
+    --nav-mobile-h: 5rem;
+    --timeline-gutter: 0.95rem;
   }
 
   .toolbar__inner {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 0.65rem 1rem;
+    padding: 0.3rem 0.65rem;
   }
 
-  .toolbar__actions {
-    justify-content: stretch;
+  .toolbar__btn--icon {
+    width: 2.2rem;
+    height: 2.2rem;
   }
 
-  .toolbar__btn {
-    flex: 1;
-    justify-content: center;
+  .site-header .section-nav:not(.section-nav--side) .section-nav__inner {
+    padding: 0 0.4rem 0.45rem;
+  }
+
+  .site-header .section-nav:not(.section-nav--side) .section-nav__link {
+    min-width: 3.75rem;
+    max-width: 5.25rem;
+    padding: 0.35rem 0.25rem 0.3rem;
+  }
+
+  .site-header .section-nav:not(.section-nav--side) .section-nav__link-caption {
+    font-size: 0.5625rem;
   }
 
   .hero__main {
@@ -915,13 +1288,30 @@ a:hover {
     justify-content: center;
   }
 
-  .timeline-flow__dates {
-    text-align: left;
-    width: 100%;
+  .hero__contact a {
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
-  .timeline-flow__head {
-    flex-direction: column;
+  .hero__profile-link {
+    padding: 0.45rem;
+    border-radius: 10px;
+  }
+
+  .hero__profile-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .timeline-flow__year-label {
+    font-size: 1.25rem;
   }
 }
 
@@ -1009,12 +1399,18 @@ a:hover {
 
 .work-era__mission-summary {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto 1fr auto;
   grid-template-rows: auto auto;
-  gap: 0.15rem 1rem;
+  gap: 0.15rem 0.65rem 1rem;
   align-items: baseline;
   cursor: pointer;
   list-style: none;
+}
+
+.work-era__mission-summary .company-logo--mission {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  align-self: center;
 }
 
 .work-era__mission-summary::-webkit-details-marker {
@@ -1022,18 +1418,18 @@ a:hover {
 }
 
 .work-era__mission-client {
-  grid-column: 1;
+  grid-column: 2;
   font-weight: 600;
 }
 
 .work-era__mission-role {
-  grid-column: 1;
+  grid-column: 2;
   font-size: 0.875rem;
   color: var(--text-muted);
 }
 
 .work-era__mission-dates {
-  grid-column: 2;
+  grid-column: 3;
   grid-row: 1 / span 2;
   text-align: right;
 }
@@ -1113,8 +1509,9 @@ a:hover {
   --radius: 12px;
   --shadow: 0 4px 24px rgba(15, 20, 25, 0.08);
   --toolbar-h: 3.25rem;
-  --header-offset: 7rem;
+  --header-offset: 6.5rem;
   --nav-side-w: 11rem;
+  --timeline-gutter: 1.5rem;
   --font: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
@@ -1137,6 +1534,14 @@ body {
   color: var(--text);
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -1246,6 +1651,23 @@ a:hover {
   text-decoration: none;
 }
 
+.toolbar__icon {
+  flex-shrink: 0;
+}
+
+.section-nav__mobile {
+  display: none;
+}
+
+.section-nav__link-full {
+  display: inline;
+}
+
+.section-nav__icon {
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
 /* —— Section navigation —— */
 .section-nav--side {
   display: none;
@@ -1334,6 +1756,131 @@ a:hover {
   min-width: 0;
 }
 
+@media (max-width: 899px) {
+  :root {
+    --toolbar-h: 2.5rem;
+    --nav-mobile-h: 5.25rem;
+    --header-offset: calc(var(--toolbar-h) + var(--nav-mobile-h) + 0.35rem);
+  }
+
+  .toolbar__inner {
+    padding: 0.35rem 0.75rem;
+    gap: 0.5rem;
+    min-height: var(--toolbar-h);
+  }
+
+  .toolbar__lang-btn {
+    padding: 0.3rem 0.65rem;
+    font-size: 0.75rem;
+  }
+
+  .toolbar__actions {
+    margin-left: auto;
+    flex-wrap: nowrap;
+    gap: 0.35rem;
+  }
+
+  .toolbar__btn--icon {
+    width: 2.35rem;
+    height: 2.35rem;
+    padding: 0;
+    justify-content: center;
+    border-radius: 10px;
+  }
+
+  .toolbar__btn--icon .toolbar__btn-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .site-header .section-nav:not(.section-nav--side) .section-nav__label {
+    display: none;
+  }
+
+  .site-header .section-nav:not(.section-nav--side) .section-nav__inner {
+    flex-direction: row;
+    align-items: stretch;
+    padding: 0 0.5rem 0.5rem;
+    gap: 0;
+  }
+
+  .site-header .section-nav:not(.section-nav--side) .section-nav__list {
+    gap: 0.2rem;
+    padding: 0.15rem 0.15rem 0.25rem;
+    align-items: stretch;
+  }
+
+  .site-header .section-nav:not(.section-nav--side) .section-nav__item {
+    scroll-snap-align: center;
+  }
+
+  .site-header .section-nav:not(.section-nav--side) .section-nav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 4.25rem;
+    max-width: 5.75rem;
+    min-height: var(--nav-mobile-h);
+    padding: 0.4rem 0.3rem 0.35rem;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.15;
+    border-radius: 10px;
+    white-space: normal;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.82);
+  }
+
+  .site-header .section-nav:not(.section-nav--side) .section-nav__link:hover,
+  .site-header .section-nav:not(.section-nav--side) .section-nav__link:focus-visible {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .site-header .section-nav:not(.section-nav--side) .section-nav__link-full {
+    display: none;
+  }
+
+  .site-header .section-nav:not(.section-nav--side) .section-nav__mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.3rem;
+    width: 100%;
+    min-height: 0;
+  }
+
+  .site-header .section-nav:not(.section-nav--side) .section-nav__icon {
+    width: 1.375rem;
+    height: 1.375rem;
+  }
+
+  .site-header .section-nav:not(.section-nav--side) .section-nav__link-caption {
+    display: -webkit-box;
+    width: 100%;
+    font-size: 0.6rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+}
+
 @media (min-width: 900px) {
   :root {
     --header-offset: 3.75rem;
@@ -1364,6 +1911,14 @@ a:hover {
     overflow: visible;
     padding: 0;
     gap: 0.15rem;
+  }
+
+  .section-nav--side .section-nav__mobile {
+    display: none;
+  }
+
+  .section-nav--side .section-nav__link-full {
+    display: inline;
   }
 
   .section-nav--side .section-nav__link {
@@ -1407,6 +1962,8 @@ a:hover {
   box-shadow: var(--shadow);
   padding: 1.75rem 1.5rem;
   margin-bottom: 1.5rem;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .hero__main {
@@ -1450,13 +2007,59 @@ a:hover {
   font-size: 0.9rem;
 }
 
-.hero__contact a,
-.hero__profiles a {
+.hero__contact a {
   color: var(--text-muted);
 }
 
-.hero__contact a:hover,
-.hero__profiles a:hover {
+.hero__contact a:hover {
+  color: var(--accent);
+}
+
+.hero__profiles {
+  gap: 0.45rem;
+}
+
+.hero__profile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  background: var(--surface-muted);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.hero__profile-link:hover {
+  color: var(--accent);
+  border-color: var(--accent-soft);
+  background: var(--accent-soft);
+  text-decoration: none;
+}
+
+.hero__profile-icon {
+  flex-shrink: 0;
+}
+
+.hero__profile-link--linkedin {
+  color: #0a66c2;
+}
+
+.hero__profile-link--github {
+  color: #24292f;
+}
+
+.hero__profile-link--twitter {
+  color: #0f1419;
+}
+
+.hero__profile-link--linkedin:hover,
+.hero__profile-link--github:hover,
+.hero__profile-link--twitter:hover {
   color: var(--accent);
 }
 
@@ -1478,6 +2081,8 @@ a:hover {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 1.5rem 1.25rem;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .section--compact {
@@ -1511,6 +2116,8 @@ a:hover {
   grid-template-columns: minmax(3.5rem, auto) 1fr;
   gap: 0.75rem 1.25rem;
   align-items: start;
+  width: 100%;
+  min-width: 0;
 }
 
 .timeline-rail {
@@ -1593,7 +2200,7 @@ a:hover {
 .timeline-flow__list {
   list-style: none;
   margin: 0;
-  padding: 0 0 0 1.5rem;
+  padding: 0 0 0 var(--timeline-gutter);
 }
 
 .timeline-flow__year {
@@ -1611,7 +2218,7 @@ a:hover {
 
 .timeline-flow__year-node {
   position: absolute;
-  left: -1.5rem;
+  left: calc(-1 * var(--timeline-gutter));
   width: 13px;
   height: 13px;
   margin-left: -5px;
@@ -1637,6 +2244,7 @@ a:hover {
 .timeline-flow__item {
   position: relative;
   padding-bottom: 1.1rem;
+  min-width: 0;
 }
 
 .timeline-flow__item:last-child {
@@ -1645,7 +2253,7 @@ a:hover {
 
 .timeline-flow__connector {
   position: absolute;
-  left: -1.5rem;
+  left: calc(-1 * var(--timeline-gutter));
   top: 1.1rem;
   width: 1rem;
   height: 2px;
@@ -1667,14 +2275,60 @@ a:hover {
   padding: 1rem 1.15rem;
   border: 1px solid var(--line);
   transition: border-color 0.2s, box-shadow 0.2s;
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 
 .timeline-flow__head {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 0.5rem 1rem;
   margin-bottom: 0.35rem;
+}
+
+.timeline-flow__identity {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-width: 0;
+  flex: 0 1 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.timeline-flow__identity > div {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+@media (min-width: 641px) {
+  .timeline-flow__head {
+    flex-wrap: nowrap;
+  }
+
+  .timeline-flow__identity {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}
+
+.company-logo {
+  flex-shrink: 0;
+  border-radius: 6px;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.company-logo--era {
+  margin-top: 0;
+}
+
+.company-logo--mission {
+  align-self: center;
 }
 
 .timeline-flow__title {
@@ -1697,7 +2351,8 @@ a:hover {
 
 .timeline-flow__dates {
   text-align: right;
-  flex-shrink: 0;
+  flex: 0 0 auto;
+  align-self: flex-start;
   font-size: 0.8125rem;
   color: var(--text-muted);
 }
@@ -1722,14 +2377,34 @@ a:hover {
 }
 
 @media (max-width: 640px) {
+  :root {
+    --timeline-gutter: 1.1rem;
+  }
+
+  .page-layout {
+    padding: 1rem 0.75rem 2.5rem;
+  }
+
+  .hero {
+    padding: 1.35rem 1rem;
+  }
+
+  .section {
+    padding: 1.25rem 1rem;
+  }
+
   .timeline-flow {
     grid-template-columns: 1fr;
+    gap: 0.65rem;
   }
 
   .timeline-rail {
     order: -1;
     align-self: auto;
     min-height: 0;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0 -0.15rem;
   }
 
   .timeline-rail__track {
@@ -1741,9 +2416,10 @@ a:hover {
     flex-wrap: nowrap;
     overflow-x: auto;
     gap: 0.4rem;
-    padding: 0 0 0.5rem;
+    padding: 0 0.15rem 0.5rem;
     scroll-snap-type: x proximity;
     -webkit-overflow-scrolling: touch;
+    max-width: 100%;
   }
 
   .timeline-rail__item {
@@ -1752,11 +2428,106 @@ a:hover {
   }
 
   .timeline-rail__chip {
-    min-width: 3.25rem;
+    min-width: 3rem;
   }
 
   .timeline-rail__chip:hover {
     transform: none;
+  }
+
+  .timeline-flow__body {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .timeline-flow__spine {
+    width: 2px;
+  }
+
+  .timeline-flow__year-node,
+  .timeline-flow__connector {
+    left: calc(-1 * var(--timeline-gutter));
+  }
+
+  .timeline-flow__year-node {
+    width: 11px;
+    height: 11px;
+    margin-left: -4px;
+  }
+
+  .timeline-flow__connector {
+    width: 0.65rem;
+  }
+
+  .timeline-flow__card {
+    padding: 0.85rem 0.9rem;
+    border-radius: 12px;
+  }
+
+  .timeline-flow__head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .timeline-flow__identity {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .timeline-flow__dates {
+    text-align: left;
+    width: 100%;
+    flex-shrink: 1;
+  }
+
+  .timeline-flow__dates time {
+    white-space: normal;
+  }
+
+  .timeline-flow__meta a {
+    word-break: break-word;
+  }
+
+  .work-era__role-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .work-era__role-dates,
+  .work-era__mission-dates {
+    white-space: normal;
+    text-align: left;
+  }
+
+  .work-era__mission-summary {
+    grid-template-columns: auto 1fr;
+    gap: 0.2rem 0.5rem;
+  }
+
+  .work-era__mission-summary .company-logo--mission {
+    grid-row: 1 / span 2;
+  }
+
+  .work-era__mission-dates {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .work-era__mission-body {
+    margin-left: 0;
+    padding-left: 0.65rem;
+  }
+
+  .skill-card,
+  .ref-card {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .skill-card__head {
+    flex-wrap: wrap;
   }
 }
 
@@ -1970,33 +2741,31 @@ a:hover {
 
 @media (max-width: 480px) {
   :root {
-    --header-offset: 9.5rem;
-  }
-
-  .section-nav__inner {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.35rem;
-    padding-bottom: 0.65rem;
-  }
-
-  .section-nav__list {
-    padding-bottom: 0.25rem;
+    --nav-mobile-h: 5rem;
+    --timeline-gutter: 0.95rem;
   }
 
   .toolbar__inner {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 0.65rem 1rem;
+    padding: 0.3rem 0.65rem;
   }
 
-  .toolbar__actions {
-    justify-content: stretch;
+  .toolbar__btn--icon {
+    width: 2.2rem;
+    height: 2.2rem;
   }
 
-  .toolbar__btn {
-    flex: 1;
-    justify-content: center;
+  .site-header .section-nav:not(.section-nav--side) .section-nav__inner {
+    padding: 0 0.4rem 0.45rem;
+  }
+
+  .site-header .section-nav:not(.section-nav--side) .section-nav__link {
+    min-width: 3.75rem;
+    max-width: 5.25rem;
+    padding: 0.35rem 0.25rem 0.3rem;
+  }
+
+  .site-header .section-nav:not(.section-nav--side) .section-nav__link-caption {
+    font-size: 0.5625rem;
   }
 
   .hero__main {
@@ -2010,13 +2779,30 @@ a:hover {
     justify-content: center;
   }
 
-  .timeline-flow__dates {
-    text-align: left;
-    width: 100%;
+  .hero__contact a {
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
-  .timeline-flow__head {
-    flex-direction: column;
+  .hero__profile-link {
+    padding: 0.45rem;
+    border-radius: 10px;
+  }
+
+  .hero__profile-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .timeline-flow__year-label {
+    font-size: 1.25rem;
   }
 }
 
@@ -2104,12 +2890,18 @@ a:hover {
 
 .work-era__mission-summary {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto 1fr auto;
   grid-template-rows: auto auto;
-  gap: 0.15rem 1rem;
+  gap: 0.15rem 0.65rem 1rem;
   align-items: baseline;
   cursor: pointer;
   list-style: none;
+}
+
+.work-era__mission-summary .company-logo--mission {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  align-self: center;
 }
 
 .work-era__mission-summary::-webkit-details-marker {
@@ -2117,18 +2909,18 @@ a:hover {
 }
 
 .work-era__mission-client {
-  grid-column: 1;
+  grid-column: 2;
   font-weight: 600;
 }
 
 .work-era__mission-role {
-  grid-column: 1;
+  grid-column: 2;
   font-size: 0.875rem;
   color: var(--text-muted);
 }
 
 .work-era__mission-dates {
-  grid-column: 2;
+  grid-column: 3;
   grid-row: 1 / span 2;
   text-align: right;
 }
@@ -2204,8 +2996,14 @@ a:hover {
           <a class="toolbar__lang-btn is-active" href="index-fr.html" hreflang="fr" lang="fr">FR</a>
         </div>
         <div class="toolbar__actions">
-          <a class="toolbar__btn toolbar__btn--ghost" href="pdf/resume-fr-europass.pdf">PDF Europass</a>
-          <a class="toolbar__btn toolbar__btn--primary" href="pdf/resume-fr.pdf" download>Télécharger le PDF</a>
+          <a class="toolbar__btn toolbar__btn--icon toolbar__btn--ghost" href="pdf/resume-fr-europass.pdf" aria-label="PDF Europass" title="PDF Europass">
+            <svg class="toolbar__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg>
+            <span class="toolbar__btn-text">PDF Europass</span>
+          </a>
+          <a class="toolbar__btn toolbar__btn--icon toolbar__btn--primary" href="pdf/resume-fr.pdf" download aria-label="Télécharger le PDF" title="Télécharger le PDF">
+            <svg class="toolbar__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 19h14"/></svg>
+            <span class="toolbar__btn-text">Télécharger le PDF</span>
+          </a>
         </div>
       </div>
     </nav>
@@ -2214,31 +3012,58 @@ a:hover {
         <span class="section-nav__label">Sur cette page</span>
         <ul class="section-nav__list">
           <li class="section-nav__item">
-            <a class="section-nav__link" href="#about">À propos</a>
+            <a class="section-nav__link" href="#about" aria-label="À propos">
+              <span class="section-nav__mobile"><svg class="section-nav__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M6 20v-1a6 6 0 0112 0v1"/></svg><span class="section-nav__link-caption">À propos</span></span>
+              <span class="section-nav__link-full">À propos</span>
+            </a>
           </li>
           <li class="section-nav__item">
-            <a class="section-nav__link" href="#experience">Expérience</a>
+            <a class="section-nav__link" href="#experience" aria-label="Expérience">
+              <span class="section-nav__mobile"><svg class="section-nav__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 6V4h4v2"/><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M8 12h8M8 16h5"/></svg><span class="section-nav__link-caption">Expérience</span></span>
+              <span class="section-nav__link-full">Expérience</span>
+            </a>
           </li>
           <li class="section-nav__item">
-            <a class="section-nav__link" href="#education">Formation</a>
+            <a class="section-nav__link" href="#education" aria-label="Formation">
+              <span class="section-nav__mobile"><svg class="section-nav__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 10l-10 5L2 10l10-5 10 5z"/><path d="M6 12v5c0 1 2.5 3 6 3s6-2 6-3v-5"/></svg><span class="section-nav__link-caption">Formation</span></span>
+              <span class="section-nav__link-full">Formation</span>
+            </a>
           </li>
           <li class="section-nav__item">
-            <a class="section-nav__link" href="#skills">Compétences</a>
+            <a class="section-nav__link" href="#skills" aria-label="Compétences">
+              <span class="section-nav__mobile"><svg class="section-nav__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14.7 6.3a4 4 0 105.4 5.4L12 20l-8.1-8.1a4 4 0 105.4-5.4L12 4l2.7 2.3z"/></svg><span class="section-nav__link-caption">Compétences</span></span>
+              <span class="section-nav__link-full">Compétences</span>
+            </a>
           </li>
           <li class="section-nav__item">
-            <a class="section-nav__link" href="#projects">Projets</a>
+            <a class="section-nav__link" href="#projects" aria-label="Projets">
+              <span class="section-nav__mobile"><svg class="section-nav__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg><span class="section-nav__link-caption">Projets</span></span>
+              <span class="section-nav__link-full">Projets</span>
+            </a>
           </li>
           <li class="section-nav__item">
-            <a class="section-nav__link" href="#languages">Langues</a>
+            <a class="section-nav__link" href="#languages" aria-label="Langues">
+              <span class="section-nav__mobile"><svg class="section-nav__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg><span class="section-nav__link-caption">Langues</span></span>
+              <span class="section-nav__link-full">Langues</span>
+            </a>
           </li>
           <li class="section-nav__item">
-            <a class="section-nav__link" href="#interests">Centres d&#x27;intérêt</a>
+            <a class="section-nav__link" href="#interests" aria-label="Centres d&#x27;intérêt">
+              <span class="section-nav__mobile"><svg class="section-nav__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 7.78l-1.06 1.06-1.06-1.06a5.5 5.5 0 007.78-7.78l1.06-1.06 1.06 1.06z"/></svg><span class="section-nav__link-caption">Centres d&#x27;intérêt</span></span>
+              <span class="section-nav__link-full">Centres d&#x27;intérêt</span>
+            </a>
           </li>
           <li class="section-nav__item">
-            <a class="section-nav__link" href="#publications">Publications</a>
+            <a class="section-nav__link" href="#publications" aria-label="Publications">
+              <span class="section-nav__mobile"><svg class="section-nav__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg><span class="section-nav__link-caption">Publications</span></span>
+              <span class="section-nav__link-full">Publications</span>
+            </a>
           </li>
           <li class="section-nav__item">
-            <a class="section-nav__link" href="#references">Références</a>
+            <a class="section-nav__link" href="#references" aria-label="Références">
+              <span class="section-nav__mobile"><svg class="section-nav__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg><span class="section-nav__link-caption">Références</span></span>
+              <span class="section-nav__link-full">Références</span>
+            </a>
           </li>
         </ul>
       </div>
@@ -2250,31 +3075,58 @@ a:hover {
     <p class="section-nav__label">Sur cette page</p>
     <ul class="section-nav__list section-nav__list--vertical">
       <li class="section-nav__item">
-        <a class="section-nav__link" href="#about">À propos</a>
+        <a class="section-nav__link" href="#about" aria-label="À propos">
+          <span class="section-nav__mobile"><svg class="section-nav__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M6 20v-1a6 6 0 0112 0v1"/></svg><span class="section-nav__link-caption">À propos</span></span>
+          <span class="section-nav__link-full">À propos</span>
+        </a>
       </li>
       <li class="section-nav__item">
-        <a class="section-nav__link" href="#experience">Expérience</a>
+        <a class="section-nav__link" href="#experience" aria-label="Expérience">
+          <span class="section-nav__mobile"><svg class="section-nav__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 6V4h4v2"/><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M8 12h8M8 16h5"/></svg><span class="section-nav__link-caption">Expérience</span></span>
+          <span class="section-nav__link-full">Expérience</span>
+        </a>
       </li>
       <li class="section-nav__item">
-        <a class="section-nav__link" href="#education">Formation</a>
+        <a class="section-nav__link" href="#education" aria-label="Formation">
+          <span class="section-nav__mobile"><svg class="section-nav__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 10l-10 5L2 10l10-5 10 5z"/><path d="M6 12v5c0 1 2.5 3 6 3s6-2 6-3v-5"/></svg><span class="section-nav__link-caption">Formation</span></span>
+          <span class="section-nav__link-full">Formation</span>
+        </a>
       </li>
       <li class="section-nav__item">
-        <a class="section-nav__link" href="#skills">Compétences</a>
+        <a class="section-nav__link" href="#skills" aria-label="Compétences">
+          <span class="section-nav__mobile"><svg class="section-nav__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14.7 6.3a4 4 0 105.4 5.4L12 20l-8.1-8.1a4 4 0 105.4-5.4L12 4l2.7 2.3z"/></svg><span class="section-nav__link-caption">Compétences</span></span>
+          <span class="section-nav__link-full">Compétences</span>
+        </a>
       </li>
       <li class="section-nav__item">
-        <a class="section-nav__link" href="#projects">Projets</a>
+        <a class="section-nav__link" href="#projects" aria-label="Projets">
+          <span class="section-nav__mobile"><svg class="section-nav__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg><span class="section-nav__link-caption">Projets</span></span>
+          <span class="section-nav__link-full">Projets</span>
+        </a>
       </li>
       <li class="section-nav__item">
-        <a class="section-nav__link" href="#languages">Langues</a>
+        <a class="section-nav__link" href="#languages" aria-label="Langues">
+          <span class="section-nav__mobile"><svg class="section-nav__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg><span class="section-nav__link-caption">Langues</span></span>
+          <span class="section-nav__link-full">Langues</span>
+        </a>
       </li>
       <li class="section-nav__item">
-        <a class="section-nav__link" href="#interests">Centres d&#x27;intérêt</a>
+        <a class="section-nav__link" href="#interests" aria-label="Centres d&#x27;intérêt">
+          <span class="section-nav__mobile"><svg class="section-nav__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 7.78l-1.06 1.06-1.06-1.06a5.5 5.5 0 007.78-7.78l1.06-1.06 1.06 1.06z"/></svg><span class="section-nav__link-caption">Centres d&#x27;intérêt</span></span>
+          <span class="section-nav__link-full">Centres d&#x27;intérêt</span>
+        </a>
       </li>
       <li class="section-nav__item">
-        <a class="section-nav__link" href="#publications">Publications</a>
+        <a class="section-nav__link" href="#publications" aria-label="Publications">
+          <span class="section-nav__mobile"><svg class="section-nav__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg><span class="section-nav__link-caption">Publications</span></span>
+          <span class="section-nav__link-full">Publications</span>
+        </a>
       </li>
       <li class="section-nav__item">
-        <a class="section-nav__link" href="#references">Références</a>
+        <a class="section-nav__link" href="#references" aria-label="Références">
+          <span class="section-nav__mobile"><svg class="section-nav__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg><span class="section-nav__link-caption">Références</span></span>
+          <span class="section-nav__link-full">Références</span>
+        </a>
       </li>
     </ul>
   </aside>
@@ -2292,9 +3144,24 @@ a:hover {
             <li>Luxembourg, LU</li>
           </ul>
           <ul class="hero__profiles">
-            <li><a href="https://www.linkedin.com/in/ludovicvalente/" rel="noopener noreferrer" data-network="linkedin">LinkedIn · ludovicvalente</a></li>
-            <li><a href="https://github.com/ludoo0d0a" rel="noopener noreferrer" data-network="github">Github · ludoo0d0a</a></li>
-            <li><a href="https://twitter.com/ludoo0d0a" rel="noopener noreferrer" data-network="twitter">Twitter · ludoo0d0a</a></li>
+            <li>
+              <a class="hero__profile-link hero__profile-link--linkedin" href="https://www.linkedin.com/in/ludovicvalente/" rel="noopener noreferrer" data-network="linkedin" aria-label="LinkedIn (ludovicvalente)" title="LinkedIn (ludovicvalente)">
+                <svg class="hero__profile-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.042 2.042 0 01-2.063-2.065 2.042 2.042 0 012.063-2.063 2.043 2.043 0 012.064 2.063 2.042 2.042 0 01-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                <span class="hero__profile-text">ludovicvalente</span>
+              </a>
+            </li>
+            <li>
+              <a class="hero__profile-link hero__profile-link--github" href="https://github.com/ludoo0d0a" rel="noopener noreferrer" data-network="github" aria-label="Github (ludoo0d0a)" title="Github (ludoo0d0a)">
+                <svg class="hero__profile-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                <span class="hero__profile-text">ludoo0d0a</span>
+              </a>
+            </li>
+            <li>
+              <a class="hero__profile-link hero__profile-link--twitter" href="https://twitter.com/ludoo0d0a" rel="noopener noreferrer" data-network="twitter" aria-label="Twitter (ludoo0d0a)" title="Twitter (ludoo0d0a)">
+                <svg class="hero__profile-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                <span class="hero__profile-text">ludoo0d0a</span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -2340,12 +3207,14 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                   <span class="timeline-flow__connector" aria-hidden="true"></span>
                   <article class="timeline-flow__card work-era">
                     <header class="timeline-flow__head work-era__head">
-                      <div>
+                      <div class="timeline-flow__identity">
+                        <img class="company-logo company-logo--era" src="https://www.google.com/s2/favicons?domain&#x3D;sfeir.com&amp;sz&#x3D;64" alt="" width="40" height="40" loading="lazy" decoding="async"/>          <div>
                         <h3 class="timeline-flow__title">
                           <a href="https://www.linkedin.com/company/sfeir/" rel="noopener noreferrer">SFEIR</a>
                         </h3>
                         <p class="work-era__tagline">ESN · développement et architecture logicielle</p>
                         <p class="timeline-flow__meta">Luxembourg</p>
+                        </div>
                       </div>
                       <div class="timeline-flow__dates">
                         <time>août 2017 — Aujourd&#x27;hui</time>
@@ -2386,8 +3255,8 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                         <li class="work-era__mission">
                           <details class="work-era__mission-details" open>
                             <summary class="work-era__mission-summary">
-                              <span class="work-era__mission-client">
-                                <a href="https://www.linkedin.com/company/bil-luxembourg/" rel="noopener noreferrer">Banque Internationale à Luxembourg</a>
+                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;bil.com&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <span class="work-era__mission-client">
+                                <a href="https://www.bil.com" rel="noopener noreferrer">Banque Internationale à Luxembourg</a>
                               </span>
                               <span class="work-era__mission-role">Software Architect</span>
                               <time class="work-era__mission-dates">nov. 2025 — Aujourd&#x27;hui</time>
@@ -2407,7 +3276,7 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                         <li class="work-era__mission">
                           <details class="work-era__mission-details">
                             <summary class="work-era__mission-summary">
-                              <span class="work-era__mission-client">
+                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;statec.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <span class="work-era__mission-client">
                                 <a href="https://www.statec.lu" rel="noopener noreferrer">STATEC</a>
                               </span>
                               <span class="work-era__mission-role">Android Mobile Developer</span>
@@ -2425,8 +3294,8 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                         <li class="work-era__mission">
                           <details class="work-era__mission-details">
                             <summary class="work-era__mission-summary">
-                              <span class="work-era__mission-client">
-                                <a href="https://www.linkedin.com/company/societe-generale/" rel="noopener noreferrer">Société Générale</a>
+                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;societegenerale.com&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <span class="work-era__mission-client">
+                                <a href="https://www.societegenerale.com" rel="noopener noreferrer">Société Générale</a>
                               </span>
                               <span class="work-era__mission-role">Tech lead</span>
                               <time class="work-era__mission-dates">févr. 2025 — sept. 2025</time>
@@ -2443,8 +3312,8 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                         <li class="work-era__mission">
                           <details class="work-era__mission-details">
                             <summary class="work-era__mission-summary">
-                              <span class="work-era__mission-client">
-                                <a href="https://www.linkedin.com/company/temenos/" rel="noopener noreferrer">Temenos</a>
+                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;temenos.com&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <span class="work-era__mission-client">
+                                <a href="https://www.temenos.com" rel="noopener noreferrer">Temenos</a>
                               </span>
                               <span class="work-era__mission-role">Senior Software Developer</span>
                               <time class="work-era__mission-dates">juil. 2024 — déc. 2024</time>
@@ -2461,8 +3330,8 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                         <li class="work-era__mission">
                           <details class="work-era__mission-details">
                             <summary class="work-era__mission-summary">
-                              <span class="work-era__mission-client">
-                                <a href="https://www.linkedin.com/company/foyer-assurances/" rel="noopener noreferrer">Foyer</a>
+                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;foyer.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <span class="work-era__mission-client">
+                                <a href="https://www.foyer.lu" rel="noopener noreferrer">Foyer</a>
                               </span>
                               <span class="work-era__mission-role">Architect, Expert leader</span>
                               <time class="work-era__mission-dates">févr. 2023 — juin 2024</time>
@@ -2484,8 +3353,8 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <span class="work-era__mission-client">
-                                  <a href="https://www.linkedin.com/company/luxembourg-stock-exchange/" rel="noopener noreferrer">Bourse de Luxembourg</a>
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;luxse.com&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                  <a href="https://www.luxse.com" rel="noopener noreferrer">Bourse de Luxembourg</a>
                                 </span>
                                 <span class="work-era__mission-role">Senior Software Developer</span>
                                 <time class="work-era__mission-dates">janv. 2021 — oct. 2021</time>
@@ -2507,8 +3376,8 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <span class="work-era__mission-client">
-                                  <a href="https://www.linkedin.com/company/fundsquare/" rel="noopener noreferrer">Fundsquare</a>
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;fundsquare.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                  <a href="https://www.fundsquare.lu" rel="noopener noreferrer">Fundsquare</a>
                                 </span>
                                 <span class="work-era__mission-role">Ingenieur développement fullstack</span>
                                 <time class="work-era__mission-dates">août 2017 — févr. 2023</time>
@@ -2549,12 +3418,14 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                   <span class="timeline-flow__connector" aria-hidden="true"></span>
                   <article class="timeline-flow__card work-era">
                     <header class="timeline-flow__head work-era__head">
-                      <div>
+                      <div class="timeline-flow__identity">
+                        <img class="company-logo company-logo--era" src="https://www.google.com/s2/favicons?domain&#x3D;sogeti.com&amp;sz&#x3D;64" alt="" width="40" height="40" loading="lazy" decoding="async"/>          <div>
                         <h3 class="timeline-flow__title">
                           <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">SOGETI Luxembourg</a>
                         </h3>
                         <p class="work-era__tagline">ESN · institutions européennes et nationales</p>
                         <p class="timeline-flow__meta">Bertrange, Luxembourg</p>
+                        </div>
                       </div>
                       <div class="timeline-flow__dates">
                         <time>juin 2001 — août 2017</time>
@@ -2573,8 +3444,8 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                         <li class="work-era__mission">
                           <details class="work-era__mission-details">
                             <summary class="work-era__mission-summary">
-                              <span class="work-era__mission-client">
-                                <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">Parlement européen</a>
+                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;europarl.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <span class="work-era__mission-client">
+                                <a href="https://www.europarl.europa.eu" rel="noopener noreferrer">Parlement européen</a>
                               </span>
                               <span class="work-era__mission-role">Fullstack software engineer</span>
                               <time class="work-era__mission-dates">juin 2017 — août 2017</time>
@@ -2599,8 +3470,8 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                         <li class="work-era__mission">
                           <details class="work-era__mission-details">
                             <summary class="work-era__mission-summary">
-                              <span class="work-era__mission-client">
-                                <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">Parlement européen</a>
+                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;europarl.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <span class="work-era__mission-client">
+                                <a href="https://www.europarl.europa.eu" rel="noopener noreferrer">Parlement européen</a>
                               </span>
                               <span class="work-era__mission-role">Fullstack software engineer</span>
                               <time class="work-era__mission-dates">janv. 2017 — juin 2017</time>
@@ -2621,8 +3492,8 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                         <li class="work-era__mission">
                           <details class="work-era__mission-details">
                             <summary class="work-era__mission-summary">
-                              <span class="work-era__mission-client">
-                                <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">Parlement européen</a>
+                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;europarl.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <span class="work-era__mission-client">
+                                <a href="https://www.europarl.europa.eu" rel="noopener noreferrer">Parlement européen</a>
                               </span>
                               <span class="work-era__mission-role">Fullstack software engineer</span>
                               <time class="work-era__mission-dates">juin 2016 — déc. 2016</time>
@@ -2642,8 +3513,8 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                         <li class="work-era__mission">
                           <details class="work-era__mission-details">
                             <summary class="work-era__mission-summary">
-                              <span class="work-era__mission-client">
-                                <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">Parlement européen</a>
+                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;europarl.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <span class="work-era__mission-client">
+                                <a href="https://www.europarl.europa.eu" rel="noopener noreferrer">Parlement européen</a>
                               </span>
                               <span class="work-era__mission-role">Fullstack software engineer</span>
                               <time class="work-era__mission-dates">janv. 2016 — juin 2016</time>
@@ -2663,8 +3534,8 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                         <li class="work-era__mission">
                           <details class="work-era__mission-details">
                             <summary class="work-era__mission-summary">
-                              <span class="work-era__mission-client">
-                                <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">Parlement européen</a>
+                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;europarl.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <span class="work-era__mission-client">
+                                <a href="https://www.europarl.europa.eu" rel="noopener noreferrer">Parlement européen</a>
                               </span>
                               <span class="work-era__mission-role">Web/Java developer</span>
                               <time class="work-era__mission-dates">oct. 2014 — déc. 2015</time>
@@ -2689,8 +3560,8 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <span class="work-era__mission-client">
-                                  <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">BNL - Bibliothèque Nationale du Luxembourg</a>
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;bnl.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                  <a href="https://www.bnl.lu" rel="noopener noreferrer">BNL - Bibliothèque Nationale du Luxembourg</a>
                                 </span>
                                 <span class="work-era__mission-role">IT Consultant</span>
                                 <time class="work-era__mission-dates">mars 2014 — sept. 2014</time>
@@ -2713,8 +3584,8 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <span class="work-era__mission-client">
-                                  <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">STATEC</a>
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;statec.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                  <a href="https://www.statec.lu" rel="noopener noreferrer">STATEC</a>
                                 </span>
                                 <span class="work-era__mission-role">Android Mobile Developer</span>
                                 <time class="work-era__mission-dates">oct. 2013 — mars 2014</time>
@@ -2735,8 +3606,8 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <span class="work-era__mission-client">
-                                  Editus Luxembourg
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;editus.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                  <a href="https://www.editus.lu" rel="noopener noreferrer">Editus Luxembourg</a>
                                 </span>
                                 <span class="work-era__mission-role">Mobile developer - iOS</span>
                                 <time class="work-era__mission-dates">juin 2013 — juil. 2013</time>
@@ -2756,8 +3627,8 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <span class="work-era__mission-client">
-                                  <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">BNL - Bibliothèque nationale du Luxembourg</a>
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;bnl.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                  <a href="https://www.bnl.lu" rel="noopener noreferrer">BNL - Bibliothèque nationale du Luxembourg</a>
                                 </span>
                                 <span class="work-era__mission-role">Développeur - architecte Web/Java</span>
                                 <time class="work-era__mission-dates">mars 2013 — juin 2013</time>
@@ -2782,8 +3653,8 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <span class="work-era__mission-client">
-                                  <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">Société Générale Bank &amp; Trust</a>
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;sgbdt.com&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                  <a href="https://www.sgbdt.com" rel="noopener noreferrer">Société Générale Bank &amp; Trust</a>
                                 </span>
                                 <span class="work-era__mission-role">Web/Java developer</span>
                                 <time class="work-era__mission-dates">nov. 2012 — févr. 2013</time>
@@ -2809,8 +3680,8 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <span class="work-era__mission-client">
-                                  <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">BNL - Bibliothèque nationale du Luxembourg</a>
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;bnl.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                  <a href="https://www.bnl.lu" rel="noopener noreferrer">BNL - Bibliothèque nationale du Luxembourg</a>
                                 </span>
                                 <span class="work-era__mission-role">Web/Java developer</span>
                                 <time class="work-era__mission-dates">janv. 2012 — mai 2012</time>
@@ -2826,8 +3697,8 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <span class="work-era__mission-client">
-                                  <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">BNL - Bibliothèque nationale du Luxembourg</a>
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;bnl.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                  <a href="https://www.bnl.lu" rel="noopener noreferrer">BNL - Bibliothèque nationale du Luxembourg</a>
                                 </span>
                                 <span class="work-era__mission-role">Software engineer</span>
                                 <time class="work-era__mission-dates">nov. 2011 — déc. 2011</time>
@@ -2853,8 +3724,8 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <span class="work-era__mission-client">
-                                  <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">Parlement européen</a>
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;europarl.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                  <a href="https://www.europarl.europa.eu" rel="noopener noreferrer">Parlement européen</a>
                                 </span>
                                 <span class="work-era__mission-role">Consultant</span>
                                 <time class="work-era__mission-dates">mai 2010 — déc. 2011</time>
@@ -2876,8 +3747,8 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <span class="work-era__mission-client">
-                                  <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">BNL - Bibliothèque nationale du Luxembourg</a>
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;bnl.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                  <a href="https://www.bnl.lu" rel="noopener noreferrer">BNL - Bibliothèque nationale du Luxembourg</a>
                                 </span>
                                 <span class="work-era__mission-role">Software engineer</span>
                                 <time class="work-era__mission-dates">août 2009 — mai 2010</time>
@@ -2896,8 +3767,8 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <span class="work-era__mission-client">
-                                  <a href="https://www.linkedin.com/company/sogeti/" rel="noopener noreferrer">Parlement européen</a>
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;europarl.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                  <a href="https://www.europarl.europa.eu" rel="noopener noreferrer">Parlement européen</a>
                                 </span>
                                 <span class="work-era__mission-role">Senior Software Engineer - J2EE, XML, DMS/CMS, ExtJs specialist</span>
                                 <time class="work-era__mission-dates">sept. 2007 — juil. 2009</time>
@@ -2920,8 +3791,8 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <span class="work-era__mission-client">
-                                  <a href="https://www.linkedin.com/company/sogeti/" rel="noopener noreferrer">Cour de justice européenne</a>
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;curia.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                  <a href="https://curia.europa.eu" rel="noopener noreferrer">Cour de justice européenne</a>
                                 </span>
                                 <span class="work-era__mission-role">IT architect</span>
                                 <time class="work-era__mission-dates">sept. 2006 — août 2007</time>
@@ -2939,8 +3810,8 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <span class="work-era__mission-client">
-                                  <a href="https://www.linkedin.com/company/sogeti/" rel="noopener noreferrer">Cour de justice européenne</a>
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;curia.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                  <a href="https://curia.europa.eu" rel="noopener noreferrer">Cour de justice européenne</a>
                                 </span>
                                 <span class="work-era__mission-role">Software analyst developer</span>
                                 <time class="work-era__mission-dates">janv. 2006 — août 2007</time>
@@ -2958,8 +3829,8 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <span class="work-era__mission-client">
-                                  <a href="https://www.linkedin.com/company/sogeti/" rel="noopener noreferrer">European Court of Justice</a>
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;curia.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                  <a href="https://curia.europa.eu" rel="noopener noreferrer">European Court of Justice</a>
                                 </span>
                                 <span class="work-era__mission-role">Software analyst developer</span>
                                 <time class="work-era__mission-dates">janv. 2006 — févr. 2006</time>
@@ -2976,8 +3847,8 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <span class="work-era__mission-client">
-                                  <a href="https://www.linkedin.com/company/sogeti/" rel="noopener noreferrer">Cour de justice européenne</a>
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;curia.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                  <a href="https://curia.europa.eu" rel="noopener noreferrer">Cour de justice européenne</a>
                                 </span>
                                 <span class="work-era__mission-role">Software analyst developer</span>
                                 <time class="work-era__mission-dates">août 2005 — févr. 2006</time>
@@ -2996,8 +3867,8 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <span class="work-era__mission-client">
-                                  <a href="https://www.linkedin.com/company/sogeti/" rel="noopener noreferrer">Cour de justice européenne</a>
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;curia.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                  <a href="https://curia.europa.eu" rel="noopener noreferrer">Cour de justice européenne</a>
                                 </span>
                                 <span class="work-era__mission-role">Software analyst developer</span>
                                 <time class="work-era__mission-dates">sept. 2001 — sept. 2004</time>
@@ -3026,12 +3897,14 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                   <span class="timeline-flow__connector" aria-hidden="true"></span>
                   <article class="timeline-flow__card">
                     <header class="timeline-flow__head">
-                      <div>
+                      <div class="timeline-flow__identity">
+                        <img class="company-logo company-logo--work" src="https://www.google.com/s2/favicons?domain&#x3D;quaternove.com&amp;sz&#x3D;64" alt="" width="36" height="36" loading="lazy" decoding="async"/>          <div>
                         <h3 class="timeline-flow__title">Chef de projet</h3>
                         <p class="timeline-flow__meta">
-                          Quaternove
+                          <a href="https://www.quaternove.com" rel="noopener noreferrer">Quaternove</a>
                           
                         </p>
+                        </div>
                       </div>
                       <div class="timeline-flow__dates">
                         <time>sept. 2000 — sept. 2001</time>
@@ -3075,9 +3948,12 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                 <span class="timeline-flow__connector" aria-hidden="true"></span>
                 <article class="timeline-flow__card">
                   <header class="timeline-flow__head">
-                    <div>
+                    <div class="timeline-flow__identity">
+                      
+                      <div>
                         <h3 class="timeline-flow__title">Ecole nationale d&#x27;Ingénieurs de Metz</h3>
                         <p class="timeline-flow__meta">Diplôme d&#x27;ingénieur — Ingénieur généraliste, spécialisé mécanique</p>
+                      </div>
                     </div>
                     <div class="timeline-flow__dates">
                       <time>déc. 1995 — déc. 2000</time>
@@ -3187,9 +4063,12 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                 <span class="timeline-flow__connector" aria-hidden="true"></span>
                 <article class="timeline-flow__card">
                   <header class="timeline-flow__head">
-                    <div>
+                    <div class="timeline-flow__identity">
+                      
+                      <div>
                         <h3 class="timeline-flow__title">Scora</h3>
                         <p class="timeline-flow__meta"><a href="http://scorawatch.com" rel="noopener noreferrer">http://scorawatch.com</a></p>
+                      </div>
                     </div>
                     <div class="timeline-flow__dates">
                       <time>déc. 2022 — Aujourd&#x27;hui</time>
@@ -3216,9 +4095,12 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                 <span class="timeline-flow__connector" aria-hidden="true"></span>
                 <article class="timeline-flow__card">
                   <header class="timeline-flow__head">
-                    <div>
+                    <div class="timeline-flow__identity">
+                      
+                      <div>
                         <h3 class="timeline-flow__title">Gorilla</h3>
                         <p class="timeline-flow__meta"><a href="https://github.com/ludoo0d0a/gorilla" rel="noopener noreferrer">https://github.com/ludoo0d0a/gorilla</a></p>
+                      </div>
                     </div>
                     <div class="timeline-flow__dates">
                       <time>oct. 2023 — avr. 2024</time>
@@ -3237,9 +4119,12 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                 <span class="timeline-flow__connector" aria-hidden="true"></span>
                 <article class="timeline-flow__card">
                   <header class="timeline-flow__head">
-                    <div>
+                    <div class="timeline-flow__identity">
+                      
+                      <div>
                         <h3 class="timeline-flow__title">GCWizard</h3>
                         <p class="timeline-flow__meta"><a href="https://gcwizard.net/" rel="noopener noreferrer">https://gcwizard.net/</a></p>
+                      </div>
                     </div>
                     <div class="timeline-flow__dates">
                       <time>mars 2021 — août 2022</time>
@@ -3263,9 +4148,12 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                 <span class="timeline-flow__connector" aria-hidden="true"></span>
                 <article class="timeline-flow__card">
                   <header class="timeline-flow__head">
-                    <div>
+                    <div class="timeline-flow__identity">
+                      
+                      <div>
                         <h3 class="timeline-flow__title">Bibliothèques npm/nodejs pour backbone et passport</h3>
                         <p class="timeline-flow__meta"><a href="https://www.npmjs.com/~ludoo" rel="noopener noreferrer">https://www.npmjs.com/~ludoo</a></p>
+                      </div>
                     </div>
                     <div class="timeline-flow__dates">
                       <time>sept. 2015 — sept. 2015</time>
@@ -3290,9 +4178,12 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                 <span class="timeline-flow__connector" aria-hidden="true"></span>
                 <article class="timeline-flow__card">
                   <header class="timeline-flow__head">
-                    <div>
+                    <div class="timeline-flow__identity">
+                      
+                      <div>
                         <h3 class="timeline-flow__title">Outils pour le géocaching</h3>
                         <p class="timeline-flow__meta"><a href="http://www.geoking.fr" rel="noopener noreferrer">http://www.geoking.fr</a></p>
+                      </div>
                     </div>
                     <div class="timeline-flow__dates">
                       <time>mars 2014 — mars 2020</time>
@@ -3315,9 +4206,12 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                 <span class="timeline-flow__connector" aria-hidden="true"></span>
                 <article class="timeline-flow__card">
                   <header class="timeline-flow__head">
-                    <div>
+                    <div class="timeline-flow__identity">
+                      
+                      <div>
                         <h3 class="timeline-flow__title">Platforme de développement rapide pour application iPhone</h3>
                         
+                      </div>
                     </div>
                     <div class="timeline-flow__dates">
                       <time>juil. 2012 — Aujourd&#x27;hui</time>
@@ -3336,9 +4230,12 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                 <span class="timeline-flow__connector" aria-hidden="true"></span>
                 <article class="timeline-flow__card">
                   <header class="timeline-flow__head">
-                    <div>
+                    <div class="timeline-flow__identity">
+                      
+                      <div>
                         <h3 class="timeline-flow__title">Eye Traffic - Info traffic Luxembourg</h3>
                         <p class="timeline-flow__meta"><a href="https://chrome.google.com/webstore/detail/kieaniodbboioemmcghcbkfgpmopffdc" rel="noopener noreferrer">https://chrome.google.com/webstore/detail/kieaniodbboioemmcghcbkfgpmopffdc</a></p>
+                      </div>
                     </div>
                     <div class="timeline-flow__dates">
                       <time>août 2010 — Aujourd&#x27;hui</time>
@@ -3356,9 +4253,12 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                 <span class="timeline-flow__connector" aria-hidden="true"></span>
                 <article class="timeline-flow__card">
                   <header class="timeline-flow__head">
-                    <div>
+                    <div class="timeline-flow__identity">
+                      
+                      <div>
                         <h3 class="timeline-flow__title">Handball club Amnéville website</h3>
                         <p class="timeline-flow__meta"><a href="http://www.7amnevillois.fr" rel="noopener noreferrer">http://www.7amnevillois.fr</a></p>
+                      </div>
                     </div>
                     <div class="timeline-flow__dates">
                       <time>oct. 2015 — août 2022</time>
@@ -3378,9 +4278,12 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                 <span class="timeline-flow__connector" aria-hidden="true"></span>
                 <article class="timeline-flow__card">
                   <header class="timeline-flow__head">
-                    <div>
+                    <div class="timeline-flow__identity">
+                      
+                      <div>
                         <h3 class="timeline-flow__title">Extension Chrome ReaderPlus</h3>
                         <p class="timeline-flow__meta"><a href="https://chrome.google.com/webstore/detail/hhcknjkmaaeinhdjgimjnophgpbdgfmg" rel="noopener noreferrer">https://chrome.google.com/webstore/detail/hhcknjkmaaeinhdjgimjnophgpbdgfmg</a></p>
+                      </div>
                     </div>
                     <div class="timeline-flow__dates">
                       <time>déc. 2009 — mai 2013</time>
@@ -3401,9 +4304,12 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                 <span class="timeline-flow__connector" aria-hidden="true"></span>
                 <article class="timeline-flow__card">
                   <header class="timeline-flow__head">
-                    <div>
+                    <div class="timeline-flow__identity">
+                      
+                      <div>
                         <h3 class="timeline-flow__title">Application Windows8</h3>
                         <p class="timeline-flow__meta"><a href="http://apps.microsoft.com/windows/fr-be/app/cityreal/8c70e367-e1bd-4890-8519-857389282fe1" rel="noopener noreferrer">http://apps.microsoft.com/windows/fr-be/app/cityreal/8c70e367-e1bd-4890-8519-857389282fe1</a></p>
+                      </div>
                     </div>
                     <div class="timeline-flow__dates">
                       <time>sept. 2012 — oct. 2012</time>
@@ -3422,9 +4328,12 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
                 <span class="timeline-flow__connector" aria-hidden="true"></span>
                 <article class="timeline-flow__card">
                   <header class="timeline-flow__head">
-                    <div>
+                    <div class="timeline-flow__identity">
+                      
+                      <div>
                         <h3 class="timeline-flow__title">Facelift for a real estate website</h3>
                         <p class="timeline-flow__meta"><a href="http://habiter.lu" rel="noopener noreferrer">http://habiter.lu</a></p>
+                      </div>
                     </div>
                     <div class="timeline-flow__dates">
                       <time>juin 2012 — juin 2012</time>
