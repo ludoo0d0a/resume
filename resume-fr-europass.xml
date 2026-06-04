@@ -2,8 +2,8 @@
 <SkillsPassport xmlns="http://europass.cedefop.europa.eu/Europass" locale="fr" xsi:schemaLocation="http://europass.cedefop.europa.eu/Europass http://europass.cedefop.europa.eu/xml/v3.4.0/EuropassSchema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <DocumentInfo>
     <DocumentType>ECV</DocumentType>
-    <CreationDate>2026-06-04T09:49:39.478Z</CreationDate>
-    <LastUpdateDate>2026-06-04T09:49:39.478Z</LastUpdateDate>
+    <CreationDate>2026-06-04T15:12:47.218Z</CreationDate>
+    <LastUpdateDate>2026-06-04T15:12:47.218Z</LastUpdateDate>
     <XSDVersion>V3.4</XSDVersion>
     <Generator>jsonresume-theme-ludoo</Generator>
     <EuropassLogo>true</EuropassLogo>
@@ -26,6 +26,7 @@
       <ContactInfo>
         <Address>
           <Contact>
+            <AddressLine>Luxembourg</AddressLine>
             <Country>
               <Code>LU</Code>
               <Label>Luxembourg</Label>
@@ -37,6 +38,27 @@
         </Email>
         <WebsiteList>
           <Website>
+            <Contact>https://www.linkedin.com/in/ludovicvalente/</Contact>
+            <Use>
+              <Code>portfolio</Code>
+              <Label>portfolio</Label>
+            </Use>
+          </Website>
+          <Website>
+            <Contact>https://github.com/ludoo0d0a</Contact>
+            <Use>
+              <Code>portfolio</Code>
+              <Label>portfolio</Label>
+            </Use>
+          </Website>
+          <Website>
+            <Contact>https://twitter.com/ludoo0d0a</Contact>
+            <Use>
+              <Code>personal</Code>
+              <Label>personal</Label>
+            </Use>
+          </Website>
+          <Website>
             <Contact>https://scorawatch.com</Contact>
             <Use>
               <Code>personal</Code>
@@ -45,6 +67,18 @@
           </Website>
         </WebsiteList>
       </ContactInfo>
+      <Demographics>
+        <NationalityList>
+          <Nationality>
+            <Code>FR</Code>
+            <Label>Française</Label>
+          </Nationality>
+        </NationalityList>
+      </Demographics>
+      <Photo>
+        <MimeType>image/jpeg</MimeType>
+        <Data>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</Data>
+      </Photo>
     </Identification>
     <Headline>
       <Type>
@@ -52,7 +86,8 @@
         <Label>Déclaration personnelle</Label>
       </Type>
       <Description>
-        <Label>Développeur Senior Fullstack, architecte IT, formateur VueJs, tech lead, développeur Flutter/Android.
+        <Label>Ingénieur logiciel fullstack @SFΞIR Luxembourg
+        Développeur Senior Fullstack, architecte IT, formateur VueJs, tech lead, développeur Flutter/Android.
         Focalisé sur l'architecture moderne autour des besoins web et mobiles.
         Je crée des applications modernes avec des technologies émergentes s'appuyant sur une architecture efficace.
         Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, NodeJs, VueJs, Flutter</Label>
@@ -85,6 +120,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/sfeir/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -114,6 +155,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/sfeir/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -152,6 +199,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/bil-luxembourg/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -182,6 +235,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.statec.lu</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -214,6 +273,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/societe-generale/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -247,6 +312,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/temenos/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -280,6 +351,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/foyer-assurances/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -329,6 +406,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/fundsquare/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -363,6 +446,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/luxembourg-stock-exchange/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -401,6 +490,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -435,6 +530,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -473,6 +574,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -511,6 +618,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -547,6 +660,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -580,6 +699,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -614,6 +739,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -653,6 +784,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -717,6 +854,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -755,6 +898,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -780,6 +929,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -812,6 +967,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -849,6 +1010,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -880,6 +1047,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -917,6 +1090,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/sogeti/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -947,6 +1126,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/sogeti/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -978,6 +1163,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/sogeti/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -1010,6 +1201,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/sogeti/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -1044,6 +1241,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/sogeti/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -1077,6 +1280,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/sogeti/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -1168,9 +1377,267 @@
           </ForeignLanguage>
         </ForeignLanguageList>
       </Linguistic>
+      <Communication>
+        <Description>Présentations techniques, ateliers clients, mentorat de développeurs et collaboration multiculturelle au sein d'institutions européennes.</Description>
+      </Communication>
+      <Organisational>
+        <Description>Engineering manager : encadrement d'équipe, suivi de carrière, formation et missions pour 10+ collaborateurs ; participation aux décisions de l'agence Luxembourg chez SFEIR.</Description>
+      </Organisational>
+      <JobRelated>
+        <Description>Frontend: HTML / JSX, SCSS / CSS / Styled Components / Material, Javascript / Typescript, React, Angular, VueJs, Sencha ExtJs, Backbone.js, Webpack, Redux, Chrome Extensions, GruntJS, GreaseMonkey, Figma
+        Backend: Node, Java, Spring, SpringBoot, Solr, ElasticSearch, Python, Kotlin, scala, Postgres, Redis, Serverless, Keycloak, Kafka, Microservices, REST, SOA, JHipster, Hibernate, XSL/XSLT, MongoDb, Oracle, PostgreSQL
+        Cloud: AWS, Azure / AKS, Google Cloud / GCP, Netlify, kubernetes
+        CI/CD: Github actions, argoCD, Jenkins
+        Mobile: Flutter, iOs / Swift / ObjectiveC, Android / Kotlin / Jetpack compose / KMP, Ionic Framework, Gradle</Description>
+      </JobRelated>
       <Computer>
-        <Description>Frontend; Backend; Cloud; CI/CD; Mobile</Description>
+        <Description>Frontend: HTML / JSX, SCSS / CSS / Styled Components / Material, Javascript / Typescript, React, Angular, VueJs, Sencha ExtJs, Backbone.js, Webpack, Redux, Chrome Extensions, GruntJS, GreaseMonkey, Figma
+        Backend: Node, Java, Spring, SpringBoot, Solr, ElasticSearch, Python, Kotlin, scala, Postgres, Redis, Serverless, Keycloak, Kafka, Microservices, REST, SOA, JHipster, Hibernate, XSL/XSLT, MongoDb, Oracle, PostgreSQL
+        Cloud: AWS, Azure / AKS, Google Cloud / GCP, Netlify, kubernetes
+        CI/CD: Github actions, argoCD, Jenkins
+        Mobile: Flutter, iOs / Swift / ObjectiveC, Android / Kotlin / Jetpack compose / KMP, Ionic Framework, Gradle</Description>
+        <ProficiencyLevel>
+          <Information>C</Information>
+          <Communication>C</Communication>
+          <ContentCreation>B</ContentCreation>
+          <Safety>B</Safety>
+          <ProblemSolving>C</ProblemSolving>
+        </ProficiencyLevel>
       </Computer>
+      <Driving>
+        <Description>
+          <Licence>B</Licence>
+        </Description>
+      </Driving>
+      <Other>
+        <Description>Centres d'intérêt
+        Geocaching: gps, Chasse au trésor
+        Sports: Randonnée, Tennis, Handball
+        Musique: Guitare, Piano</Description>
+      </Other>
     </Skills>
+    <AchievementList>
+      <Achievement>
+        <Title>
+          <Code>publications</Code>
+          <Label>Publications</Label>
+        </Title>
+        <Description>Scora — Tableau de score tennis pour montre Google Android WearOS — 2024-09-03 — https://play.google.com/store/apps/details?id=fr.geoking.tennis.scoreboard.wear</Description>
+      </Achievement>
+      <Achievement>
+        <Title>
+          <Code>publications</Code>
+          <Label>Publications</Label>
+        </Title>
+        <Description>Ce CV a été généré en PDF et HTML en plusieurs langues sur base d'une seule source JSON, et publié automatiquement sur le site web — CV au format json-resume. Traductions, formats PDF et HTML, publié automatiquement sur le site web https://ludoo0d0a.github.io/resume/. — 2025-01-03 — https://github.com/ludoo0d0a/resume</Description>
+      </Achievement>
+      <Achievement>
+        <Title>
+          <Code>publications</Code>
+          <Label>Publications</Label>
+        </Title>
+        <Description>Theme pour CV au format json-resume. — Theme pour CV au format json-resume suportant i18n — 2025-01-02 — https://www.npmjs.com/package/jsonresume-theme-ludoo</Description>
+      </Achievement>
+      <Achievement>
+        <Title>
+          <Code>publications</Code>
+          <Label>Publications</Label>
+        </Title>
+        <Description>Passport pour Geocaching — Stratégie d'authentification Geocaching pour Passport et Node.js — 2019-10-09 — https://www.npmjs.com/package/passport-geocaching</Description>
+      </Achievement>
+      <Achievement>
+        <Title>
+          <Code>publications</Code>
+          <Label>Publications</Label>
+        </Title>
+        <Description>Extension Chrome ReaderPlus — Chrome extension for Google Reader.
+        Enhances navigation and presentation by adding a theme, social sharing features, quick article preview, icons, filtering, and more...
+        Reached 80,000 users before GoogleReader shutdown.
+        Project transferred to a Chinese team. — 2011-10-01 — https://chrome.google.com/webstore/detail/hhcknjkmaaeinhdjgimjnophgpbdgfmg</Description>
+      </Achievement>
+      <Achievement>
+        <Title>
+          <Code>projects</Code>
+          <Label>Projets</Label>
+        </Title>
+        <Description>Scora
+        2022-12-31
+        Application de comptage de points pour le tennis pour montre WearOS
+        Elle vous aide à compter les points pendant votre match de tennis.
+        Site web: http://scorawatch.com
+        Publié sur Google Play Store : https://play.google.com/store/apps/details?id=fr.geoking.tennis.scoreboard.wear
+        http://scorawatch.com
+        • Projet personnel en production
+        • Technologie émergente KMP</Description>
+      </Achievement>
+      <Achievement>
+        <Title>
+          <Code>projects</Code>
+          <Label>Projets</Label>
+        </Title>
+        <Description>Gorilla
+        2023-10-31 – 2024-04-30
+        Framework JS pour automatiser les tâches sur le Web
+        https://github.com/ludoo0d0a/gorilla</Description>
+      </Achievement>
+      <Achievement>
+        <Title>
+          <Code>projects</Code>
+          <Label>Projets</Label>
+        </Title>
+        <Description>GCWizard
+        2021-03-31 – 2022-08-01
+        Cette application mobile contient de nombreux outils hors ligne, tables et calculateurs pour soutenir le géocacheur en plein air ou à la maison dans la résolution de puzzles ou de calculs.
+        Disponible pour iOs, Android et Web.
+        https://gcwizard.net/
+        • Joined the team composed of great german guys
+        • Improved search engine
+        • Initiate translation engine and translators community and tools - Thanks crowdin
+        • Steganography module</Description>
+      </Achievement>
+      <Achievement>
+        <Title>
+          <Code>projects</Code>
+          <Label>Projets</Label>
+        </Title>
+        <Description>Bibliothèques npm/nodejs pour backbone et passport
+        2015-09-30 – 2015-09-30
+        Dévéloppement et mise à disposition sous npmjs et github de composants NodeJs.
+        - backgrid (grid / backbone) : fork compatible CommonJs.
+        - Strategy passport.js pour geocaching
+        - Api geocaching NodeJs
+        https://www.npmjs.com/~ludoo
+        • javascript
+        • oauth2
+        • npm
+        • nodejs
+        • backbone</Description>
+      </Achievement>
+      <Achievement>
+        <Title>
+          <Code>projects</Code>
+          <Label>Projets</Label>
+        </Title>
+        <Description>Outils pour le géocaching
+        2014-03-31 – 2020-03-31
+        Site Web contenant des outils online pour la communauté geocaching.
+        pitaso.com devenu maintenant geoking.fr
+        http://www.geoking.fr
+        • Logbook creator widely used by community</Description>
+      </Achievement>
+      <Achievement>
+        <Title>
+          <Code>projects</Code>
+          <Label>Projets</Label>
+        </Title>
+        <Description>Platforme de développement rapide pour application iPhone
+        2012-07-31
+        Platforme de développement rapide pour application iPhone</Description>
+      </Achievement>
+      <Achievement>
+        <Title>
+          <Code>projects</Code>
+          <Label>Projets</Label>
+        </Title>
+        <Description>Eye Traffic - Info traffic Luxembourg
+        2010-08-31
+        Extension Chrome pour surveiller le traffic info au Luxembourg.
+        https://chrome.google.com/webstore/detail/kieaniodbboioemmcghcbkfgpmopffdc
+        • Agreement from Pont-Et-Chaussee to access their API</Description>
+      </Achievement>
+      <Achievement>
+        <Title>
+          <Code>projects</Code>
+          <Label>Projets</Label>
+        </Title>
+        <Description>Handball club Amnéville website
+        2015-10-31 – 2022-08-31
+        Réalisation du site Web du club de Amnéville sous Wordpress.
+        Valorisation du club, implication du comité dans ce nouvel outil de communication, promotion de nos équipes en N3 et prénationale, actualités, résultats et calendriers des différentes équipes
+        http://www.7amnevillois.fr</Description>
+      </Achievement>
+      <Achievement>
+        <Title>
+          <Code>projects</Code>
+          <Label>Projets</Label>
+        </Title>
+        <Description>Extension Chrome ReaderPlus
+        2009-12-31 – 2013-05-31
+        Chrome extension for Google Reader.
+        Enhances navigation and presentation by adding a theme, social sharing features, quick article preview, icons, filtering, and more...
+        Reached 80,000 users before GoogleReader shutdown.
+        Project transferred to a Chinese team.
+        https://chrome.google.com/webstore/detail/hhcknjkmaaeinhdjgimjnophgpbdgfmg
+        • HTML5
+        • CSS3
+        • Javascript
+        • Disponible sur le Chrome Store
+        • Plus de 80000 utilisateurs
+        • Article dans Lifehacker : https://lifehacker.com/reader-plus-is-a-chrome-extension-that-adds-missing-fea-5798022
+        • Projet vendu
+        • Plus de 600 issues/requêtes</Description>
+      </Achievement>
+      <Achievement>
+        <Title>
+          <Code>projects</Code>
+          <Label>Projets</Label>
+        </Title>
+        <Description>Application Windows8
+        2012-09-30 – 2012-10-31
+        Création et publication d'une application mobile Windows8.
+        Gestion immobilière pour une agence immobilière parisienne.
+        http://apps.microsoft.com/windows/fr-be/app/cityreal/8c70e367-e1bd-4890-8519-857389282fe1
+        • HTML5
+        • CSS3
+        • Javascript
+        • WebJs
+        • Visual Studio</Description>
+      </Achievement>
+      <Achievement>
+        <Title>
+          <Code>projects</Code>
+          <Label>Projets</Label>
+        </Title>
+        <Description>Facelift for a real estate website
+        2012-06-30 – 2012-06-30
+        Facelift et ajout de plusieurs fonctionnalités du site Web Habiter.lu dédié aux annonces immobilières pour le compte d'Editus.
+        http://habiter.lu
+        • PHP
+        • HTML
+        • CSS</Description>
+      </Achievement>
+      <Achievement>
+        <Title>
+          <Code>references</Code>
+          <Label>Références</Label>
+        </Title>
+        <Description>Vincent Mellano: I had the chance to work with Ludovic at the European Parliament for about 2 years.
+        The way he can deliver quality software on a very short time using cutting-edge technologies is very impressive.
+        His experience and ability to foresee problems at the very first phases of the project helped us a lot while taking decisions.
+        I would recommend Ludovic to anyone looking for a highly skilled, effective and professional software engineer.</Description>
+      </Achievement>
+      <Achievement>
+        <Title>
+          <Code>references</Code>
+          <Label>Références</Label>
+        </Title>
+        <Description>Pierre-antoine Gregoire: Ludovic is a very talented person. He can tackle hard tasks in a short schedule while maintaining the quality of the result. He was an invaluable partner during the time we spent working in the same service of the European parliament, and I can't wait to work with him again in the future years if it is made possible.
+        In the meantime, I can only recommend him to anybody looking for a capable professional, who doesn't lack neither the ability to learn nor an advanced existing technical knowledge.</Description>
+      </Achievement>
+      <Achievement>
+        <Title>
+          <Code>publications</Code>
+          <Label>Publications</Label>
+        </Title>
+        <Description>Online CV (HTML/PDF, EN/FR) — https://ludoo0d0a.github.io/resume/</Description>
+      </Achievement>
+      <Achievement>
+        <Title>
+          <Code>publications</Code>
+          <Label>Publications</Label>
+        </Title>
+        <Description>JSON Resume source repository — https://github.com/ludoo0d0a/resume</Description>
+      </Achievement>
+    </AchievementList>
   </LearnerInfo>
 </SkillsPassport>
