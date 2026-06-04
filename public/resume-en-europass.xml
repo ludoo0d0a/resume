@@ -2,8 +2,8 @@
 <SkillsPassport xmlns="http://europass.cedefop.europa.eu/Europass" locale="en" xsi:schemaLocation="http://europass.cedefop.europa.eu/Europass http://europass.cedefop.europa.eu/xml/v3.4.0/EuropassSchema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <DocumentInfo>
     <DocumentType>ECV</DocumentType>
-    <CreationDate>2026-06-04T15:50:52.132Z</CreationDate>
-    <LastUpdateDate>2026-06-04T15:50:52.132Z</LastUpdateDate>
+    <CreationDate>2026-06-04T16:02:44.685Z</CreationDate>
+    <LastUpdateDate>2026-06-04T16:02:44.685Z</LastUpdateDate>
     <XSDVersion>V3.4</XSDVersion>
     <Generator>jsonresume-theme-ludoo</Generator>
     <EuropassLogo>true</EuropassLogo>
@@ -482,7 +482,7 @@
         • Dtd
         • Jira</Activities>
         <Employer>
-          <Name>SOGETI Luxembourg</Name>
+          <Name>SOGETI Luxembourg - European Parliament</Name>
           <ContactInfo>
             <Address>
               <Contact>
@@ -526,7 +526,7 @@
         • jdk7
         • tomcat7</Activities>
         <Employer>
-          <Name>SOGETI Luxembourg - European Parliament, DAS Unit (Translation)</Name>
+          <Name>SOGETI Luxembourg - European Parliament</Name>
           <ContactInfo>
             <Address>
               <Contact>
@@ -570,7 +570,7 @@
         • tomcat
         • java8</Activities>
         <Employer>
-          <Name>SOGETI Luxembourg - European Parliament, DAS Unit (Translation)</Name>
+          <Name>SOGETI Luxembourg - European Parliament</Name>
           <ContactInfo>
             <Address>
               <Contact>
@@ -613,7 +613,7 @@
         • REST
         • json</Activities>
         <Employer>
-          <Name>SOGETI Luxembourg - European Parliament, DAS Unit (Translation)</Name>
+          <Name>SOGETI Luxembourg - European Parliament</Name>
           <ContactInfo>
             <Address>
               <Contact>
@@ -652,7 +652,7 @@
         • ExtJs
         • Maven</Activities>
         <Employer>
-          <Name>SOGETI Luxembourg - European Parliament, DAS Unit (Translation)</Name>
+          <Name>SOGETI Luxembourg - European Parliament</Name>
           <ContactInfo>
             <Address>
               <Contact>
@@ -737,7 +737,7 @@
         • Rest
         • XML</Activities>
         <Employer>
-          <Name>SOGETI Luxembourg</Name>
+          <Name>SOGETI Luxembourg - STATEC</Name>
           <ContactInfo>
             <Address>
               <Contact>
@@ -971,7 +971,7 @@
         • AD/LDAP
         • JavaWebStart</Activities>
         <Employer>
-          <Name>SOGETI Luxembourg - European Parliament - Web Application development</Name>
+          <Name>SOGETI Luxembourg - European Parliament</Name>
           <ContactInfo>
             <Address>
               <Contact>
@@ -1053,7 +1053,7 @@
         • Bonita workflow
         • Jahia</Activities>
         <Employer>
-          <Name>SOGETI Luxembourg - European Parliament:</Name>
+          <Name>SOGETI Luxembourg - European Parliament</Name>
           <ContactInfo>
             <Address>
               <Contact>
@@ -1090,7 +1090,7 @@
         • Jdeveloper
         • xml</Activities>
         <Employer>
-          <Name>SOGETI Luxembourg - Sogeti</Name>
+          <Name>SOGETI Luxembourg - European Court of Justice</Name>
           <ContactInfo>
             <Address>
               <Contact>
@@ -1128,7 +1128,7 @@
         • Oracle10g xmlDB
         • OracleText contextual search</Activities>
         <Employer>
-          <Name>SOGETI Luxembourg - Sogeti</Name>
+          <Name>SOGETI Luxembourg - European Court of Justice</Name>
           <ContactInfo>
             <Address>
               <Contact>
@@ -1169,7 +1169,7 @@
         • OIDC
         • ldap</Activities>
         <Employer>
-          <Name>SOGETI Luxembourg - European Court of Justice.</Name>
+          <Name>SOGETI Luxembourg - European Court of Justice</Name>
           <ContactInfo>
             <Address>
               <Contact>
@@ -1210,7 +1210,7 @@
         • OIDC
         • ldap</Activities>
         <Employer>
-          <Name>SOGETI Luxembourg - European Court of Justice.</Name>
+          <Name>SOGETI Luxembourg - European Court of Justice</Name>
           <ContactInfo>
             <Address>
               <Contact>
@@ -1250,7 +1250,7 @@
         • WordML
         • Oracle10g database</Activities>
         <Employer>
-          <Name>SOGETI Luxembourg - European Court of Justice.</Name>
+          <Name>SOGETI Luxembourg - European Court of Justice</Name>
           <ContactInfo>
             <Address>
               <Contact>
