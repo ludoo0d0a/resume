@@ -60,11 +60,11 @@ export default `
             <details class="work-era__mission-details"{{#if isCurrent}} open{{/if}}>
               <summary class="work-era__mission-summary">
                 {{> companyLogo logoUrl=clientLogo size=24 className="company-logo--mission"}}
+                <time class="work-era__mission-dates">{{dateRange}}</time>
                 <span class="work-era__mission-client">
                   {{#if clientUrl}}<a href="{{clientUrl}}" rel="noopener noreferrer">{{clientName}}</a>{{else}}{{clientName}}{{/if}}
                 </span>
                 <span class="work-era__mission-role">{{position}}</span>
-                <time class="work-era__mission-dates">{{dateRange}}</time>
               </summary>
               <div class="work-era__mission-body">
                 {{#if location}}<p class="work-era__mission-loc">{{location}}</p>{{/if}}
@@ -88,11 +88,11 @@ export default `
               <details class="work-era__mission-details">
                 <summary class="work-era__mission-summary">
                   {{> companyLogo logoUrl=clientLogo size=24 className="company-logo--mission"}}
+                  <time class="work-era__mission-dates">{{dateRange}}</time>
                   <span class="work-era__mission-client">
                     {{#if clientUrl}}<a href="{{clientUrl}}" rel="noopener noreferrer">{{clientName}}</a>{{else}}{{clientName}}{{/if}}
                   </span>
                   <span class="work-era__mission-role">{{position}}</span>
-                  <time class="work-era__mission-dates">{{dateRange}}</time>
                 </summary>
                 <div class="work-era__mission-body">
                   {{#if location}}<p class="work-era__mission-loc">{{location}}</p>{{/if}}
