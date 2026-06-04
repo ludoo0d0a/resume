@@ -1,0 +1,176 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "./schema.i18n.json",
+  "title": "Resume i18n source (JSON Resume + extensions)",
+  "description": "Source file for resume.i18n.json. Edit only this file; npm run split produces resume.en.json / resume.fr.json. Standard JSON Resume fields use en_* / fr_* pairs for localized strings. Optional workEras groups contractor employment; split flattens missions to work[] as \"Employer - Client\".",
+  "type": "object",
+  "required": ["meta", "basics"],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "const": "./schema.i18n.json"
+    },
+    "meta": {
+      "type": "object",
+      "required": ["languages"],
+      "properties": {
+        "languages": {
+          "type": "string",
+          "description": "Comma-separated language codes, e.g. \"en,fr\"",
+          "pattern": "^[a-z]{2}(,[a-z]{2})*$"
+        },
+        "en_locale": { "type": "string", "examples": ["en-US"] },
+        "fr_locale": { "type": "string", "examples": ["fr-FR"] }
+      },
+      "additionalProperties": true
+    },
+    "basics": { "type": "object", "additionalProperties": true },
+    "work": {
+      "type": "array",
+      "description": "Standalone jobs (non-era) and legacy flat entries. Prefer workEras for contractor periods.",
+      "items": { "$ref": "#/$defs/workEntry" }
+    },
+    "workEras": {
+      "type": "array",
+      "description": "Optional. Employer eras (ESN): internal roles + client missions. Split → standard work[] + kept for HTML grouping.",
+      "items": { "$ref": "#/$defs/workEra" }
+    },
+    "education": { "type": "array" },
+    "skills": { "type": "array" },
+    "projects": { "type": "array" },
+    "languages": { "type": "array" },
+    "references": { "type": "array" },
+    "publications": { "type": "array" },
+    "certificates": { "type": "array" },
+    "awards": { "type": "array" },
+    "volunteer": { "type": "array" },
+    "interests": { "type": "array" },
+    "europass": { "type": "object", "additionalProperties": true }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "localizedField": {
+      "description": "Per-language field: en_<name> and fr_<name>. After split, only <name> remains in resume.<lang>.json.",
+      "type": "object",
+      "properties": {
+        "en_summary": { "type": "string" },
+        "fr_summary": { "type": "string" },
+        "en_highlights": { "type": "array", "items": { "type": "string" } },
+        "fr_highlights": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "clientLabels": {
+      "description": "Bilingual client name on workEras.missions (required for display and flatten).",
+      "type": "object",
+      "required": ["en_client", "fr_client"],
+      "properties": {
+        "en_client": { "type": "string", "minLength": 1 },
+        "fr_client": { "type": "string", "minLength": 1 },
+        "clientUrl": {
+          "type": "string",
+          "format": "uri",
+          "description": "Link to client organization (LinkedIn, site, …)"
+        }
+      },
+      "examples": [
+        {
+          "en_client": "European Parliament",
+          "fr_client": "Parlement européen"
+        }
+      ]
+    },
+    "workEraMission": {
+      "type": "object",
+      "required": ["position", "startDate", "en_client", "fr_client"],
+      "properties": {
+        "position": { "type": "string" },
+        "startDate": { "type": "string", "format": "date" },
+        "endDate": { "type": "string", "format": "date" },
+        "location": { "type": "string" },
+        "clientUrl": { "type": "string", "format": "uri" },
+        "en_client": { "type": "string" },
+        "fr_client": { "type": "string" },
+        "en_summary": { "type": "string" },
+        "fr_summary": { "type": "string" },
+        "highlights": { "type": "array", "items": { "type": "string" } },
+        "en_highlights": { "type": "array", "items": { "type": "string" } },
+        "fr_highlights": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+    "workEraInternal": {
+      "type": "object",
+      "required": ["position", "startDate"],
+      "properties": {
+        "position": { "type": "string" },
+        "startDate": { "type": "string", "format": "date" },
+        "endDate": { "type": "string", "format": "date" },
+        "location": { "type": "string" },
+        "url": { "type": "string", "format": "uri" },
+        "en_summary": { "type": "string" },
+        "fr_summary": { "type": "string" },
+        "highlights": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": true
+    },
+    "workEra": {
+      "type": "object",
+      "required": ["employer", "startDate", "missions"],
+      "properties": {
+        "employer": { "type": "string" },
+        "employerUrl": { "type": "string", "format": "uri" },
+        "location": { "type": "string" },
+        "startDate": { "type": "string", "format": "date" },
+        "endDate": { "type": "string", "format": "date" },
+        "en_tagline": { "type": "string" },
+        "fr_tagline": { "type": "string" },
+        "en_summary": { "type": "string" },
+        "fr_summary": { "type": "string" },
+        "internal": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/workEraInternal" }
+        },
+        "missions": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/workEraMission" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "workEntry": {
+      "type": "object",
+      "description": "JSON Resume work item (output after split may use name \"Employer - Client\" for missions).",
+      "properties": {
+        "name": { "type": "string" },
+        "position": { "type": "string" },
+        "startDate": { "type": "string", "format": "date" },
+        "endDate": { "type": "string", "format": "date" },
+        "summary": { "type": "string" },
+        "highlights": { "type": "array", "items": { "type": "string" } },
+        "url": { "type": "string" },
+        "location": { "type": "string" }
+      },
+      "additionalProperties": true
+    }
+  },
+  "examples": [
+    {
+      "workEras": [
+        {
+          "employer": "SOGETI Luxembourg",
+          "startDate": "2017-01-31",
+          "missions": [
+            {
+              "position": "Fullstack software engineer",
+              "startDate": "2017-01-31",
+              "endDate": "2017-06-30",
+              "en_client": "European Parliament",
+              "fr_client": "Parlement européen",
+              "clientUrl": "https://www.linkedin.com/company/sogeti-luxembourg/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -6,6 +6,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { LOCALE_BY_LANG } from './lib/lang-paths.js';
+import { applyWorkEras } from './lib/work-eras.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const i18nPath = path.join(root, 'resume.i18n.json');
@@ -49,6 +50,7 @@ function createLanguageVersion(data, language, languages) {
   }
 
   processObject(result);
+  applyWorkEras(result);
   return result;
 }
 

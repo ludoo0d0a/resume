@@ -88,7 +88,11 @@ export default `<!DOCTYPE html>
       {{#if resume.workBool}}
       <section class="section" id="experience">
         <h2 class="section-title">{{resume.titles.experience}}</h2>
+        {{#if resume.workErasBool}}
+        {{> experienceFlow experience=resume.experienceTimeline titles=resume.titles}}
+        {{else}}
         {{> timelineFlow timeline=resume.workTimeline}}
+        {{/if}}
       </section>
       {{/if}}
 

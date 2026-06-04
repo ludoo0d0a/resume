@@ -37,6 +37,12 @@ Requires global or npx **`resume-cli`** for PDF export. Requires **`xmllint`** f
 - Edit **`resume.i18n.json`** only (i18n keys: `en_summary`, `fr_summary`, …).
 - Do not hand-edit `en_*` / `fr_*` in `resume.en.json` / `resume.fr.json`.
 
+### Work eras (optional)
+
+Contractor employment can use **`workEras`** in `resume.i18n.json` (employer → `internal` roles + client `missions`). Each mission needs **`en_client`** / **`fr_client`** (see `schema.i18n.json`). `npm run split` flattens to standard JSON Resume **`work[]`** with legacy names `Employer - Client` (see `scripts/lib/work-eras.js`). Europass and resume-cli use **`work` only**; moderncv HTML groups by **`workEras`** when present. Standalone jobs stay in **`work`**.
+
+**Schema:** `resume.i18n.json` uses `"$schema": "./schema.i18n.json"` (i18n extensions + JSON Resume baseline).
+
 ## Output paths (`scripts/lib/lang-paths.js`)
 
 | Artifact | Path |

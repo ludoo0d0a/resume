@@ -918,3 +918,177 @@ a:hover {
     flex-direction: column;
   }
 }
+
+/* —— Work eras (ESN / contractor) —— */
+.timeline-flow__item--era .timeline-flow__card {
+  border-color: rgba(37, 99, 235, 0.22);
+  box-shadow:
+    0 4px 24px rgba(37, 99, 235, 0.08),
+    inset 4px 0 0 var(--accent);
+}
+
+.work-era__tagline {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.work-era__overview {
+  margin-bottom: 0.75rem;
+}
+
+.work-era__section {
+  margin-top: 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--line);
+}
+
+.work-era__section-title {
+  margin: 0 0 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.work-era__role {
+  padding: 0.5rem 0;
+}
+
+.work-era__role + .work-era__role {
+  border-top: 1px dashed var(--line);
+}
+
+.work-era__role-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.35rem 1rem;
+}
+
+.work-era__role-title {
+  font-weight: 600;
+}
+
+.work-era__role-dates,
+.work-era__mission-dates {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.work-era__role-text {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+}
+
+.work-era__missions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.work-era__mission {
+  border-bottom: 1px solid var(--line);
+}
+
+.work-era__mission:last-child {
+  border-bottom: none;
+}
+
+.work-era__mission-details {
+  padding: 0.35rem 0;
+}
+
+.work-era__mission-summary {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  gap: 0.15rem 1rem;
+  align-items: baseline;
+  cursor: pointer;
+  list-style: none;
+}
+
+.work-era__mission-summary::-webkit-details-marker {
+  display: none;
+}
+
+.work-era__mission-client {
+  grid-column: 1;
+  font-weight: 600;
+}
+
+.work-era__mission-role {
+  grid-column: 1;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.work-era__mission-dates {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  text-align: right;
+}
+
+.work-era__mission-body {
+  padding: 0.35rem 0 0.65rem 0.75rem;
+  border-left: 2px solid var(--accent-soft);
+  margin-left: 0.15rem;
+}
+
+.work-era__mission-loc {
+  margin: 0 0 0.35rem;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.work-era__mission-text {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.work-era__more {
+  margin-top: 0.5rem;
+}
+
+.work-era__more-summary {
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.tags--compact {
+  margin-top: 0.35rem;
+}
+
+.tags--compact .tags__item {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.45rem;
+}
+
+@media print {
+  .work-era__mission-details,
+  .work-era__more {
+    open: inherit;
+  }
+
+  .work-era__mission-details[open] .work-era__mission-body,
+  .work-era__mission-details .work-era__mission-body {
+    display: block;
+  }
+
+  .work-era__mission-summary {
+    cursor: default;
+  }
+
+  .work-era__more-summary {
+    display: none;
+  }
+
+  .work-era__missions--collapsed {
+    display: block !important;
+  }
+}

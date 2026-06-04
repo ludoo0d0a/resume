@@ -2,8 +2,8 @@
 <SkillsPassport xmlns="http://europass.cedefop.europa.eu/Europass" locale="fr" xsi:schemaLocation="http://europass.cedefop.europa.eu/Europass http://europass.cedefop.europa.eu/xml/v3.4.0/EuropassSchema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <DocumentInfo>
     <DocumentType>ECV</DocumentType>
-    <CreationDate>2026-06-04T15:37:00.944Z</CreationDate>
-    <LastUpdateDate>2026-06-04T15:37:00.944Z</LastUpdateDate>
+    <CreationDate>2026-06-04T15:51:06.877Z</CreationDate>
+    <LastUpdateDate>2026-06-04T15:51:06.877Z</LastUpdateDate>
     <XSDVersion>V3.4</XSDVersion>
     <Generator>jsonresume-theme-ludoo</Generator>
     <EuropassLogo>true</EuropassLogo>
@@ -92,20 +92,29 @@
     <WorkExperienceList>
       <WorkExperience>
         <Period>
-          <From year="2017" month="--08" day="---31"/>
+          <From year="2025" month="--11" day="---15"/>
           <Current>true</Current>
         </Period>
         <Position>
-          <Label>Fullstack software engineer</Label>
+          <Label>Software Architect</Label>
         </Position>
-        <Activities>Consultant dans le développement et l'architecture de logiciels
+        <Activities>En tant que consultant Sfeir, je suis architecte logiciel à la BIL (Banque Internationale à Luxembourg) au sein de l'équipe COE, en charge de plusieurs microservices.
+        Mon rôle consiste à analyser et proposer des solutions techniques fiables.
+        Lors de la conception, je pilote les développements et offre mon expertise technique aux développeurs et je révise les fonctionnalités.
+        Je suis également responsable de l'amélioration de la qualité, des outils et des bonnes pratiques, pendant les processus de développement, de déploiement et de release.
         • java
         • SpringBoot
-        • Kafka
-        • Cloud
-        • Android Mobile</Activities>
+        • microservices
+        • openshift
+        • architecture
+        • solution design
+        • openapi
+        • flowable
+        • jwt
+        • unit testing
+        • integration testing</Activities>
         <Employer>
-          <Name>SFEIR</Name>
+          <Name>SFEIR - Banque Internationale à Luxembourg</Name>
           <ContactInfo>
             <Address>
               <Contact>
@@ -117,7 +126,199 @@
               </Contact>
             </Address>
             <Website>
-              <Contact>https://www.linkedin.com/company/sfeir/</Contact>
+              <Contact>https://www.linkedin.com/company/bil-luxembourg/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2025" month="--11" day="---01"/>
+          <To year="2025" month="--12" day="---15"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Android Mobile Developer</Label>
+        </Position>
+        <Activities>Consultant Sfeir pour STATEC - Développement d'un moteur offline basé sur SQLite pour une application Android réalisé avec Capacitor
+        • Android
+        • capacitor
+        • SQLite
+        • Typescript
+        • hybride mobile</Activities>
+        <Employer>
+          <Name>SFEIR - STATEC</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Municipality>Luxembourg</Municipality>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+            <Website>
+              <Contact>https://www.statec.lu</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2025" month="--02" day="---15"/>
+          <To year="2025" month="--09" day="---30"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Tech lead</Label>
+        </Position>
+        <Activities>En tant que consultant Sfeir, ma mission pour SG est d'assurer le suivi technique, l'architecture et le développement des projets règlementaires comme EMIR, MIFID, Loi du 25 mars. Mon rôle est d'améliorer l'efficacité et la qualité du code au sein de l'équipe de 4 développeurs. En parallèle, l'objectif est la modernisation de plusieurs applications vers Kubernetes/Cloud/API.
+        • java
+        • SpringBoot
+        • jwt
+        • reactive programming
+        • openapi
+        • unit testing
+        • integration testing</Activities>
+        <Employer>
+          <Name>SFEIR - Société Générale</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Municipality>Belval</Municipality>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/societe-generale/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2024" month="--07" day="---31"/>
+          <To year="2024" month="--12" day="---31"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Senior Software Developer</Label>
+        </Position>
+        <Activities>En tant que développeur senior, ma mission pour Sfeir est d'aider à créer une plateforme de données sur le système existant Multifonds Temenos, pour fournir des portails personnalisés.
+        • java
+        • SpringBoot
+        • keycloak
+        • jwt
+        • jsonApi
+        • jsonSchema
+        • unit testing
+        • integration testing</Activities>
+        <Employer>
+          <Name>SFEIR - Temenos</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Municipality>Bertrange</Municipality>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/temenos/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2023" month="--02" day="---28"/>
+          <To year="2024" month="--06" day="---01"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Architect, Expert leader</Label>
+        </Position>
+        <Activities>J'ai rejoint l'équipe architecture MEO pour améliorer la qualité, l'architecture et les processus autour de la production logicielle au sein du Groupe Foyer.
+        Beaucoup de défis intéressants ici !
+        • AWS
+        • SpringBoot
+        • scala
+        • CI/CD
+        • Kubernetes
+        • argoCD
+        • JWT</Activities>
+        <Employer>
+          <Name>SFEIR - Foyer</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Municipality>Leudelange</Municipality>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/foyer-assurances/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
+          </ContactInfo>
+        </Employer>
+      </WorkExperience>
+      <WorkExperience>
+        <Period>
+          <From year="2021" month="--01" day="---31"/>
+          <To year="2021" month="--10" day="---31"/>
+          <Current>false</Current>
+        </Period>
+        <Position>
+          <Label>Senior Software Developer</Label>
+        </Position>
+        <Activities>Temps partiel entre LuxSE et Fundsquare (pour Sfeir)
+        L'objectif est de développer un nouvel ensemble d'outils communs.
+        Ces services sont partagés par LuxSE et Fundsquare.
+        Hébergé dans Azure, s'appuyant sur Spring - Kafka - Mongo, je suis en charge du développement de plusieurs services.
+        Le connecteur FTP, le catalogue API sont les premiers services de cette plateforme.
+        • Spring
+        • Kafka
+        • Mongo
+        • Azure
+        • Openshift</Activities>
+        <Employer>
+          <Name>SFEIR - Bourse de Luxembourg</Name>
+          <ContactInfo>
+            <Address>
+              <Contact>
+                <Municipality>Luxembourg</Municipality>
+                <Country>
+                  <Code>LU</Code>
+                  <Label>Luxembourg</Label>
+                </Country>
+              </Contact>
+            </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/luxembourg-stock-exchange/</Contact>
               <Use>
                 <Code>business</Code>
               </Use>
@@ -162,29 +363,20 @@
       </WorkExperience>
       <WorkExperience>
         <Period>
-          <From year="2025" month="--11" day="---15"/>
+          <From year="2017" month="--08" day="---31"/>
           <Current>true</Current>
         </Period>
         <Position>
-          <Label>Software Architect</Label>
+          <Label>Fullstack software engineer</Label>
         </Position>
-        <Activities>En tant que consultant Sfeir, je suis architecte logiciel à la BIL (Banque Internationale à Luxembourg) au sein de l'équipe COE, en charge de plusieurs microservices.
-        Mon rôle consiste à analyser et proposer des solutions techniques fiables.
-        Lors de la conception, je pilote les développements et offre mon expertise technique aux développeurs et je révise les fonctionnalités.
-        Je suis également responsable de l'amélioration de la qualité, des outils et des bonnes pratiques, pendant les processus de développement, de déploiement et de release.
+        <Activities>Consultant dans le développement et l'architecture de logiciels
         • java
         • SpringBoot
-        • microservices
-        • openshift
-        • architecture
-        • solution design
-        • openapi
-        • flowable
-        • jwt
-        • unit testing
-        • integration testing</Activities>
+        • Kafka
+        • Cloud
+        • Android Mobile</Activities>
         <Employer>
-          <Name>Banque Internationale à Luxembourg</Name>
+          <Name>SFEIR</Name>
           <ContactInfo>
             <Address>
               <Contact>
@@ -196,159 +388,7 @@
               </Contact>
             </Address>
             <Website>
-              <Contact>https://www.linkedin.com/company/bil-luxembourg/</Contact>
-              <Use>
-                <Code>business</Code>
-              </Use>
-            </Website>
-          </ContactInfo>
-        </Employer>
-      </WorkExperience>
-      <WorkExperience>
-        <Period>
-          <From year="2025" month="--11" day="---01"/>
-          <To year="2025" month="--12" day="---15"/>
-          <Current>false</Current>
-        </Period>
-        <Position>
-          <Label>Android Mobile Developer</Label>
-        </Position>
-        <Activities>Consultant Sfeir pour STATEC - Développement d'un moteur offline basé sur SQLite pour une application Android réalisé avec Capacitor
-        • Android
-        • capacitor
-        • SQLite
-        • Typescript
-        • hybride mobile</Activities>
-        <Employer>
-          <Name>STATEC</Name>
-          <ContactInfo>
-            <Address>
-              <Contact>
-                <Municipality>Luxembourg</Municipality>
-                <Country>
-                  <Code>LU</Code>
-                  <Label>Luxembourg</Label>
-                </Country>
-              </Contact>
-            </Address>
-            <Website>
-              <Contact>https://www.statec.lu</Contact>
-              <Use>
-                <Code>business</Code>
-              </Use>
-            </Website>
-          </ContactInfo>
-        </Employer>
-      </WorkExperience>
-      <WorkExperience>
-        <Period>
-          <From year="2025" month="--02" day="---15"/>
-          <To year="2025" month="--09" day="---30"/>
-          <Current>false</Current>
-        </Period>
-        <Position>
-          <Label>Tech lead</Label>
-        </Position>
-        <Activities>En tant que consultant Sfeir, ma mission pour SG est d'assurer le suivi technique, l'architecture et le développement des projets règlementaires comme EMIR, MIFID, Loi du 25 mars. Mon rôle est d'améliorer l'efficacité et la qualité du code au sein de l'équipe de 4 développeurs. En parallèle, l'objectif est la modernisation de plusieurs applications vers Kubernetes/Cloud/API.
-        • java
-        • SpringBoot
-        • jwt
-        • reactive programming
-        • openapi
-        • unit testing
-        • integration testing</Activities>
-        <Employer>
-          <Name>Société Générale</Name>
-          <ContactInfo>
-            <Address>
-              <Contact>
-                <Municipality>Belval</Municipality>
-                <Country>
-                  <Code>LU</Code>
-                  <Label>Luxembourg</Label>
-                </Country>
-              </Contact>
-            </Address>
-            <Website>
-              <Contact>https://www.linkedin.com/company/societe-generale/</Contact>
-              <Use>
-                <Code>business</Code>
-              </Use>
-            </Website>
-          </ContactInfo>
-        </Employer>
-      </WorkExperience>
-      <WorkExperience>
-        <Period>
-          <From year="2024" month="--07" day="---31"/>
-          <To year="2024" month="--12" day="---31"/>
-          <Current>false</Current>
-        </Period>
-        <Position>
-          <Label>Senior Software Developer</Label>
-        </Position>
-        <Activities>En tant que développeur senior, ma mission pour Sfeir est d'aider à créer une plateforme de données sur le système existant Multifonds Temenos, pour fournir des portails personnalisés.
-        • java
-        • SpringBoot
-        • keycloak
-        • jwt
-        • jsonApi
-        • jsonSchema
-        • unit testing
-        • integration testing</Activities>
-        <Employer>
-          <Name>Temenos</Name>
-          <ContactInfo>
-            <Address>
-              <Contact>
-                <Municipality>Bertrange</Municipality>
-                <Country>
-                  <Code>LU</Code>
-                  <Label>Luxembourg</Label>
-                </Country>
-              </Contact>
-            </Address>
-            <Website>
-              <Contact>https://www.linkedin.com/company/temenos/</Contact>
-              <Use>
-                <Code>business</Code>
-              </Use>
-            </Website>
-          </ContactInfo>
-        </Employer>
-      </WorkExperience>
-      <WorkExperience>
-        <Period>
-          <From year="2023" month="--02" day="---28"/>
-          <To year="2024" month="--06" day="---01"/>
-          <Current>false</Current>
-        </Period>
-        <Position>
-          <Label>Architect, Expert leader</Label>
-        </Position>
-        <Activities>J'ai rejoint l'équipe architecture MEO pour améliorer la qualité, l'architecture et les processus autour de la production logicielle au sein du Groupe Foyer.
-        Beaucoup de défis intéressants ici !
-        • AWS
-        • SpringBoot
-        • scala
-        • CI/CD
-        • Kubernetes
-        • argoCD
-        • JWT</Activities>
-        <Employer>
-          <Name>Foyer</Name>
-          <ContactInfo>
-            <Address>
-              <Contact>
-                <Municipality>Leudelange</Municipality>
-                <Country>
-                  <Code>LU</Code>
-                  <Label>Luxembourg</Label>
-                </Country>
-              </Contact>
-            </Address>
-            <Website>
-              <Contact>https://www.linkedin.com/company/foyer-assurances/</Contact>
+              <Contact>https://www.linkedin.com/company/sfeir/</Contact>
               <Use>
                 <Code>business</Code>
               </Use>
@@ -391,7 +431,7 @@
         • GraphQL
         • NodeJs</Activities>
         <Employer>
-          <Name>Fundsquare</Name>
+          <Name>SFEIR - Fundsquare</Name>
           <ContactInfo>
             <Address>
               <Contact>
@@ -404,46 +444,6 @@
             </Address>
             <Website>
               <Contact>https://www.linkedin.com/company/fundsquare/</Contact>
-              <Use>
-                <Code>business</Code>
-              </Use>
-            </Website>
-          </ContactInfo>
-        </Employer>
-      </WorkExperience>
-      <WorkExperience>
-        <Period>
-          <From year="2021" month="--01" day="---31"/>
-          <To year="2021" month="--10" day="---31"/>
-          <Current>false</Current>
-        </Period>
-        <Position>
-          <Label>Senior Software Developer</Label>
-        </Position>
-        <Activities>Temps partiel entre LuxSE et Fundsquare (pour Sfeir)
-        L'objectif est de développer un nouvel ensemble d'outils communs.
-        Ces services sont partagés par LuxSE et Fundsquare.
-        Hébergé dans Azure, s'appuyant sur Spring - Kafka - Mongo, je suis en charge du développement de plusieurs services.
-        Le connecteur FTP, le catalogue API sont les premiers services de cette plateforme.
-        • Spring
-        • Kafka
-        • Mongo
-        • Azure
-        • Openshift</Activities>
-        <Employer>
-          <Name>Bourse de Luxembourg</Name>
-          <ContactInfo>
-            <Address>
-              <Contact>
-                <Municipality>Luxembourg</Municipality>
-                <Country>
-                  <Code>LU</Code>
-                  <Label>Luxembourg</Label>
-                </Country>
-              </Contact>
-            </Address>
-            <Website>
-              <Contact>https://www.linkedin.com/company/luxembourg-stock-exchange/</Contact>
               <Use>
                 <Code>business</Code>
               </Use>
@@ -497,46 +497,6 @@
       </WorkExperience>
       <WorkExperience>
         <Period>
-          <From year="2001" month="--06" day="---30"/>
-          <To year="2017" month="--08" day="---31"/>
-          <Current>false</Current>
-        </Period>
-        <Position>
-          <Label>Fullstack software engineer</Label>
-        </Position>
-        <Activities>J'ai travaillé pour des institutions européennes et nationales en tant qu'ingénieur logiciel Fullstack.
-        Les projets sont principalement axés sur les technologies web et mobiles.
-        Java+Spring, nodejs, Backbone, Android..., je suis les standards modernes et les nouvelles bibliothèques et frameworks performants.
-        Intégré dans plusieurs équipes de différents clients, j'aime travailler avec des personnes de différents horizons multiculturels.
-        Voir les détails ci-dessus :
-        • Java
-        • Spring
-        • nodejs
-        • Backbone
-        • Android</Activities>
-        <Employer>
-          <Name>Sogeti luxembourg</Name>
-          <ContactInfo>
-            <Address>
-              <Contact>
-                <Municipality>Bertrange</Municipality>
-                <Country>
-                  <Code>LU</Code>
-                  <Label>Luxembourg</Label>
-                </Country>
-              </Contact>
-            </Address>
-            <Website>
-              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
-              <Use>
-                <Code>business</Code>
-              </Use>
-            </Website>
-          </ContactInfo>
-        </Employer>
-      </WorkExperience>
-      <WorkExperience>
-        <Period>
           <From year="2017" month="--01" day="---31"/>
           <To year="2017" month="--06" day="---30"/>
           <Current>false</Current>
@@ -559,7 +519,7 @@
         • jdk7
         • tomcat7</Activities>
         <Employer>
-          <Name>SOGETI Luxembourg</Name>
+          <Name>SOGETI Luxembourg - European Parliament, DAS Unit (Translation)</Name>
           <ContactInfo>
             <Address>
               <Contact>
@@ -603,7 +563,7 @@
         • tomcat
         • java8</Activities>
         <Employer>
-          <Name>SOGETI Luxembourg</Name>
+          <Name>SOGETI Luxembourg - European Parliament, DAS Unit (Translation)</Name>
           <ContactInfo>
             <Address>
               <Contact>
@@ -646,10 +606,11 @@
         • REST
         • json</Activities>
         <Employer>
-          <Name>SOGETI Luxembourg</Name>
+          <Name>SOGETI Luxembourg - European Parliament, DAS Unit (Translation)</Name>
           <ContactInfo>
             <Address>
               <Contact>
+                <Municipality>Bertrange</Municipality>
                 <Country>
                   <Code>LU</Code>
                   <Label>Luxembourg</Label>
@@ -684,7 +645,7 @@
         • ExtJs
         • Maven</Activities>
         <Employer>
-          <Name>SOGETI Luxembourg</Name>
+          <Name>SOGETI Luxembourg - European Parliament, DAS Unit (Translation)</Name>
           <ContactInfo>
             <Address>
               <Contact>
@@ -724,7 +685,7 @@
         • Vagrant
         • Python</Activities>
         <Employer>
-          <Name>SOGETI Luxembourg</Name>
+          <Name>SOGETI Luxembourg - BNL - Bibliothèque Nationale du Luxembourg</Name>
           <ContactInfo>
             <Address>
               <Contact>
@@ -806,16 +767,23 @@
         • NodeJs
         • Express</Activities>
         <Employer>
-          <Name>SOGETI Luxembourg</Name>
+          <Name>SOGETI Luxembourg - Editus Luxembourg</Name>
           <ContactInfo>
             <Address>
               <Contact>
+                <Municipality>Bertrange</Municipality>
                 <Country>
                   <Code>LU</Code>
                   <Label>Luxembourg</Label>
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
@@ -839,7 +807,7 @@
         • ExtJs
         • java</Activities>
         <Employer>
-          <Name>SOGETI Luxembourg</Name>
+          <Name>SOGETI Luxembourg - BNL - Bibliothèque nationale du Luxembourg</Name>
           <ContactInfo>
             <Address>
               <Contact>
@@ -883,7 +851,7 @@
         • pdfBox
         • Documentum</Activities>
         <Employer>
-          <Name>SOGETI Luxembourg</Name>
+          <Name>SOGETI Luxembourg - Société Générale Bank &amp; Trust</Name>
           <ContactInfo>
             <Address>
               <Contact>
@@ -915,10 +883,11 @@
         <Activities>à BNL - Bibliothèque nationale du Luxembourg
         Ajout de nouvelles fonctionnalités sur le visualiseur Web Media utilisé dans eluxemburgensia.lu</Activities>
         <Employer>
-          <Name>SOGETI Luxembourg</Name>
+          <Name>SOGETI Luxembourg - BNL - Bibliothèque nationale du Luxembourg</Name>
           <ContactInfo>
             <Address>
               <Contact>
+                <Municipality>Bertrange</Municipality>
                 <Country>
                   <Code>LU</Code>
                   <Label>Luxembourg</Label>
@@ -952,7 +921,7 @@
         Maintenant le projet est utilisé dans http://www.periodika.lv
         • opensource forks</Activities>
         <Employer>
-          <Name>SOGETI Luxembourg</Name>
+          <Name>SOGETI Luxembourg - BNL - Bibliothèque nationale du Luxembourg</Name>
           <ContactInfo>
             <Address>
               <Contact>
@@ -995,7 +964,7 @@
         • AD/LDAP
         • JavaWebStart</Activities>
         <Employer>
-          <Name>SOGETI Luxembourg</Name>
+          <Name>SOGETI Luxembourg - European Parliament - Web Application development</Name>
           <ContactInfo>
             <Address>
               <Contact>
@@ -1033,10 +1002,11 @@
         • ALTO
         • Mets</Activities>
         <Employer>
-          <Name/>
+          <Name>SOGETI Luxembourg - BNL - Bibliothèque nationale du Luxembourg</Name>
           <ContactInfo>
             <Address>
               <Contact>
+                <Municipality>Bertrange</Municipality>
                 <Country>
                   <Code>LU</Code>
                   <Label>Luxembourg</Label>
@@ -1076,10 +1046,11 @@
         • Bonita workflow
         • Jahia</Activities>
         <Employer>
-          <Name>SOGETI Luxembourg</Name>
+          <Name>SOGETI Luxembourg - European Parliament:</Name>
           <ContactInfo>
             <Address>
               <Contact>
+                <Municipality>Bertrange</Municipality>
                 <Country>
                   <Code>LU</Code>
                   <Label>Luxembourg</Label>
@@ -1112,10 +1083,11 @@
         • Jdeveloper
         • xml</Activities>
         <Employer>
-          <Name>Sogeti</Name>
+          <Name>SOGETI Luxembourg - Sogeti</Name>
           <ContactInfo>
             <Address>
               <Contact>
+                <Municipality>Bertrange</Municipality>
                 <Country>
                   <Code>LU</Code>
                   <Label>Luxembourg</Label>
@@ -1149,10 +1121,11 @@
         • Oracle10g xmlDB
         • OracleText contextual search</Activities>
         <Employer>
-          <Name>Sogeti</Name>
+          <Name>SOGETI Luxembourg - Sogeti</Name>
           <ContactInfo>
             <Address>
               <Contact>
+                <Municipality>Bertrange</Municipality>
                 <Country>
                   <Code>LU</Code>
                   <Label>Luxembourg</Label>
@@ -1187,10 +1160,11 @@
         • OIDC
         • ldap</Activities>
         <Employer>
-          <Name>Sogeti</Name>
+          <Name>SOGETI Luxembourg - European Court of Justice.</Name>
           <ContactInfo>
             <Address>
               <Contact>
+                <Municipality>Bertrange</Municipality>
                 <Country>
                   <Code>LU</Code>
                   <Label>Luxembourg</Label>
@@ -1227,10 +1201,11 @@
         • OIDC
         • ldap</Activities>
         <Employer>
-          <Name>Sogeti</Name>
+          <Name>SOGETI Luxembourg - European Court of Justice.</Name>
           <ContactInfo>
             <Address>
               <Contact>
+                <Municipality>Bertrange</Municipality>
                 <Country>
                   <Code>LU</Code>
                   <Label>Luxembourg</Label>
@@ -1266,10 +1241,11 @@
         • WordML
         • Oracle10g database</Activities>
         <Employer>
-          <Name>Sogeti</Name>
+          <Name>SOGETI Luxembourg - European Court of Justice.</Name>
           <ContactInfo>
             <Address>
               <Contact>
+                <Municipality>Bertrange</Municipality>
                 <Country>
                   <Code>LU</Code>
                   <Label>Luxembourg</Label>

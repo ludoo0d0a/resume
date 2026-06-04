@@ -4,8 +4,13 @@ import { fileURLToPath } from 'url';
 import Handlebars from 'handlebars';
 import theme from './template.js';
 import timelineFlowPartial from './timeline-flow.partial.js';
+import experienceFlowPartial from './experience-flow.partial.js';
+import workEraFlowPartial from './work-era-flow.partial.js';
+import { buildExperienceTimeline } from '../../scripts/lib/work-eras.js';
 
 Handlebars.registerPartial('timelineFlow', timelineFlowPartial);
+Handlebars.registerPartial('experienceFlow', experienceFlowPartial);
+Handlebars.registerPartial('workEraFlow', workEraFlowPartial);
 
 const MAJOR_YEAR_GAP = 2;
 const MAJOR_YEAR_MAX = 12;
@@ -33,6 +38,8 @@ const I18N = {
     contact: 'Contact',
     europass: 'Europass PDF',
     timelineYears: 'Years',
+    eraInternal: 'At the company',
+    eraMissions: 'Client missions',
   },
   'fr-FR': {
     present: "Aujourd'hui",
@@ -53,6 +60,8 @@ const I18N = {
     contact: 'Contact',
     europass: 'PDF Europass',
     timelineYears: 'Années',
+    eraInternal: "Au sein de l'ESN",
+    eraMissions: 'Missions client',
   },
 };
 
@@ -348,7 +357,16 @@ function render(resume) {
   resume.nav = nav;
   resume.navBool = nav.length > 1;
 
-  if (resume.workBool) {
+  resume.workErasBool = !!(resume.workEras && resume.workEras.length);
+
+  if (resume.workErasBool) {
+    const { groups, majorYears } = buildExperienceTimeline(resume, formatSection, i18n);
+    resume.experienceTimeline = {
+      groups,
+      majorYears,
+      railLabel: i18n.timelineYears,
+    };
+  } else if (resume.workBool) {
     resume.workTimeline = buildTimelineFlow(resume.work, 'work', i18n.timelineYears);
   }
   if (resume.educationBool) {
