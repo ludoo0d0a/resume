@@ -924,6 +924,180 @@ a:hover {
     flex-direction: column;
   }
 }
+
+/* —— Work eras (ESN / contractor) —— */
+.timeline-flow__item--era .timeline-flow__card {
+  border-color: rgba(37, 99, 235, 0.22);
+  box-shadow:
+    0 4px 24px rgba(37, 99, 235, 0.08),
+    inset 4px 0 0 var(--accent);
+}
+
+.work-era__tagline {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.work-era__overview {
+  margin-bottom: 0.75rem;
+}
+
+.work-era__section {
+  margin-top: 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--line);
+}
+
+.work-era__section-title {
+  margin: 0 0 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.work-era__role {
+  padding: 0.5rem 0;
+}
+
+.work-era__role + .work-era__role {
+  border-top: 1px dashed var(--line);
+}
+
+.work-era__role-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.35rem 1rem;
+}
+
+.work-era__role-title {
+  font-weight: 600;
+}
+
+.work-era__role-dates,
+.work-era__mission-dates {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.work-era__role-text {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+}
+
+.work-era__missions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.work-era__mission {
+  border-bottom: 1px solid var(--line);
+}
+
+.work-era__mission:last-child {
+  border-bottom: none;
+}
+
+.work-era__mission-details {
+  padding: 0.35rem 0;
+}
+
+.work-era__mission-summary {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  gap: 0.15rem 1rem;
+  align-items: baseline;
+  cursor: pointer;
+  list-style: none;
+}
+
+.work-era__mission-summary::-webkit-details-marker {
+  display: none;
+}
+
+.work-era__mission-client {
+  grid-column: 1;
+  font-weight: 600;
+}
+
+.work-era__mission-role {
+  grid-column: 1;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.work-era__mission-dates {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  text-align: right;
+}
+
+.work-era__mission-body {
+  padding: 0.35rem 0 0.65rem 0.75rem;
+  border-left: 2px solid var(--accent-soft);
+  margin-left: 0.15rem;
+}
+
+.work-era__mission-loc {
+  margin: 0 0 0.35rem;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.work-era__mission-text {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.work-era__more {
+  margin-top: 0.5rem;
+}
+
+.work-era__more-summary {
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.tags--compact {
+  margin-top: 0.35rem;
+}
+
+.tags--compact .tags__item {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.45rem;
+}
+
+@media print {
+  .work-era__mission-details,
+  .work-era__more {
+    open: inherit;
+  }
+
+  .work-era__mission-details[open] .work-era__mission-body,
+  .work-era__mission-details .work-era__mission-body {
+    display: block;
+  }
+
+  .work-era__mission-summary {
+    cursor: default;
+  }
+
+  .work-era__more-summary {
+    display: none;
+  }
+
+  .work-era__missions--collapsed {
+    display: block !important;
+  }
+}
 </style>
   <style media="print">:root {
   --bg: #0f1419;
@@ -1845,6 +2019,180 @@ a:hover {
     flex-direction: column;
   }
 }
+
+/* —— Work eras (ESN / contractor) —— */
+.timeline-flow__item--era .timeline-flow__card {
+  border-color: rgba(37, 99, 235, 0.22);
+  box-shadow:
+    0 4px 24px rgba(37, 99, 235, 0.08),
+    inset 4px 0 0 var(--accent);
+}
+
+.work-era__tagline {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.work-era__overview {
+  margin-bottom: 0.75rem;
+}
+
+.work-era__section {
+  margin-top: 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--line);
+}
+
+.work-era__section-title {
+  margin: 0 0 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.work-era__role {
+  padding: 0.5rem 0;
+}
+
+.work-era__role + .work-era__role {
+  border-top: 1px dashed var(--line);
+}
+
+.work-era__role-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.35rem 1rem;
+}
+
+.work-era__role-title {
+  font-weight: 600;
+}
+
+.work-era__role-dates,
+.work-era__mission-dates {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.work-era__role-text {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+}
+
+.work-era__missions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.work-era__mission {
+  border-bottom: 1px solid var(--line);
+}
+
+.work-era__mission:last-child {
+  border-bottom: none;
+}
+
+.work-era__mission-details {
+  padding: 0.35rem 0;
+}
+
+.work-era__mission-summary {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  gap: 0.15rem 1rem;
+  align-items: baseline;
+  cursor: pointer;
+  list-style: none;
+}
+
+.work-era__mission-summary::-webkit-details-marker {
+  display: none;
+}
+
+.work-era__mission-client {
+  grid-column: 1;
+  font-weight: 600;
+}
+
+.work-era__mission-role {
+  grid-column: 1;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.work-era__mission-dates {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  text-align: right;
+}
+
+.work-era__mission-body {
+  padding: 0.35rem 0 0.65rem 0.75rem;
+  border-left: 2px solid var(--accent-soft);
+  margin-left: 0.15rem;
+}
+
+.work-era__mission-loc {
+  margin: 0 0 0.35rem;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.work-era__mission-text {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.work-era__more {
+  margin-top: 0.5rem;
+}
+
+.work-era__more-summary {
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.tags--compact {
+  margin-top: 0.35rem;
+}
+
+.tags--compact .tags__item {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.45rem;
+}
+
+@media print {
+  .work-era__mission-details,
+  .work-era__more {
+    open: inherit;
+  }
+
+  .work-era__mission-details[open] .work-era__mission-body,
+  .work-era__mission-details .work-era__mission-body {
+    display: block;
+  }
+
+  .work-era__mission-summary {
+    cursor: default;
+  }
+
+  .work-era__more-summary {
+    display: none;
+  }
+
+  .work-era__missions--collapsed {
+    display: block !important;
+  }
+}
 </style>
 </head>
 <body>
@@ -1973,37 +2321,7 @@ Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js,
                 <a class="timeline-rail__chip" href="#work-y-2017">2017</a>
               </li>
               <li class="timeline-rail__item">
-                <a class="timeline-rail__chip" href="#work-y-2018">2018</a>
-              </li>
-              <li class="timeline-rail__item">
-                <a class="timeline-rail__chip" href="#work-y-2025">2025</a>
-              </li>
-              <li class="timeline-rail__item">
-                <a class="timeline-rail__chip" href="#work-y-2023">2023</a>
-              </li>
-              <li class="timeline-rail__item">
-                <a class="timeline-rail__chip" href="#work-y-2021">2021</a>
-              </li>
-              <li class="timeline-rail__item">
                 <a class="timeline-rail__chip" href="#work-y-2001">2001</a>
-              </li>
-              <li class="timeline-rail__item">
-                <a class="timeline-rail__chip" href="#work-y-2016">2016</a>
-              </li>
-              <li class="timeline-rail__item">
-                <a class="timeline-rail__chip" href="#work-y-2014">2014</a>
-              </li>
-              <li class="timeline-rail__item">
-                <a class="timeline-rail__chip" href="#work-y-2012">2012</a>
-              </li>
-              <li class="timeline-rail__item">
-                <a class="timeline-rail__chip" href="#work-y-2010">2010</a>
-              </li>
-              <li class="timeline-rail__item">
-                <a class="timeline-rail__chip" href="#work-y-2007">2007</a>
-              </li>
-              <li class="timeline-rail__item">
-                <a class="timeline-rail__chip" href="#work-y-2005">2005</a>
               </li>
               <li class="timeline-rail__item">
                 <a class="timeline-rail__chip" href="#work-y-2000">2000</a>
@@ -2013,887 +2331,728 @@ Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js,
           <div class="timeline-flow__body">
             <div class="timeline-flow__spine" aria-hidden="true"></div>
             <ol class="timeline-flow__list">
+              
               <li class="timeline-flow__year" id="work-y-2017">
                 <span class="timeline-flow__year-node" aria-hidden="true"></span>
                 <span class="timeline-flow__year-label">2017</span>
               </li>
-              <li class="timeline-flow__item timeline-flow__item--current">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">Fullstack software engineer</h3>
-                      <p class="timeline-flow__meta">
-                        <a href="https://www.linkedin.com/company/sfeir/" rel="noopener noreferrer">SFEIR</a>
-                         · Luxembourg
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Aug 2017 — Present</time>
-                      <span class="timeline-flow__duration">8 years 10 months</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">Consultant in software development and architecture</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">java</li><li class="tags__item">SpringBoot</li><li class="tags__item">Kafka</li><li class="tags__item">Cloud</li><li class="tags__item">Android Mobile</li>
-                  </ul>
-                </article>
-              </li>
-              <li class="timeline-flow__year" id="work-y-2018">
-                <span class="timeline-flow__year-node" aria-hidden="true"></span>
-                <span class="timeline-flow__year-label">2018</span>
-              </li>
-              <li class="timeline-flow__item">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">Engineer manager</h3>
-                      <p class="timeline-flow__meta">
-                        <a href="https://www.linkedin.com/company/sfeir/" rel="noopener noreferrer">SFEIR</a>
-                         · Luxembourg
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Jan 2018 — Dec 2024</time>
-                      <span class="timeline-flow__duration">6 years 11 months</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">Managing a team of 10 collaborators, in charge of career follow-up, training, missions and clients, participating in Luxembourg agency decisions.</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">follow up</li><li class="tags__item">carreer</li><li class="tags__item">HR</li><li class="tags__item">formation</li>
-                  </ul>
-                </article>
-              </li>
-              <li class="timeline-flow__year" id="work-y-2025">
-                <span class="timeline-flow__year-node" aria-hidden="true"></span>
-                <span class="timeline-flow__year-label">2025</span>
-              </li>
-              <li class="timeline-flow__item timeline-flow__item--current">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">Software Architect</h3>
-                      <p class="timeline-flow__meta">
-                        <a href="https://www.linkedin.com/company/bil-luxembourg/" rel="noopener noreferrer">Banque Internationale à Luxembourg</a>
-                         · Luxembourg, Luxembourg
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Nov 2025 — Present</time>
-                      <span class="timeline-flow__duration">7 months</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">As a Sfeir consultant, I am a Software Architect at BIL (Banque Internationale à Luxembourg) in the COE team, responsible for multiple microservices.
-        My role is to analyze and suggest reliable technical solutions.
-        During the design phase, I lead developers, provide technical expertise, and review features.
-        I am also responsible for improving quality, tooling, and best practices during the development, deployment, and release processes.</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">java</li><li class="tags__item">SpringBoot</li><li class="tags__item">microservices</li><li class="tags__item">openshift</li><li class="tags__item">architecture</li><li class="tags__item">solution design</li><li class="tags__item">openapi</li><li class="tags__item">flowable</li><li class="tags__item">jwt</li><li class="tags__item">unit testing</li><li class="tags__item">integration testing</li>
-                  </ul>
-                </article>
-              </li>
-              <li class="timeline-flow__item">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">Android Mobile Developer</h3>
-                      <p class="timeline-flow__meta">
-                        <a href="https://www.statec.lu" rel="noopener noreferrer">STATEC</a>
-                         · Luxembourg
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Nov 2025 — Dec 2025</time>
-                      <span class="timeline-flow__duration">1 month</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">Sfeir consultant for STATEC - Development of an offline engine based on SQLite for an Android application built with Capacitor</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">Android</li><li class="tags__item">capacitor</li><li class="tags__item">SQLite</li><li class="tags__item">Typescript</li><li class="tags__item">hybride mobile</li>
-                  </ul>
-                </article>
-              </li>
-              <li class="timeline-flow__item">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">Tech lead</h3>
-                      <p class="timeline-flow__meta">
-                        <a href="https://www.linkedin.com/company/societe-generale/" rel="noopener noreferrer">Société Générale</a>
-                         · Belval, Luxembourg
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Feb 2025 — Sep 2025</time>
-                      <span class="timeline-flow__duration">7 months</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">As a Sfeir consultant, I am Tech Lead / Developer / Architect in the Regulatory team for Luxembourg.
-        Regulatory topics are mainly reporting on EMIR, MIFID, Loi du 25 mars.
-        My role is to improve efficiency and code quality in the team of 4 developers.
-        Meanwhile, the target is the modernization of several apps to Kubernetes/Cloud/API.</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">java</li><li class="tags__item">SpringBoot</li><li class="tags__item">jwt</li><li class="tags__item">reactive programming</li><li class="tags__item">openapi</li><li class="tags__item">unit testing</li><li class="tags__item">integration testing</li>
-                  </ul>
-                </article>
-              </li>
-              <li class="timeline-flow__item">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">Senior Software Developer</h3>
-                      <p class="timeline-flow__meta">
-                        <a href="https://www.linkedin.com/company/temenos/" rel="noopener noreferrer">Temenos</a>
-                         · Bertrange, Luxembourg
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Jul 2024 — Dec 2024</time>
-                      <span class="timeline-flow__duration">5 months</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">As a senior developer, my mission for Sfeir is to help create a data platform on top of the existing Multifonds Temenos data system, to provide custom portals.</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">java</li><li class="tags__item">SpringBoot</li><li class="tags__item">keycloak</li><li class="tags__item">jwt</li><li class="tags__item">jsonApi</li><li class="tags__item">jsonSchema</li><li class="tags__item">unit testing</li><li class="tags__item">integration testing</li>
-                  </ul>
-                </article>
-              </li>
-              <li class="timeline-flow__year" id="work-y-2023">
-                <span class="timeline-flow__year-node" aria-hidden="true"></span>
-                <span class="timeline-flow__year-label">2023</span>
-              </li>
-              <li class="timeline-flow__item">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">Architect, Expert leader</h3>
-                      <p class="timeline-flow__meta">
-                        <a href="https://www.linkedin.com/company/foyer-assurances/" rel="noopener noreferrer">Foyer</a>
-                         · Leudelange, Luxembourg
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Feb 2023 — Jun 2024</time>
-                      <span class="timeline-flow__duration">1 year 4 months</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">I joined the MEO architecture team to improve quality, architecture and processes around software production inside Foyer Group.
-        A lot of interesting challenges here!</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">AWS</li><li class="tags__item">SpringBoot</li><li class="tags__item">scala</li><li class="tags__item">CI/CD</li><li class="tags__item">Kubernetes</li><li class="tags__item">argoCD</li><li class="tags__item">JWT</li>
-                  </ul>
-                </article>
-              </li>
-              <li class="timeline-flow__item">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">Ingenieur développement fullstack</h3>
-                      <p class="timeline-flow__meta">
-                        <a href="https://www.linkedin.com/company/fundsquare/" rel="noopener noreferrer">Fundsquare</a>
-                         · Luxembourg
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Aug 2017 — Feb 2023</time>
-                      <span class="timeline-flow__duration">5 years 6 months</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">As a senior developer, I mostly manage the collection platform to get data, processing, wrangling, cleansing.
-        Main collected data are Priips EPT, Mifid EMT, EET, ...
-        
-        As a tech lead, I coordinate teams, draft architecture, and organize activities with all stakeholders to reach a stable and technically viable solution, matching the target vision.
-        
-        I design and develop most of the patterns like data layers, orchestration, choreography, distributed transactions, event-driven communication, business monitoring, contract specifications with JSON schema, code generators for deployable microservices and for API clients, DevOps tooling scripts for local development, delivery and troubleshooting.
-        
-        The stack is composed of several layers around these main technologies:
-        - SpringBoot, Camunda BPM, Kafka, Trifacta, Camel, MsSql, Mongo, Elasticsearch, Kubernetes, AKS, ESB, Openshift, React, GraphQL, Node.js
-        
-        We are working in collaboration with Bourse du Luxembourg architecture team to evolve to a modern solution, cloud-native in Azure.
-        
-        Over 5 years, we completely moved from legacy tomcat+mssql+esb to distributed event-driven microservices+mongo+kafka cloud native.
-        
-        Since Fundsquare's acquisition by Fe Fundinfo, the short-term target is to move completely cloud native, and integrate their platform.</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">SpringBoot</li><li class="tags__item">Camunda BPM</li><li class="tags__item">Kafka</li><li class="tags__item">Trifacta</li><li class="tags__item">Camel</li><li class="tags__item">MsSql</li><li class="tags__item">Mongo</li><li class="tags__item">Elasticsearch</li><li class="tags__item">Kubernetes</li><li class="tags__item">AKS</li><li class="tags__item">Azure</li><li class="tags__item">ESB</li><li class="tags__item">Openshift</li><li class="tags__item">React</li><li class="tags__item">GraphQL</li><li class="tags__item">NodeJs</li>
-                  </ul>
-                </article>
-              </li>
-              <li class="timeline-flow__year" id="work-y-2021">
-                <span class="timeline-flow__year-node" aria-hidden="true"></span>
-                <span class="timeline-flow__year-label">2021</span>
-              </li>
-              <li class="timeline-flow__item">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">Senior Software Developer</h3>
-                      <p class="timeline-flow__meta">
-                        <a href="https://www.linkedin.com/company/luxembourg-stock-exchange/" rel="noopener noreferrer">Luxembourg Stock Exchange</a>
-                         · Luxembourg
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Jan 2021 — Oct 2021</time>
-                      <span class="timeline-flow__duration">9 months</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">Part-time between LuxSE and Fundsquare (for Sfeir)
-        
-        The goal is to develop a new common set of tools.
-        These services are shared by LuxSE and Fundsquare.
-        Hosted in Azure, relying on Spring - Kafka - Mongo, I'm in charge of the development of several services.
-        FTP connector, API Catalog are the first services of this platform.</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">Spring</li><li class="tags__item">Kafka</li><li class="tags__item">Mongo</li><li class="tags__item">Azure</li><li class="tags__item">Openshift</li>
-                  </ul>
-                </article>
-              </li>
-              <li class="timeline-flow__item">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">Fullstack software engineer</h3>
-                      <p class="timeline-flow__meta">
-                        <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">SOGETI Luxembourg</a>
-                         · Bertrange, Luxembourg
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Jun 2017 — Aug 2017</time>
-                      <span class="timeline-flow__duration">2 months</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">Conversion tool for European Parliament.
-        
-        This MS Word to XML engine is used in production to produce XML documents compliant with rules provided by EP.
-        I built the engine core at the project startup.
-        During these 3 months, I elevated the project to a higher level in terms of readability, testing, maintenance, new format support.
-        
-        Quality improvement, testing support, improved rules engine, rewrite rules and transformers for the 2 main formats.
-        
-        Java, Spring, Eclipse, XML, AkomaNtoso, XSD, DTD, Jira</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">Java</li><li class="tags__item">Spring</li><li class="tags__item">Eclipse</li><li class="tags__item">Xml</li><li class="tags__item">AkomaNtoso</li><li class="tags__item">Xsd</li><li class="tags__item">Dtd</li><li class="tags__item">Jira</li>
-                  </ul>
-                </article>
-              </li>
+                <li class="timeline-flow__item timeline-flow__item--era timeline-flow__item--current" id="era-0">
+                  <span class="timeline-flow__connector" aria-hidden="true"></span>
+                  <article class="timeline-flow__card work-era">
+                    <header class="timeline-flow__head work-era__head">
+                      <div>
+                        <h3 class="timeline-flow__title">
+                          <a href="https://www.linkedin.com/company/sfeir/" rel="noopener noreferrer">SFEIR</a>
+                        </h3>
+                        <p class="work-era__tagline">IT services · software development &amp; architecture</p>
+                        <p class="timeline-flow__meta">Luxembourg</p>
+                      </div>
+                      <div class="timeline-flow__dates">
+                        <time>Aug 2017 — Present</time>
+                        <span class="timeline-flow__duration">8 years 10 months</span>
+                      </div>
+                    </header>
+                    
+              
+                    <section class="work-era__section">
+                      <h4 class="work-era__section-title">At the company</h4>
+                      <ul class="work-era__roles">
+                        <li class="work-era__role">
+                          <div class="work-era__role-head">
+                            <span class="work-era__role-title">Engineer manager</span>
+                            <time class="work-era__role-dates">Jan 2018 — Dec 2024</time>
+                          </div>
+                          <p class="prose work-era__role-text">Managing a team of 10 collaborators, in charge of career follow-up, training, missions and clients, participating in Luxembourg agency decisions.</p>
+                          <ul class="tags tags--compact">
+                            <li class="tags__item">follow up</li><li class="tags__item">carreer</li><li class="tags__item">HR</li><li class="tags__item">formation</li>
+                          </ul>
+                        </li>
+                        <li class="work-era__role">
+                          <div class="work-era__role-head">
+                            <span class="work-era__role-title">Fullstack software engineer</span>
+                            <time class="work-era__role-dates">Aug 2017 — Present</time>
+                          </div>
+                          <p class="prose work-era__role-text">Consultant in software development and architecture</p>
+                          <ul class="tags tags--compact">
+                            <li class="tags__item">java</li><li class="tags__item">SpringBoot</li><li class="tags__item">Kafka</li><li class="tags__item">Cloud</li><li class="tags__item">Android Mobile</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </section>
+              
+                    <section class="work-era__section">
+                      <h4 class="work-era__section-title">Client missions</h4>
+                      <ul class="work-era__missions">
+                        <li class="work-era__mission">
+                          <details class="work-era__mission-details" open>
+                            <summary class="work-era__mission-summary">
+                              <span class="work-era__mission-client">
+                                <a href="https://www.linkedin.com/company/bil-luxembourg/" rel="noopener noreferrer">Banque Internationale à Luxembourg</a>
+                              </span>
+                              <span class="work-era__mission-role">Software Architect</span>
+                              <time class="work-era__mission-dates">Nov 2025 — Present</time>
+                            </summary>
+                            <div class="work-era__mission-body">
+                              <p class="work-era__mission-loc">Luxembourg, Luxembourg</p>
+                              <p class="prose work-era__mission-text">As a Sfeir consultant, I am a Software Architect at BIL (Banque Internationale à Luxembourg) in the COE team, responsible for multiple microservices.
+              My role is to analyze and suggest reliable technical solutions.
+              During the design phase, I lead developers, provide technical expertise, and review features.
+              I am also responsible for improving quality, tooling, and best practices during the development, deployment, and release processes.</p>
+                              <ul class="tags tags--compact">
+                                <li class="tags__item">java</li><li class="tags__item">SpringBoot</li><li class="tags__item">microservices</li><li class="tags__item">openshift</li><li class="tags__item">architecture</li><li class="tags__item">solution design</li><li class="tags__item">openapi</li><li class="tags__item">flowable</li><li class="tags__item">jwt</li><li class="tags__item">unit testing</li><li class="tags__item">integration testing</li>
+                              </ul>
+                            </div>
+                          </details>
+                        </li>
+                        <li class="work-era__mission">
+                          <details class="work-era__mission-details">
+                            <summary class="work-era__mission-summary">
+                              <span class="work-era__mission-client">
+                                <a href="https://www.statec.lu" rel="noopener noreferrer">STATEC</a>
+                              </span>
+                              <span class="work-era__mission-role">Android Mobile Developer</span>
+                              <time class="work-era__mission-dates">Nov 2025 — Dec 2025</time>
+                            </summary>
+                            <div class="work-era__mission-body">
+                              <p class="work-era__mission-loc">Luxembourg</p>
+                              <p class="prose work-era__mission-text">Sfeir consultant for STATEC - Development of an offline engine based on SQLite for an Android application built with Capacitor</p>
+                              <ul class="tags tags--compact">
+                                <li class="tags__item">Android</li><li class="tags__item">capacitor</li><li class="tags__item">SQLite</li><li class="tags__item">Typescript</li><li class="tags__item">hybride mobile</li>
+                              </ul>
+                            </div>
+                          </details>
+                        </li>
+                        <li class="work-era__mission">
+                          <details class="work-era__mission-details">
+                            <summary class="work-era__mission-summary">
+                              <span class="work-era__mission-client">
+                                <a href="https://www.linkedin.com/company/societe-generale/" rel="noopener noreferrer">Société Générale</a>
+                              </span>
+                              <span class="work-era__mission-role">Tech lead</span>
+                              <time class="work-era__mission-dates">Feb 2025 — Sep 2025</time>
+                            </summary>
+                            <div class="work-era__mission-body">
+                              <p class="work-era__mission-loc">Belval, Luxembourg</p>
+                              <p class="prose work-era__mission-text">As a Sfeir consultant, I am Tech Lead / Developer / Architect in the Regulatory team for Luxembourg.
+              Regulatory topics are mainly reporting on EMIR, MIFID, Loi du 25 mars.
+              My role is to improve efficiency and code quality in the team of 4 developers.
+              Meanwhile, the target is the modernization of several apps to Kubernetes/Cloud/API.</p>
+                              <ul class="tags tags--compact">
+                                <li class="tags__item">java</li><li class="tags__item">SpringBoot</li><li class="tags__item">jwt</li><li class="tags__item">reactive programming</li><li class="tags__item">openapi</li><li class="tags__item">unit testing</li><li class="tags__item">integration testing</li>
+                              </ul>
+                            </div>
+                          </details>
+                        </li>
+                        <li class="work-era__mission">
+                          <details class="work-era__mission-details">
+                            <summary class="work-era__mission-summary">
+                              <span class="work-era__mission-client">
+                                <a href="https://www.linkedin.com/company/temenos/" rel="noopener noreferrer">Temenos</a>
+                              </span>
+                              <span class="work-era__mission-role">Senior Software Developer</span>
+                              <time class="work-era__mission-dates">Jul 2024 — Dec 2024</time>
+                            </summary>
+                            <div class="work-era__mission-body">
+                              <p class="work-era__mission-loc">Bertrange, Luxembourg</p>
+                              <p class="prose work-era__mission-text">As a senior developer, my mission for Sfeir is to help create a data platform on top of the existing Multifonds Temenos data system, to provide custom portals.</p>
+                              <ul class="tags tags--compact">
+                                <li class="tags__item">java</li><li class="tags__item">SpringBoot</li><li class="tags__item">keycloak</li><li class="tags__item">jwt</li><li class="tags__item">jsonApi</li><li class="tags__item">jsonSchema</li><li class="tags__item">unit testing</li><li class="tags__item">integration testing</li>
+                              </ul>
+                            </div>
+                          </details>
+                        </li>
+                        <li class="work-era__mission">
+                          <details class="work-era__mission-details">
+                            <summary class="work-era__mission-summary">
+                              <span class="work-era__mission-client">
+                                <a href="https://www.linkedin.com/company/foyer-assurances/" rel="noopener noreferrer">Foyer</a>
+                              </span>
+                              <span class="work-era__mission-role">Architect, Expert leader</span>
+                              <time class="work-era__mission-dates">Feb 2023 — Jun 2024</time>
+                            </summary>
+                            <div class="work-era__mission-body">
+                              <p class="work-era__mission-loc">Leudelange, Luxembourg</p>
+                              <p class="prose work-era__mission-text">I joined the MEO architecture team to improve quality, architecture and processes around software production inside Foyer Group.
+              A lot of interesting challenges here!</p>
+                              <ul class="tags tags--compact">
+                                <li class="tags__item">AWS</li><li class="tags__item">SpringBoot</li><li class="tags__item">scala</li><li class="tags__item">CI/CD</li><li class="tags__item">Kubernetes</li><li class="tags__item">argoCD</li><li class="tags__item">JWT</li>
+                              </ul>
+                            </div>
+                          </details>
+                        </li>
+                      </ul>
+                      <details class="work-era__more">
+                        <summary class="work-era__more-summary">2 earlier client missions</summary>
+                        <ul class="work-era__missions work-era__missions--collapsed">
+                          <li class="work-era__mission">
+                            <details class="work-era__mission-details">
+                              <summary class="work-era__mission-summary">
+                                <span class="work-era__mission-client">
+                                  <a href="https://www.linkedin.com/company/luxembourg-stock-exchange/" rel="noopener noreferrer">Luxembourg Stock Exchange</a>
+                                </span>
+                                <span class="work-era__mission-role">Senior Software Developer</span>
+                                <time class="work-era__mission-dates">Jan 2021 — Oct 2021</time>
+                              </summary>
+                              <div class="work-era__mission-body">
+                                <p class="work-era__mission-loc">Luxembourg</p>
+                                <p class="prose work-era__mission-text">Part-time between LuxSE and Fundsquare (for Sfeir)
+              
+              The goal is to develop a new common set of tools.
+              These services are shared by LuxSE and Fundsquare.
+              Hosted in Azure, relying on Spring - Kafka - Mongo, I'm in charge of the development of several services.
+              FTP connector, API Catalog are the first services of this platform.</p>
+                                <ul class="tags tags--compact">
+                                  <li class="tags__item">Spring</li><li class="tags__item">Kafka</li><li class="tags__item">Mongo</li><li class="tags__item">Azure</li><li class="tags__item">Openshift</li>
+                                </ul>
+                              </div>
+                            </details>
+                          </li>
+                          <li class="work-era__mission">
+                            <details class="work-era__mission-details">
+                              <summary class="work-era__mission-summary">
+                                <span class="work-era__mission-client">
+                                  <a href="https://www.linkedin.com/company/fundsquare/" rel="noopener noreferrer">Fundsquare</a>
+                                </span>
+                                <span class="work-era__mission-role">Ingenieur développement fullstack</span>
+                                <time class="work-era__mission-dates">Aug 2017 — Feb 2023</time>
+                              </summary>
+                              <div class="work-era__mission-body">
+                                <p class="work-era__mission-loc">Luxembourg</p>
+                                <p class="prose work-era__mission-text">As a senior developer, I mostly manage the collection platform to get data, processing, wrangling, cleansing.
+              Main collected data are Priips EPT, Mifid EMT, EET, ...
+              
+              As a tech lead, I coordinate teams, draft architecture, and organize activities with all stakeholders to reach a stable and technically viable solution, matching the target vision.
+              
+              I design and develop most of the patterns like data layers, orchestration, choreography, distributed transactions, event-driven communication, business monitoring, contract specifications with JSON schema, code generators for deployable microservices and for API clients, DevOps tooling scripts for local development, delivery and troubleshooting.
+              
+              The stack is composed of several layers around these main technologies:
+              - SpringBoot, Camunda BPM, Kafka, Trifacta, Camel, MsSql, Mongo, Elasticsearch, Kubernetes, AKS, ESB, Openshift, React, GraphQL, Node.js
+              
+              We are working in collaboration with Bourse du Luxembourg architecture team to evolve to a modern solution, cloud-native in Azure.
+              
+              Over 5 years, we completely moved from legacy tomcat+mssql+esb to distributed event-driven microservices+mongo+kafka cloud native.
+              
+              Since Fundsquare's acquisition by Fe Fundinfo, the short-term target is to move completely cloud native, and integrate their platform.</p>
+                                <ul class="tags tags--compact">
+                                  <li class="tags__item">SpringBoot</li><li class="tags__item">Camunda BPM</li><li class="tags__item">Kafka</li><li class="tags__item">Trifacta</li><li class="tags__item">Camel</li><li class="tags__item">MsSql</li><li class="tags__item">Mongo</li><li class="tags__item">Elasticsearch</li><li class="tags__item">Kubernetes</li><li class="tags__item">AKS</li><li class="tags__item">Azure</li><li class="tags__item">ESB</li><li class="tags__item">Openshift</li><li class="tags__item">React</li><li class="tags__item">GraphQL</li><li class="tags__item">NodeJs</li>
+                                </ul>
+                              </div>
+                            </details>
+                          </li>
+                        </ul>
+                      </details>
+                    </section>
+                  </article>
+                </li>
               <li class="timeline-flow__year" id="work-y-2001">
                 <span class="timeline-flow__year-node" aria-hidden="true"></span>
                 <span class="timeline-flow__year-label">2001</span>
               </li>
-              <li class="timeline-flow__item">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">Fullstack software engineer</h3>
-                      <p class="timeline-flow__meta">
-                        <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">Sogeti luxembourg</a>
-                         · Bertrange, Luxembourg
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Jun 2001 — Aug 2017</time>
-                      <span class="timeline-flow__duration">16 years 2 months</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">I worked for European and national institutions as Full-Stack software engineer.
-        Projects are mainly focused on web and mobile technologies.
-        Java+Spring, Node.js, Backbone, Android..., I follow modern standards and new performant libraries and frameworks.
-        Integrated into several teams from multiple clients, I like to work with people of different multicultural backgrounds.
-        
-        See details above:</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">Java</li><li class="tags__item">Spring</li><li class="tags__item">nodejs</li><li class="tags__item">Backbone</li><li class="tags__item">Android</li>
-                  </ul>
-                </article>
-              </li>
-              <li class="timeline-flow__item">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">Fullstack software engineer</h3>
-                      <p class="timeline-flow__meta">
-                        <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">SOGETI Luxembourg</a>
-                         · Luxembourg
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Jan 2017 — Jun 2017</time>
-                      <span class="timeline-flow__duration">5 months</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">at European Parliament, DAS Unit (Translation)
-        
-        Restart a collaborative platform from scratch.
-        Complete technology migration from SharePoint to Java/Angular.
-        The first steps should lay the foundation for a fully extensible collaborative system, strongly relying on business data.</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">JHipster</li><li class="tags__item">Spring Boot</li><li class="tags__item">ElasticSeach</li><li class="tags__item">Angular</li><li class="tags__item">Bootstrap</li><li class="tags__item">webpack</li><li class="tags__item">grunt</li><li class="tags__item">nodejs</li><li class="tags__item">jdk7</li><li class="tags__item">tomcat7</li>
-                  </ul>
-                </article>
-              </li>
-              <li class="timeline-flow__year" id="work-y-2016">
-                <span class="timeline-flow__year-node" aria-hidden="true"></span>
-                <span class="timeline-flow__year-label">2016</span>
-              </li>
-              <li class="timeline-flow__item">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">Fullstack software engineer</h3>
-                      <p class="timeline-flow__meta">
-                        <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">SOGETI Luxembourg</a>
-                         · Luxembourg
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Jun 2016 — Dec 2016</time>
-                      <span class="timeline-flow__duration">6 months</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">at European Parliament, DAS Unit (Translation)
-        
-        SPA+ : Participate in service-oriented architecture; Build and configure a router/proxy.
-        Socrates : Building a REST-based event manager to complete the suite of tools</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">Spring Boot</li><li class="tags__item">Spring Cloud</li><li class="tags__item">microservices architecture</li><li class="tags__item">angular</li><li class="tags__item">bootstrap</li><li class="tags__item">bower</li><li class="tags__item">grunt</li><li class="tags__item">jpa</li><li class="tags__item">Oracle</li><li class="tags__item">tomcat</li><li class="tags__item">java8</li>
-                  </ul>
-                </article>
-              </li>
-              <li class="timeline-flow__item">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">Fullstack software engineer</h3>
-                      <p class="timeline-flow__meta">
-                        <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">SOGETI Luxembourg</a>
-                        
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Jan 2016 — Jun 2016</time>
-                      <span class="timeline-flow__duration">5 months</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">at European Parliament, DAS Unit (Translation)
-        
-        Sirius : Search engine - Architect, technical analyst, development, web integration, testing, deployments.
-        Implement a solution based on ElasticSearch for millions of documents in multilingual and translation context. Web application in SPA architecture, responsive and REST oriented.</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">ElasticSearch</li><li class="tags__item">Spring Data</li><li class="tags__item">Java</li><li class="tags__item">Backbone</li><li class="tags__item">Marionette</li><li class="tags__item">Bootstrap</li><li class="tags__item">Grunt</li><li class="tags__item">Maven</li><li class="tags__item">REST</li><li class="tags__item">json</li>
-                  </ul>
-                </article>
-              </li>
-              <li class="timeline-flow__year" id="work-y-2014">
-                <span class="timeline-flow__year-node" aria-hidden="true"></span>
-                <span class="timeline-flow__year-label">2014</span>
-              </li>
-              <li class="timeline-flow__item">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">Web/Java developer</h3>
-                      <p class="timeline-flow__meta">
-                        <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">SOGETI Luxembourg</a>
-                         · Luxembourg
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Oct 2014 — Dec 2015</time>
-                      <span class="timeline-flow__duration">1 year 2 months</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">at European Parliament, DAS Unit (Translation)
-        
-        Fluid+ : Join a team to complete a web application dedicated to contract management for Translation Units.
-        Support for teams on Sencha ExtJs.
-        UX advisor for the unit.</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">Scrum</li><li class="tags__item">Spring</li><li class="tags__item">Java</li><li class="tags__item">ExtJs</li><li class="tags__item">Maven</li>
-                  </ul>
-                </article>
-              </li>
-              <li class="timeline-flow__item">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">IT Consultant</h3>
-                      <p class="timeline-flow__meta">
-                        <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">SOGETI Luxembourg</a>
-                         · Luxembourg
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Mar 2014 — Sep 2014</time>
-                      <span class="timeline-flow__duration">6 months</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">at BNL - Bibliothèque Nationale du Luxembourg
-        
-        Solr study for a high-performance search engine for eluxemburgensia.lu.
-        Research, investigate, test and develop prototypes with Solr.
-        Strong integration with existing tool A-Z.lu and viewer eluxemburgensia.lu.
-        Scalability and performance issues.
-        Prototype development with SolrCloud.</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">SolrCloud</li><li class="tags__item">ZooKeeper</li><li class="tags__item">Vagrant</li><li class="tags__item">Python</li>
-                  </ul>
-                </article>
-              </li>
-              <li class="timeline-flow__item">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">Android Mobile Developer</h3>
-                      <p class="timeline-flow__meta">
-                        <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">SOGETI Luxembourg</a>
-                         · Luxembourg
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Oct 2013 — Mar 2014</time>
-                      <span class="timeline-flow__duration">5 months</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">Development of an Android app to perform price collection for STATEC (statec.lu).
-        Backend services development (Java, Spring MVC)
-        
-        Android SDK 4.ADT, AndroidStudio, Gradle, Volley, AndroidPlot, GreenDAO
-        Eclipse, Spring MVC, Apache Commons, REST, XML</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">ADT</li><li class="tags__item">AndroidStudio</li><li class="tags__item">Gradle</li><li class="tags__item">Volley</li><li class="tags__item">AndroidPlot</li><li class="tags__item">GreenDAO</li><li class="tags__item">Eclipse</li><li class="tags__item">Spring MVC</li><li class="tags__item">Apache Commons</li><li class="tags__item">Rest</li><li class="tags__item">XML</li>
-                  </ul>
-                </article>
-              </li>
-              <li class="timeline-flow__item">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">Mobile developer - iOS</h3>
-                      <p class="timeline-flow__meta">
-                        SOGETI Luxembourg
-                        
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Jun 2013 — Jul 2013</time>
-                      <span class="timeline-flow__duration">1 month</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">for Editus Luxembourg,
-        
-        For the iPhone/iPad app habiter.lu, API development with RestKit.
-        Mockup with Node.js and Express.</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">iOs</li><li class="tags__item">RestKit</li><li class="tags__item">NodeJs</li><li class="tags__item">Express</li>
-                  </ul>
-                </article>
-              </li>
-              <li class="timeline-flow__item">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">Développeur - architecte Web/Java</h3>
-                      <p class="timeline-flow__meta">
-                        <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">SOGETI Luxembourg</a>
-                         · Luxembourg
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Mar 2013 — Jun 2013</time>
-                      <span class="timeline-flow__duration">3 months</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">at BNL - Bibliothèque nationale du Luxembourg
-        
-        Update of the eLuxemburgensia project.
-        ExtJs 4.2 support
-        Build process with Sencha Cmd.
-        Theme redesign in SASS.
-        Repository decoupling for performance improvement.
-        Book support.
-        Cache architecture review.</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">ExtJs</li><li class="tags__item">java</li>
-                  </ul>
-                </article>
-              </li>
-              <li class="timeline-flow__year" id="work-y-2012">
-                <span class="timeline-flow__year-node" aria-hidden="true"></span>
-                <span class="timeline-flow__year-label">2012</span>
-              </li>
-              <li class="timeline-flow__item">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">Web/Java developer</h3>
-                      <p class="timeline-flow__meta">
-                        <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">SOGETI Luxembourg</a>
-                         · Luxembourg / Monaco
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Nov 2012 — Feb 2013</time>
-                      <span class="timeline-flow__duration">3 months</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">at Société Générale Bank & Trust
-        
-        Based on Documentum, we develop a web application to manage PDFs using business workflows.
-        Thanks to PDFBox, I managed PDF editing.
-        I made the complex web interface with jQueryUI and other jQuery plugins.
-        ---
-        Development of a document management tool.
-        Based on Documentum, the Web application allows managing PDF document workflows.
-        Interface design with jQueryUI.
-        PDF editing/manipulation with PDFBox.</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">java</li><li class="tags__item">jQuery</li><li class="tags__item">jQueryUI</li><li class="tags__item">pdfBox</li><li class="tags__item">Documentum</li>
-                  </ul>
-                </article>
-              </li>
-              <li class="timeline-flow__item">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">Web/Java developer</h3>
-                      <p class="timeline-flow__meta">
-                        <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">SOGETI Luxembourg</a>
-                        
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Jan 2012 — May 2012</time>
-                      <span class="timeline-flow__duration">4 months</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">at BNL - Bibliothèque nationale du Luxembourg
-        
-        Add some new features on the Web Media Viewer used in eluxemburgensia.lu</p>
-                  
-                </article>
-              </li>
-              <li class="timeline-flow__item">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">Software engineer</h3>
-                      <p class="timeline-flow__meta">
-                        <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">SOGETI Luxembourg</a>
-                         · luxembourg
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Nov 2011 — Dec 2011</time>
-                      <span class="timeline-flow__duration">1 month</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">at BNL - Bibliothèque nationale du Luxembourg
-        for LNB - Latvia library
-        
-        Publish a media viewer, developed previously, as an open-source project.
-        Removed proprietary dependencies and created a free mode instead.
-        Gave the application a high level of loose coupling and the capability to be well integrated in other systems.
-        
-        http://sourceforge.net/projects/bnlviewer/
-        
-        The project is now used in http://www.periodika.lv</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">opensource forks</li>
-                  </ul>
-                </article>
-              </li>
-              <li class="timeline-flow__year" id="work-y-2010">
-                <span class="timeline-flow__year-node" aria-hidden="true"></span>
-                <span class="timeline-flow__year-label">2010</span>
-              </li>
-              <li class="timeline-flow__item">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">Consultant</h3>
-                      <p class="timeline-flow__meta">
-                        <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">SOGETI Luxembourg</a>
-                         · Luxembourg
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>May 2010 — Dec 2011</time>
-                      <span class="timeline-flow__duration">1 year 7 months</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">at European Parliament - Web Application development
-        
-        e-dictionaries is a web tool to distribute and launch dictionaries (web or local) according to the applicable licenses.
-        Users could easily manage their favorite dictionaries on their portal.
-        Administration includes license management, statistics reports, graphical overview of expiration and quota exceeded.
-        Used by all translators for their day-to-day translations.</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">Java</li><li class="tags__item">Spring</li><li class="tags__item">Hibernate</li><li class="tags__item">jQueryUI</li><li class="tags__item">Virtualization system (AppV,SCCM,...)</li><li class="tags__item">Oracle</li><li class="tags__item">AD/LDAP</li><li class="tags__item">JavaWebStart</li>
-                  </ul>
-                </article>
-              </li>
-              <li class="timeline-flow__item">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">Software engineer</h3>
-                      <p class="timeline-flow__meta">
-                        <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer"></a>
-                        
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Aug 2009 — May 2010</time>
-                      <span class="timeline-flow__duration">9 months</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">at BNL - Bibliothèque nationale du Luxembourg
-        Creation and integration of a new Web client (ExtJs/Java) to consult newspapers and books online.
-        Mets/alto standards. Full Web2.0 application.</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">ExtJs</li><li class="tags__item">Java</li><li class="tags__item">xml</li><li class="tags__item">ALTO</li><li class="tags__item">Mets</li>
-                  </ul>
-                </article>
-              </li>
-              <li class="timeline-flow__year" id="work-y-2007">
-                <span class="timeline-flow__year-node" aria-hidden="true"></span>
-                <span class="timeline-flow__year-label">2007</span>
-              </li>
-              <li class="timeline-flow__item">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">Senior Software Engineer - J2EE, XML, DMS/CMS, ExtJs specialist</h3>
-                      <p class="timeline-flow__meta">
-                        <a href="https://www.linkedin.com/company/sogeti/" rel="noopener noreferrer">SOGETI Luxembourg</a>
-                        
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Sep 2007 — Jul 2009</time>
-                      <span class="timeline-flow__duration">1 year 10 months</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">at European Parliament:
-        - Study and support for a workflow engine adoption: Bonita
-        - Workflow integration in a SOA approach
-        - XML, XSL support to project teams
-        - Jahia support (use, custom development, bugfix, ...) to project teams
-        - Studies on different Document Management systems
-        - J2EE projects development</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">SOA</li><li class="tags__item">java</li><li class="tags__item">J2EE</li><li class="tags__item">XSL</li><li class="tags__item">xml</li><li class="tags__item">Bonita workflow</li><li class="tags__item">Jahia</li>
-                  </ul>
-                </article>
-              </li>
-              <li class="timeline-flow__item">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">IT architect</h3>
-                      <p class="timeline-flow__meta">
-                        <a href="https://www.linkedin.com/company/sogeti/" rel="noopener noreferrer">Sogeti</a>
-                        
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Sep 2006 — Aug 2007</time>
-                      <span class="timeline-flow__duration">11 months</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">Client : European Court of Justice.
-        Creation of an architecture team in charge of competitive intelligence and installation of a new homogeneous development environment (technologies, tools, testing, ergonomics).</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">jsf</li><li class="tags__item">ejb</li><li class="tags__item">toplink orm</li><li class="tags__item">Jdeveloper</li><li class="tags__item">xml</li>
-                  </ul>
-                </article>
-              </li>
-              <li class="timeline-flow__item">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">Software analyst developer</h3>
-                      <p class="timeline-flow__meta">
-                        <a href="https://www.linkedin.com/company/sogeti/" rel="noopener noreferrer">Sogeti</a>
-                        
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Jan 2006 — Aug 2007</time>
-                      <span class="timeline-flow__duration">1 year 7 months</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">Client : European Court of Justice.
-        Main developer on an Intranet system: the first application hosted by this new system is a research tool that enables merging and abstracting all different sources of data.</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">Java</li><li class="tags__item">XSL</li><li class="tags__item">Ajax</li><li class="tags__item">XML</li><li class="tags__item">Oracle10g xmlDB</li><li class="tags__item">OracleText contextual search</li>
-                  </ul>
-                </article>
-              </li>
-              <li class="timeline-flow__item">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">Software analyst developer</h3>
-                      <p class="timeline-flow__meta">
-                        <a href="https://www.linkedin.com/company/sogeti/" rel="noopener noreferrer">Sogeti</a>
-                        
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Jan 2006 — Feb 2006</time>
-                      <span class="timeline-flow__duration">1 month</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">Client : European Court of Justice.
-        Main developer on a search engine dedicated to Canevas enabling searching and inserting references in 20 different languages.
-        J2EE Web application using Struts, JSP, authentication against LDAP AD/OID, Oracle database, use of ICU to help international translation and string manipulation</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">Word</li><li class="tags__item">VB</li><li class="tags__item">VBA</li><li class="tags__item">icu</li><li class="tags__item">java</li><li class="tags__item">jsp</li><li class="tags__item">OIDC</li><li class="tags__item">ldap</li>
-                  </ul>
-                </article>
-              </li>
-              <li class="timeline-flow__year" id="work-y-2005">
-                <span class="timeline-flow__year-node" aria-hidden="true"></span>
-                <span class="timeline-flow__year-label">2005</span>
-              </li>
-              <li class="timeline-flow__item">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">Software analyst developer</h3>
-                      <p class="timeline-flow__meta">
-                        <a href="https://www.linkedin.com/company/sogeti/" rel="noopener noreferrer">Sogeti</a>
-                        
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Aug 2005 — Feb 2006</time>
-                      <span class="timeline-flow__duration">6 months</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">Client : European Court of Justice.
-        Analyst and developer for a project managing all the decisions taken during hearings concerning the different cases.
-        J2EE Web application using Struts, JSP and business taglibs, authentication against LDAP AD/OID, Oracle database and XML serialization</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">Word</li><li class="tags__item">VB</li><li class="tags__item">VBA</li><li class="tags__item">icu</li><li class="tags__item">java</li><li class="tags__item">jsp</li><li class="tags__item">OIDC</li><li class="tags__item">ldap</li>
-                  </ul>
-                </article>
-              </li>
-              <li class="timeline-flow__item">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">Software analyst developer</h3>
-                      <p class="timeline-flow__meta">
-                        <a href="https://www.linkedin.com/company/sogeti/" rel="noopener noreferrer">Sogeti</a>
-                        
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Sep 2001 — Sep 2004</time>
-                      <span class="timeline-flow__duration">3 years</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">Client : European Court of Justice.
-        Main developer / analyst on a project named Canevas.
-        It's a multi-tier office application for judicial document creation.</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">VB</li><li class="tags__item">Word VBA</li><li class="tags__item">Servlets Java</li><li class="tags__item">XML</li><li class="tags__item">XSL</li><li class="tags__item">WordML</li><li class="tags__item">Oracle10g database</li>
-                  </ul>
-                </article>
-              </li>
+                <li class="timeline-flow__item timeline-flow__item--era" id="era-1">
+                  <span class="timeline-flow__connector" aria-hidden="true"></span>
+                  <article class="timeline-flow__card work-era">
+                    <header class="timeline-flow__head work-era__head">
+                      <div>
+                        <h3 class="timeline-flow__title">
+                          <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">SOGETI Luxembourg</a>
+                        </h3>
+                        <p class="work-era__tagline">IT services · European and national institutions</p>
+                        <p class="timeline-flow__meta">Bertrange, Luxembourg</p>
+                      </div>
+                      <div class="timeline-flow__dates">
+                        <time>Jun 2001 — Aug 2017</time>
+                        <span class="timeline-flow__duration">16 years 2 months</span>
+                      </div>
+                    </header>
+                    <p class="prose timeline-flow__text work-era__overview">I worked for European and national institutions as Full-Stack software engineer.
+              Projects are mainly focused on web and mobile technologies.
+              Java+Spring, Node.js, Backbone, Android..., I follow modern standards and new performant libraries and frameworks.
+              Integrated into several teams from multiple clients, I like to work with people of different multicultural backgrounds.</p>
+              
+              
+                    <section class="work-era__section">
+                      <h4 class="work-era__section-title">Client missions</h4>
+                      <ul class="work-era__missions">
+                        <li class="work-era__mission">
+                          <details class="work-era__mission-details">
+                            <summary class="work-era__mission-summary">
+                              <span class="work-era__mission-client">
+                                <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">European Parliament</a>
+                              </span>
+                              <span class="work-era__mission-role">Fullstack software engineer</span>
+                              <time class="work-era__mission-dates">Jun 2017 — Aug 2017</time>
+                            </summary>
+                            <div class="work-era__mission-body">
+                              <p class="work-era__mission-loc">Bertrange, Luxembourg</p>
+                              <p class="prose work-era__mission-text">Conversion tool for European Parliament.
+              
+              This MS Word to XML engine is used in production to produce XML documents compliant with rules provided by EP.
+              I built the engine core at the project startup.
+              During these 3 months, I elevated the project to a higher level in terms of readability, testing, maintenance, new format support.
+              
+              Quality improvement, testing support, improved rules engine, rewrite rules and transformers for the 2 main formats.
+              
+              Java, Spring, Eclipse, XML, AkomaNtoso, XSD, DTD, Jira</p>
+                              <ul class="tags tags--compact">
+                                <li class="tags__item">Java</li><li class="tags__item">Spring</li><li class="tags__item">Eclipse</li><li class="tags__item">Xml</li><li class="tags__item">AkomaNtoso</li><li class="tags__item">Xsd</li><li class="tags__item">Dtd</li><li class="tags__item">Jira</li>
+                              </ul>
+                            </div>
+                          </details>
+                        </li>
+                        <li class="work-era__mission">
+                          <details class="work-era__mission-details">
+                            <summary class="work-era__mission-summary">
+                              <span class="work-era__mission-client">
+                                <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">European Parliament</a>
+                              </span>
+                              <span class="work-era__mission-role">Fullstack software engineer</span>
+                              <time class="work-era__mission-dates">Jan 2017 — Jun 2017</time>
+                            </summary>
+                            <div class="work-era__mission-body">
+                              <p class="work-era__mission-loc">Luxembourg</p>
+                              <p class="prose work-era__mission-text">at European Parliament, DAS Unit (Translation)
+              
+              Restart a collaborative platform from scratch.
+              Complete technology migration from SharePoint to Java/Angular.
+              The first steps should lay the foundation for a fully extensible collaborative system, strongly relying on business data.</p>
+                              <ul class="tags tags--compact">
+                                <li class="tags__item">JHipster</li><li class="tags__item">Spring Boot</li><li class="tags__item">ElasticSeach</li><li class="tags__item">Angular</li><li class="tags__item">Bootstrap</li><li class="tags__item">webpack</li><li class="tags__item">grunt</li><li class="tags__item">nodejs</li><li class="tags__item">jdk7</li><li class="tags__item">tomcat7</li>
+                              </ul>
+                            </div>
+                          </details>
+                        </li>
+                        <li class="work-era__mission">
+                          <details class="work-era__mission-details">
+                            <summary class="work-era__mission-summary">
+                              <span class="work-era__mission-client">
+                                <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">European Parliament</a>
+                              </span>
+                              <span class="work-era__mission-role">Fullstack software engineer</span>
+                              <time class="work-era__mission-dates">Jun 2016 — Dec 2016</time>
+                            </summary>
+                            <div class="work-era__mission-body">
+                              <p class="work-era__mission-loc">Luxembourg</p>
+                              <p class="prose work-era__mission-text">at European Parliament, DAS Unit (Translation)
+              
+              SPA+ : Participate in service-oriented architecture; Build and configure a router/proxy.
+              Socrates : Building a REST-based event manager to complete the suite of tools</p>
+                              <ul class="tags tags--compact">
+                                <li class="tags__item">Spring Boot</li><li class="tags__item">Spring Cloud</li><li class="tags__item">microservices architecture</li><li class="tags__item">angular</li><li class="tags__item">bootstrap</li><li class="tags__item">bower</li><li class="tags__item">grunt</li><li class="tags__item">jpa</li><li class="tags__item">Oracle</li><li class="tags__item">tomcat</li><li class="tags__item">java8</li>
+                              </ul>
+                            </div>
+                          </details>
+                        </li>
+                        <li class="work-era__mission">
+                          <details class="work-era__mission-details">
+                            <summary class="work-era__mission-summary">
+                              <span class="work-era__mission-client">
+                                <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">European Parliament</a>
+                              </span>
+                              <span class="work-era__mission-role">Fullstack software engineer</span>
+                              <time class="work-era__mission-dates">Jan 2016 — Jun 2016</time>
+                            </summary>
+                            <div class="work-era__mission-body">
+                              
+                              <p class="prose work-era__mission-text">at European Parliament, DAS Unit (Translation)
+              
+              Sirius : Search engine - Architect, technical analyst, development, web integration, testing, deployments.
+              Implement a solution based on ElasticSearch for millions of documents in multilingual and translation context. Web application in SPA architecture, responsive and REST oriented.</p>
+                              <ul class="tags tags--compact">
+                                <li class="tags__item">ElasticSearch</li><li class="tags__item">Spring Data</li><li class="tags__item">Java</li><li class="tags__item">Backbone</li><li class="tags__item">Marionette</li><li class="tags__item">Bootstrap</li><li class="tags__item">Grunt</li><li class="tags__item">Maven</li><li class="tags__item">REST</li><li class="tags__item">json</li>
+                              </ul>
+                            </div>
+                          </details>
+                        </li>
+                        <li class="work-era__mission">
+                          <details class="work-era__mission-details">
+                            <summary class="work-era__mission-summary">
+                              <span class="work-era__mission-client">
+                                <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">European Parliament</a>
+                              </span>
+                              <span class="work-era__mission-role">Web/Java developer</span>
+                              <time class="work-era__mission-dates">Oct 2014 — Dec 2015</time>
+                            </summary>
+                            <div class="work-era__mission-body">
+                              <p class="work-era__mission-loc">Luxembourg</p>
+                              <p class="prose work-era__mission-text">at European Parliament, DAS Unit (Translation)
+              
+              Fluid+ : Join a team to complete a web application dedicated to contract management for Translation Units.
+              Support for teams on Sencha ExtJs.
+              UX advisor for the unit.</p>
+                              <ul class="tags tags--compact">
+                                <li class="tags__item">Scrum</li><li class="tags__item">Spring</li><li class="tags__item">Java</li><li class="tags__item">ExtJs</li><li class="tags__item">Maven</li>
+                              </ul>
+                            </div>
+                          </details>
+                        </li>
+                      </ul>
+                      <details class="work-era__more">
+                        <summary class="work-era__more-summary">15 earlier client missions</summary>
+                        <ul class="work-era__missions work-era__missions--collapsed">
+                          <li class="work-era__mission">
+                            <details class="work-era__mission-details">
+                              <summary class="work-era__mission-summary">
+                                <span class="work-era__mission-client">
+                                  <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">BNL - Bibliothèque Nationale du Luxembourg</a>
+                                </span>
+                                <span class="work-era__mission-role">IT Consultant</span>
+                                <time class="work-era__mission-dates">Mar 2014 — Sep 2014</time>
+                              </summary>
+                              <div class="work-era__mission-body">
+                                <p class="work-era__mission-loc">Luxembourg</p>
+                                <p class="prose work-era__mission-text">at BNL - Bibliothèque Nationale du Luxembourg
+              
+              Solr study for a high-performance search engine for eluxemburgensia.lu.
+              Research, investigate, test and develop prototypes with Solr.
+              Strong integration with existing tool A-Z.lu and viewer eluxemburgensia.lu.
+              Scalability and performance issues.
+              Prototype development with SolrCloud.</p>
+                                <ul class="tags tags--compact">
+                                  <li class="tags__item">SolrCloud</li><li class="tags__item">ZooKeeper</li><li class="tags__item">Vagrant</li><li class="tags__item">Python</li>
+                                </ul>
+                              </div>
+                            </details>
+                          </li>
+                          <li class="work-era__mission">
+                            <details class="work-era__mission-details">
+                              <summary class="work-era__mission-summary">
+                                <span class="work-era__mission-client">
+                                  <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">STATEC</a>
+                                </span>
+                                <span class="work-era__mission-role">Android Mobile Developer</span>
+                                <time class="work-era__mission-dates">Oct 2013 — Mar 2014</time>
+                              </summary>
+                              <div class="work-era__mission-body">
+                                <p class="work-era__mission-loc">Luxembourg</p>
+                                <p class="prose work-era__mission-text">Development of an Android app to perform price collection for STATEC (statec.lu).
+              Backend services development (Java, Spring MVC)
+              
+              Android SDK 4.ADT, AndroidStudio, Gradle, Volley, AndroidPlot, GreenDAO
+              Eclipse, Spring MVC, Apache Commons, REST, XML</p>
+                                <ul class="tags tags--compact">
+                                  <li class="tags__item">ADT</li><li class="tags__item">AndroidStudio</li><li class="tags__item">Gradle</li><li class="tags__item">Volley</li><li class="tags__item">AndroidPlot</li><li class="tags__item">GreenDAO</li><li class="tags__item">Eclipse</li><li class="tags__item">Spring MVC</li><li class="tags__item">Apache Commons</li><li class="tags__item">Rest</li><li class="tags__item">XML</li>
+                                </ul>
+                              </div>
+                            </details>
+                          </li>
+                          <li class="work-era__mission">
+                            <details class="work-era__mission-details">
+                              <summary class="work-era__mission-summary">
+                                <span class="work-era__mission-client">
+                                  Editus Luxembourg
+                                </span>
+                                <span class="work-era__mission-role">Mobile developer - iOS</span>
+                                <time class="work-era__mission-dates">Jun 2013 — Jul 2013</time>
+                              </summary>
+                              <div class="work-era__mission-body">
+                                
+                                <p class="prose work-era__mission-text">for Editus Luxembourg,
+              
+              For the iPhone/iPad app habiter.lu, API development with RestKit.
+              Mockup with Node.js and Express.</p>
+                                <ul class="tags tags--compact">
+                                  <li class="tags__item">iOs</li><li class="tags__item">RestKit</li><li class="tags__item">NodeJs</li><li class="tags__item">Express</li>
+                                </ul>
+                              </div>
+                            </details>
+                          </li>
+                          <li class="work-era__mission">
+                            <details class="work-era__mission-details">
+                              <summary class="work-era__mission-summary">
+                                <span class="work-era__mission-client">
+                                  <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">BNL - Bibliothèque nationale du Luxembourg</a>
+                                </span>
+                                <span class="work-era__mission-role">Développeur - architecte Web/Java</span>
+                                <time class="work-era__mission-dates">Mar 2013 — Jun 2013</time>
+                              </summary>
+                              <div class="work-era__mission-body">
+                                <p class="work-era__mission-loc">Luxembourg</p>
+                                <p class="prose work-era__mission-text">at BNL - Bibliothèque nationale du Luxembourg
+              
+              Update of the eLuxemburgensia project.
+              ExtJs 4.2 support
+              Build process with Sencha Cmd.
+              Theme redesign in SASS.
+              Repository decoupling for performance improvement.
+              Book support.
+              Cache architecture review.</p>
+                                <ul class="tags tags--compact">
+                                  <li class="tags__item">ExtJs</li><li class="tags__item">java</li>
+                                </ul>
+                              </div>
+                            </details>
+                          </li>
+                          <li class="work-era__mission">
+                            <details class="work-era__mission-details">
+                              <summary class="work-era__mission-summary">
+                                <span class="work-era__mission-client">
+                                  <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">Société Générale Bank &amp; Trust</a>
+                                </span>
+                                <span class="work-era__mission-role">Web/Java developer</span>
+                                <time class="work-era__mission-dates">Nov 2012 — Feb 2013</time>
+                              </summary>
+                              <div class="work-era__mission-body">
+                                <p class="work-era__mission-loc">Luxembourg / Monaco</p>
+                                <p class="prose work-era__mission-text">at Société Générale Bank & Trust
+              
+              Based on Documentum, we develop a web application to manage PDFs using business workflows.
+              Thanks to PDFBox, I managed PDF editing.
+              I made the complex web interface with jQueryUI and other jQuery plugins.
+              ---
+              Development of a document management tool.
+              Based on Documentum, the Web application allows managing PDF document workflows.
+              Interface design with jQueryUI.
+              PDF editing/manipulation with PDFBox.</p>
+                                <ul class="tags tags--compact">
+                                  <li class="tags__item">java</li><li class="tags__item">jQuery</li><li class="tags__item">jQueryUI</li><li class="tags__item">pdfBox</li><li class="tags__item">Documentum</li>
+                                </ul>
+                              </div>
+                            </details>
+                          </li>
+                          <li class="work-era__mission">
+                            <details class="work-era__mission-details">
+                              <summary class="work-era__mission-summary">
+                                <span class="work-era__mission-client">
+                                  <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">BNL - Bibliothèque nationale du Luxembourg</a>
+                                </span>
+                                <span class="work-era__mission-role">Web/Java developer</span>
+                                <time class="work-era__mission-dates">Jan 2012 — May 2012</time>
+                              </summary>
+                              <div class="work-era__mission-body">
+                                
+                                <p class="prose work-era__mission-text">at BNL - Bibliothèque nationale du Luxembourg
+              
+              Add some new features on the Web Media Viewer used in eluxemburgensia.lu</p>
+                              </div>
+                            </details>
+                          </li>
+                          <li class="work-era__mission">
+                            <details class="work-era__mission-details">
+                              <summary class="work-era__mission-summary">
+                                <span class="work-era__mission-client">
+                                  <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">BNL - Bibliothèque nationale du Luxembourg</a>
+                                </span>
+                                <span class="work-era__mission-role">Software engineer</span>
+                                <time class="work-era__mission-dates">Nov 2011 — Dec 2011</time>
+                              </summary>
+                              <div class="work-era__mission-body">
+                                <p class="work-era__mission-loc">luxembourg</p>
+                                <p class="prose work-era__mission-text">at BNL - Bibliothèque nationale du Luxembourg
+              for LNB - Latvia library
+              
+              Publish a media viewer, developed previously, as an open-source project.
+              Removed proprietary dependencies and created a free mode instead.
+              Gave the application a high level of loose coupling and the capability to be well integrated in other systems.
+              
+              http://sourceforge.net/projects/bnlviewer/
+              
+              The project is now used in http://www.periodika.lv</p>
+                                <ul class="tags tags--compact">
+                                  <li class="tags__item">opensource forks</li>
+                                </ul>
+                              </div>
+                            </details>
+                          </li>
+                          <li class="work-era__mission">
+                            <details class="work-era__mission-details">
+                              <summary class="work-era__mission-summary">
+                                <span class="work-era__mission-client">
+                                  <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">European Parliament</a>
+                                </span>
+                                <span class="work-era__mission-role">Consultant</span>
+                                <time class="work-era__mission-dates">May 2010 — Dec 2011</time>
+                              </summary>
+                              <div class="work-era__mission-body">
+                                <p class="work-era__mission-loc">Luxembourg</p>
+                                <p class="prose work-era__mission-text">at European Parliament - Web Application development
+              
+              e-dictionaries is a web tool to distribute and launch dictionaries (web or local) according to the applicable licenses.
+              Users could easily manage their favorite dictionaries on their portal.
+              Administration includes license management, statistics reports, graphical overview of expiration and quota exceeded.
+              Used by all translators for their day-to-day translations.</p>
+                                <ul class="tags tags--compact">
+                                  <li class="tags__item">Java</li><li class="tags__item">Spring</li><li class="tags__item">Hibernate</li><li class="tags__item">jQueryUI</li><li class="tags__item">Virtualization system (AppV,SCCM,...)</li><li class="tags__item">Oracle</li><li class="tags__item">AD/LDAP</li><li class="tags__item">JavaWebStart</li>
+                                </ul>
+                              </div>
+                            </details>
+                          </li>
+                          <li class="work-era__mission">
+                            <details class="work-era__mission-details">
+                              <summary class="work-era__mission-summary">
+                                <span class="work-era__mission-client">
+                                  <a href="https://www.linkedin.com/company/sogeti-luxembourg/" rel="noopener noreferrer">BNL - Bibliothèque nationale du Luxembourg</a>
+                                </span>
+                                <span class="work-era__mission-role">Software engineer</span>
+                                <time class="work-era__mission-dates">Aug 2009 — May 2010</time>
+                              </summary>
+                              <div class="work-era__mission-body">
+                                
+                                <p class="prose work-era__mission-text">at BNL - Bibliothèque nationale du Luxembourg
+              Creation and integration of a new Web client (ExtJs/Java) to consult newspapers and books online.
+              Mets/alto standards. Full Web2.0 application.</p>
+                                <ul class="tags tags--compact">
+                                  <li class="tags__item">ExtJs</li><li class="tags__item">Java</li><li class="tags__item">xml</li><li class="tags__item">ALTO</li><li class="tags__item">Mets</li>
+                                </ul>
+                              </div>
+                            </details>
+                          </li>
+                          <li class="work-era__mission">
+                            <details class="work-era__mission-details">
+                              <summary class="work-era__mission-summary">
+                                <span class="work-era__mission-client">
+                                  <a href="https://www.linkedin.com/company/sogeti/" rel="noopener noreferrer">European Parliament</a>
+                                </span>
+                                <span class="work-era__mission-role">Senior Software Engineer - J2EE, XML, DMS/CMS, ExtJs specialist</span>
+                                <time class="work-era__mission-dates">Sep 2007 — Jul 2009</time>
+                              </summary>
+                              <div class="work-era__mission-body">
+                                
+                                <p class="prose work-era__mission-text">at European Parliament:
+              - Study and support for a workflow engine adoption: Bonita
+              - Workflow integration in a SOA approach
+              - XML, XSL support to project teams
+              - Jahia support (use, custom development, bugfix, ...) to project teams
+              - Studies on different Document Management systems
+              - J2EE projects development</p>
+                                <ul class="tags tags--compact">
+                                  <li class="tags__item">SOA</li><li class="tags__item">java</li><li class="tags__item">J2EE</li><li class="tags__item">XSL</li><li class="tags__item">xml</li><li class="tags__item">Bonita workflow</li><li class="tags__item">Jahia</li>
+                                </ul>
+                              </div>
+                            </details>
+                          </li>
+                          <li class="work-era__mission">
+                            <details class="work-era__mission-details">
+                              <summary class="work-era__mission-summary">
+                                <span class="work-era__mission-client">
+                                  <a href="https://www.linkedin.com/company/sogeti/" rel="noopener noreferrer">European Court of Justice</a>
+                                </span>
+                                <span class="work-era__mission-role">IT architect</span>
+                                <time class="work-era__mission-dates">Sep 2006 — Aug 2007</time>
+                              </summary>
+                              <div class="work-era__mission-body">
+                                
+                                <p class="prose work-era__mission-text">Client : European Court of Justice.
+              Creation of an architecture team in charge of competitive intelligence and installation of a new homogeneous development environment (technologies, tools, testing, ergonomics).</p>
+                                <ul class="tags tags--compact">
+                                  <li class="tags__item">jsf</li><li class="tags__item">ejb</li><li class="tags__item">toplink orm</li><li class="tags__item">Jdeveloper</li><li class="tags__item">xml</li>
+                                </ul>
+                              </div>
+                            </details>
+                          </li>
+                          <li class="work-era__mission">
+                            <details class="work-era__mission-details">
+                              <summary class="work-era__mission-summary">
+                                <span class="work-era__mission-client">
+                                  <a href="https://www.linkedin.com/company/sogeti/" rel="noopener noreferrer">European Court of Justice</a>
+                                </span>
+                                <span class="work-era__mission-role">Software analyst developer</span>
+                                <time class="work-era__mission-dates">Jan 2006 — Aug 2007</time>
+                              </summary>
+                              <div class="work-era__mission-body">
+                                
+                                <p class="prose work-era__mission-text">Client : European Court of Justice.
+              Main developer on an Intranet system: the first application hosted by this new system is a research tool that enables merging and abstracting all different sources of data.</p>
+                                <ul class="tags tags--compact">
+                                  <li class="tags__item">Java</li><li class="tags__item">XSL</li><li class="tags__item">Ajax</li><li class="tags__item">XML</li><li class="tags__item">Oracle10g xmlDB</li><li class="tags__item">OracleText contextual search</li>
+                                </ul>
+                              </div>
+                            </details>
+                          </li>
+                          <li class="work-era__mission">
+                            <details class="work-era__mission-details">
+                              <summary class="work-era__mission-summary">
+                                <span class="work-era__mission-client">
+                                  <a href="https://www.linkedin.com/company/sogeti/" rel="noopener noreferrer">European Court of Justice</a>
+                                </span>
+                                <span class="work-era__mission-role">Software analyst developer</span>
+                                <time class="work-era__mission-dates">Jan 2006 — Feb 2006</time>
+                              </summary>
+                              <div class="work-era__mission-body">
+                                
+                                <p class="prose work-era__mission-text">Client : European Court of Justice.
+              Main developer on a search engine dedicated to Canevas enabling searching and inserting references in 20 different languages.
+              J2EE Web application using Struts, JSP, authentication against LDAP AD/OID, Oracle database, use of ICU to help international translation and string manipulation</p>
+                                <ul class="tags tags--compact">
+                                  <li class="tags__item">Word</li><li class="tags__item">VB</li><li class="tags__item">VBA</li><li class="tags__item">icu</li><li class="tags__item">java</li><li class="tags__item">jsp</li><li class="tags__item">OIDC</li><li class="tags__item">ldap</li>
+                                </ul>
+                              </div>
+                            </details>
+                          </li>
+                          <li class="work-era__mission">
+                            <details class="work-era__mission-details">
+                              <summary class="work-era__mission-summary">
+                                <span class="work-era__mission-client">
+                                  <a href="https://www.linkedin.com/company/sogeti/" rel="noopener noreferrer">European Court of Justice</a>
+                                </span>
+                                <span class="work-era__mission-role">Software analyst developer</span>
+                                <time class="work-era__mission-dates">Aug 2005 — Feb 2006</time>
+                              </summary>
+                              <div class="work-era__mission-body">
+                                
+                                <p class="prose work-era__mission-text">Client : European Court of Justice.
+              Analyst and developer for a project managing all the decisions taken during hearings concerning the different cases.
+              J2EE Web application using Struts, JSP and business taglibs, authentication against LDAP AD/OID, Oracle database and XML serialization</p>
+                                <ul class="tags tags--compact">
+                                  <li class="tags__item">Word</li><li class="tags__item">VB</li><li class="tags__item">VBA</li><li class="tags__item">icu</li><li class="tags__item">java</li><li class="tags__item">jsp</li><li class="tags__item">OIDC</li><li class="tags__item">ldap</li>
+                                </ul>
+                              </div>
+                            </details>
+                          </li>
+                          <li class="work-era__mission">
+                            <details class="work-era__mission-details">
+                              <summary class="work-era__mission-summary">
+                                <span class="work-era__mission-client">
+                                  <a href="https://www.linkedin.com/company/sogeti/" rel="noopener noreferrer">European Court of Justice</a>
+                                </span>
+                                <span class="work-era__mission-role">Software analyst developer</span>
+                                <time class="work-era__mission-dates">Sep 2001 — Sep 2004</time>
+                              </summary>
+                              <div class="work-era__mission-body">
+                                
+                                <p class="prose work-era__mission-text">Client : European Court of Justice.
+              Main developer / analyst on a project named Canevas.
+              It's a multi-tier office application for judicial document creation.</p>
+                                <ul class="tags tags--compact">
+                                  <li class="tags__item">VB</li><li class="tags__item">Word VBA</li><li class="tags__item">Servlets Java</li><li class="tags__item">XML</li><li class="tags__item">XSL</li><li class="tags__item">WordML</li><li class="tags__item">Oracle10g database</li>
+                                </ul>
+                              </div>
+                            </details>
+                          </li>
+                        </ul>
+                      </details>
+                    </section>
+                  </article>
+                </li>
               <li class="timeline-flow__year" id="work-y-2000">
                 <span class="timeline-flow__year-node" aria-hidden="true"></span>
                 <span class="timeline-flow__year-label">2000</span>
               </li>
-              <li class="timeline-flow__item">
-                <span class="timeline-flow__connector" aria-hidden="true"></span>
-                <article class="timeline-flow__card">
-                  <header class="timeline-flow__head">
-                    <div>
-                      <h3 class="timeline-flow__title">Project manager</h3>
-                      <p class="timeline-flow__meta">
-                        Quaternove
-                        
-                      </p>
-                    </div>
-                    <div class="timeline-flow__dates">
-                      <time>Sep 2000 — Sep 2001</time>
-                      <span class="timeline-flow__duration">1 year</span>
-                    </div>
-                  </header>
-                  <p class="prose timeline-flow__text">THALES e-Transactions delivers printers inside kiosks for ticket delivery in airports and train stations. This project was aimed at providing a few prototypes of these machines and moving to the production line with all necessary certificates.
-        •	Electronic and mechanical development
-        •	Production management
-        •	Suppliers management
-        •	Computer system (VB, serial communication) to control different printers for various tests in order to obtain certificates.</p>
-                  
-                  <ul class="tags">
-                    <li class="tags__item">VB</li><li class="tags__item">industrial prototyping</li><li class="tags__item">Suppliers management</li>
-                  </ul>
-                </article>
-              </li>
+                <li class="timeline-flow__item">
+                  <span class="timeline-flow__connector" aria-hidden="true"></span>
+                  <article class="timeline-flow__card">
+                    <header class="timeline-flow__head">
+                      <div>
+                        <h3 class="timeline-flow__title">Project manager</h3>
+                        <p class="timeline-flow__meta">
+                          Quaternove
+                          
+                        </p>
+                      </div>
+                      <div class="timeline-flow__dates">
+                        <time>Sep 2000 — Sep 2001</time>
+                        <span class="timeline-flow__duration">1 year</span>
+                      </div>
+                    </header>
+                    <p class="prose timeline-flow__text">THALES e-Transactions delivers printers inside kiosks for ticket delivery in airports and train stations. This project was aimed at providing a few prototypes of these machines and moving to the production line with all necessary certificates.
+              •	Electronic and mechanical development
+              •	Production management
+              •	Suppliers management
+              •	Computer system (VB, serial communication) to control different printers for various tests in order to obtain certificates.</p>
+                    <ul class="tags">
+                      <li class="tags__item">VB</li><li class="tags__item">industrial prototyping</li><li class="tags__item">Suppliers management</li>
+                    </ul>
+                  </article>
+                </li>
             </ol>
           </div>
         </div>      </section>
