@@ -15,6 +15,22 @@ export default `<!DOCTYPE html>
           <a class="toolbar__lang-btn{{#if resume.ui.isEn}} is-active{{/if}}" href="index-en.html" hreflang="en" lang="en">EN</a>
           <a class="toolbar__lang-btn{{#if resume.ui.isFr}} is-active{{/if}}" href="index-fr.html" hreflang="fr" lang="fr">FR</a>
         </div>
+        <label class="toolbar__search">
+          <svg class="toolbar__search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input
+            id="resume-search"
+            class="toolbar__search-input"
+            type="search"
+            name="q"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder="{{resume.ui.searchPlaceholder}}"
+            aria-label="{{resume.ui.searchLabel}}"
+            data-empty-msg="{{resume.ui.searchEmpty}}"
+            data-match-msg="{{resume.ui.searchMatches}}"
+          />
+        </label>
+        <p id="resume-search-status" class="toolbar__search-status" role="status" aria-live="polite" hidden></p>
         <div class="toolbar__actions">
           <a class="toolbar__btn toolbar__btn--icon toolbar__btn--ghost" href="{{resume.ui.europassPdf}}" aria-label="{{resume.ui.europassLabel}}" title="{{resume.ui.europassLabel}}">
             <svg class="toolbar__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg>
@@ -208,5 +224,6 @@ export default `<!DOCTYPE html>
     </main>
   </div>
   </div>
+  <script>{{{searchScript}}}</script>
 </body>
 </html>`;

@@ -3,6 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import Handlebars from 'handlebars';
 import theme from './template.js';
+import searchScriptSource from './resume-search.js';
 import timelineFlowPartial from './timeline-flow.partial.js';
 import experienceFlowPartial from './experience-flow.partial.js';
 import workEraFlowPartial from './work-era-flow.partial.js';
@@ -31,6 +32,16 @@ function navItem(id, i18n, labelKey) {
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const styleCSS = fs.readFileSync(path.join(__dirname, 'moderncv.css'), 'utf8');
 
+function bundleFuzzySearchForBrowser() {
+  const filePath = path.join(__dirname, 'lib/fuzzy-search.js');
+  let src = fs.readFileSync(filePath, 'utf8');
+  src = src.replace(/^export function /gm, 'function ');
+  src = src.replace(/^export const /gm, 'const ');
+  return `${src}\nwindow.ResumeFuzzy = { normalize, highlightRegex, score, matches, findHighlightSpans, DEFAULT_THRESHOLD, MIN_FUZZY_LEN };\n`;
+}
+
+const searchScript = bundleFuzzySearchForBrowser() + searchScriptSource;
+
 const I18N = {
   'en-US': {
     present: 'Present',
@@ -50,6 +61,10 @@ const I18N = {
     awards: 'Awards',
     contact: 'Contact',
     europass: 'Europass PDF',
+    search: 'Search CV',
+    searchPlaceholder: 'Search…',
+    searchEmpty: 'No matches',
+    searchMatches: '{n} matches',
     timelineYears: 'Years',
     eraInternal: 'At the company',
     eraMissions: 'Client missions',
@@ -72,6 +87,10 @@ const I18N = {
     awards: 'Distinctions',
     contact: 'Contact',
     europass: 'PDF Europass',
+    search: 'Rechercher',
+    searchPlaceholder: 'Rechercher…',
+    searchEmpty: 'Aucun résultat',
+    searchMatches: '{n} résultats',
     timelineYears: 'Années',
     eraInternal: "Au sein de l'ESN",
     eraMissions: 'Missions client',
@@ -243,6 +262,10 @@ function render(resume) {
     switchLabel: i18n.switchLang,
     downloadLabel: i18n.download,
     europassLabel: i18n.europass,
+    searchLabel: i18n.search,
+    searchPlaceholder: i18n.searchPlaceholder,
+    searchEmpty: i18n.searchEmpty,
+    searchMatches: i18n.searchMatches,
   };
 
   function formatSection(entry) {
@@ -385,6 +408,7 @@ function render(resume) {
   return Handlebars.compile(theme)({
     css: styleCSS,
     printcss: styleCSS,
+    searchScript: searchScript,
     resume,
   });
 }

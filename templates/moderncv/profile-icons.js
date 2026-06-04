@@ -1,5 +1,12 @@
+import { faviconLogo } from '../../scripts/lib/company-logo.js';
+
 const SVG_ATTRS =
   'class="hero__profile-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"';
+
+/** @type {Record<string, string>} network key → domain for favicon logo */
+const PROFILE_FAVICON_DOMAINS = {
+  scorawatch: 'scorawatch.com',
+};
 
 /** @type {Record<string, string>} */
 const PROFILE_SVG = {
@@ -28,6 +35,7 @@ const NETWORK_ALIASES = {
   youtube: 'youtube',
   facebook: 'facebook',
   instagram: 'instagram',
+  scorawatch: 'scorawatch',
 };
 
 export function normalizeProfileNetwork(network) {
@@ -41,9 +49,17 @@ export function normalizeProfileNetwork(network) {
  * @param {string} network
  * @param {string} [username]
  */
+function faviconProfileIcon(domain) {
+  const src = faviconLogo(domain);
+  return `<img class="hero__profile-icon hero__profile-icon--img" src="${src}" width="20" height="20" alt="" aria-hidden="true" decoding="async" />`;
+}
+
 export function profileLinkIcon(network, username) {
   const iconKey = normalizeProfileNetwork(network);
-  const iconSvg = PROFILE_SVG[iconKey] || PROFILE_SVG.link;
+  const faviconDomain = PROFILE_FAVICON_DOMAINS[iconKey];
+  const iconSvg = faviconDomain
+    ? faviconProfileIcon(faviconDomain)
+    : PROFILE_SVG[iconKey] || PROFILE_SVG.link;
   const ariaLabel = username ? `${network} (${username})` : network;
   return { iconKey, iconSvg, ariaLabel };
 }
