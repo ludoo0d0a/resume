@@ -2,8 +2,8 @@
 <SkillsPassport xmlns="http://europass.cedefop.europa.eu/Europass" locale="en" xsi:schemaLocation="http://europass.cedefop.europa.eu/Europass http://europass.cedefop.europa.eu/xml/v3.4.0/EuropassSchema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <DocumentInfo>
     <DocumentType>ECV</DocumentType>
-    <CreationDate>2026-06-04T16:02:44.685Z</CreationDate>
-    <LastUpdateDate>2026-06-04T16:02:44.685Z</LastUpdateDate>
+    <CreationDate>2026-06-04T16:55:53.189Z</CreationDate>
+    <LastUpdateDate>2026-06-04T16:55:53.189Z</LastUpdateDate>
     <XSDVersion>V3.4</XSDVersion>
     <Generator>jsonresume-theme-ludoo</Generator>
     <EuropassLogo>true</EuropassLogo>
@@ -130,7 +130,7 @@
               </Contact>
             </Address>
             <Website>
-              <Contact>https://www.linkedin.com/company/bil-luxembourg/</Contact>
+              <Contact>https://www.bil.com</Contact>
               <Use>
                 <Code>business</Code>
               </Use>
@@ -207,7 +207,7 @@
               </Contact>
             </Address>
             <Website>
-              <Contact>https://www.linkedin.com/company/societe-generale/</Contact>
+              <Contact>https://www.societegenerale.com</Contact>
               <Use>
                 <Code>business</Code>
               </Use>
@@ -246,7 +246,7 @@
               </Contact>
             </Address>
             <Website>
-              <Contact>https://www.linkedin.com/company/temenos/</Contact>
+              <Contact>https://www.temenos.com</Contact>
               <Use>
                 <Code>business</Code>
               </Use>
@@ -285,7 +285,7 @@
               </Contact>
             </Address>
             <Website>
-              <Contact>https://www.linkedin.com/company/foyer-assurances/</Contact>
+              <Contact>https://www.foyer.lu</Contact>
               <Use>
                 <Code>business</Code>
               </Use>
@@ -325,7 +325,7 @@
               </Contact>
             </Address>
             <Website>
-              <Contact>https://www.linkedin.com/company/luxembourg-stock-exchange/</Contact>
+              <Contact>https://www.luxse.com</Contact>
               <Use>
                 <Code>business</Code>
               </Use>
@@ -450,7 +450,7 @@
               </Contact>
             </Address>
             <Website>
-              <Contact>https://www.linkedin.com/company/fundsquare/</Contact>
+              <Contact>https://www.fundsquare.lu</Contact>
               <Use>
                 <Code>business</Code>
               </Use>
@@ -494,7 +494,7 @@
               </Contact>
             </Address>
             <Website>
-              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
+              <Contact>https://www.europarl.europa.eu</Contact>
               <Use>
                 <Code>business</Code>
               </Use>
@@ -538,7 +538,7 @@
               </Contact>
             </Address>
             <Website>
-              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
+              <Contact>https://www.europarl.europa.eu</Contact>
               <Use>
                 <Code>business</Code>
               </Use>
@@ -582,7 +582,7 @@
               </Contact>
             </Address>
             <Website>
-              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
+              <Contact>https://www.europarl.europa.eu</Contact>
               <Use>
                 <Code>business</Code>
               </Use>
@@ -625,7 +625,7 @@
               </Contact>
             </Address>
             <Website>
-              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
+              <Contact>https://www.europarl.europa.eu</Contact>
               <Use>
                 <Code>business</Code>
               </Use>
@@ -664,7 +664,7 @@
               </Contact>
             </Address>
             <Website>
-              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
+              <Contact>https://www.europarl.europa.eu</Contact>
               <Use>
                 <Code>business</Code>
               </Use>
@@ -704,7 +704,7 @@
               </Contact>
             </Address>
             <Website>
-              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
+              <Contact>https://www.bnl.lu</Contact>
               <Use>
                 <Code>business</Code>
               </Use>
@@ -749,7 +749,7 @@
               </Contact>
             </Address>
             <Website>
-              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
+              <Contact>https://www.statec.lu</Contact>
               <Use>
                 <Code>business</Code>
               </Use>
@@ -786,7 +786,7 @@
               </Contact>
             </Address>
             <Website>
-              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
+              <Contact>https://www.editus.lu</Contact>
               <Use>
                 <Code>business</Code>
               </Use>
@@ -826,7 +826,7 @@
               </Contact>
             </Address>
             <Website>
-              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
+              <Contact>https://www.bnl.lu</Contact>
               <Use>
                 <Code>business</Code>
               </Use>
@@ -870,7 +870,7 @@
               </Contact>
             </Address>
             <Website>
-              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
+              <Contact>https://www.sgbdt.com</Contact>
               <Use>
                 <Code>business</Code>
               </Use>
@@ -902,7 +902,7 @@
               </Contact>
             </Address>
             <Website>
-              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
+              <Contact>https://www.bnl.lu</Contact>
               <Use>
                 <Code>business</Code>
               </Use>
@@ -940,7 +940,7 @@
               </Contact>
             </Address>
             <Website>
-              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
+              <Contact>https://www.bnl.lu</Contact>
               <Use>
                 <Code>business</Code>
               </Use>
@@ -983,7 +983,7 @@
               </Contact>
             </Address>
             <Website>
-              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
+              <Contact>https://www.europarl.europa.eu</Contact>
               <Use>
                 <Code>business</Code>
               </Use>
@@ -1021,7 +1021,7 @@
               </Contact>
             </Address>
             <Website>
-              <Contact>https://www.linkedin.com/company/sogeti-luxembourg/</Contact>
+              <Contact>https://www.bnl.lu</Contact>
               <Use>
                 <Code>business</Code>
               </Use>
@@ -1065,7 +1065,7 @@
               </Contact>
             </Address>
             <Website>
-              <Contact>https://www.linkedin.com/company/sogeti/</Contact>
+              <Contact>https://www.europarl.europa.eu</Contact>
               <Use>
                 <Code>business</Code>
               </Use>
@@ -1102,7 +1102,7 @@
               </Contact>
             </Address>
             <Website>
-              <Contact>https://www.linkedin.com/company/sogeti/</Contact>
+              <Contact>https://curia.europa.eu</Contact>
               <Use>
                 <Code>business</Code>
               </Use>
@@ -1140,7 +1140,7 @@
               </Contact>
             </Address>
             <Website>
-              <Contact>https://www.linkedin.com/company/sogeti/</Contact>
+              <Contact>https://curia.europa.eu</Contact>
               <Use>
                 <Code>business</Code>
               </Use>
@@ -1181,7 +1181,7 @@
               </Contact>
             </Address>
             <Website>
-              <Contact>https://www.linkedin.com/company/sogeti/</Contact>
+              <Contact>https://curia.europa.eu</Contact>
               <Use>
                 <Code>business</Code>
               </Use>
@@ -1222,7 +1222,7 @@
               </Contact>
             </Address>
             <Website>
-              <Contact>https://www.linkedin.com/company/sogeti/</Contact>
+              <Contact>https://curia.europa.eu</Contact>
               <Use>
                 <Code>business</Code>
               </Use>
@@ -1262,7 +1262,7 @@
               </Contact>
             </Address>
             <Website>
-              <Contact>https://www.linkedin.com/company/sogeti/</Contact>
+              <Contact>https://curia.europa.eu</Contact>
               <Use>
                 <Code>business</Code>
               </Use>
@@ -1298,6 +1298,12 @@
                 </Country>
               </Contact>
             </Address>
+            <Website>
+              <Contact>https://www.quaternove.com</Contact>
+              <Use>
+                <Code>business</Code>
+              </Use>
+            </Website>
           </ContactInfo>
         </Employer>
       </WorkExperience>
