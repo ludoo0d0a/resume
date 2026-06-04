@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { jsonResumeToEuropassXml } from './europass-xml.js';
+import { fetchPhotoFromUrl } from './europass-photo.js';
 import { SUPPORTED_LANGS, pathsForLang, normalizeLang } from './lang-paths.js';
 import { exportWithResumeCli } from './resume-cli.js';
 
@@ -60,11 +61,28 @@ async function loadThemeRender() {
   return render;
 }
 
-function buildEuropassXml(resume, paths) {
+async function resolveEuropassPhotoData(resume, options = {}) {
+  if (options.photoData !== undefined) return options.photoData;
+  if (options.fetchPhoto === false) return null;
+  const url = resume.basics && resume.basics.image;
+  if (!url) return null;
+  const photoData = await fetchPhotoFromUrl(url, options);
+  if (!photoData) {
+    console.warn(`Europass photo: could not fetch ${url}`);
+  }
+  return photoData;
+}
+
+async function buildEuropassXml(resume, paths, options = {}) {
+  const photoData = await resolveEuropassPhotoData(resume, options);
   return jsonResumeToEuropassXml(resume, {
     language: paths.lang,
     locale: paths.locale,
     xmlLocale: paths.xmlLocale,
+    photoData,
+    signatureData: options.signatureData,
+    printingPreferences: options.printingPreferences,
+    printingFields: options.printingFields,
   });
 }
 
@@ -111,7 +129,7 @@ async function requestEuropassPdf(xml, lang, restUrl) {
 async function writeEuropassPdf(root, lang, resume, resumePath, xml, options = {}) {
   const paths = pathsForLang(lang);
   const outputPath = path.join(root, paths.europassPdf);
-  const europassXml = xml || buildEuropassXml(resume, paths);
+  const europassXml = xml || (await buildEuropassXml(resume, paths, options));
 
   if (!xml && options.writeXml !== false) {
     const xmlOutputPath = path.join(root, paths.europassXml);
@@ -167,7 +185,7 @@ async function buildForLang(root, lang, options = {}, render) {
   }
 
   if (targets.has('europass-xml')) {
-    europassXml = buildEuropassXml(resume, paths);
+    europassXml = await buildEuropassXml(resume, paths, options);
     writeFile(path.join(root, paths.europassXml), europassXml);
     console.log(`Wrote Europass XML (${lang}): ${paths.europassXml}`);
   }

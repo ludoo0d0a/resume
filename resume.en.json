@@ -850,6 +850,38 @@
     "theme": "ludoo",
     "languages": "en,fr",
     "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json",
+    "europass": {
+      "demographics": {
+        "nationalities": [
+          {
+            "code": "FR",
+            "label": "French"
+          }
+        ]
+      },
+      "driving": [
+        "B"
+      ],
+      "ict": {
+        "Information": "C",
+        "Communication": "C",
+        "ContentCreation": "B",
+        "Safety": "B",
+        "ProblemSolving": "C"
+      },
+      "externalDocumentation": [
+        {
+          "href": "https://ludoo0d0a.github.io/resume/",
+          "description": "Online CV (HTML/PDF, EN/FR)"
+        },
+        {
+          "href": "https://github.com/ludoo0d0a/resume",
+          "description": "JSON Resume source repository"
+        }
+      ],
+      "communication": "Technical presentations, client workshops, mentoring developers, and cross-cultural collaboration in European institutions.",
+      "organisational": "Engineering manager: team leadership, career follow-up, training and missions for 10+ collaborators; participation in Luxembourg agency decisions at SFEIR."
+    },
     "locale": "en-US"
   },
   "interests": [

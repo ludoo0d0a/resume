@@ -126,6 +126,68 @@ const DEFAULT_ECV_PRINTING_FIELDS = [
   },
 ];
 
+const WEBSITE_USE_BY_NETWORK = {
+  linkedin: 'portfolio',
+  github: 'portfolio',
+  twitter: 'personal',
+  x: 'personal',
+  blog: 'blog',
+  portfolio: 'portfolio',
+};
+
+const INSTANT_MESSAGING_BY_NETWORK = {
+  skype: 'skype',
+  gtalk: 'gtalk',
+  icq: 'icq',
+  aim: 'aim',
+  msn: 'msn',
+  yahoo: 'yahoo',
+};
+
+const ACHIEVEMENT_TYPE_LABELS = {
+  en: {
+    honors_awards: 'Honours and awards',
+    presentations: 'Presentations',
+    publications: 'Publications',
+    projects: 'Projects',
+    citations: 'Citations',
+    memberships: 'Memberships',
+    conferences: 'Conferences',
+    seminars: 'Seminars',
+    workshops: 'Workshops',
+    references: 'References',
+    courses: 'Courses',
+    certifications: 'Certificates',
+  },
+  fr: {
+    honors_awards: 'Distinctions',
+    presentations: 'Présentations',
+    publications: 'Publications',
+    projects: 'Projets',
+    citations: 'Citations',
+    memberships: 'Adhésions',
+    conferences: 'Conférences',
+    seminars: 'Séminaires',
+    workshops: 'Ateliers',
+    references: 'Références',
+    courses: 'Cours',
+    certifications: 'Certificats',
+  },
+};
+
+const SKILL_CATEGORY_TO_EUROPASS = {
+  frontend: 'jobRelated',
+  backend: 'jobRelated',
+  cloud: 'jobRelated',
+  'ci/cd': 'jobRelated',
+  mobile: 'jobRelated',
+  communication: 'communication',
+  organisational: 'organisational',
+  organization: 'organisational',
+  driving: 'driving',
+  other: 'other',
+};
+
 function normalizeCountryCode(code) {
   const upper = String(code || '').toUpperCase();
   return COUNTRY_ALIASES[upper] || upper;
@@ -264,6 +326,26 @@ function resolvePrintingFields(resume, options) {
   return fields;
 }
 
+function achievementTypeLabel(code, localeLang) {
+  const labels = ACHIEVEMENT_TYPE_LABELS[localeLang] || ACHIEVEMENT_TYPE_LABELS.en;
+  return labels[code] || code;
+}
+
+function websiteUseForNetwork(network) {
+  const key = String(network || '').toLowerCase();
+  return WEBSITE_USE_BY_NETWORK[key] || 'personal';
+}
+
+function instantMessagingUseForNetwork(network) {
+  const key = String(network || '').toLowerCase();
+  return INSTANT_MESSAGING_BY_NETWORK[key] || null;
+}
+
+function europassSkillBucket(skillName) {
+  const key = String(skillName || '').toLowerCase();
+  return SKILL_CATEGORY_TO_EUROPASS[key] || 'jobRelated';
+}
+
 export {
   CEF_SKILLS,
   CEF_LEVELS,
@@ -271,6 +353,9 @@ export {
   COUNTRY_LABELS,
   ISO_LANGUAGES,
   DEFAULT_ECV_PRINTING_FIELDS,
+  ACHIEVEMENT_TYPE_LABELS,
+  WEBSITE_USE_BY_NETWORK,
+  SKILL_CATEGORY_TO_EUROPASS,
   normalizeCountryCode,
   countryLabel,
   resolveIsoLanguage,
@@ -280,4 +365,8 @@ export {
   isMotherTongue,
   printingPreferencesEnabled,
   resolvePrintingFields,
+  achievementTypeLabel,
+  websiteUseForNetwork,
+  instantMessagingUseForNetwork,
+  europassSkillBucket,
 };

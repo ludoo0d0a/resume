@@ -12,8 +12,20 @@ body {
 
 .ep-header {
   border-bottom: 3px solid #003399;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
   padding-bottom: 0.6rem;
+}
+
+.ep-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.ep-brand-block {
+  flex: 1;
+  min-width: 0;
 }
 
 .ep-brand {
@@ -29,10 +41,22 @@ body {
   margin-top: 0.15rem;
 }
 
+.ep-photo {
+  width: 90px;
+  height: 110px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  flex-shrink: 0;
+}
+
+.ep-identity {
+  margin-top: 0.6rem;
+}
+
 .ep-name {
   font-size: 16pt;
   font-weight: bold;
-  margin: 0.8rem 0 0.2rem;
+  margin: 0 0 0.2rem;
 }
 
 .ep-label {
@@ -52,6 +76,13 @@ body {
   font-weight: bold;
   padding: 0.25rem 0.5rem;
   margin: 0 0 0.5rem;
+}
+
+.ep-subsection-title {
+  font-size: 10pt;
+  font-weight: bold;
+  color: #003399;
+  margin: 0.5rem 0 0.25rem;
 }
 
 .ep-entry {
@@ -79,6 +110,11 @@ body {
   font-style: italic;
 }
 
+.ep-entry-meta a {
+  color: #003399;
+  text-decoration: none;
+}
+
 .ep-entry-dates {
   flex-shrink: 0;
   font-style: italic;
@@ -89,14 +125,26 @@ body {
 
 .ep-entry-body {
   margin: 0.35rem 0 0;
+  white-space: pre-line;
 }
 
 .ep-summary {
   margin-bottom: 0.8rem;
+  white-space: pre-line;
 }
 
-.ep-contact p {
+.ep-contact-line {
   margin: 0.15rem 0;
+}
+
+.ep-contact-line span + span::before {
+  content: ' | ';
+  color: #666;
+}
+
+.ep-profile-links span + span::before {
+  content: ' · ';
+  color: #666;
 }
 
 .ep-skills-list,
@@ -110,7 +158,42 @@ body {
   margin-bottom: 0.2rem;
 }
 
+.ep-skill-text {
+  margin: 0.15rem 0 0.5rem;
+  white-space: pre-line;
+}
+
 .ep-highlights {
   margin: 0.3rem 0 0;
   padding-left: 1.2rem;
+}
+
+.ep-cefr-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 9pt;
+  margin-top: 0.35rem;
+}
+
+.ep-cefr-table th,
+.ep-cefr-table td {
+  border: 1px solid #bbb;
+  padding: 0.2rem 0.35rem;
+  text-align: center;
+}
+
+.ep-cefr-table th {
+  background: #e8eef7;
+  color: #003399;
+  font-weight: bold;
+}
+
+.ep-cefr-table .ep-lang-name {
+  text-align: left;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.ep-reference .ep-entry-body {
+  font-style: italic;
 }

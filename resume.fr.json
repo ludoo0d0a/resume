@@ -850,6 +850,38 @@
     "theme": "ludoo",
     "languages": "en,fr",
     "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json",
+    "europass": {
+      "demographics": {
+        "nationalities": [
+          {
+            "code": "FR",
+            "label": "Française"
+          }
+        ]
+      },
+      "driving": [
+        "B"
+      ],
+      "ict": {
+        "Information": "C",
+        "Communication": "C",
+        "ContentCreation": "B",
+        "Safety": "B",
+        "ProblemSolving": "C"
+      },
+      "externalDocumentation": [
+        {
+          "href": "https://ludoo0d0a.github.io/resume/",
+          "description": "Online CV (HTML/PDF, EN/FR)"
+        },
+        {
+          "href": "https://github.com/ludoo0d0a/resume",
+          "description": "JSON Resume source repository"
+        }
+      ],
+      "communication": "Présentations techniques, ateliers clients, mentorat de développeurs et collaboration multiculturelle au sein d'institutions européennes.",
+      "organisational": "Engineering manager : encadrement d'équipe, suivi de carrière, formation et missions pour 10+ collaborateurs ; participation aux décisions de l'agence Luxembourg chez SFEIR."
+    },
     "locale": "fr-FR"
   },
   "interests": [
