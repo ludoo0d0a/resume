@@ -2,8 +2,8 @@
 <SkillsPassport xmlns="http://europass.cedefop.europa.eu/Europass" locale="fr" xsi:schemaLocation="http://europass.cedefop.europa.eu/Europass http://europass.cedefop.europa.eu/xml/v3.4.0/EuropassSchema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <DocumentInfo>
     <DocumentType>ECV</DocumentType>
-    <CreationDate>2026-06-04T17:20:42.882Z</CreationDate>
-    <LastUpdateDate>2026-06-04T17:20:42.882Z</LastUpdateDate>
+    <CreationDate>2026-06-04T17:32:09.719Z</CreationDate>
+    <LastUpdateDate>2026-06-04T17:32:09.719Z</LastUpdateDate>
     <XSDVersion>V3.4</XSDVersion>
     <Generator>jsonresume-theme-ludoo</Generator>
     <EuropassLogo>true</EuropassLogo>
@@ -1366,14 +1366,14 @@
         Backend: Node, Java, Spring, SpringBoot, Solr, ElasticSearch, Python, Kotlin, scala, Postgres, Redis, Serverless, Keycloak, Kafka, Microservices, REST, SOA, JHipster, Hibernate, XSL/XSLT, MongoDb, Oracle, PostgreSQL
         Cloud: AWS, Azure / AKS, Google Cloud / GCP, Netlify, kubernetes
         CI/CD: Github actions, argoCD, Jenkins
-        Mobile: Flutter, iOs / Swift / ObjectiveC, Android / Kotlin / Jetpack compose / KMP, Ionic Framework, Gradle</Description>
+        Mobile: Flutter, iOs / Swift / ObjectiveC, Android / Kotlin / Jetpack compose / KMP, Ionic Framework, Capacitor, Gradle</Description>
       </JobRelated>
       <Computer>
         <Description>Frontend: HTML / JSX, SCSS / CSS / Styled Components / Material, Javascript / Typescript, React, Angular, VueJs, Sencha ExtJs, Backbone.js, Webpack, Redux, Chrome Extensions, GruntJS, GreaseMonkey, Figma
         Backend: Node, Java, Spring, SpringBoot, Solr, ElasticSearch, Python, Kotlin, scala, Postgres, Redis, Serverless, Keycloak, Kafka, Microservices, REST, SOA, JHipster, Hibernate, XSL/XSLT, MongoDb, Oracle, PostgreSQL
         Cloud: AWS, Azure / AKS, Google Cloud / GCP, Netlify, kubernetes
         CI/CD: Github actions, argoCD, Jenkins
-        Mobile: Flutter, iOs / Swift / ObjectiveC, Android / Kotlin / Jetpack compose / KMP, Ionic Framework, Gradle</Description>
+        Mobile: Flutter, iOs / Swift / ObjectiveC, Android / Kotlin / Jetpack compose / KMP, Ionic Framework, Capacitor, Gradle</Description>
         <ProficiencyLevel>
           <Information>C</Information>
           <Communication>C</Communication>
