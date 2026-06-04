@@ -1004,24 +1004,28 @@ a:hover {
     align-items: flex-start;
   }
 
-  .work-era__role-dates,
-  .work-era__mission-dates {
+  .work-era__role-dates {
     white-space: normal;
     text-align: left;
   }
 
   .work-era__mission-summary {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "logo dates"
+      "logo client"
+      "logo role";
     gap: 0.2rem 0.5rem;
+    align-items: start;
   }
 
   .work-era__mission-summary .company-logo--mission {
-    grid-row: 1 / span 2;
+    align-self: start;
   }
 
   .work-era__mission-dates {
-    grid-column: 1 / -1;
-    grid-row: auto;
+    white-space: normal;
   }
 
   .work-era__mission-body {
@@ -1399,17 +1403,19 @@ a:hover {
 
 .work-era__mission-summary {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   grid-template-rows: auto auto;
-  gap: 0.15rem 0.65rem 1rem;
-  align-items: baseline;
+  grid-template-areas:
+    "logo client dates"
+    "logo role   dates";
+  gap: 0.15rem 0.65rem;
+  align-items: start;
   cursor: pointer;
   list-style: none;
 }
 
 .work-era__mission-summary .company-logo--mission {
-  grid-column: 1;
-  grid-row: 1 / span 2;
+  grid-area: logo;
   align-self: center;
 }
 
@@ -2495,24 +2501,28 @@ a:hover {
     align-items: flex-start;
   }
 
-  .work-era__role-dates,
-  .work-era__mission-dates {
+  .work-era__role-dates {
     white-space: normal;
     text-align: left;
   }
 
   .work-era__mission-summary {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "logo dates"
+      "logo client"
+      "logo role";
     gap: 0.2rem 0.5rem;
+    align-items: start;
   }
 
   .work-era__mission-summary .company-logo--mission {
-    grid-row: 1 / span 2;
+    align-self: start;
   }
 
   .work-era__mission-dates {
-    grid-column: 1 / -1;
-    grid-row: auto;
+    white-space: normal;
   }
 
   .work-era__mission-body {
@@ -2890,17 +2900,19 @@ a:hover {
 
 .work-era__mission-summary {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   grid-template-rows: auto auto;
-  gap: 0.15rem 0.65rem 1rem;
-  align-items: baseline;
+  grid-template-areas:
+    "logo client dates"
+    "logo role   dates";
+  gap: 0.15rem 0.65rem;
+  align-items: start;
   cursor: pointer;
   list-style: none;
 }
 
 .work-era__mission-summary .company-logo--mission {
-  grid-column: 1;
-  grid-row: 1 / span 2;
+  grid-area: logo;
   align-self: center;
 }
 
@@ -3255,11 +3267,11 @@ Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js,
                         <li class="work-era__mission">
                           <details class="work-era__mission-details" open>
                             <summary class="work-era__mission-summary">
-                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;bil.com&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <span class="work-era__mission-client">
+                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;bil.com&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <time class="work-era__mission-dates">Nov 2025 — Present</time>
+                              <span class="work-era__mission-client">
                                 <a href="https://www.bil.com" rel="noopener noreferrer">Banque Internationale à Luxembourg</a>
                               </span>
                               <span class="work-era__mission-role">Software Architect</span>
-                              <time class="work-era__mission-dates">Nov 2025 — Present</time>
                             </summary>
                             <div class="work-era__mission-body">
                               <p class="work-era__mission-loc">Luxembourg, Luxembourg</p>
@@ -3276,11 +3288,11 @@ Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js,
                         <li class="work-era__mission">
                           <details class="work-era__mission-details">
                             <summary class="work-era__mission-summary">
-                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;statec.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <span class="work-era__mission-client">
+                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;statec.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <time class="work-era__mission-dates">Nov 2025 — Dec 2025</time>
+                              <span class="work-era__mission-client">
                                 <a href="https://www.statec.lu" rel="noopener noreferrer">STATEC</a>
                               </span>
                               <span class="work-era__mission-role">Android Mobile Developer</span>
-                              <time class="work-era__mission-dates">Nov 2025 — Dec 2025</time>
                             </summary>
                             <div class="work-era__mission-body">
                               <p class="work-era__mission-loc">Luxembourg</p>
@@ -3294,11 +3306,11 @@ Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js,
                         <li class="work-era__mission">
                           <details class="work-era__mission-details">
                             <summary class="work-era__mission-summary">
-                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;societegenerale.com&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <span class="work-era__mission-client">
+                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;societegenerale.com&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <time class="work-era__mission-dates">Feb 2025 — Sep 2025</time>
+                              <span class="work-era__mission-client">
                                 <a href="https://www.societegenerale.com" rel="noopener noreferrer">Société Générale</a>
                               </span>
                               <span class="work-era__mission-role">Tech lead</span>
-                              <time class="work-era__mission-dates">Feb 2025 — Sep 2025</time>
                             </summary>
                             <div class="work-era__mission-body">
                               <p class="work-era__mission-loc">Belval, Luxembourg</p>
@@ -3315,11 +3327,11 @@ Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js,
                         <li class="work-era__mission">
                           <details class="work-era__mission-details">
                             <summary class="work-era__mission-summary">
-                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;temenos.com&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <span class="work-era__mission-client">
+                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;temenos.com&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <time class="work-era__mission-dates">Jul 2024 — Dec 2024</time>
+                              <span class="work-era__mission-client">
                                 <a href="https://www.temenos.com" rel="noopener noreferrer">Temenos</a>
                               </span>
                               <span class="work-era__mission-role">Senior Software Developer</span>
-                              <time class="work-era__mission-dates">Jul 2024 — Dec 2024</time>
                             </summary>
                             <div class="work-era__mission-body">
                               <p class="work-era__mission-loc">Bertrange, Luxembourg</p>
@@ -3333,11 +3345,11 @@ Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js,
                         <li class="work-era__mission">
                           <details class="work-era__mission-details">
                             <summary class="work-era__mission-summary">
-                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;foyer.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <span class="work-era__mission-client">
+                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;foyer.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <time class="work-era__mission-dates">Feb 2023 — Jun 2024</time>
+                              <span class="work-era__mission-client">
                                 <a href="https://www.foyer.lu" rel="noopener noreferrer">Foyer</a>
                               </span>
                               <span class="work-era__mission-role">Architect, Expert leader</span>
-                              <time class="work-era__mission-dates">Feb 2023 — Jun 2024</time>
                             </summary>
                             <div class="work-era__mission-body">
                               <p class="work-era__mission-loc">Leudelange, Luxembourg</p>
@@ -3356,11 +3368,11 @@ Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js,
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;luxse.com&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;luxse.com&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <time class="work-era__mission-dates">Jan 2021 — Oct 2021</time>
+                                <span class="work-era__mission-client">
                                   <a href="https://www.luxse.com" rel="noopener noreferrer">Luxembourg Stock Exchange</a>
                                 </span>
                                 <span class="work-era__mission-role">Senior Software Developer</span>
-                                <time class="work-era__mission-dates">Jan 2021 — Oct 2021</time>
                               </summary>
                               <div class="work-era__mission-body">
                                 <p class="work-era__mission-loc">Luxembourg</p>
@@ -3379,11 +3391,11 @@ Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js,
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;fundsquare.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;fundsquare.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <time class="work-era__mission-dates">Aug 2017 — Feb 2023</time>
+                                <span class="work-era__mission-client">
                                   <a href="https://www.fundsquare.lu" rel="noopener noreferrer">Fundsquare</a>
                                 </span>
                                 <span class="work-era__mission-role">Ingenieur développement fullstack</span>
-                                <time class="work-era__mission-dates">Aug 2017 — Feb 2023</time>
                               </summary>
                               <div class="work-era__mission-body">
                                 <p class="work-era__mission-loc">Luxembourg</p>
@@ -3447,11 +3459,11 @@ Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js,
                         <li class="work-era__mission">
                           <details class="work-era__mission-details">
                             <summary class="work-era__mission-summary">
-                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;europarl.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <span class="work-era__mission-client">
+                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;europarl.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <time class="work-era__mission-dates">Jun 2017 — Aug 2017</time>
+                              <span class="work-era__mission-client">
                                 <a href="https://www.europarl.europa.eu" rel="noopener noreferrer">European Parliament</a>
                               </span>
                               <span class="work-era__mission-role">Fullstack software engineer</span>
-                              <time class="work-era__mission-dates">Jun 2017 — Aug 2017</time>
                             </summary>
                             <div class="work-era__mission-body">
                               <p class="work-era__mission-loc">Bertrange, Luxembourg</p>
@@ -3473,11 +3485,11 @@ Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js,
                         <li class="work-era__mission">
                           <details class="work-era__mission-details">
                             <summary class="work-era__mission-summary">
-                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;europarl.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <span class="work-era__mission-client">
+                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;europarl.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <time class="work-era__mission-dates">Jan 2017 — Jun 2017</time>
+                              <span class="work-era__mission-client">
                                 <a href="https://www.europarl.europa.eu" rel="noopener noreferrer">European Parliament</a>
                               </span>
                               <span class="work-era__mission-role">Fullstack software engineer</span>
-                              <time class="work-era__mission-dates">Jan 2017 — Jun 2017</time>
                             </summary>
                             <div class="work-era__mission-body">
                               <p class="work-era__mission-loc">Luxembourg</p>
@@ -3495,11 +3507,11 @@ Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js,
                         <li class="work-era__mission">
                           <details class="work-era__mission-details">
                             <summary class="work-era__mission-summary">
-                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;europarl.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <span class="work-era__mission-client">
+                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;europarl.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <time class="work-era__mission-dates">Jun 2016 — Dec 2016</time>
+                              <span class="work-era__mission-client">
                                 <a href="https://www.europarl.europa.eu" rel="noopener noreferrer">European Parliament</a>
                               </span>
                               <span class="work-era__mission-role">Fullstack software engineer</span>
-                              <time class="work-era__mission-dates">Jun 2016 — Dec 2016</time>
                             </summary>
                             <div class="work-era__mission-body">
                               <p class="work-era__mission-loc">Luxembourg</p>
@@ -3516,11 +3528,11 @@ Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js,
                         <li class="work-era__mission">
                           <details class="work-era__mission-details">
                             <summary class="work-era__mission-summary">
-                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;europarl.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <span class="work-era__mission-client">
+                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;europarl.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <time class="work-era__mission-dates">Jan 2016 — Jun 2016</time>
+                              <span class="work-era__mission-client">
                                 <a href="https://www.europarl.europa.eu" rel="noopener noreferrer">European Parliament</a>
                               </span>
                               <span class="work-era__mission-role">Fullstack software engineer</span>
-                              <time class="work-era__mission-dates">Jan 2016 — Jun 2016</time>
                             </summary>
                             <div class="work-era__mission-body">
                               
@@ -3537,11 +3549,11 @@ Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js,
                         <li class="work-era__mission">
                           <details class="work-era__mission-details">
                             <summary class="work-era__mission-summary">
-                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;europarl.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <span class="work-era__mission-client">
+                              <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;europarl.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                <time class="work-era__mission-dates">Oct 2014 — Dec 2015</time>
+                              <span class="work-era__mission-client">
                                 <a href="https://www.europarl.europa.eu" rel="noopener noreferrer">European Parliament</a>
                               </span>
                               <span class="work-era__mission-role">Web/Java developer</span>
-                              <time class="work-era__mission-dates">Oct 2014 — Dec 2015</time>
                             </summary>
                             <div class="work-era__mission-body">
                               <p class="work-era__mission-loc">Luxembourg</p>
@@ -3563,11 +3575,11 @@ Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js,
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;bnl.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;bnl.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <time class="work-era__mission-dates">Mar 2014 — Sep 2014</time>
+                                <span class="work-era__mission-client">
                                   <a href="https://www.bnl.lu" rel="noopener noreferrer">BNL - Bibliothèque Nationale du Luxembourg</a>
                                 </span>
                                 <span class="work-era__mission-role">IT Consultant</span>
-                                <time class="work-era__mission-dates">Mar 2014 — Sep 2014</time>
                               </summary>
                               <div class="work-era__mission-body">
                                 <p class="work-era__mission-loc">Luxembourg</p>
@@ -3587,11 +3599,11 @@ Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js,
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;statec.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;statec.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <time class="work-era__mission-dates">Oct 2013 — Mar 2014</time>
+                                <span class="work-era__mission-client">
                                   <a href="https://www.statec.lu" rel="noopener noreferrer">STATEC</a>
                                 </span>
                                 <span class="work-era__mission-role">Android Mobile Developer</span>
-                                <time class="work-era__mission-dates">Oct 2013 — Mar 2014</time>
                               </summary>
                               <div class="work-era__mission-body">
                                 <p class="work-era__mission-loc">Luxembourg</p>
@@ -3609,11 +3621,11 @@ Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js,
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;editus.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;editus.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <time class="work-era__mission-dates">Jun 2013 — Jul 2013</time>
+                                <span class="work-era__mission-client">
                                   <a href="https://www.editus.lu" rel="noopener noreferrer">Editus Luxembourg</a>
                                 </span>
                                 <span class="work-era__mission-role">Mobile developer - iOS</span>
-                                <time class="work-era__mission-dates">Jun 2013 — Jul 2013</time>
                               </summary>
                               <div class="work-era__mission-body">
                                 
@@ -3630,11 +3642,11 @@ Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js,
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;bnl.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;bnl.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <time class="work-era__mission-dates">Mar 2013 — Jun 2013</time>
+                                <span class="work-era__mission-client">
                                   <a href="https://www.bnl.lu" rel="noopener noreferrer">BNL - Bibliothèque nationale du Luxembourg</a>
                                 </span>
                                 <span class="work-era__mission-role">Développeur - architecte Web/Java</span>
-                                <time class="work-era__mission-dates">Mar 2013 — Jun 2013</time>
                               </summary>
                               <div class="work-era__mission-body">
                                 <p class="work-era__mission-loc">Luxembourg</p>
@@ -3656,11 +3668,11 @@ Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js,
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;sgbdt.com&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;sgbdt.com&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <time class="work-era__mission-dates">Nov 2012 — Feb 2013</time>
+                                <span class="work-era__mission-client">
                                   <a href="https://www.sgbdt.com" rel="noopener noreferrer">Société Générale Bank &amp; Trust</a>
                                 </span>
                                 <span class="work-era__mission-role">Web/Java developer</span>
-                                <time class="work-era__mission-dates">Nov 2012 — Feb 2013</time>
                               </summary>
                               <div class="work-era__mission-body">
                                 <p class="work-era__mission-loc">Luxembourg / Monaco</p>
@@ -3683,11 +3695,11 @@ Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js,
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;bnl.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;bnl.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <time class="work-era__mission-dates">Jan 2012 — May 2012</time>
+                                <span class="work-era__mission-client">
                                   <a href="https://www.bnl.lu" rel="noopener noreferrer">BNL - Bibliothèque nationale du Luxembourg</a>
                                 </span>
                                 <span class="work-era__mission-role">Web/Java developer</span>
-                                <time class="work-era__mission-dates">Jan 2012 — May 2012</time>
                               </summary>
                               <div class="work-era__mission-body">
                                 
@@ -3700,11 +3712,11 @@ Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js,
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;bnl.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;bnl.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <time class="work-era__mission-dates">Nov 2011 — Dec 2011</time>
+                                <span class="work-era__mission-client">
                                   <a href="https://www.bnl.lu" rel="noopener noreferrer">BNL - Bibliothèque nationale du Luxembourg</a>
                                 </span>
                                 <span class="work-era__mission-role">Software engineer</span>
-                                <time class="work-era__mission-dates">Nov 2011 — Dec 2011</time>
                               </summary>
                               <div class="work-era__mission-body">
                                 <p class="work-era__mission-loc">luxembourg</p>
@@ -3727,11 +3739,11 @@ Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js,
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;europarl.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;europarl.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <time class="work-era__mission-dates">May 2010 — Dec 2011</time>
+                                <span class="work-era__mission-client">
                                   <a href="https://www.europarl.europa.eu" rel="noopener noreferrer">European Parliament</a>
                                 </span>
                                 <span class="work-era__mission-role">Consultant</span>
-                                <time class="work-era__mission-dates">May 2010 — Dec 2011</time>
                               </summary>
                               <div class="work-era__mission-body">
                                 <p class="work-era__mission-loc">Luxembourg</p>
@@ -3750,11 +3762,11 @@ Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js,
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;bnl.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;bnl.lu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <time class="work-era__mission-dates">Aug 2009 — May 2010</time>
+                                <span class="work-era__mission-client">
                                   <a href="https://www.bnl.lu" rel="noopener noreferrer">BNL - Bibliothèque nationale du Luxembourg</a>
                                 </span>
                                 <span class="work-era__mission-role">Software engineer</span>
-                                <time class="work-era__mission-dates">Aug 2009 — May 2010</time>
                               </summary>
                               <div class="work-era__mission-body">
                                 
@@ -3770,11 +3782,11 @@ Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js,
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;europarl.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;europarl.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <time class="work-era__mission-dates">Sep 2007 — Jul 2009</time>
+                                <span class="work-era__mission-client">
                                   <a href="https://www.europarl.europa.eu" rel="noopener noreferrer">European Parliament</a>
                                 </span>
                                 <span class="work-era__mission-role">Senior Software Engineer - J2EE, XML, DMS/CMS, ExtJs specialist</span>
-                                <time class="work-era__mission-dates">Sep 2007 — Jul 2009</time>
                               </summary>
                               <div class="work-era__mission-body">
                                 
@@ -3794,11 +3806,11 @@ Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js,
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;curia.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;curia.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <time class="work-era__mission-dates">Sep 2006 — Aug 2007</time>
+                                <span class="work-era__mission-client">
                                   <a href="https://curia.europa.eu" rel="noopener noreferrer">European Court of Justice</a>
                                 </span>
                                 <span class="work-era__mission-role">IT architect</span>
-                                <time class="work-era__mission-dates">Sep 2006 — Aug 2007</time>
                               </summary>
                               <div class="work-era__mission-body">
                                 
@@ -3813,11 +3825,11 @@ Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js,
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;curia.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;curia.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <time class="work-era__mission-dates">Jan 2006 — Aug 2007</time>
+                                <span class="work-era__mission-client">
                                   <a href="https://curia.europa.eu" rel="noopener noreferrer">European Court of Justice</a>
                                 </span>
                                 <span class="work-era__mission-role">Software analyst developer</span>
-                                <time class="work-era__mission-dates">Jan 2006 — Aug 2007</time>
                               </summary>
                               <div class="work-era__mission-body">
                                 
@@ -3832,11 +3844,11 @@ Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js,
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;curia.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;curia.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <time class="work-era__mission-dates">Jan 2006 — Feb 2006</time>
+                                <span class="work-era__mission-client">
                                   <a href="https://curia.europa.eu" rel="noopener noreferrer">European Court of Justice</a>
                                 </span>
                                 <span class="work-era__mission-role">Software analyst developer</span>
-                                <time class="work-era__mission-dates">Jan 2006 — Feb 2006</time>
                               </summary>
                               <div class="work-era__mission-body">
                                 
@@ -3852,11 +3864,11 @@ Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js,
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;curia.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;curia.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <time class="work-era__mission-dates">Aug 2005 — Feb 2006</time>
+                                <span class="work-era__mission-client">
                                   <a href="https://curia.europa.eu" rel="noopener noreferrer">European Court of Justice</a>
                                 </span>
                                 <span class="work-era__mission-role">Software analyst developer</span>
-                                <time class="work-era__mission-dates">Aug 2005 — Feb 2006</time>
                               </summary>
                               <div class="work-era__mission-body">
                                 
@@ -3872,11 +3884,11 @@ Main/favorite skills: Java, SpringBoot, Android, ElasticSearch, Node.js, Vue.js,
                           <li class="work-era__mission">
                             <details class="work-era__mission-details">
                               <summary class="work-era__mission-summary">
-                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;curia.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <span class="work-era__mission-client">
+                                <img class="company-logo company-logo--mission" src="https://www.google.com/s2/favicons?domain&#x3D;curia.europa.eu&amp;sz&#x3D;64" alt="" width="24" height="24" loading="lazy" decoding="async"/>                  <time class="work-era__mission-dates">Sep 2001 — Sep 2004</time>
+                                <span class="work-era__mission-client">
                                   <a href="https://curia.europa.eu" rel="noopener noreferrer">European Court of Justice</a>
                                 </span>
                                 <span class="work-era__mission-role">Software analyst developer</span>
-                                <time class="work-era__mission-dates">Sep 2001 — Sep 2004</time>
                               </summary>
                               <div class="work-era__mission-body">
                                 
