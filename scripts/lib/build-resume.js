@@ -1,4 +1,5 @@
 import fs from 'fs';
+import os from 'os';
 import path from 'path';
 import { jsonResumeToEuropassXml } from './europass-xml.js';
 import { fetchPhotoFromUrl } from './europass-photo.js';
@@ -40,6 +41,19 @@ function ensureParentDir(filePath) {
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
 }
 
+function copySiteAssets(root) {
+  const srcDir = path.join(root, 'assets');
+  const destDir = path.join(root, 'public', 'assets');
+  if (!fs.existsSync(srcDir)) return;
+  fs.mkdirSync(destDir, { recursive: true });
+  for (const name of fs.readdirSync(srcDir)) {
+    const src = path.join(srcDir, name);
+    if (!fs.statSync(src).isFile()) continue;
+    fs.copyFileSync(src, path.join(destDir, name));
+  }
+  console.log('Copied site assets: assets/ → public/assets/');
+}
+
 function writeFile(filePath, content) {
   ensureParentDir(filePath);
   fs.writeFileSync(filePath, content, 'utf8');
@@ -66,11 +80,52 @@ async function resolveEuropassPhotoData(resume, options = {}) {
   if (options.fetchPhoto === false) return null;
   const url = resume.basics && resume.basics.image;
   if (!url) return null;
+  if (String(url).startsWith('data:')) return null;
   const photoData = await fetchPhotoFromUrl(url, options);
   if (!photoData) {
     console.warn(`Europass photo: could not fetch ${url}`);
   }
   return photoData;
+}
+
+function withEmbeddedPhoto(resume, photoData) {
+  if (!photoData) return resume;
+  const enriched = structuredClone(resume);
+  enriched.basics = {
+    ...enriched.basics,
+    image: `data:${photoData.mimeType};base64,${photoData.base64}`,
+  };
+  return enriched;
+}
+
+function writeTempResumeFile(resume) {
+  const tmpPath = path.join(
+    os.tmpdir(),
+    `resume-europass-${process.pid}-${Date.now()}.json`,
+  );
+  fs.writeFileSync(tmpPath, JSON.stringify(resume));
+  return tmpPath;
+}
+
+async function exportEuropassTheme(root, resume, resumePath, outputPath, format, options = {}) {
+  const photoData = await resolveEuropassPhotoData(resume, options);
+  const enriched = withEmbeddedPhoto(resume, photoData);
+  let pathToUse = resumePath;
+  let tmpPath = null;
+  if (photoData && enriched.basics.image !== resume.basics?.image) {
+    tmpPath = writeTempResumeFile(enriched);
+    pathToUse = tmpPath;
+  }
+  try {
+    exportWithResumeCli(root, {
+      resumePath: pathToUse,
+      outputPath,
+      format,
+      theme: './templates/europass',
+    });
+  } finally {
+    if (tmpPath) fs.unlinkSync(tmpPath);
+  }
 }
 
 async function buildEuropassXml(resume, paths, options = {}) {
@@ -150,7 +205,7 @@ async function writeEuropassPdf(root, lang, resume, resumePath, xml, options = {
     }
   }
 
-  exportPdf(root, resumePath, outputPath, './templates/europass');
+  await exportEuropassTheme(root, resume, resumePath, outputPath, 'pdf', options);
   console.log(`Wrote Europass-styled PDF (${lang}): ${outputPath}`);
 }
 
@@ -201,12 +256,14 @@ async function buildForLang(root, lang, options = {}, render) {
   }
 
   if (targets.has('europass-html')) {
-    exportWithResumeCli(root, {
+    await exportEuropassTheme(
+      root,
+      resume,
       resumePath,
-      outputPath: path.join(root, paths.europassHtml),
-      format: 'html',
-      theme: './templates/europass',
-    });
+      path.join(root, paths.europassHtml),
+      'html',
+      options,
+    );
     console.log(`Wrote Europass HTML (${lang}): ${paths.europassHtml}`);
   }
 
@@ -226,6 +283,10 @@ async function buildAll(root, options = {}) {
   const targets = resolveTargets(options);
   const needsRender = targets.has('html');
   const render = needsRender ? await loadThemeRender() : null;
+
+  if (needsRender) {
+    copySiteAssets(root);
+  }
 
   for (const lang of langs) {
     await buildForLang(root, lang, options, render);

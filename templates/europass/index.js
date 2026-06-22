@@ -3,33 +3,31 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import Handlebars from 'handlebars';
 import theme from './europass.template.js';
-import { buildCefProfile, resolveIsoLanguage, isMotherTongue } from '../../scripts/lib/europass-codes.js';
+import {
+  buildCefProfile,
+  countryLabel,
+  normalizeCountryCode,
+  resolveIsoLanguage,
+  isMotherTongue,
+} from '../../scripts/lib/europass-codes.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const styleCSS = fs.readFileSync(path.join(__dirname, 'europass.css'), 'utf8');
 
 const I18N = {
   'en-US': {
-    present: 'Present',
+    present: 'CURRENT',
     cv: 'Curriculum Vitae',
-    personal: 'Personal information',
-    about: 'About me',
+    about: 'About myself',
     work: 'Work experience',
-    education: 'Education and training',
-    skills: 'Digital skills',
+    education: 'Education & training',
+    skills: 'Skills',
     languages: 'Language skills',
     certificates: 'Certificates',
     projects: 'Projects',
     publications: 'Publications',
     references: 'References',
-    interests: 'Interests',
-    communication: 'Communication skills',
-    organisational: 'Organisational / managerial skills',
-    jobRelated: 'Job-related skills',
-    other: 'Other skills',
-    driving: 'Driving licence',
     motherTongue: 'Mother tongue(s)',
-    foreignLanguages: 'Other language(s)',
     cefUnderstanding: 'Understanding',
     cefSpeaking: 'Speaking',
     cefWriting: 'Writing',
@@ -37,28 +35,30 @@ const I18N = {
     cefReading: 'Reading',
     cefInteraction: 'Spoken interaction',
     cefProduction: 'Spoken production',
+    birthDate: 'Date of birth',
+    nationality: 'Nationality',
+    gender: 'Gender',
+    phone: 'Phone',
+    phoneMobile: 'Mobile',
+    email: 'Email address',
+    address: 'Address',
+    website: 'Website',
+    male: 'Male',
+    female: 'Female',
   },
   'fr-FR': {
-    present: "Aujourd'hui",
+    present: "AUJOURD'HUI",
     cv: 'Curriculum Vitae',
-    personal: 'Informations personnelles',
     about: 'À propos de moi',
     work: 'Expérience professionnelle',
     education: 'Formation',
-    skills: 'Compétences numériques',
+    skills: 'Compétences',
     languages: 'Compétences linguistiques',
     certificates: 'Certificats',
     projects: 'Projets',
     publications: 'Publications',
     references: 'Références',
-    interests: "Centres d'intérêt",
-    communication: 'Compétences en communication',
-    organisational: 'Compétences organisationnelles / managériales',
-    jobRelated: 'Compétences professionnelles',
-    other: 'Autres compétences',
-    driving: 'Permis de conduire',
     motherTongue: 'Langue(s) maternelle(s)',
-    foreignLanguages: 'Autre(s) langue(s)',
     cefUnderstanding: 'Compréhension',
     cefSpeaking: 'Expression orale',
     cefWriting: 'Expression écrite',
@@ -66,14 +66,24 @@ const I18N = {
     cefReading: 'Lecture',
     cefInteraction: 'Interaction orale',
     cefProduction: 'Production orale',
+    birthDate: 'Date de naissance',
+    nationality: 'Nationalité',
+    gender: 'Genre',
+    phone: 'Téléphone',
+    phoneMobile: 'Mobile',
+    email: 'Adresse e-mail',
+    address: 'Adresse',
+    website: 'Site web',
+    male: 'Homme',
+    female: 'Femme',
   },
 };
 
 const CEF_COLUMNS = [
   { key: 'Listening', labelKey: 'cefListening' },
   { key: 'Reading', labelKey: 'cefReading' },
-  { key: 'SpokenInteraction', labelKey: 'cefInteraction' },
   { key: 'SpokenProduction', labelKey: 'cefProduction' },
+  { key: 'SpokenInteraction', labelKey: 'cefInteraction' },
   { key: 'Writing', labelKey: 'cefWriting' },
 ];
 
@@ -92,42 +102,136 @@ function locationLine(location) {
   return parts.join(', ');
 }
 
-function educationDetail(entry) {
-  const parts = [];
-  if (entry.studyType) parts.push(entry.studyType);
-  if (entry.area) parts.push(entry.area);
-  return parts.join(' — ');
-}
-
-function keywordsText(keywords) {
-  if (!keywords || !keywords.length) return '';
-  return keywords.join(', ');
-}
-
 function parseDate(value) {
   if (!value) return null;
   const parts = String(value).split('-');
   return new Date(parts[0], (parts[1] || 1) - 1, parts[2] || 1);
 }
 
-function formatDate(value, locale) {
+function formatDateEuropass(value) {
   const date = parseDate(value);
   if (!date) return '';
-  return date.toLocaleDateString(locale, { year: 'numeric', month: 'short' });
+  const day = String(date.getDate()).padStart(2, '0');
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  return `${day}/${month}/${date.getFullYear()}`;
 }
 
-function formatDuration(startDate, endDate, locale, presentLabel) {
-  const start = parseDate(startDate);
+function formatEndDate(value, presentLabel) {
+  return value ? formatDateEuropass(value) : presentLabel;
+}
+
+function formatDateLocationLine(startDate, endDate, location, presentLabel) {
+  const start = formatDateEuropass(startDate);
   if (!start) return '';
-  const end = endDate ? parseDate(endDate) : new Date();
-  const months =
-    (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
-  const years = Math.floor(months / 12);
-  const rem = months % 12;
-  const parts = [];
-  if (years) parts.push(`${years} ${years > 1 ? 'years' : 'year'}`);
-  if (rem) parts.push(`${rem} ${rem > 1 ? 'months' : 'month'}`);
-  return parts.join(' ') || presentLabel;
+  const end = formatEndDate(endDate, presentLabel);
+  const place = String(location || '').trim().toUpperCase();
+  return place ? `${start} - ${end} - ${place}` : `${start} - ${end}`;
+}
+
+function buildEducationTitle(entry) {
+  const studyType = entry.studyType || '';
+  const area = entry.area || '';
+  if (studyType && area) return `${studyType} ${area}`;
+  return studyType || area || '';
+}
+
+function flattenSkills(resume) {
+  const items = [];
+  const seen = new Set();
+
+  for (const skill of resume.skills || []) {
+    for (const value of [skill.name, ...(skill.keywords || [])]) {
+      const text = String(value || '').trim();
+      if (!text) continue;
+      const key = text.toLowerCase();
+      if (seen.has(key)) continue;
+      seen.add(key);
+      items.push(text);
+    }
+  }
+
+  const ep = (resume.meta && resume.meta.europass) || {};
+  for (const extra of [ep.jobRelated, ep.communication, ep.organisational]) {
+    const text = String(extra || '').trim();
+    if (!text) continue;
+    for (const part of text.split(/[,;]\s*/)) {
+      const item = part.trim();
+      if (!item) continue;
+      const key = item.toLowerCase();
+      if (seen.has(key)) continue;
+      seen.add(key);
+      items.push(item);
+    }
+  }
+
+  for (const interest of resume.interests || []) {
+    const name = String(interest.name || '').trim();
+    if (name) {
+      const key = name.toLowerCase();
+      if (!seen.has(key)) {
+        seen.add(key);
+        items.push(name);
+      }
+    }
+    for (const kw of interest.keywords || []) {
+      const text = String(kw || '').trim();
+      if (!text) continue;
+      const key = text.toLowerCase();
+      if (seen.has(key)) continue;
+      seen.add(key);
+      items.push(text);
+    }
+  }
+
+  return items;
+}
+
+function preparePersonalInfo(resume, localeLang, titles) {
+  const items = [];
+  const basics = resume.basics || {};
+  const ep = (resume.meta && resume.meta.europass) || {};
+  const demo = ep.demographics || {};
+
+  const birthdate = demo.birthdate || demo.birthDate || basics.birthDate;
+  if (birthdate) {
+    items.push({ label: titles.birthDate, value: formatDateEuropass(birthdate) });
+  }
+
+  const nationalities = demo.nationalities || demo.nationalityList || [];
+  const natList = Array.isArray(nationalities) ? nationalities : nationalities ? [nationalities] : [];
+  if (natList.length) {
+    const labels = natList
+      .map((nat) => {
+        if (typeof nat === 'string') return countryLabel(normalizeCountryCode(nat), localeLang);
+        return nat.label || countryLabel(normalizeCountryCode(nat.code), localeLang);
+      })
+      .filter(Boolean);
+    if (labels.length) {
+      items.push({ label: titles.nationality, value: labels.join(', ') });
+    }
+  }
+
+  const gender = demo.gender || basics.gender;
+  if (gender) {
+    const code = String(gender).toUpperCase().startsWith('F') ? 'F' : 'M';
+    const label = demo.genderLabel || (code === 'F' ? titles.female : titles.male);
+    items.push({ label: titles.gender, value: label });
+  }
+
+  if (basics.phone) {
+    items.push({ label: titles.phone, value: basics.phone, suffix: titles.phoneMobile });
+  }
+
+  if (basics.email) {
+    items.push({ label: titles.email, value: basics.email });
+  }
+
+  const address = locationLine(basics.location);
+  if (address) {
+    items.push({ label: titles.address, value: address });
+  }
+
+  return items;
 }
 
 function prepareLanguages(resume, localeLang, titles) {
@@ -138,7 +242,7 @@ function prepareLanguages(resume, localeLang, titles) {
     const entry = resolveIsoLanguage(lang, localeLang);
     if (!entry) continue;
     const row = {
-      language: entry.label,
+      language: entry.label.toUpperCase(),
       fluency: lang.fluency || '',
       cef: buildCefProfile(lang),
       cefCells: CEF_COLUMNS.map((col) => ({
@@ -157,53 +261,54 @@ function prepareLanguages(resume, localeLang, titles) {
     foreign,
     motherBool: mother.length > 0,
     foreignBool: foreign.length > 0,
+    motherTongueLine: mother.map((row) => row.language).join(', '),
     cefColumns: CEF_COLUMNS.map((col) => ({ label: titles[col.labelKey] })),
   };
 }
 
-function prepareSkillGroups(resume) {
-  const groups = {
-    communication: [],
-    organisational: [],
-    jobRelated: [],
-    computer: [],
-    driving: [],
-    other: [],
-  };
-
-  for (const skill of resume.skills || []) {
-    const name = (skill.name || '').toLowerCase();
-    const text = keywordsText(skill.keywords) || skill.level || '';
-    const line = text ? `${skill.name}: ${text}` : skill.name;
-    if (['frontend', 'backend', 'cloud', 'ci/cd', 'mobile'].includes(name)) {
-      groups.jobRelated.push(line);
-    } else {
-      groups.computer.push(line);
-    }
+function prepareWorkEntries(work, presentLabel) {
+  for (const entry of work || []) {
+    entry.dateLocationLine = formatDateLocationLine(
+      entry.startDate,
+      entry.endDate,
+      entry.location,
+      presentLabel,
+    );
+    const position = String(entry.position || '').trim();
+    const employer = String(entry.name || '').trim();
+    entry.titleLine = [position, employer].filter(Boolean).join(' ').toUpperCase();
+    entry.boolHighlights = !!(entry.highlights && entry.highlights.length);
   }
+}
 
-  const ep = (resume.meta && resume.meta.europass) || {};
-  if (ep.communication) groups.communication.push(ep.communication);
-  if (ep.organisational) groups.organisational.push(ep.organisational);
-  if (ep.jobRelated) groups.jobRelated.push(ep.jobRelated);
-  if (ep.driving) {
-    const licences = Array.isArray(ep.driving) ? ep.driving : [ep.driving];
-    groups.driving.push(licences.join(', '));
+function prepareEducationEntries(education, presentLabel) {
+  for (const entry of education || []) {
+    const location = entry.location || '';
+    entry.dateLocationLine = formatDateLocationLine(
+      entry.startDate,
+      entry.endDate,
+      location,
+      presentLabel,
+    );
+    const title = buildEducationTitle(entry);
+    const institution = String(entry.institution || '').trim();
+    entry.titleLine = institution
+      ? `${title}${title ? '- ' : ''}${institution}`.toUpperCase()
+      : title.toUpperCase();
+    entry.boolSummary = !!entry.summary;
   }
+}
 
-  for (const interest of resume.interests || []) {
-    const kw = keywordsText(interest.keywords);
-    groups.other.push(kw ? `${interest.name}: ${kw}` : interest.name);
+function prepareProjectEntries(projects, presentLabel) {
+  for (const entry of projects || []) {
+    entry.dateLocationLine = formatDateLocationLine(
+      entry.startDate,
+      entry.endDate,
+      entry.location || '',
+      presentLabel,
+    );
+    entry.boolHighlights = !!(entry.highlights && entry.highlights.length);
   }
-
-  return {
-    jobRelated: groups.jobRelated,
-    computer: groups.computer,
-    communication: groups.communication.join('\n'),
-    organisational: groups.organisational.join('\n'),
-    driving: groups.driving.join(', '),
-    other: groups.other,
-  };
 }
 
 function render(resume) {
@@ -215,73 +320,30 @@ function render(resume) {
   resume.titles = i18n;
   resume.photoUrl = (resume.basics && resume.basics.image) || '';
 
-  function formatSection(entry) {
-    if (entry.startDate) entry.startDateText = formatDate(entry.startDate, locale);
-    entry.endDateText = entry.endDate ? formatDate(entry.endDate, locale) : i18n.present;
-    entry.duration = formatDuration(entry.startDate, entry.endDate, locale, i18n.present);
-  }
-
   if (resume.basics) {
     resume.basics.locationLine = locationLine(resume.basics.location);
-    const profiles = (resume.basics.profiles || []).filter((p) => {
-      const n = String(p.network || '').toLowerCase();
-      return p.url && !n.includes('translation') && n !== 'pdf' && n !== 'europass';
-    });
-    resume.basics.profileLinks = profiles;
   }
 
-  if (resume.work) {
-    resume.work.forEach((entry) => {
-      formatSection(entry);
-      entry.boolHighlights = !!(entry.highlights && entry.highlights.length);
-    });
-  }
+  resume.personalInfo = preparePersonalInfo(resume, lang, i18n);
+  resume.personalInfoBool = resume.personalInfo.length > 0;
 
-  if (resume.education) {
-    resume.education.forEach((entry) => {
-      formatSection(entry);
-      entry.educationDetail = educationDetail(entry);
-      entry.boolHighlights = !!(entry.highlights && entry.highlights.length);
-      entry.boolSummary = !!entry.summary;
-    });
-  }
-
-  if (resume.projects) {
-    resume.projects.forEach((entry) => {
-      formatSection(entry);
-      entry.boolHighlights = !!(entry.highlights && entry.highlights.length);
-    });
-  }
-
-  if (resume.skills) {
-    resume.skills.forEach((skill) => {
-      skill.keywordsText = keywordsText(skill.keywords);
-    });
-  }
+  prepareWorkEntries(resume.work, i18n.present);
+  prepareEducationEntries(resume.education, i18n.present);
+  prepareProjectEntries(resume.projects, i18n.present);
 
   const langBlocks = prepareLanguages(resume, lang, i18n);
   Object.assign(resume, langBlocks);
 
-  resume.skillGroups = prepareSkillGroups(resume);
-  resume.skillGroupsBool = Object.values(resume.skillGroups).some((g) => g.length > 0);
+  resume.skillsFlat = flattenSkills(resume);
+  resume.skillsFlatBool = resume.skillsFlat.length > 0;
 
   resume.workBool = isFirst(resume.work, 'name');
   resume.educationBool = isFirst(resume.education, 'institution');
-  resume.skillsBool = isFirst(resume.skills, 'name');
-  resume.languagesBool = isFirst(resume.languages, 'language');
+  resume.languagesBool = resume.motherBool || resume.foreignBool;
   resume.certificatesBool = isFirst(resume.certificates, 'name');
   resume.projectsBool = isFirst(resume.projects, 'name');
   resume.publicationsBool = isFirst(resume.publications, 'name');
   resume.referencesBool = isFirst(resume.references, 'name');
-  resume.interestsBool = isFirst(resume.interests, 'name');
-  resume.contactBool = !!(
-    resume.basics &&
-    (resume.basics.email ||
-      resume.basics.phone ||
-      resume.basics.url ||
-      resume.basics.locationLine ||
-      (resume.basics.profileLinks && resume.basics.profileLinks.length))
-  );
 
   return Handlebars.compile(theme)({
     css: styleCSS,
