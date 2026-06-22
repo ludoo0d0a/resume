@@ -87,6 +87,25 @@ a:hover {
   min-height: var(--toolbar-h);
 }
 
+.toolbar__brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.toolbar__brand:hover {
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.toolbar__brand-logo {
+  display: block;
+  width: auto;
+  height: 1.75rem;
+  max-width: 8rem;
+}
+
 .toolbar__lang {
   display: inline-flex;
   padding: 3px;

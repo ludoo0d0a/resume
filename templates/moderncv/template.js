@@ -3,7 +3,12 @@ export default `<!DOCTYPE html>
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="theme-color" content="#0f1419"/>
   <title>{{resume.basics.name}} — CV</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png"/>
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png"/>
   <style>{{{css}}}</style>
   <style media="print">{{{printcss}}}</style>
 </head>
@@ -11,6 +16,9 @@ export default `<!DOCTYPE html>
   <header class="site-header">
     <nav class="toolbar" aria-label="Resume actions">
       <div class="toolbar__inner">
+        <a class="toolbar__brand" href="{{resume.ui.indexHtml}}" aria-label="{{resume.basics.name}}">
+          <img class="toolbar__brand-logo" src="assets/logo-header.png" alt="" width="128" height="85" decoding="async"/>
+        </a>
         <div class="toolbar__lang" role="group" aria-label="Language">
           <a class="toolbar__lang-btn{{#if resume.ui.isEn}} is-active{{/if}}" href="index-en.html" hreflang="en" lang="en">EN</a>
           <a class="toolbar__lang-btn{{#if resume.ui.isFr}} is-active{{/if}}" href="index-fr.html" hreflang="fr" lang="fr">FR</a>
