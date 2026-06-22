@@ -10,174 +10,133 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 10pt;
-  line-height: 1.35;
-  color: #1a1a1a;
+  line-height: 1.4;
+  color: #000;
   margin: 0;
 }
 
 .ep-header {
-  border-bottom: 3px solid #003399;
-  margin-bottom: 1rem;
-  padding-bottom: 0.6rem;
+  margin-bottom: 0.75rem;
 }
 
-.ep-header-top {
+.ep-header-main {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 1rem;
 }
 
-.ep-brand-block {
+.ep-identity {
   flex: 1;
   min-width: 0;
 }
 
-.ep-brand {
-  color: #003399;
+.ep-name {
   font-size: 18pt;
   font-weight: bold;
-  letter-spacing: 0.04em;
+  margin: 0 0 0.35rem;
+  line-height: 1.15;
 }
 
-.ep-subtitle {
-  color: #003399;
-  font-size: 11pt;
-  margin-top: 0.15rem;
+.ep-personal-line {
+  margin: 0;
+  font-size: 9pt;
+  line-height: 1.45;
+  color: #111;
+}
+
+.ep-personal-item + .ep-personal-item::before {
+  content: ' | ';
+  color: #333;
+}
+
+.ep-personal-label {
+  font-weight: normal;
 }
 
 .ep-photo {
-  width: 90px;
-  height: 110px;
+  width: 35mm;
+  height: 45mm;
   object-fit: cover;
-  border: 1px solid #ccc;
+  border: 1px solid #999;
   flex-shrink: 0;
 }
 
-.ep-identity {
-  margin-top: 0.6rem;
-}
-
-.ep-name {
-  font-size: 16pt;
-  font-weight: bold;
-  margin: 0 0 0.2rem;
-}
-
-.ep-label {
-  font-size: 11pt;
-  color: #444;
-}
-
 .ep-section {
-  margin-top: 1rem;
+  margin-top: 0.9rem;
   page-break-inside: avoid;
 }
 
 .ep-section-title {
-  background: #003399;
-  color: #fff;
   font-size: 10.5pt;
   font-weight: bold;
-  padding: 0.25rem 0.5rem;
-  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  color: #000;
+  margin: 0 0 0.45rem;
+  padding: 0;
+  background: none;
+  letter-spacing: 0.02em;
 }
 
 .ep-subsection-title {
-  font-size: 10pt;
+  font-size: 9.5pt;
   font-weight: bold;
-  color: #003399;
-  margin: 0.5rem 0 0.25rem;
+  color: #000;
+  margin: 0.35rem 0 0.2rem;
 }
 
 .ep-entry {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.65rem;
 }
 
-.ep-entry-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-.ep-entry-main {
-  flex: 1;
-  min-width: 0;
-}
-
-.ep-entry-title {
+.ep-entry-period {
+  font-size: 9.5pt;
   font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.15rem;
 }
 
-.ep-entry-meta {
-  color: #333;
-  font-style: italic;
-}
-
-.ep-entry-meta a {
-  color: #003399;
-  text-decoration: none;
-}
-
-.ep-entry-dates {
-  flex-shrink: 0;
-  font-style: italic;
-  color: #333;
-  text-align: right;
-  white-space: nowrap;
+.ep-entry-heading {
+  font-size: 10pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
 }
 
 .ep-entry-body {
-  margin: 0.35rem 0 0;
+  margin: 0.2rem 0 0;
   white-space: pre-line;
 }
 
 .ep-summary {
-  margin-bottom: 0.8rem;
-  white-space: pre-line;
-}
-
-.ep-contact-line {
-  margin: 0.15rem 0;
-}
-
-.ep-contact-line span + span::before {
-  content: ' | ';
-  color: #666;
-}
-
-.ep-profile-links span + span::before {
-  content: ' · ';
-  color: #666;
-}
-
-.ep-skills-list,
-.ep-languages-list {
   margin: 0;
-  padding-left: 1.2rem;
-}
-
-.ep-skills-list li,
-.ep-languages-list li {
-  margin-bottom: 0.2rem;
-}
-
-.ep-skill-text {
-  margin: 0.15rem 0 0.5rem;
   white-space: pre-line;
 }
 
 .ep-highlights {
-  margin: 0.3rem 0 0;
+  margin: 0.25rem 0 0;
   padding-left: 1.2rem;
+}
+
+.ep-skills-flat {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.ep-skills-flat .ep-skill-item + .ep-skill-item::before {
+  content: ' | ';
+  color: #333;
+}
+
+.ep-languages-inline {
+  margin: 0 0 0.35rem;
 }
 
 .ep-cefr-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 9pt;
-  margin-top: 0.35rem;
+  margin-top: 0.25rem;
 }
 
 .ep-cefr-table th,
@@ -188,15 +147,29 @@ body {
 }
 
 .ep-cefr-table th {
-  background: #e8eef7;
-  color: #003399;
+  background: #f0f0f0;
+  color: #000;
   font-weight: bold;
+  text-transform: uppercase;
+  font-size: 8pt;
 }
 
 .ep-cefr-table .ep-lang-name {
   text-align: left;
   font-weight: bold;
+  text-transform: uppercase;
   white-space: nowrap;
+}
+
+.ep-entry-meta {
+  color: #333;
+  font-size: 9.5pt;
+  margin-top: 0.15rem;
+}
+
+.ep-entry-meta a {
+  color: #000;
+  text-decoration: underline;
 }
 
 .ep-reference .ep-entry-body {
@@ -210,174 +183,133 @@ body {
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 10pt;
-  line-height: 1.35;
-  color: #1a1a1a;
+  line-height: 1.4;
+  color: #000;
   margin: 0;
 }
 
 .ep-header {
-  border-bottom: 3px solid #003399;
-  margin-bottom: 1rem;
-  padding-bottom: 0.6rem;
+  margin-bottom: 0.75rem;
 }
 
-.ep-header-top {
+.ep-header-main {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 1rem;
 }
 
-.ep-brand-block {
+.ep-identity {
   flex: 1;
   min-width: 0;
 }
 
-.ep-brand {
-  color: #003399;
+.ep-name {
   font-size: 18pt;
   font-weight: bold;
-  letter-spacing: 0.04em;
+  margin: 0 0 0.35rem;
+  line-height: 1.15;
 }
 
-.ep-subtitle {
-  color: #003399;
-  font-size: 11pt;
-  margin-top: 0.15rem;
+.ep-personal-line {
+  margin: 0;
+  font-size: 9pt;
+  line-height: 1.45;
+  color: #111;
+}
+
+.ep-personal-item + .ep-personal-item::before {
+  content: ' | ';
+  color: #333;
+}
+
+.ep-personal-label {
+  font-weight: normal;
 }
 
 .ep-photo {
-  width: 90px;
-  height: 110px;
+  width: 35mm;
+  height: 45mm;
   object-fit: cover;
-  border: 1px solid #ccc;
+  border: 1px solid #999;
   flex-shrink: 0;
 }
 
-.ep-identity {
-  margin-top: 0.6rem;
-}
-
-.ep-name {
-  font-size: 16pt;
-  font-weight: bold;
-  margin: 0 0 0.2rem;
-}
-
-.ep-label {
-  font-size: 11pt;
-  color: #444;
-}
-
 .ep-section {
-  margin-top: 1rem;
+  margin-top: 0.9rem;
   page-break-inside: avoid;
 }
 
 .ep-section-title {
-  background: #003399;
-  color: #fff;
   font-size: 10.5pt;
   font-weight: bold;
-  padding: 0.25rem 0.5rem;
-  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  color: #000;
+  margin: 0 0 0.45rem;
+  padding: 0;
+  background: none;
+  letter-spacing: 0.02em;
 }
 
 .ep-subsection-title {
-  font-size: 10pt;
+  font-size: 9.5pt;
   font-weight: bold;
-  color: #003399;
-  margin: 0.5rem 0 0.25rem;
+  color: #000;
+  margin: 0.35rem 0 0.2rem;
 }
 
 .ep-entry {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.65rem;
 }
 
-.ep-entry-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-.ep-entry-main {
-  flex: 1;
-  min-width: 0;
-}
-
-.ep-entry-title {
+.ep-entry-period {
+  font-size: 9.5pt;
   font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.15rem;
 }
 
-.ep-entry-meta {
-  color: #333;
-  font-style: italic;
-}
-
-.ep-entry-meta a {
-  color: #003399;
-  text-decoration: none;
-}
-
-.ep-entry-dates {
-  flex-shrink: 0;
-  font-style: italic;
-  color: #333;
-  text-align: right;
-  white-space: nowrap;
+.ep-entry-heading {
+  font-size: 10pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
 }
 
 .ep-entry-body {
-  margin: 0.35rem 0 0;
+  margin: 0.2rem 0 0;
   white-space: pre-line;
 }
 
 .ep-summary {
-  margin-bottom: 0.8rem;
-  white-space: pre-line;
-}
-
-.ep-contact-line {
-  margin: 0.15rem 0;
-}
-
-.ep-contact-line span + span::before {
-  content: ' | ';
-  color: #666;
-}
-
-.ep-profile-links span + span::before {
-  content: ' · ';
-  color: #666;
-}
-
-.ep-skills-list,
-.ep-languages-list {
   margin: 0;
-  padding-left: 1.2rem;
-}
-
-.ep-skills-list li,
-.ep-languages-list li {
-  margin-bottom: 0.2rem;
-}
-
-.ep-skill-text {
-  margin: 0.15rem 0 0.5rem;
   white-space: pre-line;
 }
 
 .ep-highlights {
-  margin: 0.3rem 0 0;
+  margin: 0.25rem 0 0;
   padding-left: 1.2rem;
+}
+
+.ep-skills-flat {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.ep-skills-flat .ep-skill-item + .ep-skill-item::before {
+  content: ' | ';
+  color: #333;
+}
+
+.ep-languages-inline {
+  margin: 0 0 0.35rem;
 }
 
 .ep-cefr-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 9pt;
-  margin-top: 0.35rem;
+  margin-top: 0.25rem;
 }
 
 .ep-cefr-table th,
@@ -388,15 +320,29 @@ body {
 }
 
 .ep-cefr-table th {
-  background: #e8eef7;
-  color: #003399;
+  background: #f0f0f0;
+  color: #000;
   font-weight: bold;
+  text-transform: uppercase;
+  font-size: 8pt;
 }
 
 .ep-cefr-table .ep-lang-name {
   text-align: left;
   font-weight: bold;
+  text-transform: uppercase;
   white-space: nowrap;
+}
+
+.ep-entry-meta {
+  color: #333;
+  font-size: 9.5pt;
+  margin-top: 0.15rem;
+}
+
+.ep-entry-meta a {
+  color: #000;
+  text-decoration: underline;
 }
 
 .ep-reference .ep-entry-body {
@@ -406,34 +352,18 @@ body {
 </head>
 <body>
   <header class="ep-header">
-    <div class="ep-header-top">
-      <div class="ep-brand-block">
-        <div class="ep-brand">EUROPASS</div>
-        <div class="ep-subtitle">Curriculum Vitae</div>
+    <div class="ep-header-main">
+      <div class="ep-identity">
+        <div class="ep-name">Ludovic Valente</div>
+        <p class="ep-personal-line">
+          <span class="ep-personal-item"><span class="ep-personal-label">Nationalité:</span> Française</span>
+          <span class="ep-personal-item"><span class="ep-personal-label">Adresse e-mail:</span> ludovic.valente@gmail.com</span>
+          <span class="ep-personal-item"><span class="ep-personal-label">Adresse:</span> Luxembourg, LU</span>
+        </p>
       </div>
-      <img class="ep-photo" src="https://www.libravatar.org/avatar/0c1ddc83408f6f3966e7999083692f6d42832e1054640f4cc0a6e45aa2bc6779?d&#x3D;retro&amp;s&#x3D;80" alt=""/>
-    </div>
-    <div class="ep-identity">
-      <div class="ep-name">Ludovic Valente</div>
-      <div class="ep-label">Ingénieur logiciel fullstack @SFΞIR Luxembourg</div>
+      <img class="ep-photo" src="data:image/jpeg;base64,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" alt=""/>
     </div>
   </header>
-
-  <section class="ep-section ep-contact">
-    <h2 class="ep-section-title">Informations personnelles</h2>
-    <p class="ep-contact-line">
-      <span>ludovic.valente@gmail.com</span>
-      
-      <span>https://scorawatch.com</span>
-      <span>Luxembourg, LU</span>
-    </p>
-    <p class="ep-contact-line ep-profile-links">
-      <span><a href="https://www.linkedin.com/in/ludovicvalente/">LinkedIn — ludovicvalente</a></span>
-      <span><a href="https://github.com/ludoo0d0a">Github — ludoo0d0a</a></span>
-      <span><a href="https://twitter.com/ludoo0d0a">Twitter — ludoo0d0a</a></span>
-      <span><a href="https://scorawatch.com">Scorawatch — Scorawatch</a></span>
-    </p>
-  </section>
 
   <section class="ep-section">
     <h2 class="ep-section-title">À propos de moi</h2>
@@ -448,13 +378,8 @@ Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, N
   <section class="ep-section">
     <h2 class="ep-section-title">Expérience professionnelle</h2>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Software Architect</div>
-          <div class="ep-entry-meta">SFEIR - Banque Internationale à Luxembourg · Luxembourg, Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">nov. 2025 — Aujourd&#x27;hui</div>
-      </div>
+      <div class="ep-entry-period">15/11/2025 - AUJOURD&#x27;HUI - LUXEMBOURG, LUXEMBOURG</div>
+      <div class="ep-entry-heading">SOFTWARE ARCHITECT SFEIR - BANQUE INTERNATIONALE À LUXEMBOURG</div>
       <p class="ep-entry-body">En tant que consultant Sfeir, je suis architecte logiciel à la BIL (Banque Internationale à Luxembourg) au sein de l'équipe COE, en charge de plusieurs microservices.
 Mon rôle consiste à analyser et proposer des solutions techniques fiables.
 Lors de la conception, je pilote les développements et offre mon expertise technique aux développeurs et je révise les fonctionnalités.
@@ -464,52 +389,32 @@ Je suis également responsable de l'amélioration de la qualité, des outils et 
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Android Mobile Developer</div>
-          <div class="ep-entry-meta">SFEIR - STATEC · Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">nov. 2025 — déc. 2025</div>
-      </div>
+      <div class="ep-entry-period">01/11/2025 - 15/12/2025 - LUXEMBOURG</div>
+      <div class="ep-entry-heading">ANDROID MOBILE DEVELOPER SFEIR - STATEC</div>
       <p class="ep-entry-body">Consultant Sfeir pour STATEC - Développement d'un moteur offline basé sur SQLite pour une application Android réalisé avec Capacitor</p>
       <ul class="ep-highlights">
         <li>Android</li><li>capacitor</li><li>SQLite</li><li>Typescript</li><li>hybride mobile</li>
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Tech lead</div>
-          <div class="ep-entry-meta">SFEIR - Société Générale · Belval, Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">févr. 2025 — sept. 2025</div>
-      </div>
+      <div class="ep-entry-period">15/02/2025 - 30/09/2025 - BELVAL, LUXEMBOURG</div>
+      <div class="ep-entry-heading">TECH LEAD SFEIR - SOCIÉTÉ GÉNÉRALE</div>
       <p class="ep-entry-body">En tant que consultant Sfeir, ma mission pour SG est d'assurer le suivi technique, l'architecture et le développement des projets règlementaires comme EMIR, MIFID, Loi du 25 mars. Mon rôle est d'améliorer l'efficacité et la qualité du code au sein de l'équipe de 4 développeurs. En parallèle, l'objectif est la modernisation de plusieurs applications vers Kubernetes/Cloud/API.</p>
       <ul class="ep-highlights">
         <li>java</li><li>SpringBoot</li><li>jwt</li><li>reactive programming</li><li>openapi</li><li>unit testing</li><li>integration testing</li>
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Senior Software Developer</div>
-          <div class="ep-entry-meta">SFEIR - Temenos · Bertrange, Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">juil. 2024 — déc. 2024</div>
-      </div>
+      <div class="ep-entry-period">31/07/2024 - 31/12/2024 - BERTRANGE, LUXEMBOURG</div>
+      <div class="ep-entry-heading">SENIOR SOFTWARE DEVELOPER SFEIR - TEMENOS</div>
       <p class="ep-entry-body">En tant que développeur senior, ma mission pour Sfeir est d'aider à créer une plateforme de données sur le système existant Multifonds Temenos, pour fournir des portails personnalisés.</p>
       <ul class="ep-highlights">
         <li>java</li><li>SpringBoot</li><li>keycloak</li><li>jwt</li><li>jsonApi</li><li>jsonSchema</li><li>unit testing</li><li>integration testing</li>
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Architect, Expert leader</div>
-          <div class="ep-entry-meta">SFEIR - Foyer · Leudelange, Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">févr. 2023 — juin 2024</div>
-      </div>
+      <div class="ep-entry-period">28/02/2023 - 01/06/2024 - LEUDELANGE, LUXEMBOURG</div>
+      <div class="ep-entry-heading">ARCHITECT, EXPERT LEADER SFEIR - FOYER</div>
       <p class="ep-entry-body">J'ai rejoint l'équipe architecture MEO pour améliorer la qualité, l'architecture et les processus autour de la production logicielle au sein du Groupe Foyer.
 Beaucoup de défis intéressants ici !</p>
       <ul class="ep-highlights">
@@ -517,13 +422,8 @@ Beaucoup de défis intéressants ici !</p>
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Senior Software Developer</div>
-          <div class="ep-entry-meta">SFEIR - Bourse de Luxembourg · Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">janv. 2021 — oct. 2021</div>
-      </div>
+      <div class="ep-entry-period">31/01/2021 - 31/10/2021 - LUXEMBOURG</div>
+      <div class="ep-entry-heading">SENIOR SOFTWARE DEVELOPER SFEIR - BOURSE DE LUXEMBOURG</div>
       <p class="ep-entry-body">Temps partiel entre LuxSE et Fundsquare (pour Sfeir)
 
 L'objectif est de développer un nouvel ensemble d'outils communs.
@@ -535,39 +435,24 @@ Le connecteur FTP, le catalogue API sont les premiers services de cette platefor
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Engineer manager</div>
-          <div class="ep-entry-meta">SFEIR · Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">janv. 2018 — déc. 2024</div>
-      </div>
+      <div class="ep-entry-period">31/01/2018 - 31/12/2024 - LUXEMBOURG</div>
+      <div class="ep-entry-heading">ENGINEER MANAGER SFEIR</div>
       <p class="ep-entry-body">Responsable d'une équipe de 10 collaborateurs, en charge du suivi de carrière, formation, mission et clients, participation aux décisions de l'agence Luxembourg.</p>
       <ul class="ep-highlights">
         <li>suivi</li><li>carrière</li><li>RH</li><li>formation</li>
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Fullstack software engineer</div>
-          <div class="ep-entry-meta">SFEIR · Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">août 2017 — Aujourd&#x27;hui</div>
-      </div>
+      <div class="ep-entry-period">31/08/2017 - AUJOURD&#x27;HUI - LUXEMBOURG</div>
+      <div class="ep-entry-heading">FULLSTACK SOFTWARE ENGINEER SFEIR</div>
       <p class="ep-entry-body">Consultant dans le développement et l'architecture de logiciels</p>
       <ul class="ep-highlights">
         <li>java</li><li>SpringBoot</li><li>Kafka</li><li>Cloud</li><li>Android Mobile</li>
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Ingenieur développement fullstack</div>
-          <div class="ep-entry-meta">SFEIR - Fundsquare · Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">août 2017 — févr. 2023</div>
-      </div>
+      <div class="ep-entry-period">31/08/2017 - 28/02/2023 - LUXEMBOURG</div>
+      <div class="ep-entry-heading">INGENIEUR DÉVELOPPEMENT FULLSTACK SFEIR - FUNDSQUARE</div>
       <p class="ep-entry-body">En tant que développeur senior, je gère principalement la plateforme de collecte pour obtenir des données, le traitement, le nettoyage.
 Les principales données collectées sont Priips EPT, Mifid EMT, EET, ...
 
@@ -588,13 +473,8 @@ Depuis l'acquisition de Fundsquare par Fe Fundinfo, l'objectif à court terme es
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Fullstack software engineer</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg - Parlement européen · Bertrange, Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">juin 2017 — août 2017</div>
-      </div>
+      <div class="ep-entry-period">30/06/2017 - 31/08/2017 - BERTRANGE, LUXEMBOURG</div>
+      <div class="ep-entry-heading">FULLSTACK SOFTWARE ENGINEER SOGETI LUXEMBOURG - PARLEMENT EUROPÉEN</div>
       <p class="ep-entry-body">Outil de conversion pour le Parlement européen.
 
 Ce moteur MsWord vers Xml est utilisé en production pour produire des documents xml conformes aux règles fournies par le PE.
@@ -609,13 +489,8 @@ Java, Spring, Eclipse, Xml, AkomaNtoso, Xsd, Dtd, Jira</p>
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Fullstack software engineer</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg - Parlement européen · Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">janv. 2017 — juin 2017</div>
-      </div>
+      <div class="ep-entry-period">31/01/2017 - 30/06/2017 - LUXEMBOURG</div>
+      <div class="ep-entry-heading">FULLSTACK SOFTWARE ENGINEER SOGETI LUXEMBOURG - PARLEMENT EUROPÉEN</div>
       <p class="ep-entry-body">au Parlement européen, unité DAS (Traduction)
 
 Redémarrer une plateforme collaborative à partir de zéro.
@@ -626,13 +501,8 @@ Les premières étapes doivent poser les bases d'un système collaboratif entiè
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Fullstack software engineer</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg - Parlement européen · Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">juin 2016 — déc. 2016</div>
-      </div>
+      <div class="ep-entry-period">30/06/2016 - 31/12/2016 - LUXEMBOURG</div>
+      <div class="ep-entry-heading">FULLSTACK SOFTWARE ENGINEER SOGETI LUXEMBOURG - PARLEMENT EUROPÉEN</div>
       <p class="ep-entry-body">au Parlement européen, unité DAS (Traduction)
 
 SPA+ : Participer à l'architecture orientée services ; Construire et configurer un routeur/proxy.
@@ -642,13 +512,8 @@ Socrates : Construction d'un gestionnaire d'événements basé sur REST pour com
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Fullstack software engineer</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg - Parlement européen · Bertrange, Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">janv. 2016 — juin 2016</div>
-      </div>
+      <div class="ep-entry-period">31/01/2016 - 30/06/2016 - BERTRANGE, LUXEMBOURG</div>
+      <div class="ep-entry-heading">FULLSTACK SOFTWARE ENGINEER SOGETI LUXEMBOURG - PARLEMENT EUROPÉEN</div>
       <p class="ep-entry-body">au Parlement européen, unité DAS (Traduction)
 
 Sirius : Moteur de recherche - Architecte, analyste technique, développement, intégration web, tests, déploiements.
@@ -658,13 +523,8 @@ Mettre en œuvre une solution basée sur ElasticSearch pour des millions de docu
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Web/Java developer</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg - Parlement européen · Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">oct. 2014 — déc. 2015</div>
-      </div>
+      <div class="ep-entry-period">31/10/2014 - 31/12/2015 - LUXEMBOURG</div>
+      <div class="ep-entry-heading">WEB/JAVA DEVELOPER SOGETI LUXEMBOURG - PARLEMENT EUROPÉEN</div>
       <p class="ep-entry-body">au Parlement européen, unité DAS (Traduction)
 
 Fluid+ : Rejoindre une équipe pour compléter une application web dédiée à la gestion des contrats pour les unités de traduction.
@@ -675,13 +535,8 @@ Conseiller UX pour l'unité.</p>
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">IT Consultant</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg - BNL - Bibliothèque Nationale du Luxembourg · Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">mars 2014 — sept. 2014</div>
-      </div>
+      <div class="ep-entry-period">31/03/2014 - 30/09/2014 - LUXEMBOURG</div>
+      <div class="ep-entry-heading">IT CONSULTANT SOGETI LUXEMBOURG - BNL - BIBLIOTHÈQUE NATIONALE DU LUXEMBOURG</div>
       <p class="ep-entry-body">à BNL - Bibliothèque Nationale du Luxembourg
 
 Etude Solr pour un moteur de recherche performant pour eluxemburgensia.lu.
@@ -694,13 +549,8 @@ Réalisation de prototype avec SolrCloud.</p>
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Android Mobile Developer</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg - STATEC · Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">oct. 2013 — mars 2014</div>
-      </div>
+      <div class="ep-entry-period">31/10/2013 - 31/03/2014 - LUXEMBOURG</div>
+      <div class="ep-entry-heading">ANDROID MOBILE DEVELOPER SOGETI LUXEMBOURG - STATEC</div>
       <p class="ep-entry-body">Développement d'une app Android pour effectuer le relevé des prix pour le STATEC (statec.lu).
 Réalisation des services backend (Java, Spring MVC)
 
@@ -711,13 +561,8 @@ Eclipse, Spring MVC, Apache Commons, Rest, XML</p>
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Mobile developer - iOS</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg - Editus Luxembourg · Bertrange, Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">juin 2013 — juil. 2013</div>
-      </div>
+      <div class="ep-entry-period">30/06/2013 - 31/07/2013 - BERTRANGE, LUXEMBOURG</div>
+      <div class="ep-entry-heading">MOBILE DEVELOPER - IOS SOGETI LUXEMBOURG - EDITUS LUXEMBOURG</div>
       <p class="ep-entry-body">pour Editus Luxembourg,
 
 Pour l'app iPhone/iPad habiter.lu, développement de l'API avec RestKit.
@@ -727,13 +572,8 @@ Mockup avec NodeJs et Express.</p>
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Développeur - architecte Web/Java</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg - BNL - Bibliothèque nationale du Luxembourg · Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">mars 2013 — juin 2013</div>
-      </div>
+      <div class="ep-entry-period">31/03/2013 - 30/06/2013 - LUXEMBOURG</div>
+      <div class="ep-entry-heading">DÉVELOPPEUR - ARCHITECTE WEB/JAVA SOGETI LUXEMBOURG - BNL - BIBLIOTHÈQUE NATIONALE DU LUXEMBOURG</div>
       <p class="ep-entry-body">à BNL - Bibliothèque nationale du Luxembourg
 
 Mise à jour du projet eLuxemburgensia.
@@ -748,13 +588,8 @@ Architecture des caches revue.</p>
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Web/Java developer</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg - Société Générale Bank &amp; Trust · Luxembourg / Monaco</div>
-        </div>
-        <div class="ep-entry-dates">nov. 2012 — févr. 2013</div>
-      </div>
+      <div class="ep-entry-period">30/11/2012 - 28/02/2013 - LUXEMBOURG / MONACO</div>
+      <div class="ep-entry-heading">WEB/JAVA DEVELOPER SOGETI LUXEMBOURG - SOCIÉTÉ GÉNÉRALE BANK &amp; TRUST</div>
       <p class="ep-entry-body">à Société Générale Bank & Trust
 
 Basé sur Documentum, nous développons une webapp pour gérer les PDF en utilisant des workflows métier.
@@ -770,25 +605,15 @@ Edition/manipulation des PDF avec pdfBox.</p>
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Web/Java developer</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg - BNL - Bibliothèque nationale du Luxembourg · Bertrange, Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">janv. 2012 — mai 2012</div>
-      </div>
+      <div class="ep-entry-period">31/01/2012 - 31/05/2012 - BERTRANGE, LUXEMBOURG</div>
+      <div class="ep-entry-heading">WEB/JAVA DEVELOPER SOGETI LUXEMBOURG - BNL - BIBLIOTHÈQUE NATIONALE DU LUXEMBOURG</div>
       <p class="ep-entry-body">à BNL - Bibliothèque nationale du Luxembourg
 
 Ajout de nouvelles fonctionnalités sur le visualiseur Web Media utilisé dans eluxemburgensia.lu</p>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Software engineer</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg - BNL - Bibliothèque nationale du Luxembourg · luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">nov. 2011 — déc. 2011</div>
-      </div>
+      <div class="ep-entry-period">30/11/2011 - 31/12/2011 - LUXEMBOURG</div>
+      <div class="ep-entry-heading">SOFTWARE ENGINEER SOGETI LUXEMBOURG - BNL - BIBLIOTHÈQUE NATIONALE DU LUXEMBOURG</div>
       <p class="ep-entry-body">à BNL - Bibliothèque nationale du Luxembourg
 pour LNB - Bibliothèque de Lettonie
 
@@ -804,13 +629,8 @@ Maintenant le projet est utilisé dans http://www.periodika.lv</p>
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Consultant</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg - Parlement européen · Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">mai 2010 — déc. 2011</div>
-      </div>
+      <div class="ep-entry-period">31/05/2010 - 31/12/2011 - LUXEMBOURG</div>
+      <div class="ep-entry-heading">CONSULTANT SOGETI LUXEMBOURG - PARLEMENT EUROPÉEN</div>
       <p class="ep-entry-body">au Parlement européen - Développement d'applications Web
 
 e-dictionaries est un outil web pour distribuer et lancer des dictionnaires (web ou locaux) selon les licences relatives.
@@ -822,13 +642,8 @@ Utilisé par tous les traducteurs pour leurs traductions quotidiennes.</p>
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Software engineer</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg - BNL - Bibliothèque nationale du Luxembourg · Bertrange, Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">août 2009 — mai 2010</div>
-      </div>
+      <div class="ep-entry-period">31/08/2009 - 31/05/2010 - BERTRANGE, LUXEMBOURG</div>
+      <div class="ep-entry-heading">SOFTWARE ENGINEER SOGETI LUXEMBOURG - BNL - BIBLIOTHÈQUE NATIONALE DU LUXEMBOURG</div>
       <p class="ep-entry-body">à BNL - Bibliothèque nationale du Luxembourg
 Création et intégration d'un nouveau client Web (ExtJs/Java) pour consulter les journaux et livres en ligne.
 Standards Mets/alto. Application Web2.0 complète.</p>
@@ -837,13 +652,8 @@ Standards Mets/alto. Application Web2.0 complète.</p>
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Senior Software Engineer - J2EE, XML, DMS/CMS, ExtJs specialist</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg - Parlement européen · Bertrange, Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">sept. 2007 — juil. 2009</div>
-      </div>
+      <div class="ep-entry-period">30/09/2007 - 31/07/2009 - BERTRANGE, LUXEMBOURG</div>
+      <div class="ep-entry-heading">SENIOR SOFTWARE ENGINEER - J2EE, XML, DMS/CMS, EXTJS SPECIALIST SOGETI LUXEMBOURG - PARLEMENT EUROPÉEN</div>
       <p class="ep-entry-body">au Parlement européen :
 - Étude et support pour l'adoption d'un moteur de workflow : Bonita
 - Intégration du workflow dans une approche SOA
@@ -856,13 +666,8 @@ Standards Mets/alto. Application Web2.0 complète.</p>
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">IT architect</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg - Cour de justice européenne · Bertrange, Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">sept. 2006 — août 2007</div>
-      </div>
+      <div class="ep-entry-period">30/09/2006 - 31/08/2007 - BERTRANGE, LUXEMBOURG</div>
+      <div class="ep-entry-heading">IT ARCHITECT SOGETI LUXEMBOURG - COUR DE JUSTICE EUROPÉENNE</div>
       <p class="ep-entry-body">Client : Cour de Justice européenne.
 Création d'une équipe d'architecture en charge de la veille concurrentielle et de l'installation d'un nouvel environnement de développement homogène (technologies, outils, tests, ergonomie).</p>
       <ul class="ep-highlights">
@@ -870,13 +675,8 @@ Création d'une équipe d'architecture en charge de la veille concurrentielle et
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Software analyst developer</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg - Cour de justice européenne · Bertrange, Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">janv. 2006 — août 2007</div>
-      </div>
+      <div class="ep-entry-period">31/01/2006 - 31/08/2007 - BERTRANGE, LUXEMBOURG</div>
+      <div class="ep-entry-heading">SOFTWARE ANALYST DEVELOPER SOGETI LUXEMBOURG - COUR DE JUSTICE EUROPÉENNE</div>
       <p class="ep-entry-body">Client : Cour de Justice européenne.
 Développeur principal sur un système Intranet : la première application hébergée par ce nouveau système est un outil de recherche permettant de fusionner et d'abstraire toutes les différentes sources de données.</p>
       <ul class="ep-highlights">
@@ -884,26 +684,16 @@ Développeur principal sur un système Intranet : la première application hébe
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Software analyst developer</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg - European Court of Justice · Bertrange, Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">janv. 2006 — févr. 2006</div>
-      </div>
+      <div class="ep-entry-period">31/01/2006 - 28/02/2006 - BERTRANGE, LUXEMBOURG</div>
+      <div class="ep-entry-heading">SOFTWARE ANALYST DEVELOPER SOGETI LUXEMBOURG - EUROPEAN COURT OF JUSTICE</div>
       <p class="ep-entry-body">Client : Cour de Justice européenne.\nDéveloppeur principal sur un moteur de recherche dédié aux Canevas permettant de rechercher et d'insérer des références dans les 20 langues différentes.\nApplication Web J2EE utilisant Struts, JSP, authentification via LDAP AD/OID, base de données Oracle, utilisation d'ICU pour faciliter la traduction internationale et la manipulation de chaînes.</p>
       <ul class="ep-highlights">
         <li>Word</li><li>VB</li><li>VBA</li><li>icu</li><li>java</li><li>jsp</li><li>OIDC</li><li>ldap</li>
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Software analyst developer</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg - Cour de justice européenne · Bertrange, Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">août 2005 — févr. 2006</div>
-      </div>
+      <div class="ep-entry-period">31/08/2005 - 28/02/2006 - BERTRANGE, LUXEMBOURG</div>
+      <div class="ep-entry-heading">SOFTWARE ANALYST DEVELOPER SOGETI LUXEMBOURG - COUR DE JUSTICE EUROPÉENNE</div>
       <p class="ep-entry-body">Client : Cour de Justice européenne.
 Analyste et développeur pour un projet de gestion de toutes les décisions prises lors des audiences concernant les différentes affaires.
 Application Web J2EE utilisant Struts, JSP et taglibs métier, authentification via LDAP AD/OID, base de données Oracle et sérialisation XML</p>
@@ -912,13 +702,8 @@ Application Web J2EE utilisant Struts, JSP et taglibs métier, authentification 
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Software analyst developer</div>
-          <div class="ep-entry-meta">SOGETI Luxembourg - Cour de justice européenne · Bertrange, Luxembourg</div>
-        </div>
-        <div class="ep-entry-dates">sept. 2001 — sept. 2004</div>
-      </div>
+      <div class="ep-entry-period">30/09/2001 - 30/09/2004 - BERTRANGE, LUXEMBOURG</div>
+      <div class="ep-entry-heading">SOFTWARE ANALYST DEVELOPER SOGETI LUXEMBOURG - COUR DE JUSTICE EUROPÉENNE</div>
       <p class="ep-entry-body">Client : Cour de Justice européenne.
 Développeur principal / analyste sur un projet nommé Canevas.
 C'est une application bureautique multi-niveaux pour la création de documents judiciaires</p>
@@ -927,13 +712,8 @@ C'est une application bureautique multi-niveaux pour la création de documents j
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Chef de projet</div>
-          <div class="ep-entry-meta">Quaternove</div>
-        </div>
-        <div class="ep-entry-dates">sept. 2000 — sept. 2001</div>
-      </div>
+      <div class="ep-entry-period">30/09/2000 - 30/09/2001</div>
+      <div class="ep-entry-heading">CHEF DE PROJET QUATERNOVE</div>
       <p class="ep-entry-body">THALES e-Transactions fournit des imprimantes dans des bornes pour la délivrance de billets dans les aéroports et les gares. Ce projet visait à fournir plusieurs prototypes de ces machines et à passer à la ligne de production avec tous les certificats nécessaires.
 •	Développement électronique et mécanique
 •	Gestion de la production
@@ -948,49 +728,50 @@ C'est une application bureautique multi-niveaux pour la création de documents j
   <section class="ep-section">
     <h2 class="ep-section-title">Formation</h2>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Ecole nationale d&#x27;Ingénieurs de Metz</div>
-          <div class="ep-entry-meta">Diplôme d&#x27;ingénieur — Ingénieur généraliste, spécialisé mécanique</div>
-        </div>
-        <div class="ep-entry-dates">déc. 1995 — déc. 2000</div>
-      </div>
+      <div class="ep-entry-period">31/12/1995 - 31/12/2000</div>
+      <div class="ep-entry-heading">DIPLÔME D&#x27;INGÉNIEUR INGÉNIEUR GÉNÉRALISTE, SPÉCIALISÉ MÉCANIQUE- ECOLE NATIONALE D&#x27;INGÉNIEURS DE METZ</div>
+      
       
     </div>
   </section>
 
   <section class="ep-section">
     <h2 class="ep-section-title">Compétences linguistiques</h2>
+    <p class="ep-languages-inline">Langue(s) maternelle(s): FRANÇAIS</p>
+    <table class="ep-cefr-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th colspan="2">Compréhension</th>
+          <th colspan="2">Expression orale</th>
+          <th>Expression écrite</th>
+        </tr>
+        <tr>
+          <th></th>
+          <th>Écoute</th><th>Lecture</th><th>Production orale</th><th>Interaction orale</th><th>Expression écrite</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ep-lang-name">ANGLAIS</td>
+          <td>C1</td><td>C1</td><td>C1</td><td>C1</td><td>C1</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
   <section class="ep-section">
-    <h2 class="ep-section-title">Compétences numériques</h2>
-    <h3 class="ep-subsection-title">Compétences professionnelles</h3>
-    <ul class="ep-skills-list">
-      <li>Frontend: HTML / JSX, SCSS / CSS / Styled Components / Material, Javascript / Typescript, React, Angular, VueJs, Sencha ExtJs, Backbone.js, Webpack, Redux, Chrome Extensions, GruntJS, GreaseMonkey, Figma</li><li>Backend: Node, Java, Spring, SpringBoot, Solr, ElasticSearch, Python, Kotlin, scala, Postgres, Redis, Serverless, Keycloak, Kafka, Microservices, REST, SOA, JHipster, Hibernate, XSL/XSLT, MongoDb, Oracle, PostgreSQL</li><li>Cloud: AWS, Azure / AKS, Google Cloud / GCP, Netlify, kubernetes</li><li>CI/CD: Github actions, argoCD, Jenkins</li><li>Mobile: Flutter, iOs / Swift / ObjectiveC, Android / Kotlin / Jetpack compose / KMP, Ionic Framework, Capacitor, Gradle</li>
-    </ul>
-    <h3 class="ep-subsection-title">Compétences en communication</h3>
-    <p class="ep-skill-text">Présentations techniques, ateliers clients, mentorat de développeurs et collaboration multiculturelle au sein d&#x27;institutions européennes.</p>
-    <h3 class="ep-subsection-title">Compétences organisationnelles / managériales</h3>
-    <p class="ep-skill-text">Engineering manager : encadrement d&#x27;équipe, suivi de carrière, formation et missions pour 10+ collaborateurs ; participation aux décisions de l&#x27;agence Luxembourg chez SFEIR.</p>
-    <h3 class="ep-subsection-title">Permis de conduire</h3>
-    <p class="ep-skill-text">B</p>
-    <h3 class="ep-subsection-title">Centres d&#x27;intérêt</h3>
-    <ul class="ep-skills-list">
-      <li>Geocaching: gps, Chasse au trésor</li><li>Sports: Randonnée, Tennis, Handball</li><li>Musique: Guitare, Piano</li>
-    </ul>
+    <h2 class="ep-section-title">Compétences</h2>
+    <p class="ep-skills-flat">
+      <span class="ep-skill-item">Frontend</span><span class="ep-skill-item">HTML / JSX</span><span class="ep-skill-item">SCSS / CSS / Styled Components / Material</span><span class="ep-skill-item">Javascript / Typescript</span><span class="ep-skill-item">React</span><span class="ep-skill-item">Angular</span><span class="ep-skill-item">VueJs</span><span class="ep-skill-item">Sencha ExtJs</span><span class="ep-skill-item">Backbone.js</span><span class="ep-skill-item">Webpack</span><span class="ep-skill-item">Redux</span><span class="ep-skill-item">Chrome Extensions</span><span class="ep-skill-item">GruntJS</span><span class="ep-skill-item">GreaseMonkey</span><span class="ep-skill-item">Figma</span><span class="ep-skill-item">Backend</span><span class="ep-skill-item">Node</span><span class="ep-skill-item">Java</span><span class="ep-skill-item">Spring</span><span class="ep-skill-item">SpringBoot</span><span class="ep-skill-item">Solr</span><span class="ep-skill-item">ElasticSearch</span><span class="ep-skill-item">Python</span><span class="ep-skill-item">Kotlin</span><span class="ep-skill-item">scala</span><span class="ep-skill-item">Postgres</span><span class="ep-skill-item">Redis</span><span class="ep-skill-item">Serverless</span><span class="ep-skill-item">Keycloak</span><span class="ep-skill-item">Kafka</span><span class="ep-skill-item">Microservices</span><span class="ep-skill-item">REST</span><span class="ep-skill-item">SOA</span><span class="ep-skill-item">JHipster</span><span class="ep-skill-item">Hibernate</span><span class="ep-skill-item">XSL/XSLT</span><span class="ep-skill-item">MongoDb</span><span class="ep-skill-item">Oracle</span><span class="ep-skill-item">PostgreSQL</span><span class="ep-skill-item">Cloud</span><span class="ep-skill-item">AWS</span><span class="ep-skill-item">Azure / AKS</span><span class="ep-skill-item">Google Cloud / GCP</span><span class="ep-skill-item">Netlify</span><span class="ep-skill-item">kubernetes</span><span class="ep-skill-item">CI/CD</span><span class="ep-skill-item">Github actions</span><span class="ep-skill-item">argoCD</span><span class="ep-skill-item">Jenkins</span><span class="ep-skill-item">Mobile</span><span class="ep-skill-item">Flutter</span><span class="ep-skill-item">iOs / Swift / ObjectiveC</span><span class="ep-skill-item">Android / Kotlin / Jetpack compose / KMP</span><span class="ep-skill-item">Ionic Framework</span><span class="ep-skill-item">Capacitor</span><span class="ep-skill-item">Gradle</span><span class="ep-skill-item">Présentations techniques</span><span class="ep-skill-item">ateliers clients</span><span class="ep-skill-item">mentorat de développeurs et collaboration multiculturelle au sein d&#x27;institutions européennes.</span><span class="ep-skill-item">Engineering manager : encadrement d&#x27;équipe</span><span class="ep-skill-item">suivi de carrière</span><span class="ep-skill-item">formation et missions pour 10+ collaborateurs</span><span class="ep-skill-item">participation aux décisions de l&#x27;agence Luxembourg chez SFEIR.</span><span class="ep-skill-item">Geocaching</span><span class="ep-skill-item">gps</span><span class="ep-skill-item">Chasse au trésor</span><span class="ep-skill-item">Sports</span><span class="ep-skill-item">Randonnée</span><span class="ep-skill-item">Tennis</span><span class="ep-skill-item">Handball</span><span class="ep-skill-item">Musique</span><span class="ep-skill-item">Guitare</span><span class="ep-skill-item">Piano</span>
+    </p>
   </section>
 
   <section class="ep-section">
     <h2 class="ep-section-title">Projets</h2>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Scora</div>
-          <div class="ep-entry-meta"><a href="http://scorawatch.com">http://scorawatch.com</a></div>
-        </div>
-        <div class="ep-entry-dates">déc. 2022 — Aujourd&#x27;hui</div>
-      </div>
+      <div class="ep-entry-period">31/12/2022 - AUJOURD&#x27;HUI</div>
+      <div class="ep-entry-heading">Scora</div>
       <p class="ep-entry-body">Application de comptage de points pour le tennis pour montre WearOS
 Elle vous aide à compter les points pendant votre match de tennis.
 
@@ -1002,23 +783,13 @@ Publié sur Google Play Store : https://play.google.com/store/apps/details?id=fr
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Gorilla</div>
-          <div class="ep-entry-meta"><a href="https://github.com/ludoo0d0a/gorilla">https://github.com/ludoo0d0a/gorilla</a></div>
-        </div>
-        <div class="ep-entry-dates">oct. 2023 — avr. 2024</div>
-      </div>
+      <div class="ep-entry-period">31/10/2023 - 30/04/2024</div>
+      <div class="ep-entry-heading">Gorilla</div>
       <p class="ep-entry-body">Framework JS pour automatiser les tâches sur le Web</p>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">GCWizard</div>
-          <div class="ep-entry-meta"><a href="https://gcwizard.net/">https://gcwizard.net/</a></div>
-        </div>
-        <div class="ep-entry-dates">mars 2021 — août 2022</div>
-      </div>
+      <div class="ep-entry-period">31/03/2021 - 01/08/2022</div>
+      <div class="ep-entry-heading">GCWizard</div>
       <p class="ep-entry-body">Cette application mobile contient de nombreux outils hors ligne, tables et calculateurs pour soutenir le géocacheur en plein air ou à la maison dans la résolution de puzzles ou de calculs.
 
 Disponible pour iOs, Android et Web.</p>
@@ -1027,13 +798,8 @@ Disponible pour iOs, Android et Web.</p>
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Bibliothèques npm/nodejs pour backbone et passport</div>
-          <div class="ep-entry-meta"><a href="https://www.npmjs.com/~ludoo">https://www.npmjs.com/~ludoo</a></div>
-        </div>
-        <div class="ep-entry-dates">sept. 2015 — sept. 2015</div>
-      </div>
+      <div class="ep-entry-period">30/09/2015 - 30/09/2015</div>
+      <div class="ep-entry-heading">Bibliothèques npm/nodejs pour backbone et passport</div>
       <p class="ep-entry-body">Dévéloppement et mise à disposition sous npmjs et github de composants NodeJs.
 - backgrid (grid / backbone) : fork compatible CommonJs.
 - Strategy passport.js pour geocaching
@@ -1043,13 +809,8 @@ Disponible pour iOs, Android et Web.</p>
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Outils pour le géocaching</div>
-          <div class="ep-entry-meta"><a href="http://www.geoking.fr">http://www.geoking.fr</a></div>
-        </div>
-        <div class="ep-entry-dates">mars 2014 — mars 2020</div>
-      </div>
+      <div class="ep-entry-period">31/03/2014 - 31/03/2020</div>
+      <div class="ep-entry-heading">Outils pour le géocaching</div>
       <p class="ep-entry-body">Site Web contenant des outils online pour la communauté geocaching.
 pitaso.com devenu maintenant geoking.fr</p>
       <ul class="ep-highlights">
@@ -1057,47 +818,27 @@ pitaso.com devenu maintenant geoking.fr</p>
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Platforme de développement rapide pour application iPhone</div>
-          
-        </div>
-        <div class="ep-entry-dates">juil. 2012 — Aujourd&#x27;hui</div>
-      </div>
+      <div class="ep-entry-period">31/07/2012 - AUJOURD&#x27;HUI</div>
+      <div class="ep-entry-heading">Platforme de développement rapide pour application iPhone</div>
       <p class="ep-entry-body">Platforme de développement rapide pour application iPhone</p>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Eye Traffic - Info traffic Luxembourg</div>
-          <div class="ep-entry-meta"><a href="https://chrome.google.com/webstore/detail/kieaniodbboioemmcghcbkfgpmopffdc">https://chrome.google.com/webstore/detail/kieaniodbboioemmcghcbkfgpmopffdc</a></div>
-        </div>
-        <div class="ep-entry-dates">août 2010 — Aujourd&#x27;hui</div>
-      </div>
+      <div class="ep-entry-period">31/08/2010 - AUJOURD&#x27;HUI</div>
+      <div class="ep-entry-heading">Eye Traffic - Info traffic Luxembourg</div>
       <p class="ep-entry-body">Extension Chrome pour surveiller le traffic info au Luxembourg.</p>
       <ul class="ep-highlights">
         <li>Agreement from Pont-Et-Chaussee to access their API</li>
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Handball club Amnéville website</div>
-          <div class="ep-entry-meta"><a href="http://www.7amnevillois.fr">http://www.7amnevillois.fr</a></div>
-        </div>
-        <div class="ep-entry-dates">oct. 2015 — août 2022</div>
-      </div>
+      <div class="ep-entry-period">31/10/2015 - 31/08/2022</div>
+      <div class="ep-entry-heading">Handball club Amnéville website</div>
       <p class="ep-entry-body">Réalisation du site Web du club de Amnéville sous Wordpress.
 Valorisation du club, implication du comité dans ce nouvel outil de communication, promotion de nos équipes en N3 et prénationale, actualités, résultats et calendriers des différentes équipes</p>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Extension Chrome ReaderPlus</div>
-          <div class="ep-entry-meta"><a href="https://chrome.google.com/webstore/detail/hhcknjkmaaeinhdjgimjnophgpbdgfmg">https://chrome.google.com/webstore/detail/hhcknjkmaaeinhdjgimjnophgpbdgfmg</a></div>
-        </div>
-        <div class="ep-entry-dates">déc. 2009 — mai 2013</div>
-      </div>
+      <div class="ep-entry-period">31/12/2009 - 31/05/2013</div>
+      <div class="ep-entry-heading">Extension Chrome ReaderPlus</div>
       <p class="ep-entry-body">Chrome extension for Google Reader.
 Enhances navigation and presentation by adding a theme, social sharing features, quick article preview, icons, filtering, and more...
 Reached 80,000 users before GoogleReader shutdown.
@@ -1107,13 +848,8 @@ Project transferred to a Chinese team.</p>
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Application Windows8</div>
-          <div class="ep-entry-meta"><a href="http://apps.microsoft.com/windows/fr-be/app/cityreal/8c70e367-e1bd-4890-8519-857389282fe1">http://apps.microsoft.com/windows/fr-be/app/cityreal/8c70e367-e1bd-4890-8519-857389282fe1</a></div>
-        </div>
-        <div class="ep-entry-dates">sept. 2012 — oct. 2012</div>
-      </div>
+      <div class="ep-entry-period">30/09/2012 - 31/10/2012</div>
+      <div class="ep-entry-heading">Application Windows8</div>
       <p class="ep-entry-body">Création et publication d'une application mobile Windows8.
 Gestion immobilière pour une agence immobilière parisienne.</p>
       <ul class="ep-highlights">
@@ -1121,13 +857,8 @@ Gestion immobilière pour une agence immobilière parisienne.</p>
       </ul>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-head">
-        <div class="ep-entry-main">
-          <div class="ep-entry-title">Facelift for a real estate website</div>
-          <div class="ep-entry-meta"><a href="http://habiter.lu">http://habiter.lu</a></div>
-        </div>
-        <div class="ep-entry-dates">juin 2012 — juin 2012</div>
-      </div>
+      <div class="ep-entry-period">30/06/2012 - 30/06/2012</div>
+      <div class="ep-entry-heading">Facelift for a real estate website</div>
       <p class="ep-entry-body">Facelift et ajout de plusieurs fonctionnalités du site Web Habiter.lu dédié aux annonces immobilières pour le compte d'Editus.</p>
       <ul class="ep-highlights">
         <li>PHP</li><li>HTML</li><li>CSS</li>
@@ -1138,31 +869,31 @@ Gestion immobilière pour une agence immobilière parisienne.</p>
   <section class="ep-section">
     <h2 class="ep-section-title">Publications</h2>
     <div class="ep-entry">
-      <div class="ep-entry-title">Scora</div>
+      <div class="ep-entry-heading">Scora</div>
       <p class="ep-entry-body">Tableau de score tennis pour montre Google Android WearOS</p>
       <div class="ep-entry-meta"><a href="https://play.google.com/store/apps/details?id&#x3D;fr.geoking.tennis.scoreboard.wear">https://play.google.com/store/apps/details?id&#x3D;fr.geoking.tennis.scoreboard.wear</a></div>
       <div class="ep-entry-meta">2024-09-03</div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-title">Ce CV a été généré en PDF et HTML en plusieurs langues sur base d&#x27;une seule source JSON, et publié automatiquement sur le site web</div>
+      <div class="ep-entry-heading">Ce CV a été généré en PDF et HTML en plusieurs langues sur base d&#x27;une seule source JSON, et publié automatiquement sur le site web</div>
       <p class="ep-entry-body">CV au format json-resume. Traductions, formats PDF et HTML, publié automatiquement sur le site web https://ludoo0d0a.github.io/resume/.</p>
       <div class="ep-entry-meta"><a href="https://github.com/ludoo0d0a/resume">https://github.com/ludoo0d0a/resume</a></div>
       <div class="ep-entry-meta">2025-01-03</div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-title">Theme pour CV au format json-resume.</div>
+      <div class="ep-entry-heading">Theme pour CV au format json-resume.</div>
       <p class="ep-entry-body">Theme pour CV au format json-resume suportant i18n</p>
       <div class="ep-entry-meta"><a href="https://www.npmjs.com/package/jsonresume-theme-ludoo">https://www.npmjs.com/package/jsonresume-theme-ludoo</a></div>
       <div class="ep-entry-meta">2025-01-02</div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-title">Passport pour Geocaching</div>
+      <div class="ep-entry-heading">Passport pour Geocaching</div>
       <p class="ep-entry-body">Stratégie d'authentification Geocaching pour Passport et Node.js</p>
       <div class="ep-entry-meta"><a href="https://www.npmjs.com/package/passport-geocaching">https://www.npmjs.com/package/passport-geocaching</a></div>
       <div class="ep-entry-meta">2019-10-09</div>
     </div>
     <div class="ep-entry">
-      <div class="ep-entry-title">Extension Chrome ReaderPlus</div>
+      <div class="ep-entry-heading">Extension Chrome ReaderPlus</div>
       <p class="ep-entry-body">Chrome extension for Google Reader.
 Enhances navigation and presentation by adding a theme, social sharing features, quick article preview, icons, filtering, and more...
 Reached 80,000 users before GoogleReader shutdown.
@@ -1176,14 +907,14 @@ Project transferred to a Chinese team.</p>
   <section class="ep-section">
     <h2 class="ep-section-title">Références</h2>
     <div class="ep-entry ep-reference">
-      <div class="ep-entry-title">Vincent Mellano</div>
+      <div class="ep-entry-heading">Vincent Mellano</div>
       <p class="ep-entry-body">I had the chance to work with Ludovic at the European Parliament for about 2 years.
 The way he can deliver quality software on a very short time using cutting-edge technologies is very impressive.
 His experience and ability to foresee problems at the very first phases of the project helped us a lot while taking decisions.
 I would recommend Ludovic to anyone looking for a highly skilled, effective and professional software engineer.</p>
     </div>
     <div class="ep-entry ep-reference">
-      <div class="ep-entry-title">Pierre-antoine Gregoire</div>
+      <div class="ep-entry-heading">Pierre-antoine Gregoire</div>
       <p class="ep-entry-body">Ludovic is a very talented person. He can tackle hard tasks in a short schedule while maintaining the quality of the result. He was an invaluable partner during the time we spent working in the same service of the European parliament, and I can&#x27;t wait to work with him again in the future years if it is made possible. 
 In the meantime, I can only recommend him to anybody looking for a capable professional, who doesn&#x27;t lack neither the ability to learn nor an advanced existing technical knowledge.</p>
     </div>
