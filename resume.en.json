@@ -59,7 +59,7 @@
     {
       "position": "Software Architect",
       "startDate": "2025-11-15",
-      "summary": "As a Sfeir consultant, I am a Software Architect at BIL (Banque Internationale à Luxembourg) in the COE team, responsible for multiple microservices.\nMy role is to analyze and suggest reliable technical solutions.\nDuring the design phase, I lead developers, provide technical expertise, and review features.\nI am also responsible for improving quality, tooling, and best practices during the development, deployment, and release processes.",
+      "summary": "Sfeir consultant, Software Architect at BIL (Banque Internationale à Luxembourg) in the COE team, responsible for several microservices related to payments, KYC remediation, or the interface with the BILNet mobile app.\nThe role consists in analyzing and proposing reliable technical solutions.\nDuring design: leading developments, providing technical expertise to developers, and reviewing features.\nAlso responsible for improving quality, tooling, and best practices during development, deployment, and release processes.",
       "highlights": [
         "java",
         "SpringBoot",
@@ -945,7 +945,7 @@
           "location": "Luxembourg, Luxembourg",
           "clientUrl": "https://www.bil.com",
           "clientLogo": "https://www.google.com/s2/favicons?domain=bil.com&sz=64",
-          "summary": "As a Sfeir consultant, I am a Software Architect at BIL (Banque Internationale à Luxembourg) in the COE team, responsible for multiple microservices.\nMy role is to analyze and suggest reliable technical solutions.\nDuring the design phase, I lead developers, provide technical expertise, and review features.\nI am also responsible for improving quality, tooling, and best practices during the development, deployment, and release processes.",
+          "summary": "Sfeir consultant, Software Architect at BIL (Banque Internationale à Luxembourg) in the COE team, responsible for several microservices related to payments, KYC remediation, or the interface with the BILNet mobile app.\nThe role consists in analyzing and proposing reliable technical solutions.\nDuring design: leading developments, providing technical expertise to developers, and reviewing features.\nAlso responsible for improving quality, tooling, and best practices during development, deployment, and release processes.",
           "client": "Banque Internationale à Luxembourg"
         },
         {
