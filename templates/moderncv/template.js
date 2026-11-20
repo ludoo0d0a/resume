@@ -17,7 +17,7 @@ export default `<!DOCTYPE html>
     <nav class="toolbar" aria-label="Resume actions">
       <div class="toolbar__inner">
         <a class="toolbar__brand" href="{{resume.ui.indexHtml}}" aria-label="{{resume.basics.name}}">
-          <img class="toolbar__brand-logo" src="assets/logo-header.png" alt="" width="128" height="85" decoding="async"/>
+          <img class="toolbar__brand-logo" src="assets/logo-header.png" alt="" width="192" height="128" decoding="async"/>
         </a>
         <div class="toolbar__lang" role="group" aria-label="Language">
           <a class="toolbar__lang-btn{{#if resume.ui.isEn}} is-active{{/if}}" href="index-en.html" hreflang="en" lang="en">EN</a>

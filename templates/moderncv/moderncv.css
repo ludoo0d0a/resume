@@ -502,6 +502,11 @@ mark.search-highlight {
     --header-offset: 3.75rem;
   }
 
+  .toolbar__brand-logo {
+    height: 2.5rem;
+    max-width: 12rem;
+  }
+
   .site-header .section-nav:not(.section-nav--side) {
     display: none;
   }
