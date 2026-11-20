@@ -40,6 +40,10 @@ export default `<!DOCTYPE html>
         </label>
         <p id="resume-search-status" class="toolbar__search-status" role="status" aria-live="polite" hidden></p>
         <div class="toolbar__actions">
+          <a class="toolbar__btn toolbar__btn--icon toolbar__btn--ghost" href="{{resume.ui.portfolioUrl}}" target="_blank" rel="noopener noreferrer" aria-label="{{resume.ui.portfolioLabel}}" title="{{resume.ui.portfolioLabel}}">
+            <svg class="toolbar__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            <span class="toolbar__btn-text">{{resume.ui.portfolioLabel}}</span>
+          </a>
           <a class="toolbar__btn toolbar__btn--icon toolbar__btn--ghost" href="{{resume.ui.europassPdf}}" aria-label="{{resume.ui.europassLabel}}" title="{{resume.ui.europassLabel}}">
             <svg class="toolbar__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg>
             <span class="toolbar__btn-text">{{resume.ui.europassLabel}}</span>
