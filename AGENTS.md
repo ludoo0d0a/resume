@@ -12,12 +12,14 @@ resume.en.json  resume.fr.json
        ├─ europass  → public/resume-*-europass.{xml,html} + public/pdf/resume-*-europass.pdf
        └─ validate  → XSD (xmllint)
        ▼
-public/  (+ pdf/ in repo)  →  GitHub Pages (publish_dir: public)
+public/  (+ pdf/ in repo)
+       ├─ GitHub Pages (`gh-pages`) → https://ludoo0d0a.github.io/resume/
+       └─ Cloudflare Pages (`ludovicvalente`) → https://ludovicvalente.geoking.fr/
 ```
 
 **Local:** `npm ci` then `npm run build:all` (split + `build -- --preset public`).
 
-**CI:** [.github/workflows/build.yml](.github/workflows/build.yml) runs the same npm scripts, commits `resume.*.json`, `public/`, `pdf/`, deploys `public/` to `gh-pages`.
+**CI:** [.github/workflows/build.yml](.github/workflows/build.yml) runs the same npm scripts, commits `resume.*.json`, `public/`, `pdf/`, then deploys `public/` to **both** GitHub Pages and Cloudflare Pages.
 
 ## npm scripts
 
@@ -72,5 +74,5 @@ Profile URLs in JSON are relative to the **site root** (`pdf/resume-en.pdf`, `in
 
 ## Boundaries
 
-- Secrets: `GIST_ID`, `GIST_TOKEN` in Actions only.
+- Secrets (Actions only): `GIST_ID`, `GIST_TOKEN`, `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`.
 - CI uses `git add -f public/` if needed; do not add `/public/` to `.gitignore`.

@@ -6,6 +6,7 @@ on:
       - 'resume.i18n.json'
       - 'scripts/**'
       - 'templates/**'
+      - 'assets/**'
       - 'index.js'
       - 'package.json'
       - 'package-lock.json'
@@ -83,6 +84,32 @@ jobs:
           publish_dir: public
           publish_branch: gh-pages
 
-      - name: Log deploy URL
+      - name: Deploy to Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
-          echo "::notice::Site https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+          set -euo pipefail
+          if [ -z "${CLOUDFLARE_API_TOKEN}" ] || [ -z "${CLOUDFLARE_ACCOUNT_ID}" ]; then
+            echo "::error::Missing CLOUDFLARE_API_TOKEN or CLOUDFLARE_ACCOUNT_ID"
+            exit 1
+          fi
+          # Pin: wrangler@4 latest can fail Pages with "Failed to publish your Function"
+          for attempt in 1 2 3; do
+            echo "Cloudflare deploy attempt ${attempt}/3"
+            if npx --yes wrangler@4.40.0 pages deploy public \
+              --project-name=ludovicvalente \
+              --branch=main \
+              --commit-dirty=true; then
+              exit 0
+            fi
+            echo "Deploy failed (attempt ${attempt}); retrying in 10s…"
+            sleep 10
+          done
+          echo "All Cloudflare deploy attempts failed"
+          exit 1
+
+      - name: Log deploy URLs
+        run: |
+          echo "::notice::GitHub Pages https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+          echo "::notice::Cloudflare Pages https://ludovicvalente.geoking.fr/"

@@ -7,7 +7,7 @@
 
 JSON Resume CV in **EN** and **FR**, built from a single i18n source.
 
-Live site: [ludoo0d0a.github.io/resume](https://ludoo0d0a.github.io/resume/)
+Live sites: [ludovicvalente.geoking.fr](https://ludovicvalente.geoking.fr/) · [ludoo0d0a.github.io/resume](https://ludoo0d0a.github.io/resume/)
 
 ## Quick start (local)
 
@@ -38,17 +38,19 @@ On push to `resume.i18n.json` (or build-related paths), CI runs the same pipelin
 
 1. `npm run split` → commit `resume.en.json` / `resume.fr.json`
 2. `npm run build -- --preset public` → commit `public/` and `pdf/`
-3. Deploy **`public/`** to GitHub Pages (`gh-pages`)
+3. Deploy **`public/`** to GitHub Pages (`gh-pages`) **and** Cloudflare Pages (`ludovicvalente`)
 
-Optional gist sync: set `GIST_ID` and `GIST_TOKEN` in repository secrets.
+Secrets: `GIST_ID` / `GIST_TOKEN` (optional gist sync); `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID` (Cloudflare deploy).
 
 ## Published URLs
 
 | Page | URL |
 |------|-----|
-| EN | https://ludoo0d0a.github.io/resume/ |
-| FR | https://ludoo0d0a.github.io/resume/index-fr.html |
-| Europass EN | https://ludoo0d0a.github.io/resume/resume-en-europass.html |
+| EN (primary) | https://ludovicvalente.geoking.fr/ |
+| FR (primary) | https://ludovicvalente.geoking.fr/index-fr |
+| EN (GitHub Pages) | https://ludoo0d0a.github.io/resume/ |
+| FR (GitHub Pages) | https://ludoo0d0a.github.io/resume/index-fr.html |
+| Europass EN | https://ludovicvalente.geoking.fr/resume-en-europass.html |
 
 ## i18n format
 
