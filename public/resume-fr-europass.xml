@@ -2,8 +2,8 @@
 <SkillsPassport xmlns="http://europass.cedefop.europa.eu/Europass" locale="fr" xsi:schemaLocation="http://europass.cedefop.europa.eu/Europass http://europass.cedefop.europa.eu/xml/v3.4.0/EuropassSchema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <DocumentInfo>
     <DocumentType>ECV</DocumentType>
-    <CreationDate>2026-11-21T13:00:45.504Z</CreationDate>
-    <LastUpdateDate>2026-11-21T13:00:45.504Z</LastUpdateDate>
+    <CreationDate>2026-11-22T10:46:26.928Z</CreationDate>
+    <LastUpdateDate>2026-11-22T10:46:26.928Z</LastUpdateDate>
     <XSDVersion>V3.4</XSDVersion>
     <Generator>jsonresume-theme-ludoo</Generator>
     <EuropassLogo>true</EuropassLogo>
@@ -87,7 +87,7 @@
       </Type>
       <Description>
         <Label>Ingénieur logiciel fullstack @SFΞIR Luxembourg
-        Développeur Senior Fullstack, architecte IT, formateur VueJs, tech lead, développeur Flutter/Android.
+        Développeur Senior Fullstack, architecte IT, formateur VueJs, tech lead, développeur Android/Kotlin/Java/Spring.
         Focalisé sur l'architecture moderne autour des besoins web et mobiles.
         Je crée des applications modernes avec des technologies émergentes s'appuyant sur une architecture efficace.
         Compétences principales/favorites : Java, SpringBoot, Android, ElasticSearch, NodeJs, VueJs, Flutter</Label>
